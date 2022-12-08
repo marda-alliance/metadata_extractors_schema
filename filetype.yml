@@ -1,0 +1,36 @@
+name: marda_filetype_schema
+id: marda_filetype_schema
+default_range: string
+prefixes:
+  schema: http://schema.org
+
+classes:
+  FileType:
+    description: >-
+      A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type.
+    attributes:
+      uuid:
+        identifier: true
+        slot_uri: schema:identifier
+      name:
+        slot_uri: schema:name
+      description:
+        slot_uri: schema:description
+      vendor:
+        slot_uri: schema:vendor
+      associated_instruments:
+        multivalued: true
+        inlined_as_list: true
+        description: >-
+          Any instrument, or class of instruments, that typically create the data encoded into such files.
+      associated_software:
+        description: >-
+          Any software (proprietary or otherwise) that produces such files.
+      subformats:
+        multivalued: true
+        range: FileType
+        inlined_as_list: true
+
+    close_mappings:
+      - schema:fileFormat
+      - schema:encodingFormat
