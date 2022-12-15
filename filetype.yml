@@ -1,14 +1,21 @@
-name: marda_filetype_schema
-id: marda_filetype_schema
-default_range: string
+name: filetype
+id: https://www.marda-alliance.org/extractors/filetype
 prefixes:
-  schema_org: http://schema.org
-  dublin_core: http://purl.org/dc/elements/1.1
+  linkml: https://w3id.org/linkml/
+  schema_org: http://schema.org/
+  dublin_core: http://purl.org/dc/elements/1.1/
+imports:
+  - linkml:types
+default_range: string
 
 classes:
   FileType:
     description: >-
       A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type.
+    close_mappings:
+      - schema_org:fileFormat
+      - schema_org:encodingFormat
+      - dublin_core:format
     attributes:
       id:
         identifier: true
@@ -59,8 +66,3 @@ classes:
         description: ->
           Any keywords, phrases or classification codes that are relevant to the file type, e.g., particular scientific domains of applicability, or experimental techniques.
         slot_uri: dublin_core:subject
-
-    close_mappings:
-      - schema_org:fileFormat
-      - schema_org:encodingFormat
-      - dublin_core:format
