@@ -1,17 +1,16 @@
+---
 id: >-
-  biologic-mpr
+    biologic-mpr
 name: >-
-  Biologic MPR file
+    Biologic MPR file
 description: >-
-  A binary data file created by Biologic cyclers, containing time- and frequency-domain data pertaining to many electrochemical techniques, such as voltammetry, potentiometry, coulometry and impedance spectroscopy.
+    A binary data file created by Biologic cyclers, containing time- and frequency-domain
+    data pertaining to many electrochemical techniques, such as voltammetry,
+    potentiometry, coulometry and impedance spectroscopy.
 associated_vendors: >-
-  - Biologic
-subject: ->
-  - electrochemistry
-  - voltammetry
-  - impedance spectropscopy
-  - potentiometry
+    - Biologic
+subject: -> - electrochemistry - voltammetry - impedance spectropscopy - potentiometry
 associated_instruments:
-  - Biologic MPG-200
+    - Biologic MPG-200
 associated_software:
-  - Biologic EC-Lab
+    - Biologic EC-Lab
