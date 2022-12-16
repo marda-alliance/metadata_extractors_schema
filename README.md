@@ -8,16 +8,16 @@ Some initial schemas have been sketched out with [LinkML](https://linkml.io/link
 They can be used as follows, after installing LinkML (`pip install -r requirements.txt` in a fresh environment)
 
 - Generate a JSONSchema version of the file type schema:
-```
-gen-json-schema filetype.yml >> filetype.json
-```
+  ```
+  gen-json-schema filetype.yml >> filetype.json
+  ```
 
 - Generate pydantic or dataclass models for the FileType schema:
-```
-gen-python filetype.yml >> filetype.py
-```
+  ```
+  gen-python filetype.yml >> filetype.py
+  ```
 
 - Validate example data against the schema:
-```
-linkml-validate -s filetype.yml -C FileType biologic_mpr.yml
-```
+  ```
+  linkml-validate -s filetype.yml -C FileType biologic_mpr.yml
+  ```
