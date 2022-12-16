@@ -41,13 +41,11 @@ classes:
             associated_vendors:
                 slot_uri: schema_org:vendor
                 multivalued: true
-                inlined_as_list: true
                 description: >-
                     If this file type is associated with particular software or instrument
                     vendors, they can be listed here.
             associated_instruments:
                 multivalued: true
-                inlined_as_list: true
                 description: >-
                     Any instrument, or class of instruments, that typically create
                     the data encoded into such files.
@@ -63,13 +61,11 @@ classes:
                     e.g., CSV, JSON, HDF5, then they can be listed here.
             associated_standards:
                 multivalued: true
-                inlined_as_list: true
                 description: >-
                     If this is a subformat that follows a particular well-defined
                     standard, e.g., CIF, NeXuS, then it can be listed here.
             subject:
                 multivalued: true
-                inlined_as_list: true
                 description: >-
                     Any keywords, phrases or classification codes that are relevant
                     to the file type, e.g., particular scientific domains of applicability,
