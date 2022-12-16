@@ -24,7 +24,8 @@ classes:
                 identifier: true
                 slot_uri: schema_org:identifier
                 required: true
-                description: -> A unique identifier for the format within the MaRDA
+                description: >-
+                    A unique identifier for the format within the MaRDA
                     registry namespace, this should be a shorthand label rather than
                     a UUID. Only lower-case alphanumeric and dash ("-") characters
                     are permitted.
@@ -32,11 +33,13 @@ classes:
             name:
                 slot_uri: schema_org:name
                 required: true
-                description: -> A recognisable name for the format.
+                description: >-
+                    A recognisable name for the format.
             description:
                 slot_uri: schema_org:description
                 required: true
-                description: -> A human-readable outline of the file type, its format,
+                description: >-
+                    A human-readable outline of the file type, its format,
                     data content and uses.
             associated_vendors:
                 slot_uri: schema_org:vendor
@@ -65,9 +68,9 @@ classes:
                     If this is a subformat that follows a particular well-defined
                     standard, e.g., CIF, NeXuS, then it can be listed here.
             subject:
+                slot_uri: dublin_core:subject
                 multivalued: true
                 description: >-
                     Any keywords, phrases or classification codes that are relevant
                     to the file type, e.g., particular scientific domains of applicability,
                     or experimental techniques.
-                slot_uri: dublin_core:subject
