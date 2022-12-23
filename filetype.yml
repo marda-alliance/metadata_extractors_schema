@@ -66,7 +66,7 @@ classes:
                 multivalued: true
                 description: >-
                     If this is a subformat that follows a particular well-defined
-                    standard, e.g., CIF, NeXuS, then it can be listed here.
+                    standard, e.g., CIF, NeXus, then it can be listed here.
             subject:
                 slot_uri: dublin_core:subject
                 multivalued: true
