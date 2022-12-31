@@ -53,4 +53,3 @@ URI: [https://www.marda-alliance.org/extractors/filetype/FileType](https://www.m
 | **Close Mappings:** | | schema_org:fileFormat |
 |  | | schema_org:encodingFormat |
 |  | | dublin_core:format |
-

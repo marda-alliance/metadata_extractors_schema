@@ -26,4 +26,3 @@ None &#8594;  <sub>0..\*</sub> [String](types/String.md)
 |  |  |  |
 | --- | --- | --- |
 | **Mappings:** | | schema_org:vendor |
-

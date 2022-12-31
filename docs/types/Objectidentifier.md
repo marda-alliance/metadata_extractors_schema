@@ -16,4 +16,3 @@ URI: [linkml:Objectidentifier](https://w3id.org/linkml/Objectidentifier)
 |  |  |  |
 | --- | --- | --- |
 | **Comments:** | | Used for inheritence and type checking |
-
