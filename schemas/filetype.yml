@@ -8,6 +8,9 @@ prefixes:
 imports:
     - linkml:types
 default_range: string
+description: >-
+    This file describes the `FileType` model created by the MaRDA extractors WG.
+
 
 classes:
     FileType:
@@ -74,3 +77,10 @@ classes:
                     Any keywords, phrases or classification codes that are relevant
                     to the file type, e.g., particular scientific domains of applicability,
                     or experimental techniques.
+    Container:
+        tree_root: true
+        attributes:
+            file_types:
+                multivalued: true
+                inlined_as_list: true
+                range: FileType
