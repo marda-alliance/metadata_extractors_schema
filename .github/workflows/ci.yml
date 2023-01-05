@@ -45,4 +45,4 @@ jobs:
 
             - name: Validate examples
               run: |
-                  linkml-validate schemas/examples/biologic_mpr.yml -s schemas/filetype.yml
+                  linkml-validate schemas/examples/biologic_mpr.yml -s schemas/filetype.yml -C FileType
