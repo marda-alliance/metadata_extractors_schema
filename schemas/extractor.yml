@@ -1,0 +1,70 @@
+---
+name: extractor
+id: https://www.marda-alliance.org/extractors/extractor
+prefixes:
+    linkml: https://w3id.org/linkml/
+    schema_org: http://schema.org/
+    dublin_core: http://purl.org/dc/elements/1.1/
+imports:
+    - linkml:types
+default_range: string
+description: >-
+    This file describes the `Extractor` model created by the MaRDA extractors WG.
+
+
+classes:
+    Extractor:
+        description: >-
+            A code object or web service that when executed can read a file with specific file type, or a
+            set of files with a given structure, and extract or transform the scientific data
+            and/or metadata contained within the file.
+        close_mappings:
+            - schema_org:SoftwareApplication
+            - schema_org:ServiceChannel
+            - dublin_core:Software
+            - dublin_core:Service
+        attributes:
+            id:
+                identifier: true
+                slot_uri: schema_org:identifier
+                required: true
+                description: >-
+                    A unique identifier for the format within the MaRDA
+                    registry namespace, this should be a shorthand label rather than
+                    a UUID. Only lower-case alphanumeric and dash ("-") characters
+                    are permitted.
+                pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
+            name:
+                slot_uri: schema_org:name
+                required: true
+                description: >-
+                    A recognisable name for the extractor.
+            description:
+                slot_uri: schema_org:description
+                required: true
+                description: >-
+                    A human-readable outline of the extractor.
+            version:
+                slot_uri: dublin_core:version
+                required: true
+                description: >-
+                    A version tag for the registered extractor.
+            source_repository_url:
+                required: false
+                description: >-
+                    A URL or URI for a source code repository associated with this extractor.
+            documentation_url:
+                required: false
+                description: >-
+                    A URL or URI for any online documentation associated with this extractor.
+            usage_instructions:
+                required: false
+                description: >-
+                    Any MaRDA-specific usage instructions for this extractor.
+            subject:
+                slot_uri: dublin_core:subject
+                multivalued: true
+                description: >-
+                    Any keywords, phrases or classification codes that are relevant
+                    to the file type, e.g., particular scientific domains of applicability,
+                    or experimental techniques.
