@@ -39,7 +39,7 @@ jobs:
 
             - name: Run LinkML generators
               run: |
-                  for f in $(ls schemas/*.yml); do
+                  for f in $(ls schemas/*.y[a]ml); do
                     gen-pydantic -vvv --stacktrace $f
                   done
 

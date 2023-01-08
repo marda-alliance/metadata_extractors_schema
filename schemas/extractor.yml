@@ -7,6 +7,7 @@ prefixes:
     dublin_core: http://purl.org/dc/elements/1.1/
 imports:
     - linkml:types
+    - base
 default_range: string
 description: >-
     This file describes the `Extractor` model created by the MaRDA extractors WG.
@@ -25,27 +26,12 @@ classes:
             - schema_org:ServiceChannel
             - dublin_core:Software
             - dublin_core:Service
+        slots:
+            - id
+            - name
+            - description
+            - subject
         attributes:
-            id:
-                identifier: true
-                slot_uri: schema_org:identifier
-                required: true
-                description: >-
-                    A unique identifier for the format within the MaRDA
-                    registry namespace, this should be a shorthand label rather than
-                    a UUID. Only lower-case alphanumeric and dash ("-") characters
-                    are permitted.
-                pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
-            name:
-                slot_uri: schema_org:name
-                required: true
-                description: >-
-                    A recognisable name for the extractor.
-            description:
-                slot_uri: schema_org:description
-                required: true
-                description: >-
-                    A human-readable outline of the extractor.
             version:
                 slot_uri: dublin_core:version
                 required: true
@@ -65,10 +51,3 @@ classes:
                 required: false
                 description: >-
                     Any MaRDA-specific usage instructions for this extractor.
-            subject:
-                slot_uri: dublin_core:subject
-                multivalued: true
-                description: >-
-                    Any keywords, phrases or classification codes that are relevant
-                    to the file type, e.g., particular scientific domains of applicability,
-                    or experimental techniques.
