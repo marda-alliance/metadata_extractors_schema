@@ -17,10 +17,8 @@ classes:
     Extractor:
         description: >-
             A code object or web service that when executed can read a file with specific
-            file type, or a
-            set of files with a given structure, and extract or transform the scientific
-            data
-            and/or metadata contained within the file.
+            file type, or a set of files with a given structure, and extract or transform
+            the scientific data and/or metadata contained within the file.
         close_mappings:
             - schema_org:SoftwareApplication
             - schema_org:ServiceChannel
