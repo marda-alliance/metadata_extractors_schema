@@ -45,7 +45,11 @@ classes:
                 description: >-
                     A URL or URI for any online documentation associated with this
                     extractor.
-            usage_instructions:
+            usage:
                 required: false
                 description: >-
-                    Any MaRDA-specific usage instructions for this extractor.
+                    A command-line invocation of the parser, to be available after installation instructions have been followed.
+            instructions:
+                required: false
+                description: >-
+                    Any usage or installation instructions for this extractor.
