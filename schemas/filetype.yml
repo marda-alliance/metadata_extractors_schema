@@ -7,6 +7,7 @@ prefixes:
     dublin_core: http://purl.org/dc/elements/1.1/
 imports:
     - linkml:types
+    - base
 default_range: string
 description: >-
     This file describes the `FileType` model created by the MaRDA extractors WG.
@@ -22,28 +23,12 @@ classes:
             - schema_org:fileFormat
             - schema_org:encodingFormat
             - dublin_core:format
+        slots:
+            - id
+            - description
+            - name
+            - subject
         attributes:
-            id:
-                identifier: true
-                slot_uri: schema_org:identifier
-                required: true
-                description: >-
-                    A unique identifier for the format within the MaRDA
-                    registry namespace, this should be a shorthand label rather than
-                    a UUID. Only lower-case alphanumeric and dash ("-") characters
-                    are permitted.
-                pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
-            name:
-                slot_uri: schema_org:name
-                required: true
-                description: >-
-                    A recognisable name for the format.
-            description:
-                slot_uri: schema_org:description
-                required: true
-                description: >-
-                    A human-readable outline of the file type, its format,
-                    data content and uses.
             associated_vendors:
                 slot_uri: schema_org:vendor
                 multivalued: true
@@ -70,10 +55,3 @@ classes:
                 description: >-
                     If this is a subformat that follows a particular well-defined
                     standard, e.g., CIF, NeXus, then it can be listed here.
-            subject:
-                slot_uri: dublin_core:subject
-                multivalued: true
-                description: >-
-                    Any keywords, phrases or classification codes that are relevant
-                    to the file type, e.g., particular scientific domains of applicability,
-                    or experimental techniques.

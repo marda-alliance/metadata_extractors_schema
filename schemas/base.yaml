@@ -1,0 +1,43 @@
+---
+name: base
+id: https://www.marda-alliance.org/extractors/base
+prefixes:
+    linkml: https://w3id.org/linkml/
+    schema_org: http://schema.org/
+    dublin_core: http://purl.org/dc/elements/1.1/
+imports:
+    - linkml:types
+default_range: string
+description: >-
+    This file describes the generic slots used by models in the MaRDA extractors WG.
+
+
+slots:
+    id:
+        identifier: true
+        slot_uri: schema_org:identifier
+        required: true
+        description: >-
+            A unique identifier for the entry within the MaRDA
+            registry namespace, this should be a shorthand label rather than
+            a UUID. Only lower-case alphanumeric and dash ("-") characters
+            are permitted.
+        pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
+    name:
+        slot_uri: schema_org:name
+        required: true
+        description: >-
+            A recognisable name for the entry.
+    description:
+        slot_uri: schema_org:description
+        required: true
+        description: >-
+            A human-readable outline of the entry, its format,
+            data content and uses.
+    subject:
+        slot_uri: dublin_core:subject
+        multivalued: true
+        description: >-
+            Any keywords, phrases or classification codes that are relevant
+            to the entry, e.g., particular scientific domains of applicability,
+            or experimental techniques.

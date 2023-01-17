@@ -1,0 +1,56 @@
+---
+name: extractor
+id: https://www.marda-alliance.org/extractors/extractor
+prefixes:
+    linkml: https://w3id.org/linkml/
+    schema_org: http://schema.org/
+    dublin_core: http://purl.org/dc/elements/1.1/
+imports:
+    - linkml:types
+    - base
+default_range: string
+description: >-
+    This file describes the `Extractor` model created by the MaRDA extractors WG.
+
+
+classes:
+    Extractor:
+        description: >-
+            A code object or web service that when executed can read a file with specific
+            file type, or a set of files with a given structure, and extract or transform
+            the scientific data and/or metadata contained within the file.
+        close_mappings:
+            - schema_org:SoftwareApplication
+            - schema_org:ServiceChannel
+            - dublin_core:Software
+            - dublin_core:Service
+        slots:
+            - id
+            - name
+            - description
+            - subject
+        attributes:
+            version:
+                slot_uri: dublin_core:version
+                required: true
+                description: >-
+                    A version tag for the registered extractor.
+            source_repository_url:
+                required: false
+                description: >-
+                    A URL or URI for a source code repository associated with this
+                    extractor.
+            documentation_url:
+                required: false
+                description: >-
+                    A URL or URI for any online documentation associated with this
+                    extractor.
+            usage:
+                required: false
+                description: >-
+                    A command-line invocation of the parser, to be available after
+                    installation instructions have been followed.
+            instructions:
+                required: false
+                description: >-
+                    Any usage or installation instructions for this extractor.
