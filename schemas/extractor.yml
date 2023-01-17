@@ -48,7 +48,8 @@ classes:
             usage:
                 required: false
                 description: >-
-                    A command-line invocation of the parser, to be available after installation instructions have been followed.
+                    A command-line invocation of the parser, to be available after
+                    installation instructions have been followed.
             instructions:
                 required: false
                 description: >-
