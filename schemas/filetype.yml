@@ -53,7 +53,7 @@ classes:
             mimetypes:
                 multivalued: true
                 description: >-
-                    The mimetypes of the file-format or used `based_formats`. 
+                    The mimetypes of the file-format or used `based_formats`.
             associated_standards:
                 multivalued: true
                 description: >-
@@ -62,7 +62,8 @@ classes:
             file_names:
                 multivalued: true
                 description: >-
-                    Regular expressions that describe the typecal filenames that might be used
+                    Regular expressions that describe the typecal filenames that might
+                    be used
                     for this format. This could target file-extensions for example.
     TextFileType:
         is_a: FileType
@@ -70,23 +71,23 @@ classes:
             A specific file type that is based on ASCII text.
         attributes:
             contents:
-                description:
-                    A regular expression that allows to identify a file of this type,
-                    based on its full contents or partial content (e.g. a file header)
+                description: A regular expression that allows to identify a file of
+                    this type, based on its full contents or partial content (e.g.
+                    a file header)
     StructuredDataFileType:
         is_a: FileType
         description: >-
-            A specific file type based on a base format that support structured data object, such as JSON or HDF5.
+            A specific file type based on a base format that support structured data
+            object, such as JSON or HDF5.
         attributes:
             characteristic_keys:
-                description:
-                    A list of keys that are indicative for the top level object in data of this type.
+                description: A list of keys that are indicative for the top level
+                    object in data of this type.
             charactersistic_key_value_pairs:
-                description:
-                    A list of key value pairs that are indicative for the top level object in data of this type.
+                description: A list of key value pairs that are indicative for the
+                    top level object in data of this type.
             query:
-                description:
-                    A query written in a to be choosed language (e.g. xpath) to describe some expected contents of
-                    this type.
-     
-                    
+                description: A query written in a to be choosed language (e.g. xpath)
+                    to describe some expected contents of this type.
+
+
