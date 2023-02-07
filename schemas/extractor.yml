@@ -35,16 +35,22 @@ classes:
                 required: true
                 description: >-
                     A version tag for the registered extractor.
-            source_repository_url:
+            source_repository:
                 required: false
                 description: >-
                     A URL or URI for a source code repository associated with this
                     extractor.
-            documentation_url:
+            documentation:
                 required: false
                 description: >-
                     A URL or URI for any online documentation associated with this
                     extractor.
+            license:
+                required: false
+                slot_uri: dublin_core:license
+                description: >-
+                    A URL, URI or SPDX license identifier for a legal document giving
+                    official permission to do something with the resource.
             usage:
                 required: false
                 description: >-
