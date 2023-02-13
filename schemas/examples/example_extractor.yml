@@ -1,0 +1,41 @@
+---
+id: >-
+    example
+name: >-
+    Example Extractor
+description: >-
+    An example extractor entry, using all features from the schema.
+subject:
+    - electrochemistry
+    - voltammetry
+    - impedance spectropscopy
+    - potentiometry
+version: >-
+    v1.0.0
+citations:
+    - identifier: doi:10.1000/182
+      creators:
+          - S. Omeone
+          - A. Nother
+      contributors: A. Person
+      title: An example extractor paper
+      type: article
+    - identifier: https://github.com/example/extractor
+      creator:
+          - S. Omeone
+          - A. Nother
+      contributor: A. Person
+      title: Example extractor code repo
+      type: software
+source_repository_url: https://github.com/example/extractor
+documentation_url: https://example.github.io/extractor
+usage: >-
+    - cli:parse --type=example {{ file_path }}
+    - python:example.extrators.extract({{ file_path }}, type="example")
+    - python:example.extrators.extract.ExampleExtractor({{ file_path }}).parse()
+instructions: >-
+    Install the package into a Python 3.8+ environment with
+    `pip install example-extractor`. After activating the
+    environment, the `parse` entrypoint will be available at
+    the command-line, and functions can be directly invoked
+    from Python code.
