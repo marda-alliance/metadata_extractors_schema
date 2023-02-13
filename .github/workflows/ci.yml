@@ -46,3 +46,4 @@ jobs:
             - name: Validate examples
               run: |
                   linkml-validate schemas/examples/biologic_mpr.yml -s schemas/filetype.yml -C FileType
+                  linkml-validate schemas/examples/example_extractor.yml -s schemas/extractor.yml -C Extractor
