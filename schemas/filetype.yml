@@ -1,10 +1,10 @@
 ---
 name: filetype
+version: 0.1.0
 id: https://www.marda-alliance.org/extractors/filetype
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
-    dublin_core: http://purl.org/dc/elements/1.1/
 imports:
     - linkml:types
     - base
@@ -22,7 +22,6 @@ classes:
         close_mappings:
             - schema_org:fileFormat
             - schema_org:encodingFormat
-            - dublin_core:format
         slots:
             - id
             - description
