@@ -12,23 +12,10 @@ subject:
     - potentiometry
 version: >-
     v1.0.0
-citations:
-    - identifier: doi:10.1000/182
-      creators:
-          - S. Omeone
-          - A. Nother
-      contributors: A. Person
-      title: An example extractor paper
-      type: article
-    - identifier: https://github.com/example/extractor
-      creator:
-          - S. Omeone
-          - A. Nother
-      contributor: A. Person
-      title: Example extractor code repo
-      type: software
-source_repository_url: https://github.com/example/extractor
-documentation_url: https://example.github.io/extractor
+source_repository: >-
+    https://github.com/example/extractor
+documentation: >-
+    https://example.github.io/extractor
 usage: >-
     - cli:parse --type=example {{ file_path }}
     - python:example.extrators.extract({{ file_path }}, type="example")
@@ -39,3 +26,18 @@ instructions: >-
     environment, the `parse` entrypoint will be available at
     the command-line, and functions can be directly invoked
     from Python code.
+citations:
+    - title: An example extractor paper
+      uri: doi:10.1000/182
+      creators:
+          - S. Omeone
+          - A. Nother
+      contributors: A. Person
+      type: article
+    - title: Example extractor code repo
+      uri: https://github.com/example/extractor
+      creators:
+          - S. Omeone
+          - A. Nother
+      contributors: A. Person
+      type: software

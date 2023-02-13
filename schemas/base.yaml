@@ -16,9 +16,9 @@ description: >-
 classes:
     Citation:
         attributes:
-            identifier:
+            uri:
                 slot_uri: dc:identifier
-                required: true
+                required: false
                 description: >-
                     An unambiguous reference to the resource within a given context.
                     Recommended practice is to identify the resource by means of a
@@ -46,7 +46,7 @@ classes:
                 slot_uri: dc:type
                 description: >-
                     Any bibliographic resource type (e.g., article, dataset, software)
-                    enumerated iin the DCMI Type Vocabulary.
+                    enumerated in the DCMI Type Vocabulary.
 
 
 
