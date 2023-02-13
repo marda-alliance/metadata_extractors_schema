@@ -1,5 +1,6 @@
 ---
 name: extractor
+version: 0.1.0
 id: https://www.marda-alliance.org/extractors/extractor
 prefixes:
     linkml: https://w3id.org/linkml/
@@ -14,6 +15,7 @@ description: >-
 
 
 classes:
+
     Extractor:
         description: >-
             A code object or web service that when executed can read a file with specific
@@ -29,9 +31,10 @@ classes:
             - name
             - description
             - subject
+            - citations
         attributes:
             version:
-                slot_uri: dublin_core:version
+                slot_uri: schema_org:version
                 required: true
                 description: >-
                     A version tag for the registered extractor.
@@ -53,6 +56,7 @@ classes:
                     official permission to do something with the resource.
             usage:
                 required: false
+                multivalued: true
                 description: >-
                     A command-line invocation of the parser, to be available after
                     installation instructions have been followed.
