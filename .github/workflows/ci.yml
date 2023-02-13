@@ -36,14 +36,21 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install -U setuptools wheel
                   pip install -r requirements.txt
+                  pip freeze
 
             - name: Run LinkML generators
               run: |
-                  for f in $(ls schemas/*.yml) $(ls schemas/*.yaml); do
+                  for f in $(ls schemas/*); do
                     gen-pydantic -vvv --stacktrace $f
+                    gen-json-schema -vvv --stacktrace $f
                   done
 
             - name: Validate examples
               run: |
-                  linkml-validate schemas/examples/biologic_mpr.yml -s schemas/filetype.yml -C FileType
-                  linkml-validate schemas/examples/example_extractor.yml -s schemas/extractor.yml -C Extractor
+                  for f in $(ls examples/extractor/*.yml); do
+                    linkml-validate -s schemas/extractor.yml -C Extractor $f
+                  done
+
+                  for f in $(ls examples/filetype/*.yml); do
+                    linkml-validate -s schemas/filetype.yml -C FileType $f
+                  done
