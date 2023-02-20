@@ -33,34 +33,33 @@ classes:
             - subject
             - citations
         attributes:
+            supported_filetypes:
+                multivalued: true
+                pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
+                description: >-
+                    A list of MaRDA file type IDs that are supported by this extractor.
             version:
                 slot_uri: schema_org:version
-                required: true
                 description: >-
                     A version tag for the registered extractor.
             source_repository:
-                required: false
                 description: >-
                     A URL or URI for a source code repository associated with this
                     extractor.
             documentation:
-                required: false
                 description: >-
                     A URL or URI for any online documentation associated with this
                     extractor.
             license:
-                required: false
                 slot_uri: dublin_core:license
                 description: >-
                     A URL, URI or SPDX license identifier for a legal document giving
                     official permission to do something with the resource.
             usage:
-                required: false
                 multivalued: true
                 description: >-
                     A command-line invocation of the parser, to be available after
                     installation instructions have been followed.
             instructions:
-                required: false
                 description: >-
                     Any usage or installation instructions for this extractor.
