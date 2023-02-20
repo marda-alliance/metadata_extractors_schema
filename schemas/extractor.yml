@@ -17,11 +17,15 @@ description: >-
 classes:
 
     SupportedFileTypes:
-        description: >-
-            Container for links to the file types that this extractor supports.
-        slots:
-            - id
-            - description
+        attributes:
+            id:
+                description: >-
+                    Registered MarDA extractors ID for this file type.
+
+            description:
+                description: Free-text description of caveats or instructions specific
+                    to this file type.
+
 
     Extractor:
         description: >-
@@ -43,6 +47,8 @@ classes:
             supported_filetypes:
                 multivalued: true
                 range: SupportedFileTypes
+                description: >-
+                    Container for links to the file types that this extractor supports.
             version:
                 slot_uri: schema_org:version
                 description: >-
