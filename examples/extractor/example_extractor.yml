@@ -42,6 +42,6 @@ citations:
       contributors: A. Person
       type: software
 supported_filetypes:
-  - id: biologic-mpr
-    description: >-
-      Can parse biologic MPR provided its a full moon.
+    - id: biologic-mpr
+      description: >-
+          Can parse biologic MPR provided its a full moon.

@@ -17,11 +17,11 @@ description: >-
 classes:
 
     SupportedFileTypes:
-       description: >-
-         Container for links to the file types that this extractor supports.
-       slots:
-         - id
-         - description
+        description: >-
+            Container for links to the file types that this extractor supports.
+        slots:
+            - id
+            - description
 
     Extractor:
         description: >-
