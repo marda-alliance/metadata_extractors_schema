@@ -16,6 +16,13 @@ description: >-
 
 classes:
 
+    SupportedFileTypes:
+       description: >-
+         Container for links to the file types that this extractor supports.
+       slots:
+         - id
+         - description
+
     Extractor:
         description: >-
             A code object or web service that when executed can read a file with specific
@@ -35,9 +42,7 @@ classes:
         attributes:
             supported_filetypes:
                 multivalued: true
-                pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
-                description: >-
-                    A list of MaRDA file type IDs that are supported by this extractor.
+                range: SupportedFileTypes
             version:
                 slot_uri: schema_org:version
                 description: >-
