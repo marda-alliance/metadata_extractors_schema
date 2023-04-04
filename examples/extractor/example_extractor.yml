@@ -45,3 +45,5 @@ supported_filetypes:
     - id: biologic-mpr
       description: >-
           Can parse biologic MPR provided its a full moon.
+license:
+    spdx: MIT

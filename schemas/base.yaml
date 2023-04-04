@@ -47,6 +47,17 @@ classes:
                 description: >-
                     Any bibliographic resource type (e.g., article, dataset, software)
                     enumerated in the DCMI Type Vocabulary.
+    License:
+        attributes:
+            uri:
+                required: false
+                description: >-
+                    An unambiguous reference to the resource within a given context.
+            spdx:
+                required: false
+                description: >-
+                    An SPDX License Identifier entry.
+
 
 
 
@@ -87,3 +98,11 @@ slots:
         description: >-
             A citation or citations for the entry, to be provided should it be used
             in academic work (or otherwise).
+    license:
+        slot_uri: dublin_core:license
+        required: true
+        range: License
+        description: >-
+            A URL, URI or SPDX license identifier for a legal document giving
+            official permission to do something with the resource.
+            

@@ -43,6 +43,7 @@ classes:
             - description
             - subject
             - citations
+            - license
         attributes:
             supported_filetypes:
                 multivalued: true
@@ -62,12 +63,6 @@ classes:
                 description: >-
                     A URL or URI for any online documentation associated with this
                     extractor.
-            license:
-                slot_uri: dublin_core:license
-                required: true
-                description: >-
-                    A URL, URI or SPDX license identifier for a legal document giving
-                    official permission to do something with the resource.
             usage:
                 multivalued: true
                 description: >-
