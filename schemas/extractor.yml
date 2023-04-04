@@ -46,6 +46,7 @@ classes:
         attributes:
             supported_filetypes:
                 multivalued: true
+                required: true
                 range: SupportedFileTypes
                 description: >-
                     Container for links to the file types that this extractor supports.
@@ -63,6 +64,7 @@ classes:
                     extractor.
             license:
                 slot_uri: dublin_core:license
+                required: true
                 description: >-
                     A URL, URI or SPDX license identifier for a legal document giving
                     official permission to do something with the resource.
