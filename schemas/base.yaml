@@ -7,6 +7,7 @@ prefixes:
     schema_org: http://schema.org/
     dc: http://purl.org/dc/elements/1.1/
     dctypes: http://purl.org/dc/dcmitype/1.1
+    dublin_core: http://purl.org/dc/elements/1.1/
 imports:
     - linkml:types
 default_range: string
