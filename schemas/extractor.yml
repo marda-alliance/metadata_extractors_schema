@@ -32,7 +32,8 @@ classes:
             method:
                 required: true
                 description: >-
-                    Usage method. Currently usage via a command line executable (cli) or
+                    Usage method. Currently usage via a command line executable (cli)
+                    or
                     as a Python function (python) are supported.
                 permissible_values:
                     cli:
@@ -43,7 +44,8 @@ classes:
                     A machine-executable command by which the Extractor functionality
                     can be accessed. For method:cli, this is a parametrized executable
                     invocation which should be available after installing the Extractor.
-                    For method:python, this is a parametrized function invocation which
+                    For method:python, this is a parametrized function invocation
+                    which
                     should be available after installing and importing the Extractor.
 
 
