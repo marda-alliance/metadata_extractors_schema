@@ -1,0 +1,37 @@
+---
+id: >-
+    datatree
+name: >-
+    Datatree is a prototype implementation of a tree-like hierarchical 
+    data structure for xarray.
+description: >-
+    Extractor for netCDF files using xarray's Datasets.
+subject:
+    - data science
+version: >-
+    v0.0.12
+source_repository: >-
+    https://github.com/xarray-contrib/datatree
+documentation: >-
+    https://xarray-datatree.readthedocs.io/en/latest/
+usage:
+    - method: python
+      command: datatree.open_datatree({{ file_path }})
+installation:
+    - method: pip
+      command: pip install xarray-datatree==0.0.12
+instructions: >-
+    Install the xarray-datatree package into a Python 3.9+ environment with
+    `pip install xarray-datatree`. After importing, netCDF files can be read
+    as DataTrees using the 'datatree.open_datatree()' function.
+citations:
+    - title: Datatree documentation
+      uri: https://xarray-datatree.readthedocs.io/en/latest/
+      creators:
+          - T. Nicholas
+      contributors: A. Person
+      type: software
+supported_filetypes:
+    - id: netcdf
+      description: >-
+          Can load netCDF files into Datatree objects.

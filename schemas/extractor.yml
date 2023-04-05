@@ -45,6 +45,24 @@ classes:
                     Extractor.
 
 
+    Installation:
+        attributes:
+            method:
+                required: true
+                range: InstallationTypes
+                description: >-
+                    Extractor installation method, specifying the package manager to
+                    process the installation instructions with.
+            requirements:
+                description: >-
+                    The contents of an optional 'requirements.yml'-like file, which
+                    can be forwarded to the installation command using '$requirements'.
+            command:
+                required: true
+                description: >-
+                    A machine-executable command by which the Extractor can be installed
+                    using the 'method' specified above.
+
 
     Extractor:
         description: >-
@@ -87,17 +105,29 @@ classes:
                 inlined_as_list: true
                 range: Usage
                 description: >-
-                    A command-line or functional invocation of the Extractor, to be
-                    available after installation instructions have been followed.
+                    A machine-actionable description of the usage of the Extractor. The
+                    described usage pattern shall be available after the 'installation'
+                    instructions have been followed.
+            installation:
+                multivalued: true
+                inlined_as_list: true
+                range: Installation
+                description: >-
+                    A machine-actionable set of installation instructions to obtain a
+                    working set-up of the Extractor.
             instructions:
                 description: >-
-                    Any usage or installation instructions for this extractor.
+                    Any usage notes or installation instructions for this Extractor.
+                    This field is intended for human use only and is not intended to be 
+                    machine-actionable. Please use the 'installation' and 'usage'
+                    fields for that purpose.
 
 
 enums:
     UsageTypes:
         permissible_values:
             cli:
+<<<<<<< HEAD
                 description: >-
                     Acess the Extractor as a command line executable. The executable
                     as well as the invocation syntax, parametrised using arguments,
@@ -106,6 +136,28 @@ enums:
                 description: >-
                     Acess the Extractor as a Python function. The function should
                     be
+=======
+                description: >- 
+                    Access the Extractor as a command line executable. The executable
+                    as well as the invocation syntax, parametrised using arguments,
+                    shall be supplied in the 'command' slot.
+            python:
+                description: >- 
+                    Access the Extractor as a Python function. The function should be
+>>>>>>> 12354c9 (Add installation instructions & datatree example.)
                     available when 'import Extractor' is called, and should be specified
                     including relevant namespaces. The function signature, parametrised
                     using arguments, shall be supplied in the 'command' slot.
+
+
+    InstallationTypes:
+        permissible_values:
+            pip:
+                description: >- 
+                    Install the Extractor using 'pip'. The 'command' has to be a valid
+                    pip invocation, such as 'pip install yadg'. Usage of a requirements
+                    file can be specified as 'pip install -r $requirements'. Packages
+                    can also be installed using the git/https interface.
+            conda:
+                description: >- 
+                    Install the Extractor using 'conda'. Not yet implemented / supported.
