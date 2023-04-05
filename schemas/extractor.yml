@@ -127,16 +127,6 @@ enums:
     UsageTypes:
         permissible_values:
             cli:
-<<<<<<< HEAD
-                description: >-
-                    Acess the Extractor as a command line executable. The executable
-                    as well as the invocation syntax, parametrised using arguments,
-                    shall be supplied in the 'command' slot.
-            python:
-                description: >-
-                    Acess the Extractor as a Python function. The function should
-                    be
-=======
                 description: >-
                     Access the Extractor as a command line executable. The executable
                     as well as the invocation syntax, parametrised using arguments,
@@ -144,7 +134,6 @@ enums:
             python:
                 description: >-
                     Access the Extractor as a Python function. The function should be
->>>>>>> 12354c9 (Add installation instructions & datatree example.)
                     available when 'import Extractor' is called, and should be specified
                     including relevant namespaces. The function signature, parametrised
                     using arguments, shall be supplied in the 'command' slot.
