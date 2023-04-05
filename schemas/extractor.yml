@@ -51,7 +51,8 @@ classes:
                 required: true
                 range: InstallationTypes
                 description: >-
-                    Extractor installation method, specifying the package manager to
+                    Extractor installation method, specifying the package manager
+                    to
                     process the installation instructions with.
             requirements:
                 description: >-
@@ -105,7 +106,8 @@ classes:
                 inlined_as_list: true
                 range: Usage
                 description: >-
-                    A machine-actionable description of the usage of the Extractor. The
+                    A machine-actionable description of the usage of the Extractor.
+                    The
                     described usage pattern shall be available after the 'installation'
                     instructions have been followed.
             installation:
@@ -113,12 +115,14 @@ classes:
                 inlined_as_list: true
                 range: Installation
                 description: >-
-                    A machine-actionable set of installation instructions to obtain a
+                    A machine-actionable set of installation instructions to obtain
+                    a
                     working set-up of the Extractor.
             instructions:
                 description: >-
                     Any usage notes or installation instructions for this Extractor.
-                    This field is intended for human use only and is not intended to be
+                    This field is intended for human use only and is not intended
+                    to be
                     machine-actionable. Please use the 'installation' and 'usage'
                     fields for that purpose.
 
@@ -133,7 +137,8 @@ enums:
                     shall be supplied in the 'command' slot.
             python:
                 description: >-
-                    Access the Extractor as a Python function. The function should be
+                    Access the Extractor as a Python function. The function should
+                    be
                     available when 'import Extractor' is called, and should be specified
                     including relevant namespaces. The function signature, parametrised
                     using arguments, shall be supplied in the 'command' slot.
