@@ -31,11 +31,9 @@ classes:
         attributes:
             method:
                 required: true
+                range: UsageTypes
                 description: >-
-                    Usage method. Currently usage via a command line executable (cli)
-                    or
-                    as a Python function (python) are supported.
-                range: UsageEnum
+                    Usage invocation method, e.g. from a command line or from Python.
             command:
                 required: true
                 description: >-
@@ -43,8 +41,8 @@ classes:
                     can be accessed. For method:cli, this is a parametrized executable
                     invocation which should be available after installing the Extractor.
                     For method:python, this is a parametrized function invocation
-                    which
-                    should be available after installing and importing the Extractor.
+                    which should be available after installing and importing the
+                    Extractor.
 
 
 
@@ -86,6 +84,7 @@ classes:
                     extractor.
             usage:
                 multivalued: true
+                inlined_as_list: true
                 range: Usage
                 description: >-
                     A command-line or functional invocation of the Extractor, to be
@@ -96,7 +95,16 @@ classes:
 
 
 enums:
-    UsageEnum:
+    UsageTypes:
         permissible_values:
             cli:
+                description: >- 
+                    Acess the Extractor as a command line executable. The executable
+                    as well as the invocation syntax, parametrised using arguments,
+                    shall be supplied in the 'command' slot.
             python:
+                description: >- 
+                    Acess the Extractor as a Python function. The function should be
+                    available when 'import Extractor' is called, and should be specified
+                    including relevant namespaces. The function signature, parametrised
+                    using arguments, shall be supplied in the 'command' slot.
