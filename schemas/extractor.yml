@@ -35,9 +35,8 @@ classes:
                     Usage method. Currently usage via a command line executable (cli)
                     or
                     as a Python function (python) are supported.
-                permissible_values:
-                    cli:
-                    python:
+                range:
+                    UsageEnum
             command:
                 required: true
                 description: >-
@@ -95,3 +94,10 @@ classes:
             instructions:
                 description: >-
                     Any usage or installation instructions for this extractor.
+
+
+enums:
+    UsageEnum:
+        permissible_values:
+            cli:
+            python:
