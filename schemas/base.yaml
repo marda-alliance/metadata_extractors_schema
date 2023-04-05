@@ -5,8 +5,8 @@ id: https://www.marda-alliance.org/extractors/base
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
-    dcmi_terms: http://purl.org/dc/dcmitype/1.1
-    dublin_core: http://purl.org/dc/elements/1.1/
+    dcmitype: http://purl.org/dc/dcmitype/1.1
+    dc_terms: http://purl.org/dc/terms/1.1/
 imports:
     - linkml:types
 default_range: string
@@ -17,7 +17,7 @@ classes:
     Citation:
         attributes:
             uri:
-                slot_uri: dublin_core:identifier
+                slot_uri: dc_terms:identifier
                 required: false
                 description: >-
                     An unambiguous reference to the resource within a given context.
@@ -27,23 +27,23 @@ classes:
                     (DOI), and Uniform Resource Name (URN). Persistent identifiers
                     should be provided as HTTP URIs [from DC].
             creators:
-                slot_uri: dublin_core:creator
+                slot_uri: dc_terms:creator
                 multivalued: true
                 description: >-
                     A list of the creators of the resource.
             contributors:
-                slot_uri: dublin_core:contributor
+                slot_uri: dc_terms:contributor
                 multivalued: true
                 description: >-
                     A list of the contributors to the resource.
             title:
                 required: false
-                slot_uri: dublin_core:title
+                slot_uri: dc_terms:title
                 description: >-
                     A name given to the resource [from DC].
             type:
                 required: false
-                slot_uri: dublin_core:type
+                slot_uri: dc_terms:type
                 description: >-
                     Any bibliographic resource type (e.g., article, dataset, software)
                     enumerated in the DCMI Type Vocabulary.
@@ -84,14 +84,14 @@ slots:
             A human-readable outline of the entry, its format,
             data content and uses.
     subject:
-        slot_uri: dublin_core:subject
+        slot_uri: dc_terms:subject
         multivalued: true
         description: >-
             Any keywords, phrases or classification codes that are relevant
             to the entry, e.g., particular scientific domains of applicability,
             or experimental techniques.
     citations:
-        slot_uri: dcmi_types:BibliographicReference
+        slot_uri: dcmitype:BibliographicReference
         multivalued: true
         required: false
         range: Citation
@@ -99,7 +99,7 @@ slots:
             A citation or citations for the entry, to be provided should it be used
             in academic work (or otherwise).
     license:
-        slot_uri: dublin_core:license
+        slot_uri: dc_terms:license
         required: true
         range: License
         description: >-

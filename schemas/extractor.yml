@@ -5,7 +5,7 @@ id: https://www.marda-alliance.org/extractors/extractor
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
-    dublin_core: http://purl.org/dc/elements/1.1/
+    dcmitype: http://purl.org/dc/dcmitype/1.1
 imports:
     - linkml:types
     - base
@@ -35,8 +35,8 @@ classes:
         close_mappings:
             - schema_org:SoftwareApplication
             - schema_org:ServiceChannel
-            - dublin_core:Software
-            - dublin_core:Service
+            - dcmitype:Software
+            - dcmitype:Service
         slots:
             - id
             - name
