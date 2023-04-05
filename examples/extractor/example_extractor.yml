@@ -16,10 +16,13 @@ source_repository: >-
     https://github.com/example/extractor
 documentation: >-
     https://example.github.io/extractor
-usage: >-
-    - cli:parse --type=example {{ file_path }}
-    - python:example.extrators.extract({{ file_path }}, type="example")
-    - python:example.extrators.extract.ExampleExtractor({{ file_path }}).parse()
+usage:
+    - method: cli
+      command: parse --type=example {{ file_path }}
+    - method: python
+      command: example.extrators.extract({{ file_path }}, type="example")
+    - method: python
+      command: example.extrators.extract.ExampleExtractor({{ file_path }}).parse()
 instructions: >-
     Install the package into a Python 3.8+ environment with
     `pip install example-extractor`. After activating the
