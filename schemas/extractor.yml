@@ -35,8 +35,7 @@ classes:
                     Usage method. Currently usage via a command line executable (cli)
                     or
                     as a Python function (python) are supported.
-                range:
-                    UsageEnum
+                range: UsageEnum
             command:
                 required: true
                 description: >-
