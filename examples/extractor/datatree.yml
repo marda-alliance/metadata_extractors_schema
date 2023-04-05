@@ -2,7 +2,7 @@
 id: >-
     datatree
 name: >-
-    Datatree is a prototype implementation of a tree-like hierarchical 
+    Datatree is a prototype implementation of a tree-like hierarchical
     data structure for xarray.
 description: >-
     Extractor for netCDF files using xarray's Datasets.

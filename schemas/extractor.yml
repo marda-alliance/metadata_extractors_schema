@@ -118,7 +118,7 @@ classes:
             instructions:
                 description: >-
                     Any usage notes or installation instructions for this Extractor.
-                    This field is intended for human use only and is not intended to be 
+                    This field is intended for human use only and is not intended to be
                     machine-actionable. Please use the 'installation' and 'usage'
                     fields for that purpose.
 
@@ -137,12 +137,12 @@ enums:
                     Acess the Extractor as a Python function. The function should
                     be
 =======
-                description: >- 
+                description: >-
                     Access the Extractor as a command line executable. The executable
                     as well as the invocation syntax, parametrised using arguments,
                     shall be supplied in the 'command' slot.
             python:
-                description: >- 
+                description: >-
                     Access the Extractor as a Python function. The function should be
 >>>>>>> 12354c9 (Add installation instructions & datatree example.)
                     available when 'import Extractor' is called, and should be specified
@@ -153,11 +153,11 @@ enums:
     InstallationTypes:
         permissible_values:
             pip:
-                description: >- 
+                description: >-
                     Install the Extractor using 'pip'. The 'command' has to be a valid
                     pip invocation, such as 'pip install yadg'. Usage of a requirements
                     file can be specified as 'pip install -r $requirements'. Packages
                     can also be installed using the git/https interface.
             conda:
-                description: >- 
+                description: >-
                     Install the Extractor using 'conda'. Not yet implemented / supported.
