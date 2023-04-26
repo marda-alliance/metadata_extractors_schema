@@ -56,7 +56,7 @@ classes:
                     process the installation instructions with.
             requirements:
                 description: >-
-                    The contents of an optional 'requirements.yml'-like file, which
+                    The contents of an optional 'requirements.txt'-like file, which
                     can be forwarded to the installation command using '$requirements'.
             command:
                 required: true
