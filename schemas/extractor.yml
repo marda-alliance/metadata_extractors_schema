@@ -5,7 +5,7 @@ id: https://www.marda-alliance.org/extractors/extractor
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
-    dublin_core: http://purl.org/dc/elements/1.1/
+    dcmitype: http://purl.org/dc/dcmitype/1.1
 imports:
     - linkml:types
     - base
@@ -35,17 +35,19 @@ classes:
         close_mappings:
             - schema_org:SoftwareApplication
             - schema_org:ServiceChannel
-            - dublin_core:Software
-            - dublin_core:Service
+            - dcmitype:Software
+            - dcmitype:Service
         slots:
             - id
             - name
             - description
             - subject
             - citations
+            - license
         attributes:
             supported_filetypes:
                 multivalued: true
+                required: true
                 range: SupportedFileTypes
                 description: >-
                     Container for links to the file types that this extractor supports.
@@ -61,11 +63,6 @@ classes:
                 description: >-
                     A URL or URI for any online documentation associated with this
                     extractor.
-            license:
-                slot_uri: dublin_core:license
-                description: >-
-                    A URL, URI or SPDX license identifier for a legal document giving
-                    official permission to do something with the resource.
             usage:
                 multivalued: true
                 description: >-
