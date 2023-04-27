@@ -19,7 +19,7 @@ usage:
       command: datatree.open_datatree({{ file_path }})
 installation:
     - method: pip
-      command: pip install xarray-datatree==0.0.12
+      packages: xarray-datatree==0.0.12
 instructions: >-
     Install the xarray-datatree package into a Python 3.9+ environment with
     `pip install xarray-datatree`. After importing, netCDF files can be read

@@ -20,9 +20,24 @@ usage:
     - method: cli
       command: parse --type=example {{ file_path }}
     - method: python
-      command: example.extractors.extract({{ file_path }}, type="example")
+      setup: example.extractors
+      command: extractors.extract({{ file_path }}, type="example")
     - method: python
       command: example.extractors.extract.ExampleExtractor({{ file_path }}).parse()
+installation:
+    - method: conda
+      requirements: >-
+        dependencies:
+          - python=3.4
+          - numpy
+          - toolz
+          - matplotlib
+          - dill
+          - pandas
+          - partd
+          - bokeh
+          - pip:
+            - git+https://github.com/blaze/dask.git#egg=dask[complete]
 instructions: >-
     Install the package into a Python 3.8+ environment with
     `pip install example-extractor`. After activating the

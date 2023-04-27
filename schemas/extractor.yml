@@ -34,35 +34,40 @@ classes:
                 range: UsageTypes
                 description: >-
                     Usage invocation method, e.g. from a command line or from Python.
+            setup:
+                description: >-
+                    Any necessary setup step for the 'command' to become available:
+                      - for 'method=python', this is an argument to python's 'import'
             command:
                 required: true
                 description: >-
                     A machine-executable command by which the Extractor functionality
-                    can be accessed. For method:cli, this is a parametrized executable
-                    invocation which should be available after installing the Extractor.
-                    For method:python, this is a parametrized function invocation
-                    which should be available after installing and importing the
-                    Extractor.
+                    can be accessed:
+                      - for 'method=cli' a parametrized executable invocation which
+                        should be available after installing the Extractor;
+                      - for 'method=python' a parametrized function invocation which
+                        should eb available after installing and setting up the Extractor.
 
 
     Installation:
         attributes:
             method:
                 required: true
-                range: InstallationTypes
+                range: InstallerTypes
                 description: >-
-                    Extractor installation method, specifying the package manager
-                    to
-                    process the installation instructions with.
+                    Extractor installer, specifying the package manager to process
+                    the installation instructions with.
             requirements:
                 description: >-
-                    The contents of an optional 'requirements.txt'-like file, which
-                    can be forwarded to the installation command using '$requirements'.
-            command:
-                required: true
+                    Contents of a 'requirements.txt'-like file. Will be installed by the
+                    selected Installer using an appropriate method, e.g. 'pip install
+                    -r requirements.txt' for pip, or 'conda env create -f requirements.txt'
+                    for conda.
+            packages:
+                multivalued: true
                 description: >-
-                    A machine-executable command by which the Extractor can be installed
-                    using the 'method' specified above.
+                    A list of packages, including versioned packages or git+https://
+                    targets, to be installed using the Installer.
 
 
     Extractor:
@@ -107,24 +112,21 @@ classes:
                 range: Usage
                 description: >-
                     A machine-actionable description of the usage of the Extractor.
-                    The
-                    described usage pattern shall be available after the 'installation'
-                    instructions have been followed.
+                    The described usage pattern shall be available after the
+                    'installation' instructions have been followed.
             installation:
                 multivalued: true
                 inlined_as_list: true
                 range: Installation
                 description: >-
                     A machine-actionable set of installation instructions to obtain
-                    a
-                    working set-up of the Extractor.
+                    a working set-up of the Extractor.
             instructions:
                 description: >-
                     Any usage notes or installation instructions for this Extractor.
                     This field is intended for human use only and is not intended
-                    to be
-                    machine-actionable. Please use the 'installation' and 'usage'
-                    fields for that purpose.
+                    to be machine-actionable. Please use the 'installation' and
+                    'usage' fields for that purpose.
 
 
 enums:
@@ -143,8 +145,7 @@ enums:
                     including relevant namespaces. The function signature, parametrised
                     using arguments, shall be supplied in the 'command' slot.
 
-
-    InstallationTypes:
+    InstallerTypes:
         permissible_values:
             pip:
                 description: >-
