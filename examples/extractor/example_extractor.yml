@@ -64,4 +64,4 @@ supported_filetypes:
       description: >-
           Can parse biologic MPR provided its a full moon.
 license:
-    spdx: MIT
+    uri: https://example.com

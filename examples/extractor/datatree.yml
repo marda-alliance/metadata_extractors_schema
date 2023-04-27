@@ -35,3 +35,5 @@ supported_filetypes:
     - id: netcdf
       description: >-
           Can load netCDF files into Datatree objects.
+license:
+    spdx: Apache-2.0
