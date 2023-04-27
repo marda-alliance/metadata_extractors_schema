@@ -141,19 +141,17 @@ enums:
             python:
                 description: >-
                     Access the Extractor as a Python function. The function should
-                    be
-                    available when 'import Extractor' is called, and should be specified
-                    including relevant namespaces. The function signature, parametrised
-                    using arguments, shall be supplied in the 'command' slot.
+                    be available when 'import Extractor' is called, and should be
+                    specified including relevant namespaces. The function signature,
+                    parametrised using arguments, shall be supplied in the 'command'
+                    slot.
 
     InstallerTypes:
         permissible_values:
             pip:
                 description: >-
-                    Install the Extractor using 'pip'. The 'command' has to be a valid
-                    pip invocation, such as 'pip install yadg'. Usage of a requirements
-                    file can be specified as 'pip install -r $requirements'. Packages
-                    can also be installed using the git/https interface.
+                    Install the Extractor using 'pip'. Will process 'packages' using
+                    'pip install' and 'requirements' using 'pip install -r'.
             conda:
                 description: >-
                     Install the Extractor using 'conda'. Not yet implemented / supported.
