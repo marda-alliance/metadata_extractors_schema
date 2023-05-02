@@ -114,6 +114,15 @@ classes:
                     A machine-actionable description of the usage of the Extractor.
                     The described usage pattern shall be available after the
                     `installation` instructions have been followed.
+                examples:
+                    - value:
+                          method: cli
+                          command: parse --type=example {{ file_path }}
+                    - value:
+                          method: python
+                          setup: example.extractors
+                          command: example.extractors.extract({{ file_path }}, type="example")
+
             installation:
                 multivalued: true
                 inlined_as_list: true
@@ -121,6 +130,17 @@ classes:
                 description: >-
                     A machine-actionable set of installation instructions to obtain
                     a working set-up of the Extractor.
+                examples:
+                    - value:
+                          method: pip
+                          packages: my-pypi-package==1.0.0
+                    - value:
+                          method: conda
+                          requirements: >-
+                              dependencies:
+                                - python=3.10
+                                - numpy
+
             instructions:
                 description: >-
                     Any usage notes or installation instructions for this Extractor.
