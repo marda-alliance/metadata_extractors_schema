@@ -37,16 +37,16 @@ classes:
             setup:
                 description: >-
                     Any necessary setup step for the 'command' to become available:
-                      - for 'method=python', this is an argument to python's 'import'
+                      - for `method: python`, this is an argument to Python's `import`
             command:
                 required: true
                 description: >-
                     A machine-executable command by which the Extractor functionality
                     can be accessed:
-                      - for 'method=cli' a parametrized executable invocation which
+                      - for `method: cli` a parametrized executable invocation which
                         should be available after installing the Extractor;
-                      - for 'method=python' a parametrized function invocation which
-                        should eb available after installing and setting up the Extractor.
+                      - for `method: python` a parametrized function invocation which
+                        should be available after installing and setting up the Extractor.
 
 
     Installation:
@@ -60,14 +60,13 @@ classes:
             requirements:
                 description: >-
                     Contents of a 'requirements.txt'-like file. Will be installed
-                    by the
-                    selected Installer using an appropriate method, e.g. 'pip install
-                    -r requirements.txt' for pip, or 'conda env create -f requirements.txt'
-                    for conda.
+                    by the selected Installer using an appropriate method, e.g.,
+                    `pip install -r requirements.txt` for pip, or 
+                    `conda env create -f requirements.txt` for conda.
             packages:
                 multivalued: true
                 description: >-
-                    A list of packages, including versioned packages or git+https://
+                    A list of packages, including versioned packages or `git+https://`
                     targets, to be installed using the Installer.
 
 
@@ -114,7 +113,7 @@ classes:
                 description: >-
                     A machine-actionable description of the usage of the Extractor.
                     The described usage pattern shall be available after the
-                    'installation' instructions have been followed.
+                    `installation` instructions have been followed.
             installation:
                 multivalued: true
                 inlined_as_list: true
@@ -126,8 +125,8 @@ classes:
                 description: >-
                     Any usage notes or installation instructions for this Extractor.
                     This field is intended for human use only and is not intended
-                    to be machine-actionable. Please use the 'installation' and
-                    'usage' fields for that purpose.
+                    to be machine-actionable. Please use the `installation` and
+                    `usage` fields for that purpose.
 
 
 enums:
@@ -137,7 +136,7 @@ enums:
                 description: >-
                     Access the Extractor as a command line executable. The executable
                     as well as the invocation syntax, parametrised using arguments,
-                    shall be supplied in the 'command' slot.
+                    shall be supplied in the `command` slot.
             python:
                 description: >-
                     Access the Extractor as a Python function. The function should
@@ -150,8 +149,8 @@ enums:
         permissible_values:
             pip:
                 description: >-
-                    Install the Extractor using 'pip'. Will process 'packages' using
-                    'pip install' and 'requirements' using 'pip install -r'.
+                    Install the Extractor using 'pip'. Will process `packages` using
+                    `pip install` and `requirements` using `pip install -r`.
             conda:
                 description: >-
                     Install the Extractor using 'conda'. Not yet implemented / supported.
