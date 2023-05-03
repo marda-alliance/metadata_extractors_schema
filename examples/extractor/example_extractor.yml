@@ -21,7 +21,7 @@ usage:
       command: parse --type=example {{ file_path }}
     - method: python
       setup: example.extractors
-      command: extractors.extract({{ file_path }}, type="example")
+      command: example.extractors.extract({{ file_path }}, type="example")
     - method: python
       command: example.extractors.extract.ExampleExtractor({{ file_path }}).parse()
 installation:
