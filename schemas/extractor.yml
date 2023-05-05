@@ -27,6 +27,60 @@ classes:
                     to this file type.
 
 
+    Usage:
+        attributes:
+            method:
+                required: true
+                range: UsageTypes
+                description: >-
+                    Usage invocation method, e.g. from a command line or from Python.
+            setup:
+                description: >-
+                    Any necessary setup step for the 'command' to become available:
+                      - for `method: python`, this is an argument to Python's `import`
+            command:
+                required: true
+                description: >-
+                    A machine-executable command by which the Extractor functionality
+                    can be accessed:
+                      - for `method: cli` a parametrized executable invocation which
+                        should be available after installing the Extractor;
+                      - for `method: python` a parametrized function invocation which
+                        should be available after installing and setting up the Extractor.
+
+                    The following templated parameters can be requested from the user,
+                    using the `{{}}` syntax:
+                      - `{{ input_path }}`: the location of the resource (e.g., file,
+                    or directory) on disk to parse (REQUIRED).
+                      - `{{ input_type }}`: the registry ID of the file type to parse
+                    (OPTIONAL).
+                      - `{{ output_path }}`: the location of the output to write to
+                    disk with the results of the extraction, if successful (OPTIONAL).
+                      - `{{ output_type }}`: the registry ID of the file type to write
+                    to disk (OPTIONAL).
+
+
+    Installation:
+        attributes:
+            method:
+                required: true
+                range: InstallerTypes
+                description: >-
+                    Extractor installer, specifying the package manager to process
+                    the installation instructions with.
+            requirements:
+                description: >-
+                    Contents of a 'requirements.txt'-like file. Will be installed
+                    by the selected Installer using an appropriate method, e.g.,
+                    `pip install -r requirements.txt` for pip, or
+                    `conda env create -f requirements.txt` for conda.
+            packages:
+                multivalued: true
+                description: >-
+                    A list of packages, including versioned packages or `git+https://`
+                    targets, to be installed using the Installer.
+
+
     Extractor:
         description: >-
             A code object or web service that when executed can read a file with specific
@@ -50,7 +104,25 @@ classes:
                 required: true
                 range: SupportedFileTypes
                 description: >-
-                    Container for links to the file types that this extractor supports.
+                    Container for links to the file types that this extractor supports,
+                    matching the registry file types. The ID values can be passed
+                    to an extractor with the `{{ input_type }}` parameter in `usage->command`.
+
+            supported_output_filetypes:
+                multivalued: true
+                required: false
+                range: SupportedFileTypes
+                description: >-
+                    Container for enumerating the possible output formats of this
+                    extractor. These should match registry entries and can be
+                    specified on extractor execution using the `{{ output_type }}`
+                    parameter in `usage->command`. If provided in the schema, when
+                    a user passes the `{{ output_type }}`, a resource of
+                    that type is expected to be found at the corresponding `{{ output_path
+                    }}` (or its default value, if missing).
+
+
+
             version:
                 slot_uri: schema_org:version
                 description: >-
@@ -65,9 +137,69 @@ classes:
                     extractor.
             usage:
                 multivalued: true
+                inlined_as_list: true
+                range: Usage
                 description: >-
-                    A command-line invocation of the parser, to be available after
-                    installation instructions have been followed.
+                    A machine-actionable description of the usage of the Extractor.
+                    The described usage pattern shall be available after the
+                    `installation` instructions have been followed.
+                examples:
+                    - value:
+                          method: cli
+                          command: parse --type=example {{ file_path }}
+                    - value:
+                          method: python
+                          setup: example.extractors
+                          command: example.extractors.extract({{ file_path }}, type="example")
+
+            installation:
+                multivalued: true
+                inlined_as_list: true
+                range: Installation
+                description: >-
+                    A machine-actionable set of installation instructions to obtain
+                    a working set-up of the Extractor.
+                examples:
+                    - value:
+                          method: pip
+                          packages: my-pypi-package==1.0.0
+                    - value:
+                          method: conda
+                          requirements: >-
+                              dependencies:
+                                - python=3.10
+                                - numpy
+
             instructions:
                 description: >-
-                    Any usage or installation instructions for this extractor.
+                    Any usage notes or installation instructions for this Extractor.
+                    This field is intended for human use only and is not intended
+                    to be machine-actionable. Please use the `installation` and
+                    `usage` fields for that purpose.
+
+
+enums:
+    UsageTypes:
+        permissible_values:
+            cli:
+                description: >-
+                    Access the Extractor as a command line executable. The executable
+                    as well as the invocation syntax, parametrised using arguments,
+                    shall be supplied in the `command` slot.
+            python:
+                description: >-
+                    Access the Extractor as a Python function. The function should
+                    be available when `import <setup>` is called, and should be
+                    specified including relevant namespaces. The function signature,
+                    parametrised using arguments, shall be supplied in the `command`
+                    slot.
+
+    InstallerTypes:
+        permissible_values:
+            pip:
+                description: >-
+                    Install the Extractor using 'pip'. Will process `packages` using
+                    `pip install` and `requirements` using `pip install -r`.
+            conda:
+                description: >-
+                    Install the Extractor using 'conda'. Not yet implemented / supported.
