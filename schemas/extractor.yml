@@ -106,7 +106,7 @@ classes:
                 description: >-
                     Container for links to the file types that this extractor supports,
                     matching the registry file types. The ID values can be passed
-                    to an extractor with the `{{ intput_type }}` parameter in `usage->command`.
+                    to an extractor with the `{{ input_type }}` parameter in `usage->command`.
 
             supported_output_filetypes:
                 multivalued: true
