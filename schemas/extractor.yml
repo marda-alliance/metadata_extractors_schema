@@ -49,7 +49,7 @@ classes:
                         should be available after installing and setting up the Extractor.
 
                     The following templated parameters can be requested from the user,
-                    using the `{{}}`` syntax:
+                    using the `{{}}` syntax:
                       - `{{ input_path }}`: the location of the resource (e.g., file,
                     or directory) on disk to parse (REQUIRED).
                       - `{{ input_type }}`: the registry ID of the file type to parse
