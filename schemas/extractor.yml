@@ -104,7 +104,25 @@ classes:
                 required: true
                 range: SupportedFileTypes
                 description: >-
-                    Container for links to the file types that this extractor supports.
+                    Container for links to the file types that this extractor supports,
+                    matching the registry file types. The ID values can be passed
+                    to an extractor with the `{{ intput_type }}` parameter in `usage->command`.
+
+            supported_output_filetypes:
+                multivalued: true
+                required: false
+                range: SupportedFileTypes
+                description: >-
+                    Countainer for enumerating the possible output formats of this
+                    extractor. These should match registry entries and can be
+                    specified on extractor execution using the `{{ output_type }}`
+                    parameter in `usage->command`. If provided in the schema, when
+                    a user passes the `{{ output_type }}`, a resource of
+                    that type is expected to be found at the corresponding `{{ output_path
+                    }}` (or its default value, if missing).
+
+
+
             version:
                 slot_uri: schema_org:version
                 description: >-
