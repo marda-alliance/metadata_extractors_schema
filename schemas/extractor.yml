@@ -47,6 +47,12 @@ classes:
                         should be available after installing the Extractor;
                       - for `method: python` a parametrized function invocation which
                         should be available after installing and setting up the Extractor.
+                        
+                    The following templated parameters can be requested from the user, using the `{{}}`` syntax:
+                      - `{{ input_path }}`: the location of the resource (e.g., file, or directory) on disk to parse (REQUIRED).
+                      - `{{ input_type }}`: the registry ID of the file type to parse (OPTIONAL).
+                      - `{{ output_path }}`: the location of the output to write to disk with the results of the extraction, if successful (OPTIONAL).
+                      - `{{ output_type }}`: the registry ID of the file type to write to disk (OPTIONAL).
 
 
     Installation:
@@ -160,9 +166,9 @@ enums:
             python:
                 description: >-
                     Access the Extractor as a Python function. The function should
-                    be available when 'import Extractor' is called, and should be
+                    be available when `import <setup>` is called, and should be
                     specified including relevant namespaces. The function signature,
-                    parametrised using arguments, shall be supplied in the 'command'
+                    parametrised using arguments, shall be supplied in the `command`
                     slot.
 
     InstallerTypes:
