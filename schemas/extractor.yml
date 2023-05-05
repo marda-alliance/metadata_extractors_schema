@@ -113,7 +113,7 @@ classes:
                 required: false
                 range: SupportedFileTypes
                 description: >-
-                    Countainer for enumerating the possible output formats of this
+                    Container for enumerating the possible output formats of this
                     extractor. These should match registry entries and can be
                     specified on extractor execution using the `{{ output_type }}`
                     parameter in `usage->command`. If provided in the schema, when
