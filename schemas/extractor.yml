@@ -47,12 +47,17 @@ classes:
                         should be available after installing the Extractor;
                       - for `method: python` a parametrized function invocation which
                         should be available after installing and setting up the Extractor.
-                        
-                    The following templated parameters can be requested from the user, using the `{{}}`` syntax:
-                      - `{{ input_path }}`: the location of the resource (e.g., file, or directory) on disk to parse (REQUIRED).
-                      - `{{ input_type }}`: the registry ID of the file type to parse (OPTIONAL).
-                      - `{{ output_path }}`: the location of the output to write to disk with the results of the extraction, if successful (OPTIONAL).
-                      - `{{ output_type }}`: the registry ID of the file type to write to disk (OPTIONAL).
+
+                    The following templated parameters can be requested from the user,
+                    using the `{{}}`` syntax:
+                      - `{{ input_path }}`: the location of the resource (e.g., file,
+                    or directory) on disk to parse (REQUIRED).
+                      - `{{ input_type }}`: the registry ID of the file type to parse
+                    (OPTIONAL).
+                      - `{{ output_path }}`: the location of the output to write to
+                    disk with the results of the extraction, if successful (OPTIONAL).
+                      - `{{ output_type }}`: the registry ID of the file type to write
+                    to disk (OPTIONAL).
 
 
     Installation:
