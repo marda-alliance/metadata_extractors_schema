@@ -146,11 +146,11 @@ classes:
                 examples:
                     - value:
                           method: cli
-                          command: parse --type=example {{ file_path }}
+                          command: parse --type=example {{ input_path }}
                     - value:
                           method: python
                           setup: example.extractors
-                          command: example.extractors.extract({{ file_path }}, type="example")
+                          command: example.extractors.extract({{ input_path }}, type="example")
 
             installation:
                 multivalued: true
