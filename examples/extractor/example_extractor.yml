@@ -37,7 +37,7 @@ installation:
               - git+https://github.com/example/extractor.git#egg=example[all]
     - method: pip
       packages:
-        - example-extractor
+          - example-extractor
 instructions: >-
     Install the package into a Python 3.4 environment with
     `pip install example-extractor`. After activating the
