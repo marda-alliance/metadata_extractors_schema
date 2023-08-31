@@ -1,0 +1,19 @@
+---
+id: >-
+    example-filetype
+name: >-
+    Example Filetype
+description: >-
+    A binary data file with a random description. Can be multilined. It is just an
+    example.
+associated_vendors:
+    - Example Vendor
+subject:
+    - science
+    - engineering
+associated_instruments:
+    - Example Machine
+    - Bunch of Junk
+associated_software:
+    - Example Software
+    - Bitrot Software

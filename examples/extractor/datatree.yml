@@ -8,18 +8,18 @@ description: >-
     Extractor for netCDF files using xarray's Datasets.
 subject:
     - data science
-version: >-
-    v0.0.12
 source_repository: >-
     https://github.com/xarray-contrib/datatree
 documentation: >-
     https://xarray-datatree.readthedocs.io/en/latest/
 usage:
     - method: python
+      setup: datatree
       command: datatree.open_datatree({{ file_path }})
 installation:
     - method: pip
-      packages: xarray-datatree==0.0.12
+      packages:
+         - xarray-datatree==0.0.12
 instructions: >-
     Install the xarray-datatree package into a Python 3.9+ environment with
     `pip install xarray-datatree`. After importing, netCDF files can be read
@@ -29,7 +29,6 @@ citations:
       uri: https://xarray-datatree.readthedocs.io/en/latest/
       creators:
           - T. Nicholas
-      contributors: A. Person
       type: software
 supported_filetypes:
     - id: netcdf

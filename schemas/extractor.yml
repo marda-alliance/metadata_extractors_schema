@@ -21,7 +21,6 @@ classes:
             id:
                 description: >-
                     Registered MarDA extractors ID for this file type.
-
             description:
                 description: Free-text description of caveats or instructions specific
                     to this file type.
@@ -123,10 +122,6 @@ classes:
 
 
 
-            version:
-                slot_uri: schema_org:version
-                description: >-
-                    A version tag for the registered extractor.
             source_repository:
                 description: >-
                     A URL or URI for a source code repository associated with this
