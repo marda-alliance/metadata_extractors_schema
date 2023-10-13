@@ -14,13 +14,14 @@ documentation: >-
     https://example.github.io/extractor
 usage:
     - method: cli
-      command: parse --type=example {{ file_path }}
+      command: parse --type={{ input_type }} {{ file_path }}
     - method: python
       setup: example.extractors
-      command: example.extractors.extract({{ file_path }}, type="example")
+      command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
     - method: python
       setup: example
-      command: example.extractors.extract.ExampleExtractor({{ file_path }}).parse()
+      command: '{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path
+          }}).parse()'
 installation:
     - method: conda
       requirements: >-
@@ -65,5 +66,7 @@ supported_filetypes:
     - id: example-filetype
       description: >-
           Example Extractor can parse example-filetype once in a blue moon.
+      template:
+          input_type: example
 license:
     uri: https://example.com
