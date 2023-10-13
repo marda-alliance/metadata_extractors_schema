@@ -24,7 +24,31 @@ classes:
             description:
                 description: Free-text description of caveats or instructions specific
                     to this file type.
+            template:
+                description: >-
+                    A mechanism for overriding the template values for this file type
+                    in the
+                    usage instructions.
+                range: UsageTemplate
+                required: false
 
+    UsageTemplate:
+        attributes:
+            input_path:
+                description: >-
+                    The location of the resource (e.g., file, or directory) on disk
+                    to parse.
+            input_type:
+                description: >-
+                    The registry ID of the file type to parse Will default to the
+                    ID of the file type.
+            output_path:
+                description: >-
+                    The location of the output to write to disk with the results of
+                    the extraction, if successful (OPTIONAL).
+            output_type:
+                description: >-
+                    The registry ID of the file type to write to disk.
 
     Usage:
         attributes:
@@ -48,7 +72,7 @@ classes:
                         should be available after installing and setting up the Extractor.
 
                     The following templated parameters can be requested from the user,
-                    using the `{{}}` syntax:
+                    using the `{{}}` syntax, as described by the `UsageTemplate` class:
                       - `{{ input_path }}`: the location of the resource (e.g., file,
                     or directory) on disk to parse (REQUIRED).
                       - `{{ input_type }}`: the registry ID of the file type to parse
