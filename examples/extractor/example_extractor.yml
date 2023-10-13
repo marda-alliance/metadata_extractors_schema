@@ -6,12 +6,8 @@ name: >-
 description: >-
     An example extractor entry, using all features from the schema.
 subject:
-    - electrochemistry
-    - voltammetry
-    - impedance spectropscopy
-    - potentiometry
-version: >-
-    v1.0.0
+    - science
+    - engineering
 source_repository: >-
     https://github.com/example/extractor
 documentation: >-
@@ -23,6 +19,7 @@ usage:
       setup: example.extractors
       command: example.extractors.extract({{ file_path }}, type="example")
     - method: python
+      setup: example
       command: example.extractors.extract.ExampleExtractor({{ file_path }}).parse()
 installation:
     - method: conda
@@ -37,31 +34,36 @@ installation:
             - partd
             - bokeh
             - pip:
-              - git+https://github.com/blaze/dask.git#egg=dask[complete]
+              - git+https://github.com/example/extractor.git#egg=example[all]
+    - method: pip
+      packages:
+          - example-extractor
 instructions: >-
-    Install the package into a Python 3.8+ environment with
+    Install the package into a Python 3.4 environment with
     `pip install example-extractor`. After activating the
     environment, the `parse` entrypoint will be available at
     the command-line, and functions can be directly invoked
     from Python code.
 citations:
-    - title: An example extractor paper
+    - title: An example extractor paper using DOI
       uri: doi:10.1000/182
       creators:
-          - S. Omeone
-          - A. Nother
-      contributors: A. Person
+          - A. Uthor
+          - M. A. Nuscript
+      contributors:
+          - E. Ditor
       type: article
     - title: Example extractor code repo
       uri: https://github.com/example/extractor
       creators:
           - S. Omeone
           - A. Nother
-      contributors: A. Person
+      contributors:
+          - A. Person
       type: software
 supported_filetypes:
-    - id: biologic-mpr
+    - id: example-filetype
       description: >-
-          Can parse biologic MPR provided its a full moon.
+          Example Extractor can parse example-filetype once in a blue moon.
 license:
     uri: https://example.com
