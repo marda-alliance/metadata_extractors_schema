@@ -47,6 +47,7 @@ installation:
     - method: pip
       packages:
           - example-extractor
+      requires_python: ==3.4
 instructions: >-
     Install the package into a Python 3.4 environment with
     `pip install example-extractor`. After activating the

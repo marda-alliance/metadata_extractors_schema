@@ -104,6 +104,11 @@ classes:
                 description: >-
                     Extractor installer, specifying the package manager to process
                     the installation instructions with.
+            requires_python:
+                required: false
+                description: >-
+                    A PEP 440 version string for the version constraints on the
+                    Python version required for this extractor.
             requirements:
                 description: >-
                     Contents of a 'requirements.txt'-like file. Will be installed
@@ -115,7 +120,6 @@ classes:
                 description: >-
                     A list of packages, including versioned packages or `git+https://`
                     targets, to be installed using the Installer.
-
 
     Extractor:
         description: >-
@@ -193,6 +197,7 @@ classes:
                     - value:
                           method: pip
                           packages: my-pypi-package==1.0.0
+                          requires_python: '>=3.9'
                     - value:
                           method: conda
                           requirements: >-
