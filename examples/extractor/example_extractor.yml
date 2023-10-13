@@ -15,12 +15,20 @@ documentation: >-
 usage:
     - method: cli
       command: parse --type=example {{ file_path }}
+    - method: cli
+      scope: meta-only
+      command: parse --type=example --summary {{ file_path }}
     - method: python
       setup: example.extractors
       command: example.extractors.extract({{ file_path }}, type="example")
     - method: python
       setup: example
+      scope: meta+data
       command: example.extractors.extract.ExampleExtractor({{ file_path }}).parse()
+    - method: python
+      setup: example
+      scope: meta-only
+      command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
 installation:
     - method: conda
       requirements: >-
