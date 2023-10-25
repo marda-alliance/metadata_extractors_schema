@@ -20,7 +20,7 @@ version = "main"
 # -- Project information -----------------------------------------------------
 
 project = "MaRDA Metadata Extractors"
-copyright = "2021 - 2023, yadg authors"
+copyright = "2021 - 2023, MaRDA Metadata Extractors Team"
 author = "Peter Kraus"
 release = version
 
