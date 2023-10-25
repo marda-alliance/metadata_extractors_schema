@@ -9,15 +9,34 @@ Contents
 ````````
 The repository contains two user-facing schemas:
 
+- The |FileType|_ schema, used to specify the types of files passed to the extractors by users.
+- The |Extractor|_ schema, used to specify the download, installation, and usage instructions, allowing for machine execution of the defined extractor/parser code, as well as a list of :class:`FileTypes` compatible with the :class:`Extractor`.
+
 
 .. toctree::
    :maxdepth: 1
-   :caption: Schemas
+   :caption: Usage Docs
    :hidden:
 
-   filetype/filetype
-   extractor/extractor
+   Usage<usage>
+   Contributing<contributing>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Schema Docs
+   :hidden:
+
+   gen-doc/filetype
+   gen-doc/extractor
 
 .. |LinkML| replace:: :mod:`LinkML`
 
 .. _LinkML: https://linkml.io/linkml/
+
+.. |FileType| replace:: :class:`FileType`
+
+.. _FileType: filetype/filetype.html#class-filetype
+
+.. |Extractor| replace:: :class:`Extractor`
+
+.. _Extractor: extractor/extractor.html#class-extractor

@@ -35,6 +35,7 @@ extensions = [
     # "sphinx.ext.coverage",
     "sphinx.ext.napoleon",
     "sphinx.ext.intersphinx",
+    "sphinx.ext.autosectionlabel",
     # "sphinx.ext.autosummary",
     # "sphinx_autodoc_typehints",
     "sphinx_rtd_theme",

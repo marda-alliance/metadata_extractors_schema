@@ -79,11 +79,11 @@ jobs:
 
             - name: Build FileType docs
               run: |
-                  gen-doc schemas/filetype.yml -d docs/source/filetype
+                  gen-doc schemas/filetype.yml -d docs/source/gen-doc
 
             - name: Build Extractor docs
               run: |
-                  gen-doc schemas/extractor.yml -d docs/source/extractor
+                  gen-doc schemas/extractor.yml -d docs/source/gen-doc
 
             - name: Build Sphinx docs
               run: |
