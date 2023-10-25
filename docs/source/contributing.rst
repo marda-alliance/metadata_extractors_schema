@@ -8,5 +8,5 @@ In particular, if you have any suggestions, technical queries, or a feature requ
 Contributors
 ------------
 
-- Matthew Evans `@ml-evs <github.com/ml-evs>`_
-- Peter Kraus `@PeterKraus <github.com/PeterKraus>`_
+- Matthew Evans `@ml-evs <https://github.com/ml-evs>`_
+- Peter Kraus `@PeterKraus <https://github.com/PeterKraus>`_
