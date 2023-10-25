@@ -29,7 +29,7 @@ Then, you can check the validity of your filetype or extractor definition agains
 
 .. code-block:: bash
 
-    linkml-validate -s schemas/filetype.yml -C FileType examples/filetype/biologic_mpr.yml
+    linkml-validate -s <submodule>/schemas/filetype.yml -C FileType <submodule>/examples/filetype/netcdf.yml
 
 
 If successful, you should see ``✓ No problems found`` returned by ``linkml-validate``.
@@ -41,9 +41,9 @@ The |LinkML|_ schemas provided here can be automatically translated to other for
 
 .. code-block:: bash
 
-    gen-json-schema schemas/filetype.yml >> filetype.json
-    gen-python schemas/filetype.yml >> filetype.py
-    gen-pydantic schemas/filetype.yml >> filetype.py
+    gen-json-schema <submodule>/schemas/filetype.yml >> filetype.json
+    gen-python <submodule>/schemas/filetype.yml >> filetype.py
+    gen-pydantic <submodule>/schemas/filetype.yml >> filetype.py
 
 The generated files are intended to be used in downstream codes such as in the `validation function <https://github.com/marda-alliance/metadata_extractors_registry/blob/main/tasks.py#L33>`_ of the |MME Registry|_.
 
