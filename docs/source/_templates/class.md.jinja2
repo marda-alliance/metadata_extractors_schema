@@ -105,17 +105,21 @@ URI: {{ gen.uri_link(element) }}
 ### Direct
 
 <details>
+
 ```yaml
 {{gen.yaml(element)}}
 ```
+
 </details>
 
 ### Induced
 
 <details>
+
 ```yaml
 {{gen.yaml(element, inferred=True)}}
 ```
+
 </details>
 
 {%- if footer -%}
