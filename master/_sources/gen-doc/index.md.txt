@@ -2,7 +2,7 @@
 
 This file describes the `Extractor` model created by the MaRDA extractors WG.
 
-URI: https://www.marda-alliance.org/extractors/extractor
+URI: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 Name: extractor
 
@@ -18,6 +18,7 @@ Name: extractor
 | [License](License.md) | None |
 | [SupportedFileTypes](SupportedFileTypes.md) | None |
 | [Usage](Usage.md) | None |
+| [UsageTemplate](UsageTemplate.md) | None |
 
 
 
@@ -32,24 +33,30 @@ Name: extractor
 | [description](description.md) | A human-readable outline of the entry, its format, data content and uses |
 | [documentation](documentation.md) | A URL or URI for any online documentation associated with this extractor |
 | [id](id.md) | A unique identifier for the entry within the MaRDA registry namespace, this s... |
+| [input_path](input_path.md) | The location of the resource (e |
+| [input_type](input_type.md) | The registry ID of the file type to parse Will default to the ID of the file ... |
 | [installation](installation.md) | A machine-actionable set of installation instructions to obtain a working set... |
 | [instructions](instructions.md) | Any usage notes or installation instructions for this Extractor |
 | [license](license.md) | A URL, URI or SPDX license identifier for a legal document giving official pe... |
 | [method](method.md) | Usage invocation method, e |
 | [name](name.md) | A recognisable name for the entry |
+| [output_path](output_path.md) | The location of the output to write to disk with the results of the extractio... |
+| [output_type](output_type.md) | The registry ID of the file type to write to disk |
 | [packages](packages.md) | A list of packages, including versioned packages or `git+https://` targets, t... |
 | [requirements](requirements.md) | Contents of a 'requirements |
+| [requires_python](requires_python.md) | A PEP 440 version string for the version constraints on the Python version re... |
+| [scope](scope.md) | This enumeration field allows extractor usage to be described in one of two m... |
 | [setup](setup.md) | Any necessary setup step for the 'command' to become available: |
 | [source_repository](source_repository.md) | A URL or URI for a source code repository associated with this extractor |
 | [spdx](spdx.md) | An SPDX License Identifier entry |
 | [subject](subject.md) | Any keywords, phrases or classification codes that are relevant to the entry,... |
 | [supported_filetypes](supported_filetypes.md) | Container for links to the file types that this extractor supports, matching ... |
 | [supported_output_filetypes](supported_output_filetypes.md) | Container for enumerating the possible output formats of this extractor |
+| [template](template.md) | A mechanism for overriding the template values for this file type in the usag... |
 | [title](title.md) | A name given to the resource [from DC] |
 | [type](type.md) | Any bibliographic resource type (e |
 | [uri](uri.md) | An unambiguous reference to the resource within a given context |
 | [usage](usage.md) | A machine-actionable description of the usage of the Extractor |
-| [version](version.md) | A version tag for the registered extractor |
 
 
 ## Enumerations
@@ -57,6 +64,7 @@ Name: extractor
 | Enumeration | Description |
 | --- | --- |
 | [InstallerTypes](InstallerTypes.md) |  |
+| [UsageScope](UsageScope.md) |  |
 | [UsageTypes](UsageTypes.md) |  |
 
 

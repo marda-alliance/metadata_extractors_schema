@@ -5,7 +5,7 @@ _Container for links to the file types that this extractor supports, matching th
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:supported_filetypes](https://www.marda-alliance.org/extractors/extractor/:supported_filetypes)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:supported_filetypes](https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:supported_filetypes)
 
 
 
@@ -18,7 +18,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:supported_filetypes](
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific... |  no  |
+[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
 
 
 
@@ -49,7 +49,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:supported_filetypes](
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
 
@@ -62,7 +62,7 @@ name: supported_filetypes
 description: Container for links to the file types that this extractor supports, matching
   the registry file types. The ID values can be passed to an extractor with the `{{
   input_type }}` parameter in `usage->command`.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 rank: 1000
 multivalued: true
 alias: supported_filetypes

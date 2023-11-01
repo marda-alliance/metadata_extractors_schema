@@ -82,7 +82,7 @@
   <section id="extractor">
 <h1>extractor<a class="headerlink" href="#extractor" title="Link to this heading"></a></h1>
 <p>This file describes the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> model created by the MaRDA extractors WG.</p>
-<p>URI: https://www.marda-alliance.org/extractors/extractor</p>
+<p>URI: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor</p>
 <p>Name: extractor</p>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
@@ -109,6 +109,9 @@
 <td><p>None</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="Usage.html"><span class="std std-doc">Usage</span></a></p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="UsageTemplate.html"><span class="std std-doc">UsageTemplate</span></a></p></td>
 <td><p>None</p></td>
 </tr>
 </tbody>
@@ -144,6 +147,12 @@
 <tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="std std-doc">id</span></a></p></td>
 <td><p>A unique identifier for the entry within the MaRDA registry namespace, this s…</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="input_path.html"><span class="std std-doc">input_path</span></a></p></td>
+<td><p>The location of the resource (e</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="input_type.html"><span class="std std-doc">input_type</span></a></p></td>
+<td><p>The registry ID of the file type to parse Will default to the ID of the file …</p></td>
+</tr>
 <tr class="row-odd"><td><p><span class="xref myst">installation</span></p></td>
 <td><p>A machine-actionable set of installation instructions to obtain a working set…</p></td>
 </tr>
@@ -159,11 +168,23 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="name.html"><span class="std std-doc">name</span></a></p></td>
 <td><p>A recognisable name for the entry</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="output_path.html"><span class="std std-doc">output_path</span></a></p></td>
+<td><p>The location of the output to write to disk with the results of the extractio…</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="output_type.html"><span class="std std-doc">output_type</span></a></p></td>
+<td><p>The registry ID of the file type to write to disk</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="packages.html"><span class="std std-doc">packages</span></a></p></td>
 <td><p>A list of packages, including versioned packages or <code class="docutils literal notranslate"><span class="pre">git+https://</span></code> targets, t…</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="requirements.html"><span class="std std-doc">requirements</span></a></p></td>
 <td><p>Contents of a ‘requirements</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="requires_python.html"><span class="std std-doc">requires_python</span></a></p></td>
+<td><p>A PEP 440 version string for the version constraints on the Python version re…</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scope.html"><span class="std std-doc">scope</span></a></p></td>
+<td><p>This enumeration field allows extractor usage to be described in one of two m…</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="setup.html"><span class="std std-doc">setup</span></a></p></td>
 <td><p>Any necessary setup step for the ‘command’ to become available:</p></td>
@@ -183,20 +204,20 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="supported_output_filetypes.html"><span class="std std-doc">supported_output_filetypes</span></a></p></td>
 <td><p>Container for enumerating the possible output formats of this extractor</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="title.html"><span class="std std-doc">title</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="template.html"><span class="std std-doc">template</span></a></p></td>
+<td><p>A mechanism for overriding the template values for this file type in the usag…</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="title.html"><span class="std std-doc">title</span></a></p></td>
 <td><p>A name given to the resource [from DC]</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="type.html"><span class="std std-doc">type</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="type.html"><span class="std std-doc">type</span></a></p></td>
 <td><p>Any bibliographic resource type (e</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="uri.html"><span class="std std-doc">uri</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="uri.html"><span class="std std-doc">uri</span></a></p></td>
 <td><p>An unambiguous reference to the resource within a given context</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="xref myst">usage</span></p></td>
+<tr class="row-even"><td><p><span class="xref myst">usage</span></p></td>
 <td><p>A machine-actionable description of the usage of the Extractor</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="version.html"><span class="std std-doc">version</span></a></p></td>
-<td><p>A version tag for the registered extractor</p></td>
 </tr>
 </tbody>
 </table>
@@ -213,7 +234,10 @@
 <tr class="row-even"><td><p><a class="reference internal" href="InstallerTypes.html"><span class="std std-doc">InstallerTypes</span></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="UsageTypes.html"><span class="std std-doc">UsageTypes</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="UsageScope.html"><span class="std std-doc">UsageScope</span></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="UsageTypes.html"><span class="std std-doc">UsageTypes</span></a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -299,7 +323,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021 - 2023, yadg authors.</p>
+    <p>&#169; Copyright 2021 - 2023, MaRDA Metadata Extractors Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

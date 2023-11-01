@@ -18,7 +18,7 @@ URI: [dc_terms:type](http://purl.org/dc/terms/1.1/type)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Citation](Citation.md) |  |  no  |
+[Citation](Citation.md) | None |  no  |
 
 
 
@@ -45,7 +45,7 @@ URI: [dc_terms:type](http://purl.org/dc/terms/1.1/type)
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
 
@@ -57,7 +57,7 @@ URI: [dc_terms:type](http://purl.org/dc/terms/1.1/type)
 name: type
 description: Any bibliographic resource type (e.g., article, dataset, software) enumerated
   in the DCMI Type Vocabulary.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 rank: 1000
 slot_uri: dc_terms:type
 alias: type

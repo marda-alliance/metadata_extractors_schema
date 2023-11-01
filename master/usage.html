@@ -107,7 +107,7 @@
 </pre></div>
 </div>
 <p>Then, you can check the validity of your filetype or extractor definition against the provided schemas using <code class="docutils literal notranslate"><span class="pre">linkml-validate</span></code>. For example, to validate the provided example <a class="reference external" href="filetype/filetype.html#class-filetype"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileType</span></code></a> definition in <a class="reference external" href="https://raw.githubusercontent.com/marda-alliance/metadata_extractors_schema/main/examples/filetype/netcdf.yml"><code class="xref py py-mod docutils literal notranslate"><span class="pre">netcdf.yml</span></code></a> against the <a class="reference external" href="filetype/filetype.html#class-filetype"><code class="xref py py-class docutils literal notranslate"><span class="pre">FileType</span></code></a> schema, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>linkml-validate<span class="w"> </span>-s<span class="w"> </span>schemas/filetype.yml<span class="w"> </span>-C<span class="w"> </span>FileType<span class="w"> </span>examples/filetype/biologic_mpr.yml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>linkml-validate<span class="w"> </span>-s<span class="w"> </span>&lt;submodule&gt;/schemas/filetype.yml<span class="w"> </span>-C<span class="w"> </span>FileType<span class="w"> </span>&lt;submodule&gt;/examples/filetype/netcdf.yml
 </pre></div>
 </div>
 <p>If successful, you should see <code class="docutils literal notranslate"><span class="pre">✓</span> <span class="pre">No</span> <span class="pre">problems</span> <span class="pre">found</span></code> returned by <code class="docutils literal notranslate"><span class="pre">linkml-validate</span></code>.</p>
@@ -115,9 +115,9 @@
 <section id="translation">
 <h2>Translation<a class="headerlink" href="#translation" title="Link to this heading"></a></h2>
 <p>The <a class="reference external" href="https://linkml.io/linkml/"><code class="xref py py-mod docutils literal notranslate"><span class="pre">LinkML</span></code></a> schemas provided here can be automatically translated to other formats, including <code class="docutils literal notranslate"><span class="pre">JSONSchema</span></code>, Python <code class="docutils literal notranslate"><span class="pre">dataclasses</span></code>, or <a class="reference external" href="https://docs.pydantic.dev/latest/"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pydantic</span></code></a> classes:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gen-json-schema<span class="w"> </span>schemas/filetype.yml<span class="w"> </span>&gt;&gt;<span class="w"> </span>filetype.json
-gen-python<span class="w"> </span>schemas/filetype.yml<span class="w"> </span>&gt;&gt;<span class="w"> </span>filetype.py
-gen-pydantic<span class="w"> </span>schemas/filetype.yml<span class="w"> </span>&gt;&gt;<span class="w"> </span>filetype.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gen-json-schema<span class="w"> </span>&lt;submodule&gt;/schemas/filetype.yml<span class="w"> </span>&gt;&gt;<span class="w"> </span>filetype.json
+gen-python<span class="w"> </span>&lt;submodule&gt;/schemas/filetype.yml<span class="w"> </span>&gt;&gt;<span class="w"> </span>filetype.py
+gen-pydantic<span class="w"> </span>&lt;submodule&gt;/schemas/filetype.yml<span class="w"> </span>&gt;&gt;<span class="w"> </span>filetype.py
 </pre></div>
 </div>
 <p>The generated files are intended to be used in downstream codes such as in the <a class="reference external" href="https://github.com/marda-alliance/metadata_extractors_registry/blob/main/tasks.py#L33">validation function</a> of the <a class="reference external" href="https://github.com/marda-alliance/metadata_extractors_registry">MaRDA Metadata Extractors Registry</a>.</p>
@@ -135,7 +135,7 @@ gen-pydantic<span class="w"> </span>schemas/filetype.yml<span class="w"> </span>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021 - 2023, yadg authors.</p>
+    <p>&#169; Copyright 2021 - 2023, MaRDA Metadata Extractors Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

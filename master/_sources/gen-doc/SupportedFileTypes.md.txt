@@ -2,17 +2,21 @@
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes](https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:SupportedFileTypes](https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:SupportedFileTypes)
 
 
 
 
-```mermaid
+```{mermaid}
  classDiagram
     class SupportedFileTypes
       SupportedFileTypes : description
         
       SupportedFileTypes : id
+        
+      SupportedFileTypes : template
+        
+          SupportedFileTypes --|> UsageTemplate : template
         
       
 ```
@@ -27,8 +31,9 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes](h
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 0..1 <br/> [String](String.md) | Registered MarDA extractors ID for this file type | direct |
-| [description](description.md) | 0..1 <br/> [String](String.md) | Free-text description of caveats or instructions specific to this file type | direct |
+| [id](id.md) | 0..1 <br/> [String](String.md) | Registered MarDA extractors ID for this file type. | direct |
+| [description](description.md) | 0..1 <br/> [String](String.md) | Free-text description of caveats or instructions specific to this file type. | direct |
+| [template](template.md) | 0..1 <br/> [UsageTemplate](UsageTemplate.md) | A mechanism for overriding the template values for this file type in the usage<br/>instructions. | direct |
 
 
 
@@ -57,7 +62,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes](h
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
 
@@ -67,8 +72,8 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes](h
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes |
-| native | https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes |
+| self | https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:SupportedFileTypes |
+| native | https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:SupportedFileTypes |
 
 
 
@@ -83,17 +88,25 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes](h
 <details>
 ```yaml
 name: SupportedFileTypes
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 attributes:
   id:
     name: id
     description: Registered MarDA extractors ID for this file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
   description:
     name: description
     description: Free-text description of caveats or instructions specific to this
       file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
+  template:
+    name: template
+    description: A mechanism for overriding the template values for this file type
+      in the usage instructions.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
+    rank: 1000
+    range: UsageTemplate
+    required: false
 
 ```
 </details>
@@ -103,12 +116,12 @@ attributes:
 <details>
 ```yaml
 name: SupportedFileTypes
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 attributes:
   id:
     name: id
     description: Registered MarDA extractors ID for this file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
     alias: id
     owner: SupportedFileTypes
     domain_of:
@@ -119,13 +132,25 @@ attributes:
     name: description
     description: Free-text description of caveats or instructions specific to this
       file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
     alias: description
     owner: SupportedFileTypes
     domain_of:
     - SupportedFileTypes
     - Extractor
     range: string
+  template:
+    name: template
+    description: A mechanism for overriding the template values for this file type
+      in the usage instructions.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
+    rank: 1000
+    alias: template
+    owner: SupportedFileTypes
+    domain_of:
+    - SupportedFileTypes
+    range: UsageTemplate
+    required: false
 
 ```
 </details>

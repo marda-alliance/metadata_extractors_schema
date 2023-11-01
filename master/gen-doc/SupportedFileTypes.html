@@ -17,6 +17,8 @@
         <script src="../_static/documentation_options.js?v=a8da1a53"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -81,17 +83,20 @@
              
   <section id="class-supportedfiletypes">
 <h1>Class: SupportedFileTypes<a class="headerlink" href="#class-supportedfiletypes" title="Link to this heading"></a></h1>
-<p>URI: <a class="reference external" href="https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes">https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes</a></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span> classDiagram
+<p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:SupportedFileTypes">https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:SupportedFileTypes</a></p>
+<div class="mermaid">
+             classDiagram
     class SupportedFileTypes
       SupportedFileTypes : description
         
       SupportedFileTypes : id
         
+      SupportedFileTypes : template
+        
+          SupportedFileTypes --|&gt; UsageTemplate : template
+        
       
-</pre></div>
-</div>
-<!-- no inheritance hierarchy -->
+        </div><!-- no inheritance hierarchy -->
 <section id="slots">
 <h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -105,12 +110,17 @@
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="std std-doc">id</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>Registered MarDA extractors ID for this file type</p></td>
+<td><p>Registered MarDA extractors ID for this file type.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="description.html"><span class="std std-doc">description</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>Free-text description of caveats or instructions specific to this file type</p></td>
+<td><p>Free-text description of caveats or instructions specific to this file type.</p></td>
+<td><p>direct</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="template.html"><span class="std std-doc">template</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="UsageTemplate.html"><span class="std std-doc">UsageTemplate</span></a></p></td>
+<td><p>A mechanism for overriding the template values for this file type in the usage<br/>instructions.</p></td>
 <td><p>direct</p></td>
 </tr>
 </tbody>
@@ -145,7 +155,7 @@
 <section id="schema-source">
 <h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>from schema: https://www.marda-alliance.org/extractors/extractor</p></li>
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor</p></li>
 </ul>
 </section>
 </section>
@@ -159,10 +169,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes</p></td>
+<td><p>https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:SupportedFileTypes</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes</p></td>
+<td><p>https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:SupportedFileTypes</p></td>
 </tr>
 </tbody>
 </table>
@@ -175,17 +185,25 @@
 <details>
 ```yaml
 name: SupportedFileTypes
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 attributes:
   id:
     name: id
     description: Registered MarDA extractors ID for this file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
   description:
     name: description
     description: Free-text description of caveats or instructions specific to this
       file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
+  template:
+    name: template
+    description: A mechanism for overriding the template values for this file type
+      in the usage instructions.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
+    rank: 1000
+    range: UsageTemplate
+    required: false
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
 
 ### Induced
@@ -193,12 +211,12 @@ attributes:
 &lt;details&gt;
 ```yaml
 name: SupportedFileTypes
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 attributes:
   id:
     name: id
     description: Registered MarDA extractors ID for this file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
     alias: id
     owner: SupportedFileTypes
     domain_of:
@@ -209,13 +227,25 @@ attributes:
     name: description
     description: Free-text description of caveats or instructions specific to this
       file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
     alias: description
     owner: SupportedFileTypes
     domain_of:
     - SupportedFileTypes
     - Extractor
     range: string
+  template:
+    name: template
+    description: A mechanism for overriding the template values for this file type
+      in the usage instructions.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
+    rank: 1000
+    alias: template
+    owner: SupportedFileTypes
+    domain_of:
+    - SupportedFileTypes
+    range: UsageTemplate
+    required: false
 
 </pre></div>
 </div>
@@ -231,7 +261,7 @@ attributes:
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021 - 2023, yadg authors.</p>
+    <p>&#169; Copyright 2021 - 2023, MaRDA Metadata Extractors Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

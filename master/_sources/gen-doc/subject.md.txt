@@ -18,7 +18,7 @@ URI: [dc_terms:subject](http://purl.org/dc/terms/1.1/subject)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific... |  no  |
+[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
 
 
 
@@ -47,7 +47,7 @@ URI: [dc_terms:subject](http://purl.org/dc/terms/1.1/subject)
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
 
@@ -59,7 +59,7 @@ URI: [dc_terms:subject](http://purl.org/dc/terms/1.1/subject)
 name: subject
 description: Any keywords, phrases or classification codes that are relevant to the
   entry, e.g., particular scientific domains of applicability, or experimental techniques.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 rank: 1000
 slot_uri: dc_terms:subject
 multivalued: true

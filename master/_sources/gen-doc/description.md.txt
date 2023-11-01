@@ -18,8 +18,8 @@ URI: [schema_org:description](http://schema.org/description)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific... |  no  |
-[SupportedFileTypes](SupportedFileTypes.md) |  |  no  |
+[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
+[SupportedFileTypes](SupportedFileTypes.md) | None |  no  |
 
 
 
@@ -48,7 +48,7 @@ URI: [schema_org:description](http://schema.org/description)
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
 
@@ -59,7 +59,7 @@ URI: [schema_org:description](http://schema.org/description)
 ```yaml
 name: description
 description: A human-readable outline of the entry, its format, data content and uses.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 rank: 1000
 slot_uri: schema_org:description
 alias: description

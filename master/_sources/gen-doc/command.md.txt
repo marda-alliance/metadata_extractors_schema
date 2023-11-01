@@ -13,7 +13,7 @@ _    should be available after installing and setting up the Extractor._
 
 __
 
-_The following templated parameters can be requested from the user, using the `{{}}` syntax:_
+_The following templated parameters can be requested from the user, using the `{{}}` syntax, as described by the `UsageTemplate` class:_
 
 _  - `{{ input_path }}`: the location of the resource (e.g., file,_
 
@@ -33,7 +33,7 @@ _to disk (OPTIONAL)._
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:command](https://www.marda-alliance.org/extractors/extractor/:command)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:command](https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:command)
 
 
 
@@ -46,7 +46,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:command](https://www.
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Usage](Usage.md) |  |  no  |
+[Usage](Usage.md) | None |  no  |
 
 
 
@@ -75,7 +75,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:command](https://www.
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
 
@@ -90,13 +90,13 @@ description: "A machine-executable command by which the Extractor functionality 
   \    should be available after installing the Extractor;\n  - for `method: python`\
   \ a parametrized function invocation which\n    should be available after installing\
   \ and setting up the Extractor.\n\nThe following templated parameters can be requested\
-  \ from the user, using the `{{}}` syntax:\n  - `{{ input_path }}`: the location\
-  \ of the resource (e.g., file,\nor directory) on disk to parse (REQUIRED).\n  -\
-  \ `{{ input_type }}`: the registry ID of the file type to parse\n(OPTIONAL).\n \
-  \ - `{{ output_path }}`: the location of the output to write to\ndisk with the results\
-  \ of the extraction, if successful (OPTIONAL).\n  - `{{ output_type }}`: the registry\
-  \ ID of the file type to write\nto disk (OPTIONAL)."
-from_schema: https://www.marda-alliance.org/extractors/extractor
+  \ from the user, using the `{{}}` syntax, as described by the `UsageTemplate` class:\n\
+  \  - `{{ input_path }}`: the location of the resource (e.g., file,\nor directory)\
+  \ on disk to parse (REQUIRED).\n  - `{{ input_type }}`: the registry ID of the file\
+  \ type to parse\n(OPTIONAL).\n  - `{{ output_path }}`: the location of the output\
+  \ to write to\ndisk with the results of the extraction, if successful (OPTIONAL).\n\
+  \  - `{{ output_type }}`: the registry ID of the file type to write\nto disk (OPTIONAL)."
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 rank: 1000
 alias: command
 owner: Usage

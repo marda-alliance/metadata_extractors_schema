@@ -5,7 +5,7 @@ _A machine-actionable description of the usage of the Extractor. The described u
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:usage](https://www.marda-alliance.org/extractors/extractor/:usage)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:usage](https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:usage)
 
 
 
@@ -18,7 +18,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:usage](https://www.ma
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific... |  no  |
+[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
 
 
 
@@ -55,7 +55,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:usage](https://www.ma
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
 
@@ -72,7 +72,7 @@ examples:
 - value: JsonObj(method='cli', command='parse --type=example {{ file_path }}')
 - value: JsonObj(method='python', setup='example.extractors', command='example.extractors.extract({{
     file_path }}, type="example")')
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 rank: 1000
 multivalued: true
 alias: usage

@@ -17,6 +17,8 @@
         <script src="../_static/documentation_options.js?v=a8da1a53"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -97,8 +99,9 @@
   <section id="class-filetype">
 <h1>Class: FileType<a class="headerlink" href="#class-filetype" title="Link to this heading"></a></h1>
 <p><em>A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type.</em></p>
-<p>URI: <a class="reference external" href="https://www.marda-alliance.org/extractors/filetype/:FileType">https://www.marda-alliance.org/extractors/filetype/:FileType</a></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span> classDiagram
+<p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype/:FileType">https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype/:FileType</a></p>
+<div class="mermaid">
+             classDiagram
     class FileType
       FileType : associated_instruments
         
@@ -123,9 +126,7 @@
       FileType : subject
         
       
-</pre></div>
-</div>
-<!-- no inheritance hierarchy -->
+        </div><!-- no inheritance hierarchy -->
 <section id="slots">
 <h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -139,52 +140,52 @@
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="std std-doc">id</span></a></p></td>
 <td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>A unique identifier for the entry within the MaRDA registry namespace, this s…</p></td>
+<td><p>A unique identifier for the entry within the MaRDA registry namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash (“-”) characters are permitted.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="description.html"><span class="std std-doc">description</span></a></p></td>
 <td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>A human-readable outline of the entry, its format, data content and uses</p></td>
+<td><p>A human-readable outline of the entry, its format, data content and uses.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="name.html"><span class="std std-doc">name</span></a></p></td>
 <td><p>1..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>A recognisable name for the entry</p></td>
+<td><p>A recognisable name for the entry.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="subject.html"><span class="std std-doc">subject</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>Any keywords, phrases or classification codes that are relevant to the entry,…</p></td>
+<td><p>Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="associated_vendors.html"><span class="std std-doc">associated_vendors</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>If this file type is associated with particular software or instrument vendor…</p></td>
+<td><p>If this file type is associated with particular software or instrument vendors,<br/>they can be listed here.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="associated_instruments.html"><span class="std std-doc">associated_instruments</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>Any instrument, or class of instruments, that typically create the data encod…</p></td>
+<td><p>Any instrument, or class of instruments, that typically create the data encoded<br/>into such files.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="associated_software.html"><span class="std std-doc">associated_software</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>Any software (proprietary or otherwise) that produces such files</p></td>
+<td><p>Any software (proprietary or otherwise) that produces such files.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="base_formats.html"><span class="std std-doc">base_formats</span></a></p></td>
 <td><p>0..* <br/> <span class="xref myst">FileType</span></p></td>
-<td><p>If this format uses any particular underlying generic formats, e</p></td>
+<td><p>If this format uses any particular underlying generic formats, e.g., CSV, JSON,<br/>HDF5, then they can be listed here.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="associated_standards.html"><span class="std std-doc">associated_standards</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>If this is a subformat that follows a particular well-defined standard, e</p></td>
+<td><p>If this is a subformat that follows a particular well-defined standard, e.g.,<br/>CIF, NeXus, then it can be listed here.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="registered_extractors.html"><span class="std std-doc">registered_extractors</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>A list of MaRDA extractor IDs that support this file type</p></td>
+<td><p>A list of MaRDA extractor IDs that support this file type. This field should be<br/>auto-populated by a registry.</p></td>
 <td><p>direct</p></td>
 </tr>
 </tbody>
@@ -214,7 +215,7 @@
 <section id="schema-source">
 <h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>from schema: https://www.marda-alliance.org/extractors/filetype</p></li>
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype</p></li>
 </ul>
 </section>
 </section>
@@ -228,10 +229,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>https://www.marda-alliance.org/extractors/filetype/:FileType</p></td>
+<td><p>https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype/:FileType</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>https://www.marda-alliance.org/extractors/filetype/:FileType</p></td>
+<td><p>https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype/:FileType</p></td>
 </tr>
 <tr class="row-even"><td><p>close</p></td>
 <td><p>schema_org:fileFormat, schema_org:encodingFormat</p></td>
@@ -250,7 +251,7 @@ name: FileType
 description: A specific encoding of data for storage purposes, defined by a set of
   common characteristics and expectations, that can be assumed for all files of a
   given file type.
-from_schema: https://www.marda-alliance.org/extractors/filetype
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
 close_mappings:
 - schema_org:fileFormat
 - schema_org:encodingFormat
@@ -264,7 +265,7 @@ attributes:
     name: associated_vendors
     description: If this file type is associated with particular software or instrument
       vendors, they can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     slot_uri: schema_org:vendor
     multivalued: true
@@ -272,20 +273,20 @@ attributes:
     name: associated_instruments
     description: Any instrument, or class of instruments, that typically create the
       data encoded into such files.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
   associated_software:
     name: associated_software
     description: Any software (proprietary or otherwise) that produces such files.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
   base_formats:
     name: base_formats
     description: If this format uses any particular underlying generic formats, e.g.,
       CSV, JSON, HDF5, then they can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
     range: FileType
@@ -293,14 +294,14 @@ attributes:
     name: associated_standards
     description: If this is a subformat that follows a particular well-defined standard,
       e.g., CIF, NeXus, then it can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
   registered_extractors:
     name: registered_extractors
     description: A list of MaRDA extractor IDs that support this file type. This field
       should be auto-populated by a registry.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
@@ -314,7 +315,7 @@ name: FileType
 description: A specific encoding of data for storage purposes, defined by a set of
   common characteristics and expectations, that can be assumed for all files of a
   given file type.
-from_schema: https://www.marda-alliance.org/extractors/filetype
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
 close_mappings:
 - schema_org:fileFormat
 - schema_org:encodingFormat
@@ -323,7 +324,7 @@ attributes:
     name: associated_vendors
     description: If this file type is associated with particular software or instrument
       vendors, they can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     slot_uri: schema_org:vendor
     multivalued: true
@@ -336,7 +337,7 @@ attributes:
     name: associated_instruments
     description: Any instrument, or class of instruments, that typically create the
       data encoded into such files.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
     alias: associated_instruments
@@ -347,7 +348,7 @@ attributes:
   associated_software:
     name: associated_software
     description: Any software (proprietary or otherwise) that produces such files.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
     alias: associated_software
@@ -359,7 +360,7 @@ attributes:
     name: base_formats
     description: If this format uses any particular underlying generic formats, e.g.,
       CSV, JSON, HDF5, then they can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
     alias: base_formats
@@ -371,7 +372,7 @@ attributes:
     name: associated_standards
     description: If this is a subformat that follows a particular well-defined standard,
       e.g., CIF, NeXus, then it can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
     alias: associated_standards
@@ -383,7 +384,7 @@ attributes:
     name: registered_extractors
     description: A list of MaRDA extractor IDs that support this file type. This field
       should be auto-populated by a registry.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     multivalued: true
     alias: registered_extractors
@@ -397,7 +398,7 @@ attributes:
     description: A unique identifier for the entry within the MaRDA registry namespace,
       this should be a shorthand label rather than a UUID. Only lower-case alphanumeric
       and dash (&quot;-&quot;) characters are permitted.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     slot_uri: schema_org:identifier
     identifier: true
@@ -412,7 +413,7 @@ attributes:
     name: description
     description: A human-readable outline of the entry, its format, data content and
       uses.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     slot_uri: schema_org:description
     alias: description
@@ -424,7 +425,7 @@ attributes:
   name:
     name: name
     description: A recognisable name for the entry.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     slot_uri: schema_org:name
     alias: name
@@ -438,7 +439,7 @@ attributes:
     description: Any keywords, phrases or classification codes that are relevant to
       the entry, e.g., particular scientific domains of applicability, or experimental
       techniques.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/filetype
     rank: 1000
     slot_uri: dc_terms:subject
     multivalued: true
@@ -465,7 +466,7 @@ attributes:
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021 - 2023, yadg authors.</p>
+    <p>&#169; Copyright 2021 - 2023, MaRDA Metadata Extractors Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

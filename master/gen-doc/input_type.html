@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slot: version &mdash; MaRDA Metadata Extractors main documentation</title>
+  <title>Slot: input_type &mdash; MaRDA Metadata Extractors main documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom_theme.css" type="text/css" />
@@ -69,9 +69,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Slot: version</li>
+      <li class="breadcrumb-item active">Slot: input_type</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/gen-doc/version.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/gen-doc/input_type.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -79,10 +79,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="slot-version">
-<h1>Slot: version<a class="headerlink" href="#slot-version" title="Link to this heading"></a></h1>
-<p><em>A version tag for the registered extractor.</em></p>
-<p>URI: <a class="reference external" href="http://schema.org/version">schema_org:version</a></p>
+  <section id="slot-input-type">
+<h1>Slot: input_type<a class="headerlink" href="#slot-input-type" title="Link to this heading"></a></h1>
+<p><em>The registry ID of the file type to parse Will default to the ID of the file type.</em></p>
+<p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:input_type">https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:input_type</a></p>
 <!-- no inheritance hierarchy -->
 <section id="applicable-classes">
 <h2>Applicable Classes<a class="headerlink" href="#applicable-classes" title="Link to this heading"></a></h2>
@@ -94,8 +94,8 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="xref myst">Extractor</span></p></td>
-<td><p>A code object or web service that when executed can read a file with specific…</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="UsageTemplate.html"><span class="std std-doc">UsageTemplate</span></a></p></td>
+<td><p>None</p></td>
 <td><p>no</p></td>
 </tr>
 </tbody>
@@ -112,7 +112,7 @@
 <section id="schema-source">
 <h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>from schema: https://www.marda-alliance.org/extractors/extractor</p></li>
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor</p></li>
 </ul>
 </section>
 </section>
@@ -120,15 +120,15 @@
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <details>
 ```yaml
-name: version
-description: A version tag for the registered extractor.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+name: input_type
+description: The registry ID of the file type to parse Will default to the ID of the
+  file type.
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 rank: 1000
-slot_uri: schema_org:version
-alias: version
-owner: Extractor
+alias: input_type
+owner: UsageTemplate
 domain_of:
-- Extractor
+- UsageTemplate
 range: string
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
 </pre></div>
@@ -144,7 +144,7 @@ range: string
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021 - 2023, yadg authors.</p>
+    <p>&#169; Copyright 2021 - 2023, MaRDA Metadata Extractors Team.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -1,6 +1,6 @@
 # Slot: method
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:method](https://www.marda-alliance.org/extractors/extractor/:method)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:method](https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:method)
 
 
 
@@ -13,8 +13,8 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:method](https://www.m
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Usage](Usage.md) |  |  no  |
-[Installation](Installation.md) |  |  no  |
+[Usage](Usage.md) | None |  no  |
+[Installation](Installation.md) | None |  no  |
 
 
 

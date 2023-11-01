@@ -5,7 +5,7 @@ _A machine-actionable set of installation instructions to obtain a working set-u
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:installation](https://www.marda-alliance.org/extractors/extractor/:installation)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:installation](https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:installation)
 
 
 
@@ -18,7 +18,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:installation](https:/
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific... |  no  |
+[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
 
 
 
@@ -41,7 +41,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:installation](https:/
 
 | Value |
 | --- |
-| JsonObj(method='pip', packages='my-pypi-package==1.0.0') |
+| JsonObj(method='pip', packages='my-pypi-package==1.0.0', requires_python='>=3.9') |
 | JsonObj(method='conda', requirements='dependencies:\n  - python=3.10\n  - numpy') |
 
 ## Identifier and Mapping Information
@@ -55,7 +55,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:installation](https:/
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
 
@@ -68,10 +68,10 @@ name: installation
 description: A machine-actionable set of installation instructions to obtain a working
   set-up of the Extractor.
 examples:
-- value: JsonObj(method='pip', packages='my-pypi-package==1.0.0')
+- value: JsonObj(method='pip', packages='my-pypi-package==1.0.0', requires_python='>=3.9')
 - value: JsonObj(method='conda', requirements='dependencies:\n  - python=3.10\n  -
     numpy')
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 rank: 1000
 multivalued: true
 alias: installation

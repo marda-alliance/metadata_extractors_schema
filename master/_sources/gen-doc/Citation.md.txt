@@ -2,12 +2,12 @@
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:Citation](https://www.marda-alliance.org/extractors/extractor/:Citation)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:Citation](https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:Citation)
 
 
 
 
-```mermaid
+```{mermaid}
  classDiagram
     class Citation
       Citation : contributors
@@ -33,11 +33,11 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:Citation](https://www
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [uri](uri.md) | 0..1 <br/> [String](String.md) | An unambiguous reference to the resource within a given context | direct |
-| [creators](creators.md) | 0..* <br/> [String](String.md) | A list of the creators of the resource | direct |
-| [contributors](contributors.md) | 0..* <br/> [String](String.md) | A list of the contributors to the resource | direct |
-| [title](title.md) | 0..1 <br/> [String](String.md) | A name given to the resource [from DC] | direct |
-| [type](type.md) | 0..1 <br/> [String](String.md) | Any bibliographic resource type (e | direct |
+| [uri](uri.md) | 0..1 <br/> [String](String.md) | An unambiguous reference to the resource within a given context. Recommended<br/>practice is to identify the resource by means of a string conforming to an<br/>identification system. Examples include International Standard Book Number<br/>(ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).<br/>Persistent identifiers should be provided as HTTP URIs [from DC]. | direct |
+| [creators](creators.md) | 0..* <br/> [String](String.md) | A list of the creators of the resource. | direct |
+| [contributors](contributors.md) | 0..* <br/> [String](String.md) | A list of the contributors to the resource. | direct |
+| [title](title.md) | 0..1 <br/> [String](String.md) | A name given to the resource [from DC]. | direct |
+| [type](type.md) | 0..1 <br/> [String](String.md) | Any bibliographic resource type (e.g., article, dataset, software) enumerated in<br/>the DCMI Type Vocabulary. | direct |
 
 
 
@@ -65,7 +65,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:Citation](https://www
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
 
@@ -75,8 +75,8 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:Citation](https://www
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://www.marda-alliance.org/extractors/extractor/:Citation |
-| native | https://www.marda-alliance.org/extractors/extractor/:Citation |
+| self | https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:Citation |
+| native | https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor/:Citation |
 
 
 
@@ -91,7 +91,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:Citation](https://www
 <details>
 ```yaml
 name: Citation
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 attributes:
   uri:
     name: uri
@@ -100,28 +100,28 @@ attributes:
       to an identification system. Examples include International Standard Book Number
       (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent
       identifiers should be provided as HTTP URIs [from DC].
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:identifier
     required: false
   creators:
     name: creators
     description: A list of the creators of the resource.
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:creator
     multivalued: true
   contributors:
     name: contributors
     description: A list of the contributors to the resource.
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:contributor
     multivalued: true
   title:
     name: title
     description: A name given to the resource [from DC].
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:title
     required: false
@@ -129,7 +129,7 @@ attributes:
     name: type
     description: Any bibliographic resource type (e.g., article, dataset, software)
       enumerated in the DCMI Type Vocabulary.
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:type
     required: false
@@ -142,7 +142,7 @@ attributes:
 <details>
 ```yaml
 name: Citation
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 attributes:
   uri:
     name: uri
@@ -151,7 +151,7 @@ attributes:
       to an identification system. Examples include International Standard Book Number
       (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent
       identifiers should be provided as HTTP URIs [from DC].
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:identifier
     alias: uri
@@ -164,7 +164,7 @@ attributes:
   creators:
     name: creators
     description: A list of the creators of the resource.
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:creator
     multivalued: true
@@ -176,7 +176,7 @@ attributes:
   contributors:
     name: contributors
     description: A list of the contributors to the resource.
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:contributor
     multivalued: true
@@ -188,7 +188,7 @@ attributes:
   title:
     name: title
     description: A name given to the resource [from DC].
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:title
     alias: title
@@ -201,7 +201,7 @@ attributes:
     name: type
     description: Any bibliographic resource type (e.g., article, dataset, software)
       enumerated in the DCMI Type Vocabulary.
-    from_schema: https://www.marda-alliance.org/extractors/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/base
     rank: 1000
     slot_uri: dc_terms:type
     alias: type

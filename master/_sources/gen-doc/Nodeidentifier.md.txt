@@ -33,7 +33,6 @@ URI: [shex:nonLiteral](http://www.w3.org/ns/shex#nonLiteral)
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
-
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/master/gen-doc/extractor
 
 
