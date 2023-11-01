@@ -185,86 +185,85 @@
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Link to this heading"></a></h3>
 <details>
-```yaml
-name: UsageTemplate
-from_schema: https://www.marda-alliance.org/extractors/extractor
-attributes:
-  input_path:
-    name: input_path
-    description: The location of the resource (e.g., file, or directory) on disk to
-      parse.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-  input_type:
-    name: input_type
-    description: The registry ID of the file type to parse Will default to the ID
-      of the file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-  output_path:
-    name: output_path
-    description: The location of the output to write to disk with the results of the
-      extraction, if successful (OPTIONAL).
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-  output_type:
-    name: output_type
-    description: The registry ID of the file type to write to disk.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
-
-### Induced
-
-&lt;details&gt;
-```yaml
-name: UsageTemplate
-from_schema: https://www.marda-alliance.org/extractors/extractor
-attributes:
-  input_path:
-    name: input_path
-    description: The location of the resource (e.g., file, or directory) on disk to
-      parse.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-    alias: input_path
-    owner: UsageTemplate
-    domain_of:
-    - UsageTemplate
-    range: string
-  input_type:
-    name: input_type
-    description: The registry ID of the file type to parse Will default to the ID
-      of the file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-    alias: input_type
-    owner: UsageTemplate
-    domain_of:
-    - UsageTemplate
-    range: string
-  output_path:
-    name: output_path
-    description: The location of the output to write to disk with the results of the
-      extraction, if successful (OPTIONAL).
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-    alias: output_path
-    owner: UsageTemplate
-    domain_of:
-    - UsageTemplate
-    range: string
-  output_type:
-    name: output_type
-    description: The registry ID of the file type to write to disk.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-    alias: output_type
-    owner: UsageTemplate
-    domain_of:
-    - UsageTemplate
-    range: string
-
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="nt">attributes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">input_path</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_path</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location of the resource (e.g., file, or directory) on disk to</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">parse.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">  </span><span class="nt">input_type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_type</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry ID of the file type to parse Will default to the ID</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the file type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">  </span><span class="nt">output_path</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_path</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location of the output to write to disk with the results of the</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">extraction, if successful (OPTIONAL).</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">  </span><span class="nt">output_type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_type</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry ID of the file type to write to disk.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="induced">
+<h3>Induced<a class="headerlink" href="#induced" title="Link to this heading"></a></h3>
+<details>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="nt">attributes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">input_path</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_path</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location of the resource (e.g., file, or directory) on disk to</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">parse.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_path</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">input_type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_type</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry ID of the file type to parse Will default to the ID</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the file type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_type</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">output_path</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_path</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location of the output to write to disk with the results of the</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">extraction, if successful (OPTIONAL).</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_path</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">output_type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_type</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry ID of the file type to write to disk.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_type</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 </pre></div>
 </div>
 </details></section>

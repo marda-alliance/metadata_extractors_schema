@@ -185,70 +185,69 @@
 <section id="direct">
 <h3>Direct<a class="headerlink" href="#direct" title="Link to this heading"></a></h3>
 <details>
-```yaml
-name: SupportedFileTypes
-from_schema: https://www.marda-alliance.org/extractors/extractor
-attributes:
-  id:
-    name: id
-    description: Registered MarDA extractors ID for this file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-  description:
-    name: description
-    description: Free-text description of caveats or instructions specific to this
-      file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-  template:
-    name: template
-    description: A mechanism for overriding the template values for this file type
-      in the usage instructions.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-    range: UsageTemplate
-    required: false
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;/details&gt;
-
-### Induced
-
-&lt;details&gt;
-```yaml
-name: SupportedFileTypes
-from_schema: https://www.marda-alliance.org/extractors/extractor
-attributes:
-  id:
-    name: id
-    description: Registered MarDA extractors ID for this file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    alias: id
-    owner: SupportedFileTypes
-    domain_of:
-    - SupportedFileTypes
-    - Extractor
-    range: string
-  description:
-    name: description
-    description: Free-text description of caveats or instructions specific to this
-      file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    alias: description
-    owner: SupportedFileTypes
-    domain_of:
-    - SupportedFileTypes
-    - Extractor
-    range: string
-  template:
-    name: template
-    description: A mechanism for overriding the template values for this file type
-      in the usage instructions.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
-    rank: 1000
-    alias: template
-    owner: SupportedFileTypes
-    domain_of:
-    - SupportedFileTypes
-    range: UsageTemplate
-    required: false
-
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="nt">attributes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">id</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registered MarDA extractors ID for this file type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Free-text description of caveats or instructions specific to this</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">file type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">template</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A mechanism for overriding the template values for this file type</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the usage instructions.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="induced">
+<h3>Induced<a class="headerlink" href="#induced" title="Link to this heading"></a></h3>
+<details>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="nt">attributes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">id</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Registered MarDA extractors ID for this file type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Free-text description of caveats or instructions specific to this</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">file type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">template</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A mechanism for overriding the template values for this file type</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the usage instructions.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">template</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </pre></div>
 </div>
 </details></section>

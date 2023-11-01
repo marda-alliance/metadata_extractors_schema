@@ -124,6 +124,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:Extractor](https://ww
 ### Direct
 
 <details>
+
 ```yaml
 name: Extractor
 description: A code object or web service that when executed can read a file with
@@ -214,11 +215,13 @@ attributes:
     rank: 1000
 
 ```
+
 </details>
 
 ### Induced
 
 <details>
+
 ```yaml
 name: Extractor
 description: A code object or web service that when executed can read a file with
@@ -417,4 +420,5 @@ attributes:
     required: true
 
 ```
+
 </details>

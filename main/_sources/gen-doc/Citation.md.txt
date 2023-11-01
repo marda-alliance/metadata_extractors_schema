@@ -89,6 +89,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:Citation](https://www
 ### Direct
 
 <details>
+
 ```yaml
 name: Citation
 from_schema: https://www.marda-alliance.org/extractors/extractor
@@ -135,11 +136,13 @@ attributes:
     required: false
 
 ```
+
 </details>
 
 ### Induced
 
 <details>
+
 ```yaml
 name: Citation
 from_schema: https://www.marda-alliance.org/extractors/extractor
@@ -212,4 +215,5 @@ attributes:
     required: false
 
 ```
+
 </details>

@@ -86,6 +86,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:UsageTemplate](https:
 ### Direct
 
 <details>
+
 ```yaml
 name: UsageTemplate
 from_schema: https://www.marda-alliance.org/extractors/extractor
@@ -115,11 +116,13 @@ attributes:
     rank: 1000
 
 ```
+
 </details>
 
 ### Induced
 
 <details>
+
 ```yaml
 name: UsageTemplate
 from_schema: https://www.marda-alliance.org/extractors/extractor
@@ -169,4 +172,5 @@ attributes:
     range: string
 
 ```
+
 </details>

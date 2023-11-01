@@ -112,6 +112,7 @@ URI: [https://www.marda-alliance.org/extractors/filetype/:FileType](https://www.
 ### Direct
 
 <details>
+
 ```yaml
 name: FileType
 description: A specific encoding of data for storage purposes, defined by a set of
@@ -173,11 +174,13 @@ attributes:
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
 
 ```
+
 </details>
 
 ### Induced
 
 <details>
+
 ```yaml
 name: FileType
 description: A specific encoding of data for storage purposes, defined by a set of
@@ -318,4 +321,5 @@ attributes:
     range: string
 
 ```
+
 </details>
