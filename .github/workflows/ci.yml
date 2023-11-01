@@ -5,7 +5,7 @@ on:
     pull_request:
     push:
         branches:
-            - master
+            - main
 
 # Cancel running workflows when additional changes are pushed
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-a-fallback-value
@@ -55,7 +55,7 @@ jobs:
                     linkml-validate -s schemas/filetype.yml -C FileType $f
                   done
     build-pages:
-        runs-on: ubuntu-latest
+        runs-on: windows-latest
         needs: [check-linkml-schemas]
         steps:
             - uses: actions/checkout@v3
@@ -91,4 +91,16 @@ jobs:
 
             - name: Build Sphinx docs
               run: |
-                  sphinx-build -b html docs/source public/master
+                  sphinx-build -b html docs/source public/pr
+
+            - name: Upload docs artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: public-pr
+                  path: public/pr
+
+            - name: Upload gen-doc artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: gen-doc
+                  path: docs/source/gen-doc
