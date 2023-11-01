@@ -40,6 +40,7 @@ extensions = [
     # "sphinx_autodoc_typehints",
     "sphinx_rtd_theme",
     "myst_parser",
+    "sphinxcontrib.mermaid",
     # "sphinxcontrib.autodoc_pydantic",
 ]
 
@@ -49,7 +50,7 @@ templates_path = ["_templates"]
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-# exclude_patterns = []
+exclude_patterns = ["_build"]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -88,4 +89,9 @@ intersphinx_mapping = {
 #    "dgbowl_schemas": ("https://dgbowl.github.io/dgbowl-schemas/master", None),
 #    "xarray": ("https://docs.xarray.dev/en/stable", None),
 #    "datatree": ("https://xarray-datatree.readthedocs.io/en/latest/", None),
+}
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown'
 }
