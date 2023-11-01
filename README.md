@@ -4,6 +4,9 @@
 
 # <div align="center">MaRDA Metadata Extractors: Schema</div>
 
+[![Documentation](https://badgen.net/badge/docs/marda-alliance.github.io/grey?icon=firefox)](https://marda-alliance.github.io/metadata_extractors_schema)
+![Github status](https://badgen.net/github/checks/marda-alliance/metadata_extractors_schema/?icon=github)
+
 A repository containing the [LinkML](https://linkml.io/linkml/)-based schemas backing the
 MaRDA Metadata Extractors [Registry](https://github.com/marda-alliance/metadata_extractors_registry/)
 and [API](https://github.com/marda-alliance/metadata_extractors_api/).

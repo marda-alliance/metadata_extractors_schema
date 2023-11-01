@@ -20,8 +20,8 @@ version = "main"
 # -- Project information -----------------------------------------------------
 
 project = "MaRDA Metadata Extractors"
-copyright = "2021 - 2023, MaRDA Metadata Extractors Team"
-author = "Peter Kraus"
+copyright = "2022 - 2023, MaRDA Metadata Extractors Team"
+author = "Peter Kraus, Matthew Evans"
 release = version
 
 
@@ -62,13 +62,15 @@ html_theme = "sphinx_rtd_theme"
 html_css_files = [
     "custom_theme.css",
 ]
+
 html_theme_options = {
     "body_max_width": "none",
     "sticky_navigation": True,
     "navigation_depth": 6,
+    "github_url": "https://github.com/marda-alliance/metadata_extractors_schema",
 }
-#html_logo = "./images/yadg.png"
-#html_favicon = "./images/yadg_ico.png"
+html_logo = "https://avatars.githubusercontent.com/u/74017645?s=200&v=4"
+html_favicon = "https://www.marda-alliance.org/wp-content/uploads/2023/04/cropped-favicon-32x32.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
