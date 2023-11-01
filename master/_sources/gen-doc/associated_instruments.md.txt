@@ -1,0 +1,72 @@
+# Slot: associated_instruments
+
+
+_Any instrument, or class of instruments, that typically create the data encoded into such files._
+
+
+
+URI: [https://www.marda-alliance.org/extractors/filetype/:associated_instruments](https://www.marda-alliance.org/extractors/filetype/:associated_instruments)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[FileType](FileType.md) | A specific encoding of data for storage purposes, defined by a set of common ... |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/filetype
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: associated_instruments
+description: Any instrument, or class of instruments, that typically create the data
+  encoded into such files.
+from_schema: https://www.marda-alliance.org/extractors/filetype
+rank: 1000
+multivalued: true
+alias: associated_instruments
+owner: FileType
+domain_of:
+- FileType
+range: string
+
+```
+</details>

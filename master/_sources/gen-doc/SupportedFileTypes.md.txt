@@ -1,0 +1,131 @@
+# Class: SupportedFileTypes
+
+
+
+URI: [https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes](https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes)
+
+
+
+
+```mermaid
+ classDiagram
+    class SupportedFileTypes
+      SupportedFileTypes : description
+        
+      SupportedFileTypes : id
+        
+      
+```
+
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [id](id.md) | 0..1 <br/> [String](String.md) | Registered MarDA extractors ID for this file type | direct |
+| [description](description.md) | 0..1 <br/> [String](String.md) | Free-text description of caveats or instructions specific to this file type | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Extractor](Extractor.md) | [supported_filetypes](supported_filetypes.md) | range | [SupportedFileTypes](SupportedFileTypes.md) |
+| [Extractor](Extractor.md) | [supported_output_filetypes](supported_output_filetypes.md) | range | [SupportedFileTypes](SupportedFileTypes.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/extractor
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes |
+| native | https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes |
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+```yaml
+name: SupportedFileTypes
+from_schema: https://www.marda-alliance.org/extractors/extractor
+attributes:
+  id:
+    name: id
+    description: Registered MarDA extractors ID for this file type.
+    from_schema: https://www.marda-alliance.org/extractors/extractor
+  description:
+    name: description
+    description: Free-text description of caveats or instructions specific to this
+      file type.
+    from_schema: https://www.marda-alliance.org/extractors/extractor
+
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+name: SupportedFileTypes
+from_schema: https://www.marda-alliance.org/extractors/extractor
+attributes:
+  id:
+    name: id
+    description: Registered MarDA extractors ID for this file type.
+    from_schema: https://www.marda-alliance.org/extractors/extractor
+    alias: id
+    owner: SupportedFileTypes
+    domain_of:
+    - SupportedFileTypes
+    - Extractor
+    range: string
+  description:
+    name: description
+    description: Free-text description of caveats or instructions specific to this
+      file type.
+    from_schema: https://www.marda-alliance.org/extractors/extractor
+    alias: description
+    owner: SupportedFileTypes
+    domain_of:
+    - SupportedFileTypes
+    - Extractor
+    range: string
+
+```
+</details>

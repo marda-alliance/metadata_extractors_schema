@@ -1,0 +1,88 @@
+# extractor
+
+This file describes the `Extractor` model created by the MaRDA extractors WG.
+
+URI: https://www.marda-alliance.org/extractors/extractor
+
+Name: extractor
+
+
+
+## Classes
+
+| Class | Description |
+| --- | --- |
+| [Citation](Citation.md) | None |
+| [Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |
+| [Installation](Installation.md) | None |
+| [License](License.md) | None |
+| [SupportedFileTypes](SupportedFileTypes.md) | None |
+| [Usage](Usage.md) | None |
+
+
+
+## Slots
+
+| Slot | Description |
+| --- | --- |
+| [citations](citations.md) | A citation or citations for the entry, to be provided should it be used in ac... |
+| [command](command.md) | A machine-executable command by which the Extractor functionality can be acce... |
+| [contributors](contributors.md) | A list of the contributors to the resource |
+| [creators](creators.md) | A list of the creators of the resource |
+| [description](description.md) | A human-readable outline of the entry, its format, data content and uses |
+| [documentation](documentation.md) | A URL or URI for any online documentation associated with this extractor |
+| [id](id.md) | A unique identifier for the entry within the MaRDA registry namespace, this s... |
+| [installation](installation.md) | A machine-actionable set of installation instructions to obtain a working set... |
+| [instructions](instructions.md) | Any usage notes or installation instructions for this Extractor |
+| [license](license.md) | A URL, URI or SPDX license identifier for a legal document giving official pe... |
+| [method](method.md) | Usage invocation method, e |
+| [name](name.md) | A recognisable name for the entry |
+| [packages](packages.md) | A list of packages, including versioned packages or `git+https://` targets, t... |
+| [requirements](requirements.md) | Contents of a 'requirements |
+| [setup](setup.md) | Any necessary setup step for the 'command' to become available: |
+| [source_repository](source_repository.md) | A URL or URI for a source code repository associated with this extractor |
+| [spdx](spdx.md) | An SPDX License Identifier entry |
+| [subject](subject.md) | Any keywords, phrases or classification codes that are relevant to the entry,... |
+| [supported_filetypes](supported_filetypes.md) | Container for links to the file types that this extractor supports, matching ... |
+| [supported_output_filetypes](supported_output_filetypes.md) | Container for enumerating the possible output formats of this extractor |
+| [title](title.md) | A name given to the resource [from DC] |
+| [type](type.md) | Any bibliographic resource type (e |
+| [uri](uri.md) | An unambiguous reference to the resource within a given context |
+| [usage](usage.md) | A machine-actionable description of the usage of the Extractor |
+| [version](version.md) | A version tag for the registered extractor |
+
+
+## Enumerations
+
+| Enumeration | Description |
+| --- | --- |
+| [InstallerTypes](InstallerTypes.md) |  |
+| [UsageTypes](UsageTypes.md) |  |
+
+
+## Types
+
+| Type | Description |
+| --- | --- |
+| [Boolean](Boolean.md) | A binary (true or false) value |
+| [Curie](Curie.md) | a compact URI |
+| [Date](Date.md) | a date (year, month and day) in an idealized calendar |
+| [DateOrDatetime](DateOrDatetime.md) | Either a date or a datetime |
+| [Datetime](Datetime.md) | The combination of a date and time |
+| [Decimal](Decimal.md) | A real number with arbitrary precision that conforms to the xsd:decimal speci... |
+| [Double](Double.md) | A real number that conforms to the xsd:double specification |
+| [Float](Float.md) | A real number that conforms to the xsd:float specification |
+| [Integer](Integer.md) | An integer |
+| [Ncname](Ncname.md) | Prefix part of CURIE |
+| [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
+| [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |
+| [String](String.md) | A character string |
+| [Time](Time.md) | A time object represents a (local) time of day, independent of any particular... |
+| [Uri](Uri.md) | a complete URI |
+| [Uriorcurie](Uriorcurie.md) | a URI or a CURIE |
+
+
+## Subsets
+
+| Subset | Description |
+| --- | --- |

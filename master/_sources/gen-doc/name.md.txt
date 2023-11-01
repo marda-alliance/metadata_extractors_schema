@@ -1,0 +1,71 @@
+# Slot: name
+
+
+_A recognisable name for the entry._
+
+
+
+URI: [schema_org:name](http://schema.org/name)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific... |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Required: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: name
+description: A recognisable name for the entry.
+from_schema: https://www.marda-alliance.org/extractors/extractor
+rank: 1000
+slot_uri: schema_org:name
+alias: name
+domain_of:
+- Extractor
+range: string
+required: true
+
+```
+</details>
