@@ -91,4 +91,10 @@ jobs:
 
             - name: Build Sphinx docs
               run: |
-                  sphinx-build -b html docs/source public/main
+                  sphinx-build -b html docs/source public/pr
+
+            - name: Upload docs artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: public-pr
+                  path: public/pr
