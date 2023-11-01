@@ -1,0 +1,70 @@
+# Slot: template
+
+
+_A mechanism for overriding the template values for this file type in the usage instructions._
+
+
+
+URI: [https://www.marda-alliance.org/extractors/extractor/:template](https://www.marda-alliance.org/extractors/extractor/:template)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[SupportedFileTypes](SupportedFileTypes.md) |  |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [UsageTemplate](UsageTemplate.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: template
+description: A mechanism for overriding the template values for this file type in
+  the usage instructions.
+from_schema: https://www.marda-alliance.org/extractors/extractor
+rank: 1000
+alias: template
+owner: SupportedFileTypes
+domain_of:
+- SupportedFileTypes
+range: UsageTemplate
+required: false
+
+```
+</details>

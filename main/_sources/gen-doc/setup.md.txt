@@ -1,0 +1,71 @@
+# Slot: setup
+
+
+_Any necessary setup step for the 'command' to become available:_
+
+_  - for `method: python`, this is an argument to Python's `import`_
+
+
+
+URI: [https://www.marda-alliance.org/extractors/extractor/:setup](https://www.marda-alliance.org/extractors/extractor/:setup)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Usage](Usage.md) |  |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: setup
+description: "Any necessary setup step for the 'command' to become available:\n  -\
+  \ for `method: python`, this is an argument to Python's `import`"
+from_schema: https://www.marda-alliance.org/extractors/extractor
+rank: 1000
+alias: setup
+owner: Usage
+domain_of:
+- Usage
+range: string
+
+```
+</details>

@@ -1,0 +1,215 @@
+# Class: Citation
+
+
+
+URI: [https://www.marda-alliance.org/extractors/extractor/:Citation](https://www.marda-alliance.org/extractors/extractor/:Citation)
+
+
+
+
+```mermaid
+ classDiagram
+    class Citation
+      Citation : contributors
+        
+      Citation : creators
+        
+      Citation : title
+        
+      Citation : type
+        
+      Citation : uri
+        
+      
+```
+
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [uri](uri.md) | 0..1 <br/> [String](String.md) | An unambiguous reference to the resource within a given context | direct |
+| [creators](creators.md) | 0..* <br/> [String](String.md) | A list of the creators of the resource | direct |
+| [contributors](contributors.md) | 0..* <br/> [String](String.md) | A list of the contributors to the resource | direct |
+| [title](title.md) | 0..1 <br/> [String](String.md) | A name given to the resource [from DC] | direct |
+| [type](type.md) | 0..1 <br/> [String](String.md) | Any bibliographic resource type (e | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Extractor](Extractor.md) | [citations](citations.md) | range | [Citation](Citation.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/extractor
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://www.marda-alliance.org/extractors/extractor/:Citation |
+| native | https://www.marda-alliance.org/extractors/extractor/:Citation |
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+```yaml
+name: Citation
+from_schema: https://www.marda-alliance.org/extractors/extractor
+attributes:
+  uri:
+    name: uri
+    description: An unambiguous reference to the resource within a given context.
+      Recommended practice is to identify the resource by means of a string conforming
+      to an identification system. Examples include International Standard Book Number
+      (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent
+      identifiers should be provided as HTTP URIs [from DC].
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:identifier
+    required: false
+  creators:
+    name: creators
+    description: A list of the creators of the resource.
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:creator
+    multivalued: true
+  contributors:
+    name: contributors
+    description: A list of the contributors to the resource.
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:contributor
+    multivalued: true
+  title:
+    name: title
+    description: A name given to the resource [from DC].
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:title
+    required: false
+  type:
+    name: type
+    description: Any bibliographic resource type (e.g., article, dataset, software)
+      enumerated in the DCMI Type Vocabulary.
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:type
+    required: false
+
+```
+</details>
+
+### Induced
+
+<details>
+```yaml
+name: Citation
+from_schema: https://www.marda-alliance.org/extractors/extractor
+attributes:
+  uri:
+    name: uri
+    description: An unambiguous reference to the resource within a given context.
+      Recommended practice is to identify the resource by means of a string conforming
+      to an identification system. Examples include International Standard Book Number
+      (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent
+      identifiers should be provided as HTTP URIs [from DC].
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:identifier
+    alias: uri
+    owner: Citation
+    domain_of:
+    - Citation
+    - License
+    range: string
+    required: false
+  creators:
+    name: creators
+    description: A list of the creators of the resource.
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:creator
+    multivalued: true
+    alias: creators
+    owner: Citation
+    domain_of:
+    - Citation
+    range: string
+  contributors:
+    name: contributors
+    description: A list of the contributors to the resource.
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:contributor
+    multivalued: true
+    alias: contributors
+    owner: Citation
+    domain_of:
+    - Citation
+    range: string
+  title:
+    name: title
+    description: A name given to the resource [from DC].
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:title
+    alias: title
+    owner: Citation
+    domain_of:
+    - Citation
+    range: string
+    required: false
+  type:
+    name: type
+    description: Any bibliographic resource type (e.g., article, dataset, software)
+      enumerated in the DCMI Type Vocabulary.
+    from_schema: https://www.marda-alliance.org/extractors/base
+    rank: 1000
+    slot_uri: dc_terms:type
+    alias: type
+    owner: Citation
+    domain_of:
+    - Citation
+    range: string
+    required: false
+
+```
+</details>

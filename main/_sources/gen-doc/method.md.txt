@@ -1,0 +1,54 @@
+# Slot: method
+
+URI: [https://www.marda-alliance.org/extractors/extractor/:method](https://www.marda-alliance.org/extractors/extractor/:method)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Usage](Usage.md) |  |  no  |
+[Installation](Installation.md) |  |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: method
+alias: method
+domain_of:
+- Usage
+- Installation
+range: string
+
+```
+</details>
