@@ -1,7 +1,7 @@
 MaRDA Metadata Extractors Schema
 ================================
 
-A repository (`marda-alliance/metadata_extractors_schema <https://github.com/marda-alliance/metadata_extractors_schema/>`) containing the |LinkML|_-based schemas backing the MaRDA Metadata Extractors Registry and API.
+A repository at |MMESchemaRepo|_, containing the |LinkML|_-based schemas backing the MaRDA Metadata Extractors Registry and API.
 
 The schemas implemented here are machine-actionable. They are used by the `Registry <https://github.com/marda-alliance/metadata_extractors_registry/>`_ to validate entries; a reference implementation demonstrating their pracical use is shown in the `API <https://github.com/marda-alliance/metadata_extractors_api/>`_.
 
@@ -28,6 +28,10 @@ The repository contains two user-facing schemas:
 
    gen-doc/filetype
    gen-doc/extractor
+
+.. |MMESchemaRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_schema/?icon=github
+
+.. _MMESchemaRepo: https://github.com/marda-alliance/metadata_extractors_schema/
 
 .. |LinkML| replace:: :mod:`LinkML`
 

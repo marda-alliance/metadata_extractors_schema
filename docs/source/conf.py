@@ -67,7 +67,13 @@ html_theme_options = {
     "body_max_width": "none",
     "sticky_navigation": True,
     "navigation_depth": 6,
-    "github_url": "https://github.com/marda-alliance/metadata_extractors_schema",
+}
+html_context = {
+    "display_github": True,
+    "github_user": "marda-alliance",
+    "github_repo": "metadata_extractors_schema",
+    "github_version": version,
+    "conf_py_path": "/docs/source/"
 }
 html_logo = "https://avatars.githubusercontent.com/u/74017645?s=200&v=4"
 html_favicon = "https://www.marda-alliance.org/wp-content/uploads/2023/04/cropped-favicon-32x32.png"
