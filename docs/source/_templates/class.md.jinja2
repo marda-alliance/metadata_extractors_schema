@@ -41,12 +41,12 @@ URI: {{ gen.uri_link(element) }}
 | ---  | --- | --- | --- |
 {% if gen.get_direct_slots(element)|length > 0 %}
 {%- for slot in gen.get_direct_slots(element) -%}
-| {{ gen.link(slot) }} | {{ gen.cardinality(slot) }} <br/> {{ gen.link(slot.range) }} | {{ slot.description|enshorten }} | direct |
+| {{ gen.link(slot) }} | {{ gen.cardinality(slot) }} <br/> {{ gen.link(slot.range) }} | {{ slot.description | wordwrap(80, wrapstring='<br/>') }} | direct |
 {% endfor -%}
 {% endif -%}
 {% if gen.get_indirect_slots(element)|length > 0 %}
 {%- for slot in gen.get_indirect_slots(element) -%}
-| {{ gen.link(slot) }} | {{ gen.cardinality(slot) }} <br/> {{ gen.link(slot.range) }} | {{ slot.description|enshorten }} | {{ gen.links(gen.get_slot_inherited_from(element.name, slot.name))|join(', ') }} |
+| {{ gen.link(slot) }} | {{ gen.cardinality(slot) }} <br/> {{ gen.link(slot.range) }} | {{ slot.description | wordwrap(80, wrapstring='<br/>') }} | {{ gen.links(gen.get_slot_inherited_from(element.name, slot.name))|join(', ') }} |
 {% endfor -%}
 {% endif %}
 

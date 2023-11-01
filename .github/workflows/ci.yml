@@ -77,6 +77,10 @@ jobs:
                   pip install -r requirements.txt
                   pip freeze
 
+            - name: Build base docs
+              run: |
+                  gen-doc schemas/base.yaml -d docs/source/gen-doc --template-directory docs/source/_templates
+
             - name: Build FileType docs
               run: |
                   gen-doc schemas/filetype.yml -d docs/source/gen-doc --template-directory docs/source/_templates
