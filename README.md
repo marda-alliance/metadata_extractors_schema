@@ -4,7 +4,7 @@
 
 # <div align="center">MaRDA Metadata Extractors: Schema</div>
 <div align="center">
-  
+
 [![Documentation](https://badgen.net/badge/docs/marda-alliance.github.io/grey?icon=firefox)](https://marda-alliance.github.io/metadata_extractors_schema)
 ![Github status](https://badgen.net/github/checks/marda-alliance/metadata_extractors_schema/?icon=github)
 
