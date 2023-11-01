@@ -18,7 +18,7 @@ URI: [dc_terms:title](http://purl.org/dc/terms/1.1/title)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Citation](Citation.md) |  |  no  |
+[Citation](Citation.md) | None |  no  |
 
 
 

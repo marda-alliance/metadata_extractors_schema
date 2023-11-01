@@ -18,7 +18,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:requirements](https:/
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Installation](Installation.md) |  |  no  |
+[Installation](Installation.md) | None |  no  |
 
 
 

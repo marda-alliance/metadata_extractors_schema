@@ -46,7 +46,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:command](https://www.
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Usage](Usage.md) |  |  no  |
+[Usage](Usage.md) | None |  no  |
 
 
 

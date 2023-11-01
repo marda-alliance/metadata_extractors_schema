@@ -13,8 +13,8 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:uri](https://www.mard
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Citation](Citation.md) |  |  no  |
-[License](License.md) |  |  no  |
+[Citation](Citation.md) | None |  no  |
+[License](License.md) | None |  no  |
 
 
 

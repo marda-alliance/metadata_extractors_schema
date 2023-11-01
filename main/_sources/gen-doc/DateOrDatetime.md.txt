@@ -36,4 +36,3 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 * from schema: https://www.marda-alliance.org/extractors/extractor
 
 
-

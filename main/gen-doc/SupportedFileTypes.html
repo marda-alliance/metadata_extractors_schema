@@ -18,6 +18,8 @@
         <script src="../_static/documentation_options.js?v=a8da1a53"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -84,7 +86,8 @@
   <section id="class-supportedfiletypes">
 <h1>Class: SupportedFileTypes<a class="headerlink" href="#class-supportedfiletypes" title="Link to this heading"></a></h1>
 <p>URI: <a class="reference external" href="https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes">https://www.marda-alliance.org/extractors/extractor/:SupportedFileTypes</a></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span> classDiagram
+<div class="mermaid">
+             classDiagram
     class SupportedFileTypes
       SupportedFileTypes : description
         
@@ -95,9 +98,7 @@
           SupportedFileTypes --|&gt; UsageTemplate : template
         
       
-</pre></div>
-</div>
-<!-- no inheritance hierarchy -->
+        </div><!-- no inheritance hierarchy -->
 <section id="slots">
 <h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -111,17 +112,17 @@
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="std std-doc">id</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>Registered MarDA extractors ID for this file type</p></td>
+<td><p>Registered MarDA extractors ID for this file type.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="description.html"><span class="std std-doc">description</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>Free-text description of caveats or instructions specific to this file type</p></td>
+<td><p>Free-text description of caveats or instructions specific to this file type.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="template.html"><span class="std std-doc">template</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="UsageTemplate.html"><span class="std std-doc">UsageTemplate</span></a></p></td>
-<td><p>A mechanism for overriding the template values for this file type in the usag…</p></td>
+<td><p>A mechanism for overriding the template values for this file type in the usage<br/>instructions.</p></td>
 <td><p>direct</p></td>
 </tr>
 </tbody>

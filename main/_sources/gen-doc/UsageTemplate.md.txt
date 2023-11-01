@@ -7,7 +7,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:UsageTemplate](https:
 
 
 
-```mermaid
+```{mermaid}
  classDiagram
     class UsageTemplate
       UsageTemplate : input_path
@@ -31,10 +31,10 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:UsageTemplate](https:
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [input_path](input_path.md) | 0..1 <br/> [String](String.md) | The location of the resource (e | direct |
-| [input_type](input_type.md) | 0..1 <br/> [String](String.md) | The registry ID of the file type to parse Will default to the ID of the file ... | direct |
-| [output_path](output_path.md) | 0..1 <br/> [String](String.md) | The location of the output to write to disk with the results of the extractio... | direct |
-| [output_type](output_type.md) | 0..1 <br/> [String](String.md) | The registry ID of the file type to write to disk | direct |
+| [input_path](input_path.md) | 0..1 <br/> [String](String.md) | The location of the resource (e.g., file, or directory) on disk to parse. | direct |
+| [input_type](input_type.md) | 0..1 <br/> [String](String.md) | The registry ID of the file type to parse Will default to the ID of the file<br/>type. | direct |
+| [output_path](output_path.md) | 0..1 <br/> [String](String.md) | The location of the output to write to disk with the results of the extraction,<br/>if successful (OPTIONAL). | direct |
+| [output_type](output_type.md) | 0..1 <br/> [String](String.md) | The registry ID of the file type to write to disk. | direct |
 
 
 

@@ -18,7 +18,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:input_type](https://w
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[UsageTemplate](UsageTemplate.md) |  |  no  |
+[UsageTemplate](UsageTemplate.md) | None |  no  |
 
 
 

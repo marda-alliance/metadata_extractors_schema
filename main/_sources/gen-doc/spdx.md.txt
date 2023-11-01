@@ -18,7 +18,7 @@ URI: [dc_terms:identifier](http://purl.org/dc/terms/1.1/identifier)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[License](License.md) |  |  no  |
+[License](License.md) | None |  no  |
 
 
 

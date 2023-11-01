@@ -18,6 +18,8 @@
         <script src="../_static/documentation_options.js?v=a8da1a53"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -84,7 +86,8 @@
   <section id="class-citation">
 <h1>Class: Citation<a class="headerlink" href="#class-citation" title="Link to this heading"></a></h1>
 <p>URI: <a class="reference external" href="https://www.marda-alliance.org/extractors/extractor/:Citation">https://www.marda-alliance.org/extractors/extractor/:Citation</a></p>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span> classDiagram
+<div class="mermaid">
+             classDiagram
     class Citation
       Citation : contributors
         
@@ -97,9 +100,7 @@
       Citation : uri
         
       
-</pre></div>
-</div>
-<!-- no inheritance hierarchy -->
+        </div><!-- no inheritance hierarchy -->
 <section id="slots">
 <h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -113,27 +114,27 @@
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="uri.html"><span class="std std-doc">uri</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>An unambiguous reference to the resource within a given context</p></td>
+<td><p>An unambiguous reference to the resource within a given context. Recommended<br/>practice is to identify the resource by means of a string conforming to an<br/>identification system. Examples include International Standard Book Number<br/>(ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).<br/>Persistent identifiers should be provided as HTTP URIs [from DC].</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="creators.html"><span class="std std-doc">creators</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>A list of the creators of the resource</p></td>
+<td><p>A list of the creators of the resource.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="contributors.html"><span class="std std-doc">contributors</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>A list of the contributors to the resource</p></td>
+<td><p>A list of the contributors to the resource.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="title.html"><span class="std std-doc">title</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>A name given to the resource [from DC]</p></td>
+<td><p>A name given to the resource [from DC].</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="type.html"><span class="std std-doc">type</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>Any bibliographic resource type (e</p></td>
+<td><p>Any bibliographic resource type (e.g., article, dataset, software) enumerated in<br/>the DCMI Type Vocabulary.</p></td>
 <td><p>direct</p></td>
 </tr>
 </tbody>

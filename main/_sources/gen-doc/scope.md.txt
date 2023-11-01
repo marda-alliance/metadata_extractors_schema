@@ -18,7 +18,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:scope](https://www.ma
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Usage](Usage.md) |  |  no  |
+[Usage](Usage.md) | None |  no  |
 
 
 
