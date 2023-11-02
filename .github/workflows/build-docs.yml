@@ -39,12 +39,12 @@ jobs:
             - name: Build FileType docs
               shell: bash
               run: |
-                  gen-doc schemas/filetype.yml -d docs/source/gen-doc/filetype --template-directory docs/source/_templates
+                  gen-doc schemas/filetype.yml -d docs/source/gen-doc/filetype --template-directory docs/source/_templates  --example-directory examples/filetype
 
             - name: Build Extractor docs
               shell: bash
               run: |
-                  gen-doc schemas/extractor.yml -d docs/source/gen-doc/extractor --template-directory docs/source/_templates
+                  gen-doc schemas/extractor.yml -d docs/source/gen-doc/extractor --template-directory docs/source/_templates --example-directory examples/extractor
 
             - name: Tar gen-doc files
               run: tar -cvf gen-doc.tar docs/source/gen-doc
