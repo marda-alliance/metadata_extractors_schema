@@ -14,9 +14,8 @@ concurrency:
 
 jobs:
 
-    call-check-linkml-schemas:
+    call-workflow:
         uses: ./.github/workflows/check-linkml-schemas.yml
 
-    call-build-docs:
-        needs: [call-check-linkml-schemas]
+    call-workflow:
         uses: ./.github/workflows/build-docs.yml
