@@ -18,7 +18,7 @@ URI: [schema_org:identifier](http://schema.org/identifier)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific `FileType`. The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
 [SupportedFileTypes](SupportedFileTypes.md) | None |  no  |
 
 
@@ -50,7 +50,7 @@ URI: [schema_org:identifier](http://schema.org/identifier)
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 
 
@@ -63,7 +63,7 @@ name: id
 description: A unique identifier for the entry within the MaRDA registry namespace,
   this should be a shorthand label rather than a UUID. Only lower-case alphanumeric
   and dash ("-") characters are permitted.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 rank: 1000
 slot_uri: schema_org:identifier
 identifier: true

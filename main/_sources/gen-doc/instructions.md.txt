@@ -5,7 +5,7 @@ _Any usage notes or installation instructions for this Extractor. This field is 
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:instructions](https://www.marda-alliance.org/extractors/extractor/:instructions)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:instructions](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:instructions)
 
 
 
@@ -18,7 +18,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:instructions](https:/
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific `FileType`. The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
 
 
 
@@ -45,7 +45,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:instructions](https:/
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 
 
@@ -58,7 +58,7 @@ name: instructions
 description: Any usage notes or installation instructions for this Extractor. This
   field is intended for human use only and is not intended to be machine-actionable.
   Please use the `installation` and `usage` fields for that purpose.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 rank: 1000
 alias: instructions
 owner: Extractor

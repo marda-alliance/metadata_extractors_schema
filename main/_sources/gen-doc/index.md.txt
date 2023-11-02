@@ -2,7 +2,7 @@
 
 This file describes the `Extractor` model created by the MaRDA extractors WG.
 
-URI: https://www.marda-alliance.org/extractors/extractor
+URI: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 Name: extractor
 
@@ -13,7 +13,7 @@ Name: extractor
 | Class | Description |
 | --- | --- |
 | [Citation](Citation.md) | None |
-| [Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |
+| [Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific `FileType`. The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |
 | [Installation](Installation.md) | None |
 | [License](License.md) | None |
 | [SupportedFileTypes](SupportedFileTypes.md) | None |
@@ -50,8 +50,8 @@ Name: extractor
 | [source_repository](source_repository.md) | A URL or URI for a source code repository associated with this extractor |
 | [spdx](spdx.md) | An SPDX License Identifier entry |
 | [subject](subject.md) | Any keywords, phrases or classification codes that are relevant to the entry,... |
-| [supported_filetypes](supported_filetypes.md) | Container for links to the file types that this extractor supports, matching ... |
-| [supported_output_filetypes](supported_output_filetypes.md) | Container for enumerating the possible output formats of this extractor |
+| [supported_filetypes](supported_filetypes.md) | An enumeration of the :class:`FileType` that an :class:`Extractor` supports, ... |
+| [supported_output_filetypes](supported_output_filetypes.md) | An enumeration of the possible output formats of an :class:`Extractor` |
 | [template](template.md) | A mechanism for overriding the template values for this file type in the usag... |
 | [title](title.md) | A name given to the resource [from DC] |
 | [type](type.md) | Any bibliographic resource type (e |

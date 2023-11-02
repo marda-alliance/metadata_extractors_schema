@@ -99,8 +99,8 @@
              
   <section id="class-extractor">
 <h1>Class: Extractor<a class="headerlink" href="#class-extractor" title="Link to this heading"></a></h1>
-<p><em>A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file.</em></p>
-<p>URI: <a class="reference external" href="https://www.marda-alliance.org/extractors/extractor/:Extractor">https://www.marda-alliance.org/extractors/extractor/:Extractor</a></p>
+<p><em>A script, code, or web service that, when executed, can extract information from a supplied “file” with a specific <code class="docutils literal notranslate"><span class="pre">FileType</span></code>. The supplied “file” may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.</em></p>
+<p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:Extractor">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:Extractor</a></p>
 <div class="mermaid">
              classDiagram
     class Extractor
@@ -187,12 +187,12 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="supported_filetypes.html"><span class="std std-doc">supported_filetypes</span></a></p></td>
 <td><p>1..* <br/> <a class="reference internal" href="SupportedFileTypes.html"><span class="std std-doc">SupportedFileTypes</span></a></p></td>
-<td><p>Container for links to the file types that this extractor supports, matching the<br/>registry file types. The ID values can be passed to an extractor with the <code class="docutils literal notranslate"><span class="pre">{{&lt;br/&gt;input_type</span> <span class="pre">}}</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">usage-&gt;command</span></code>.</p></td>
+<td><p>An enumeration of the :class:<code class="docutils literal notranslate"><span class="pre">FileType</span></code> that an :class:<code class="docutils literal notranslate"><span class="pre">Extractor</span></code> supports,<br/>matching :class:<code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. The :obj:<code class="docutils literal notranslate"><span class="pre">FileType:id</span></code> can<br/>be passed to the :class:<code class="docutils literal notranslate"><span class="pre">Extractor</span></code>, see the :class:<code class="docutils literal notranslate"><span class="pre">Usage</span></code> class.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="supported_output_filetypes.html"><span class="std std-doc">supported_output_filetypes</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="SupportedFileTypes.html"><span class="std std-doc">SupportedFileTypes</span></a></p></td>
-<td><p>Container for enumerating the possible output formats of this extractor. These<br/>should match registry entries and can be specified on extractor execution using<br/>the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_type</span> <span class="pre">}}</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">usage-&gt;command</span></code>. If provided in the<br/>schema, when a user passes the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_type</span> <span class="pre">}}</span></code>, a resource of that type is<br/>expected to be found at the corresponding <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_path</span> <span class="pre">}}</span></code> (or its default<br/>value, if missing).</p></td>
+<td><p>An enumeration of the possible output formats of an :class:<code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. These<br/>should match :class:<code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. They can be specified<br/>on extractor execution using the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_type</span> <span class="pre">}}</span></code> parameter in<br/><code class="docutils literal notranslate"><span class="pre">usage-&gt;command</span></code>. If provided in the schema, when a user passes the <code class="docutils literal notranslate"><span class="pre">{{&lt;br/&gt;output_type</span> <span class="pre">}}</span></code>, a resource of that type is expected to be found at the<br/>corresponding <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_path</span> <span class="pre">}}</span></code> (or its default value, if missing).</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="source_repository.html"><span class="std std-doc">source_repository</span></a></p></td>
@@ -228,7 +228,7 @@
 <section id="schema-source">
 <h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>from schema: https://www.marda-alliance.org/extractors/extractor</p></li>
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</p></li>
 </ul>
 </section>
 </section>
@@ -242,10 +242,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>self</p></td>
-<td><p>https://www.marda-alliance.org/extractors/extractor/:Extractor</p></td>
+<td><p>https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:Extractor</p></td>
 </tr>
 <tr class="row-odd"><td><p>native</p></td>
-<td><p>https://www.marda-alliance.org/extractors/extractor/:Extractor</p></td>
+<td><p>https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:Extractor</p></td>
 </tr>
 <tr class="row-even"><td><p>close</p></td>
 <td><p>schema_org:SoftwareApplication, schema_org:ServiceChannel, dcmitype:Software, dcmitype:Service</p></td>
@@ -260,10 +260,12 @@
 <h3>Direct<a class="headerlink" href="#direct" title="Link to this heading"></a></h3>
 <details>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A code object or web service that when executed can read a file with</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">specific file type, or a set of files with a given structure, and extract or transform</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the scientific data and/or metadata contained within the file.</span>
-<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A script, code, or web service that, when executed, can extract information</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">from a supplied &quot;file&quot; with a specific `FileType`. The supplied &quot;file&quot; may also</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">be a set of files with a given structure. The extracted information may be verbatim</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or transformed, and include the scientific data and/or metadata contained within</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the file.</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="nt">close_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:SoftwareApplication</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:ServiceChannel</span>
@@ -279,23 +281,23 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">supported_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Container for links to the file types that this extractor supports,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">matching the registry file types. The ID values can be passed to an extractor</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the `{{ input_type }}` parameter in `usage-&gt;command`.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the :class:`FileType` that an :class:`Extractor`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">supports, matching :class:`FileTypes` present in the registry. The :obj:`FileType:id`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be passed to the :class:`Extractor`, see the :class:`Usage` class.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">supported_output_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_output_filetypes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Container for enumerating the possible output formats of this extractor.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">These should match registry entries and can be specified on extractor execution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">using the `{{ output_type }}` parameter in `usage-&gt;command`. If provided in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the schema, when a user passes the `{{ output_type }}`, a resource of that type</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is expected to be found at the corresponding `{{ output_path }}` (or its default</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value, if missing).</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the possible output formats of an :class:`Extractor`.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">These should match :class:`FileTypes` present in the registry. They can be specified</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">on extractor execution using the `{{ output_type }}` parameter in `usage-&gt;command`.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">If provided in the schema, when a user passes the `{{ output_type }}`, a resource</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of that type is expected to be found at the corresponding `{{ output_path }}`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(or its default value, if missing).</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
@@ -303,12 +305,12 @@
 <span class="w">  </span><span class="nt">source_repository</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source_repository</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A URL or URI for a source code repository associated with this extractor.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">  </span><span class="nt">documentation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">documentation</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A URL or URI for any online documentation associated with this extractor.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">  </span><span class="nt">usage</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usage</span>
@@ -319,7 +321,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;cli&#39;, command=&#39;parse --type=example {{ file_path }}&#39;)</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;python&#39;, setup=&#39;example.extractors&#39;, command=&#39;example.extractors.extract({{</span>
 <span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">file_path }}, type=&quot;example&quot;)&#39;)</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
@@ -333,7 +335,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;pip&#39;, packages=&#39;my-pypi-package==1.0.0&#39;, requires_python=&#39;&gt;=3.9&#39;)</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;conda&#39;, requirements=&#39;dependencies:\n  - python=3.10\n  -</span>
 <span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">numpy&#39;)</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
@@ -344,7 +346,7 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any usage notes or installation instructions for this Extractor.</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This field is intended for human use only and is not intended to be machine-actionable.</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Please use the `installation` and `usage` fields for that purpose.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </pre></div>
 </div>
@@ -354,10 +356,12 @@
 <h3>Induced<a class="headerlink" href="#induced" title="Link to this heading"></a></h3>
 <details>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A code object or web service that when executed can read a file with</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">specific file type, or a set of files with a given structure, and extract or transform</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the scientific data and/or metadata contained within the file.</span>
-<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A script, code, or web service that, when executed, can extract information</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">from a supplied &quot;file&quot; with a specific `FileType`. The supplied &quot;file&quot; may also</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">be a set of files with a given structure. The extracted information may be verbatim</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or transformed, and include the scientific data and/or metadata contained within</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the file.</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="nt">close_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:SoftwareApplication</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:ServiceChannel</span>
@@ -366,10 +370,10 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">supported_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Container for links to the file types that this extractor supports,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">matching the registry file types. The ID values can be passed to an extractor</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the `{{ input_type }}` parameter in `usage-&gt;command`.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the :class:`FileType` that an :class:`Extractor`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">supports, matching :class:`FileTypes` present in the registry. The :obj:`FileType:id`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be passed to the :class:`Extractor`, see the :class:`Usage` class.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
@@ -380,13 +384,13 @@
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">supported_output_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_output_filetypes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Container for enumerating the possible output formats of this extractor.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">These should match registry entries and can be specified on extractor execution</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">using the `{{ output_type }}` parameter in `usage-&gt;command`. If provided in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the schema, when a user passes the `{{ output_type }}`, a resource of that type</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is expected to be found at the corresponding `{{ output_path }}` (or its default</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">value, if missing).</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the possible output formats of an :class:`Extractor`.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">These should match :class:`FileTypes` present in the registry. They can be specified</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">on extractor execution using the `{{ output_type }}` parameter in `usage-&gt;command`.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">If provided in the schema, when a user passes the `{{ output_type }}`, a resource</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of that type is expected to be found at the corresponding `{{ output_path }}`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(or its default value, if missing).</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_output_filetypes</span>
@@ -398,7 +402,7 @@
 <span class="w">  </span><span class="nt">source_repository</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source_repository</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A URL or URI for a source code repository associated with this extractor.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source_repository</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
@@ -408,7 +412,7 @@
 <span class="w">  </span><span class="nt">documentation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">documentation</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A URL or URI for any online documentation associated with this extractor.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">documentation</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
@@ -424,7 +428,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;cli&#39;, command=&#39;parse --type=example {{ file_path }}&#39;)</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;python&#39;, setup=&#39;example.extractors&#39;, command=&#39;example.extractors.extract({{</span>
 <span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">file_path }}, type=&quot;example&quot;)&#39;)</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usage</span>
@@ -442,7 +446,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;pip&#39;, packages=&#39;my-pypi-package==1.0.0&#39;, requires_python=&#39;&gt;=3.9&#39;)</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;conda&#39;, requirements=&#39;dependencies:\n  - python=3.10\n  -</span>
 <span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">numpy&#39;)</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">installation</span>
@@ -457,7 +461,7 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any usage notes or installation instructions for this Extractor.</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This field is intended for human use only and is not intended to be machine-actionable.</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Please use the `installation` and `usage` fields for that purpose.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instructions</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
@@ -469,7 +473,7 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier for the entry within the MaRDA registry namespace,</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this should be a shorthand label rather than a UUID. Only lower-case alphanumeric</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and dash (&quot;-&quot;) characters are permitted.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:identifier</span>
 <span class="w">    </span><span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -484,7 +488,7 @@
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A recognisable name for the entry.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:name</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
@@ -497,7 +501,7 @@
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A human-readable outline of the entry, its format, data content and</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">uses.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:description</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
@@ -512,7 +516,7 @@
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any keywords, phrases or classification codes that are relevant to</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the entry, e.g., particular scientific domains of applicability, or experimental</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">techniques.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dc_terms:subject</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -525,7 +529,7 @@
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">citations</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A citation or citations for the entry, to be provided should it be</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">used in academic work (or otherwise).</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dcmitype:BibliographicReference</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -539,7 +543,7 @@
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">license</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A URL, URI or SPDX license identifier for a legal document giving</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">official permission to do something with the resource.</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dc_terms:license</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">license</span>

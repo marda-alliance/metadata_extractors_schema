@@ -84,7 +84,7 @@
   <section id="slot-usage">
 <h1>Slot: usage<a class="headerlink" href="#slot-usage" title="Link to this heading"></a></h1>
 <p><em>A machine-actionable description of the usage of the Extractor. The described usage pattern shall be available after the <code class="docutils literal notranslate"><span class="pre">installation</span></code> instructions have been followed.</em></p>
-<p>URI: <a class="reference external" href="https://www.marda-alliance.org/extractors/extractor/:usage">https://www.marda-alliance.org/extractors/extractor/:usage</a></p>
+<p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:usage">https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:usage</a></p>
 <!-- no inheritance hierarchy -->
 <section id="applicable-classes">
 <h2>Applicable Classes<a class="headerlink" href="#applicable-classes" title="Link to this heading"></a></h2>
@@ -97,7 +97,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="Extractor.html"><span class="std std-doc">Extractor</span></a></p></td>
-<td><p>A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file.</p></td>
+<td><p>A script, code, or web service that, when executed, can extract information from a supplied “file” with a specific <code class="docutils literal notranslate"><span class="pre">FileType</span></code>. The supplied “file” may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.</p></td>
 <td><p>no</p></td>
 </tr>
 </tbody>
@@ -130,7 +130,7 @@
 <section id="schema-source">
 <h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>from schema: https://www.marda-alliance.org/extractors/extractor</p></li>
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</p></li>
 </ul>
 </section>
 </section>
@@ -146,7 +146,7 @@ examples:
 - value: JsonObj(method='cli', command='parse --type=example {{ file_path }}')
 - value: JsonObj(method='python', setup='example.extractors', command='example.extractors.extract({{
     file_path }}, type="example")')
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 rank: 1000
 multivalued: true
 alias: usage

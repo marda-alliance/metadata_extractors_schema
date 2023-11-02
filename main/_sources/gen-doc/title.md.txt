@@ -45,7 +45,7 @@ URI: [dc_terms:title](http://purl.org/dc/terms/1.1/title)
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 
 
@@ -56,7 +56,7 @@ URI: [dc_terms:title](http://purl.org/dc/terms/1.1/title)
 ```yaml
 name: title
 description: A name given to the resource [from DC].
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 rank: 1000
 slot_uri: dc_terms:title
 alias: title

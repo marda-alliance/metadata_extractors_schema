@@ -2,7 +2,7 @@
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:UsageTemplate](https://www.marda-alliance.org/extractors/extractor/:UsageTemplate)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:UsageTemplate](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:UsageTemplate)
 
 
 
@@ -62,7 +62,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:UsageTemplate](https:
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 
 
@@ -72,8 +72,8 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:UsageTemplate](https:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://www.marda-alliance.org/extractors/extractor/:UsageTemplate |
-| native | https://www.marda-alliance.org/extractors/extractor/:UsageTemplate |
+| self | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:UsageTemplate |
+| native | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:UsageTemplate |
 
 
 
@@ -89,30 +89,30 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:UsageTemplate](https:
 
 ```yaml
 name: UsageTemplate
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 attributes:
   input_path:
     name: input_path
     description: The location of the resource (e.g., file, or directory) on disk to
       parse.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
   input_type:
     name: input_type
     description: The registry ID of the file type to parse Will default to the ID
       of the file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
   output_path:
     name: output_path
     description: The location of the output to write to disk with the results of the
       extraction, if successful (OPTIONAL).
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
   output_type:
     name: output_type
     description: The registry ID of the file type to write to disk.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
 
 ```
@@ -125,13 +125,13 @@ attributes:
 
 ```yaml
 name: UsageTemplate
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 attributes:
   input_path:
     name: input_path
     description: The location of the resource (e.g., file, or directory) on disk to
       parse.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     alias: input_path
     owner: UsageTemplate
@@ -142,7 +142,7 @@ attributes:
     name: input_type
     description: The registry ID of the file type to parse Will default to the ID
       of the file type.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     alias: input_type
     owner: UsageTemplate
@@ -153,7 +153,7 @@ attributes:
     name: output_path
     description: The location of the output to write to disk with the results of the
       extraction, if successful (OPTIONAL).
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     alias: output_path
     owner: UsageTemplate
@@ -163,7 +163,7 @@ attributes:
   output_type:
     name: output_type
     description: The registry ID of the file type to write to disk.
-    from_schema: https://www.marda-alliance.org/extractors/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     alias: output_type
     owner: UsageTemplate

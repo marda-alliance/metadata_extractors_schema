@@ -84,7 +84,7 @@
   <section id="extractor">
 <h1>extractor<a class="headerlink" href="#extractor" title="Link to this heading"></a></h1>
 <p>This file describes the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> model created by the MaRDA extractors WG.</p>
-<p>URI: https://www.marda-alliance.org/extractors/extractor</p>
+<p>URI: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/</p>
 <p>Name: extractor</p>
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading"></a></h2>
@@ -99,7 +99,7 @@
 <td><p>None</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="Extractor.html"><span class="std std-doc">Extractor</span></a></p></td>
-<td><p>A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file.</p></td>
+<td><p>A script, code, or web service that, when executed, can extract information from a supplied “file” with a specific <code class="docutils literal notranslate"><span class="pre">FileType</span></code>. The supplied “file” may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="Installation.html"><span class="std std-doc">Installation</span></a></p></td>
 <td><p>None</p></td>
@@ -201,10 +201,10 @@
 <td><p>Any keywords, phrases or classification codes that are relevant to the entry,…</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="supported_filetypes.html"><span class="std std-doc">supported_filetypes</span></a></p></td>
-<td><p>Container for links to the file types that this extractor supports, matching …</p></td>
+<td><p>An enumeration of the :class:<code class="docutils literal notranslate"><span class="pre">FileType</span></code> that an :class:<code class="docutils literal notranslate"><span class="pre">Extractor</span></code> supports, …</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="supported_output_filetypes.html"><span class="std std-doc">supported_output_filetypes</span></a></p></td>
-<td><p>Container for enumerating the possible output formats of this extractor</p></td>
+<td><p>An enumeration of the possible output formats of an :class:<code class="docutils literal notranslate"><span class="pre">Extractor</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="template.html"><span class="std std-doc">template</span></a></p></td>
 <td><p>A mechanism for overriding the template values for this file type in the usag…</p></td>

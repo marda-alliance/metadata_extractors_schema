@@ -1,6 +1,6 @@
 # Slot: uri
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:uri](https://www.marda-alliance.org/extractors/extractor/:uri)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:uri](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:uri)
 
 
 

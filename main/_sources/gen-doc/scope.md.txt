@@ -5,7 +5,7 @@ _This enumeration field allows extractor usage to be described in one of two mod
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:scope](https://www.marda-alliance.org/extractors/extractor/:scope)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:scope](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:scope)
 
 
 
@@ -45,7 +45,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:scope](https://www.ma
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 
 
@@ -61,7 +61,7 @@ description: This enumeration field allows extractor usage to be described in on
   that extractors may have multiple defined usage modes for each scope and each execution
   method. The default is to assume the 'worst case' that the extractor indeed returns
   as much of the data in the file that it supports, plus potentially additional analysis.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 rank: 1000
 alias: scope
 owner: Usage

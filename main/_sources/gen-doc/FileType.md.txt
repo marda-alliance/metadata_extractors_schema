@@ -7,7 +7,7 @@ _A specific encoding of data for storage purposes, defined by a set of common ch
 
 
 
-URI: [https://www.marda-alliance.org/extractors/filetype/:FileType](https://www.marda-alliance.org/extractors/filetype/:FileType)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:FileType](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:FileType)
 
 
 
@@ -87,7 +87,7 @@ URI: [https://www.marda-alliance.org/extractors/filetype/:FileType](https://www.
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/filetype
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 
 
@@ -97,8 +97,8 @@ URI: [https://www.marda-alliance.org/extractors/filetype/:FileType](https://www.
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://www.marda-alliance.org/extractors/filetype/:FileType |
-| native | https://www.marda-alliance.org/extractors/filetype/:FileType |
+| self | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:FileType |
+| native | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:FileType |
 | close | schema_org:fileFormat, schema_org:encodingFormat |
 
 
@@ -118,7 +118,7 @@ name: FileType
 description: A specific encoding of data for storage purposes, defined by a set of
   common characteristics and expectations, that can be assumed for all files of a
   given file type.
-from_schema: https://www.marda-alliance.org/extractors/filetype
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 close_mappings:
 - schema_org:fileFormat
 - schema_org:encodingFormat
@@ -132,7 +132,7 @@ attributes:
     name: associated_vendors
     description: If this file type is associated with particular software or instrument
       vendors, they can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     slot_uri: schema_org:vendor
     multivalued: true
@@ -140,20 +140,20 @@ attributes:
     name: associated_instruments
     description: Any instrument, or class of instruments, that typically create the
       data encoded into such files.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
   associated_software:
     name: associated_software
     description: Any software (proprietary or otherwise) that produces such files.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
   base_formats:
     name: base_formats
     description: If this format uses any particular underlying generic formats, e.g.,
       CSV, JSON, HDF5, then they can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
     range: FileType
@@ -161,14 +161,14 @@ attributes:
     name: associated_standards
     description: If this is a subformat that follows a particular well-defined standard,
       e.g., CIF, NeXus, then it can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
   registered_extractors:
     name: registered_extractors
     description: A list of MaRDA extractor IDs that support this file type. This field
       should be auto-populated by a registry.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
@@ -186,7 +186,7 @@ name: FileType
 description: A specific encoding of data for storage purposes, defined by a set of
   common characteristics and expectations, that can be assumed for all files of a
   given file type.
-from_schema: https://www.marda-alliance.org/extractors/filetype
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 close_mappings:
 - schema_org:fileFormat
 - schema_org:encodingFormat
@@ -195,7 +195,7 @@ attributes:
     name: associated_vendors
     description: If this file type is associated with particular software or instrument
       vendors, they can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     slot_uri: schema_org:vendor
     multivalued: true
@@ -208,7 +208,7 @@ attributes:
     name: associated_instruments
     description: Any instrument, or class of instruments, that typically create the
       data encoded into such files.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
     alias: associated_instruments
@@ -219,7 +219,7 @@ attributes:
   associated_software:
     name: associated_software
     description: Any software (proprietary or otherwise) that produces such files.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
     alias: associated_software
@@ -231,7 +231,7 @@ attributes:
     name: base_formats
     description: If this format uses any particular underlying generic formats, e.g.,
       CSV, JSON, HDF5, then they can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
     alias: base_formats
@@ -243,7 +243,7 @@ attributes:
     name: associated_standards
     description: If this is a subformat that follows a particular well-defined standard,
       e.g., CIF, NeXus, then it can be listed here.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
     alias: associated_standards
@@ -255,7 +255,7 @@ attributes:
     name: registered_extractors
     description: A list of MaRDA extractor IDs that support this file type. This field
       should be auto-populated by a registry.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     multivalued: true
     alias: registered_extractors
@@ -269,7 +269,7 @@ attributes:
     description: A unique identifier for the entry within the MaRDA registry namespace,
       this should be a shorthand label rather than a UUID. Only lower-case alphanumeric
       and dash ("-") characters are permitted.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     slot_uri: schema_org:identifier
     identifier: true
@@ -284,7 +284,7 @@ attributes:
     name: description
     description: A human-readable outline of the entry, its format, data content and
       uses.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     slot_uri: schema_org:description
     alias: description
@@ -296,7 +296,7 @@ attributes:
   name:
     name: name
     description: A recognisable name for the entry.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     slot_uri: schema_org:name
     alias: name
@@ -310,7 +310,7 @@ attributes:
     description: Any keywords, phrases or classification codes that are relevant to
       the entry, e.g., particular scientific domains of applicability, or experimental
       techniques.
-    from_schema: https://www.marda-alliance.org/extractors/filetype
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
     rank: 1000
     slot_uri: dc_terms:subject
     multivalued: true

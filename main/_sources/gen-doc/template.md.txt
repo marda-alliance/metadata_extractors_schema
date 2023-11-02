@@ -5,7 +5,7 @@ _A mechanism for overriding the template values for this file type in the usage 
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:template](https://www.marda-alliance.org/extractors/extractor/:template)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:template](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:template)
 
 
 
@@ -45,7 +45,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:template](https://www
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 
 
@@ -57,7 +57,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:template](https://www
 name: template
 description: A mechanism for overriding the template values for this file type in
   the usage instructions.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 rank: 1000
 alias: template
 owner: SupportedFileTypes

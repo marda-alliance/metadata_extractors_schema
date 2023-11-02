@@ -5,7 +5,7 @@ _A URL or URI for any online documentation associated with this extractor._
 
 
 
-URI: [https://www.marda-alliance.org/extractors/extractor/:documentation](https://www.marda-alliance.org/extractors/extractor/:documentation)
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:documentation](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:documentation)
 
 
 
@@ -18,7 +18,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:documentation](https:
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific `FileType`. The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
 
 
 
@@ -45,7 +45,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:documentation](https:
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 
 
@@ -56,7 +56,7 @@ URI: [https://www.marda-alliance.org/extractors/extractor/:documentation](https:
 ```yaml
 name: documentation
 description: A URL or URI for any online documentation associated with this extractor.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 rank: 1000
 alias: documentation
 owner: Extractor

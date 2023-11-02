@@ -18,7 +18,7 @@ URI: [dc_terms:license](http://purl.org/dc/terms/1.1/license)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific `FileType`. The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
 
 
 
@@ -47,7 +47,7 @@ URI: [dc_terms:license](http://purl.org/dc/terms/1.1/license)
 ### Schema Source
 
 
-* from schema: https://www.marda-alliance.org/extractors/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 
 
 
@@ -59,7 +59,7 @@ URI: [dc_terms:license](http://purl.org/dc/terms/1.1/license)
 name: license
 description: A URL, URI or SPDX license identifier for a legal document giving official
   permission to do something with the resource.
-from_schema: https://www.marda-alliance.org/extractors/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 rank: 1000
 slot_uri: dc_terms:license
 alias: license
