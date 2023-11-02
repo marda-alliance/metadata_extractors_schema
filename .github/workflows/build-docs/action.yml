@@ -13,24 +13,29 @@ runs:
                   requirements*.txt
 
         - name: Install dependencies
+          shell: bash
           run: |
               python -m pip install --upgrade pip
               pip install -r requirements.txt
               pip install -r requirements-docs.txt
 
         - name: Check environment
+          shell: bash
           run: |
               pip freeze
 
         - name: Build base docs
+          shell: bash
           run: |
               gen-doc schemas/base.yaml -d docs/source/gen-doc --template-directory docs/source/_templates
 
         - name: Build FileType docs
+          shell: bash
           run: |
               gen-doc schemas/filetype.yml -d docs/source/gen-doc --template-directory docs/source/_templates
 
         - name: Build Extractor docs
+          shell: bash
           run: |
               gen-doc schemas/extractor.yml -d docs/source/gen-doc --template-directory docs/source/_templates
 
@@ -41,6 +46,7 @@ runs:
               path: docs/source/gen-doc
 
         - name: Build Sphinx docs
+          shell: bash
           run: |
               sphinx-build -b html docs/source public/main
 

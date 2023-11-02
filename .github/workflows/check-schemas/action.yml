@@ -13,16 +13,19 @@ runs:
                   requirements*.txt
 
         - name: Install dependencies
+          shell: bash
           run: |
               python -m pip install --upgrade pip
               pip install -U setuptools wheel
               pip install -r requirements.txt
 
         - name: Check environment
+          shell: bash
           run: |
               pip freeze
 
         - name: Run LinkML generators
+          shell: bash
           run: |
               for f in $(ls schemas/*); do
                 gen-pydantic -vvv --stacktrace $f
@@ -30,6 +33,7 @@ runs:
               done
 
         - name: Validate examples
+          shell: bash
           run: |
               for f in $(ls examples/extractor/*.yml); do
                 linkml-validate -s schemas/extractor.yml -C Extractor $f
