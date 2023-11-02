@@ -14,22 +14,9 @@ concurrency:
 
 jobs:
 
-    check-linkml-schemas:
-        runs-on: ubuntu-latest
+    call-check-linkml-schemas:
+        uses: marda-alliance/metadata_extractors/schema/.github/workflows/check-linkml-schemas.yml@cleaner_ci
 
-        steps:
-            - uses: actions/checkout@v3
-              with:
-                  submodules: true
-
-            - uses: ./.github/workflows/check-schemas
-
-    build-docs:
-        runs-on: windows-latest
-        needs: [check-linkml-schemas]
-        steps:
-            - uses: actions/checkout@v3
-              with:
-                  submodules: true
-
-            - uses: ./.github/workflows/build-docs
+    call-build-docs:
+        needs: [call-check-linkml-schemas]
+        uses: marda-alliance/metadata_extractors/schema/.github/workflows/build-docs.yml@cleaner_ci
