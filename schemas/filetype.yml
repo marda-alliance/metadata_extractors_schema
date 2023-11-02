@@ -11,7 +11,7 @@ emit_prefixes:
     - mme_schema
 imports:
     - linkml:types
-    - mme_schema:base
+    - base
 default_range: string
 description: >-
     This file describes the `FileType` model created by the MaRDA extractors WG.
