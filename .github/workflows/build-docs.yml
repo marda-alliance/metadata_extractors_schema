@@ -34,17 +34,17 @@ jobs:
             - name: Build base docs
               shell: bash
               run: |
-                  gen-doc schemas/base.yaml -d docs/source/gen-doc --template-directory docs/source/_templates
+                  gen-doc schemas/base.yaml -d docs/source/gen-doc/base --template-directory docs/source/_templates
 
             - name: Build FileType docs
               shell: bash
               run: |
-                  gen-doc schemas/filetype.yml -d docs/source/gen-doc --template-directory docs/source/_templates
+                  gen-doc schemas/filetype.yml -d docs/source/gen-doc/filetype --template-directory docs/source/_templates
 
             - name: Build Extractor docs
               shell: bash
               run: |
-                  gen-doc schemas/extractor.yml -d docs/source/gen-doc --template-directory docs/source/_templates
+                  gen-doc schemas/extractor.yml -d docs/source/gen-doc/extractor --template-directory docs/source/_templates
 
             - name: Tar gen-doc files
               run: tar -cvf gen-doc.tar docs/source/gen-doc
