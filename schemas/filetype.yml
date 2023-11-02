@@ -1,7 +1,7 @@
 ---
 name: filetype
 version: 0.2.0
-id: https://www.marda-alliance.org/extractors/filetype
+id: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
@@ -54,11 +54,9 @@ classes:
                 description: >-
                     If this is a subformat that follows a particular well-defined
                     standard, e.g., CIF, NeXus, then it can be listed here.
-
             registered_extractors:
                 multivalued: true
                 pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
                 description: >-
                     A list of MaRDA extractor IDs that support this file type. This
-                    field
-                    should be auto-populated by a registry.
+                    field should be auto-populated by a registry.

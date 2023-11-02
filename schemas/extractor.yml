@@ -1,7 +1,7 @@
 ---
 name: extractor
 version: 0.2.0
-id: https://www.marda-alliance.org/extractors/extractor
+id: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
@@ -66,10 +66,11 @@ classes:
                 description: >-
                     A machine-executable command by which the Extractor functionality
                     can be accessed:
+
                       - for `method: cli` a parametrized executable invocation which
-                        should be available after installing the Extractor;
+                        should be available after installing the :class:`Extractor`;
                       - for `method: python` a parametrized function invocation which
-                        should be available after installing and setting up the Extractor.
+                        should be available after installing and setting up the :class:`Extractor`.
 
                     The following templated parameters can be requested from the user,
                     using the `{{}}` syntax, as described by the `UsageTemplate` class:
@@ -91,10 +92,8 @@ classes:
                     by the extractor, respectively. In practice, this means that extractors
                     may have multiple defined usage modes for each scope and each
                     execution method. The default is to assume the 'worst case' that
-                    the
-                    extractor indeed returns as much of the data in the file that
-                    it supports,
-                    plus potentially additional analysis.
+                    the extractor indeed returns as much of the data in the file that
+                    it supports, plus potentially additional analysis.
 
     Installation:
         attributes:
@@ -123,9 +122,11 @@ classes:
 
     Extractor:
         description: >-
-            A code object or web service that when executed can read a file with specific
-            file type, or a set of files with a given structure, and extract or transform
-            the scientific data and/or metadata contained within the file.
+            A script, code, or web service that, when executed, can extract information
+            from a supplied "file" with a specific `FileType`. The supplied "file" may
+            also be a set of files with a given structure. The extracted information may
+            be verbatim or transformed, and include the scientific data and/or metadata
+            contained within the file.
         close_mappings:
             - schema_org:SoftwareApplication
             - schema_org:ServiceChannel
@@ -144,18 +145,19 @@ classes:
                 required: true
                 range: SupportedFileTypes
                 description: >-
-                    Container for links to the file types that this extractor supports,
-                    matching the registry file types. The ID values can be passed
-                    to an extractor with the `{{ input_type }}` parameter in `usage->command`.
+                    An enumeration of the :class:`FileType` that an :class:`Extractor`
+                    supports, matching :class:`FileTypes` present in the registry. The
+                    :obj:`FileType:id` can be passed to the :class:`Extractor`, see the
+                    :class:`Usage` class.
 
             supported_output_filetypes:
                 multivalued: true
                 required: false
                 range: SupportedFileTypes
                 description: >-
-                    Container for enumerating the possible output formats of this
-                    extractor. These should match registry entries and can be
-                    specified on extractor execution using the `{{ output_type }}`
+                    An enumeration of the possible output formats of an :class:`Extractor`.
+                    These should match :class:`FileTypes` present in the registry. They
+                    can be specified on extractor execution using the `{{ output_type }}`
                     parameter in `usage->command`. If provided in the schema, when
                     a user passes the `{{ output_type }}`, a resource of
                     that type is expected to be found at the corresponding `{{ output_path
