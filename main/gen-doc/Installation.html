@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slot: installation &mdash; MaRDA Metadata Extractors main documentation</title>
+  <title>Class: Installation &mdash; MaRDA Metadata Extractors main documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom_theme.css" type="text/css" />
@@ -18,6 +18,8 @@
         <script src="../_static/documentation_options.js?v=a8da1a53"></script>
         <script src="../_static/doctools.js?v=888ff710"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -53,8 +55,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Schema Docs</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="filetype.html">Class: FileType</a></li>
-<li class="toctree-l1"><a class="reference internal" href="extractor.html">Class: Extractor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileType.html">Class: FileType</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Extractor.html">Class: Extractor</a></li>
 </ul>
 
         </div>
@@ -71,7 +73,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Slot: installation</li>
+      <li class="breadcrumb-item active">Class: Installation</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/marda-alliance/metadata_extractors_schema/blob/main/docs/source/gen-doc/Installation.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -81,46 +83,73 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="slot-installation">
-<h1>Slot: installation<a class="headerlink" href="#slot-installation" title="Link to this heading"></a></h1>
-<p><em>A machine-actionable set of installation instructions to obtain a working set-up of the Extractor.</em></p>
-<p>URI: <a class="reference external" href="https://www.marda-alliance.org/extractors/extractor/:installation">https://www.marda-alliance.org/extractors/extractor/:installation</a></p>
-<!-- no inheritance hierarchy -->
-<section id="applicable-classes">
-<h2>Applicable Classes<a class="headerlink" href="#applicable-classes" title="Link to this heading"></a></h2>
+  <section id="class-installation">
+<h1>Class: Installation<a class="headerlink" href="#class-installation" title="Link to this heading"></a></h1>
+<p>URI: <a class="reference external" href="https://www.marda-alliance.org/extractors/extractor/:Installation">https://www.marda-alliance.org/extractors/extractor/:Installation</a></p>
+<div class="mermaid">
+             classDiagram
+    class Installation
+      Installation : method
+        
+          Installation --|&gt; InstallerTypes : method
+        
+      Installation : packages
+        
+      Installation : requirements
+        
+      Installation : requires_python
+        
+      
+        </div><!-- no inheritance hierarchy -->
+<section id="slots">
+<h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Cardinality and Range</p></th>
 <th class="head"><p>Description</p></th>
-<th class="head"><p>Modifies Slot</p></th>
+<th class="head"><p>Inheritance</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><span class="xref myst">Extractor</span></p></td>
-<td><p>A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file.</p></td>
-<td><p>no</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="method.html"><span class="std std-doc">method</span></a></p></td>
+<td><p>1..1 <br/> <a class="reference internal" href="InstallerTypes.html"><span class="std std-doc">InstallerTypes</span></a></p></td>
+<td><p>Extractor installer, specifying the package manager to process the installation<br/>instructions with.</p></td>
+<td><p>direct</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="requires_python.html"><span class="std std-doc">requires_python</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>A PEP 440 version string for the version constraints on the Python version<br/>required for this extractor.</p></td>
+<td><p>direct</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="requirements.html"><span class="std std-doc">requirements</span></a></p></td>
+<td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>Contents of a ‘requirements.txt’-like file. Will be installed by the selected<br/>Installer using an appropriate method, e.g., <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code><br/>for pip, or <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">requirements.txt</span></code> for conda.</p></td>
+<td><p>direct</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="packages.html"><span class="std std-doc">packages</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>A list of packages, including versioned packages or <code class="docutils literal notranslate"><span class="pre">git+https://</span></code> targets, to<br/>be installed using the Installer.</p></td>
+<td><p>direct</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="properties">
-<h2>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p>Range: <a class="reference internal" href="#"><span class="std std-doc">Installation</span></a></p></li>
-<li><p>Multivalued: True</p></li>
-</ul>
-</section>
-<section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="usages">
+<h2>Usages<a class="headerlink" href="#usages" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Value</p></th>
+<tr class="row-odd"><th class="head"><p>used by</p></th>
+<th class="head"><p>used in</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>used</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>JsonObj(method=’pip’, packages=’my-pypi-package==1.0.0’, requires_python=’&gt;=3.9’)</p></td>
-</tr>
-<tr class="row-odd"><td><p>JsonObj(method=’conda’, requirements=’dependencies:\n  - python=3.10\n  - numpy’)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="Extractor.html"><span class="std std-doc">Extractor</span></a></p></td>
+<td><p><a class="reference internal" href="installation.html"><span class="std std-doc">installation</span></a></p></td>
+<td><p>range</p></td>
+<td><p><a class="reference internal" href="#"><span class="std std-doc">Installation</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -134,30 +163,122 @@
 </ul>
 </section>
 </section>
+<section id="mappings">
+<h2>Mappings<a class="headerlink" href="#mappings" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mapping Type</p></th>
+<th class="head"><p>Mapped Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>self</p></td>
+<td><p>https://www.marda-alliance.org/extractors/extractor/:Installation</p></td>
+</tr>
+<tr class="row-odd"><td><p>native</p></td>
+<td><p>https://www.marda-alliance.org/extractors/extractor/:Installation</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<section id="direct">
+<h3>Direct<a class="headerlink" href="#direct" title="Link to this heading"></a></h3>
 <details>
-```yaml
-name: installation
-description: A machine-actionable set of installation instructions to obtain a working
-  set-up of the Extractor.
-examples:
-- value: JsonObj(method='pip', packages='my-pypi-package==1.0.0', requires_python='>=3.9')
-- value: JsonObj(method='conda', requirements='dependencies:\n  - python=3.10\n  -
-    numpy')
-from_schema: https://www.marda-alliance.org/extractors/extractor
-rank: 1000
-multivalued: true
-alias: installation
-owner: Extractor
-domain_of:
-- Extractor
-range: Installation
-inlined: true
-inlined_as_list: true
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="nt">attributes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">method</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor installer, specifying the package manager to process the</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">installation instructions with.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InstallerTypes</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">requires_python</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requires_python</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A PEP 440 version string for the version constraints on the Python</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">version required for this extractor.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Contents of a &#39;requirements.txt&#39;-like file. Will be installed by</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the selected Installer using an appropriate method, e.g., `pip install -r requirements.txt`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for pip, or `conda env create -f requirements.txt` for conda.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">  </span><span class="nt">packages</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packages</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of packages, including versioned packages or `git+https://`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">targets, to be installed using the Installer.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
+</details>
+</section>
+<section id="induced">
+<h3>Induced<a class="headerlink" href="#induced" title="Link to this heading"></a></h3>
+<details>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="nt">attributes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">method</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor installer, specifying the package manager to process the</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">installation instructions with.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">method</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InstallerTypes</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">requires_python</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requires_python</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A PEP 440 version string for the version constraints on the Python</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">version required for this extractor.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requires_python</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">requirements</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Contents of a &#39;requirements.txt&#39;-like file. Will be installed by</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the selected Installer using an appropriate method, e.g., `pip install -r requirements.txt`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for pip, or `conda env create -f requirements.txt` for conda.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">packages</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packages</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of packages, including versioned packages or `git+https://`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">targets, to be installed using the Installer.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://www.marda-alliance.org/extractors/extractor</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packages</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</pre></div>
+</div>
+</details></section>
 </section>
 </section>
 
