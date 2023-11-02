@@ -123,8 +123,10 @@ classes:
     Extractor:
         description: >-
             A script, code, or web service that, when executed, can extract information
-            from a supplied "file" with a specific `FileType`. The supplied "file" may
-            also be a set of files with a given structure. The extracted information may
+            from a supplied "file" with a specific `FileType`. The supplied "file"
+            may
+            also be a set of files with a given structure. The extracted information
+            may
             be verbatim or transformed, and include the scientific data and/or metadata
             contained within the file.
         close_mappings:
@@ -146,8 +148,10 @@ classes:
                 range: SupportedFileTypes
                 description: >-
                     An enumeration of the :class:`FileType` that an :class:`Extractor`
-                    supports, matching :class:`FileTypes` present in the registry. The
-                    :obj:`FileType:id` can be passed to the :class:`Extractor`, see the
+                    supports, matching :class:`FileTypes` present in the registry.
+                    The
+                    :obj:`FileType:id` can be passed to the :class:`Extractor`, see
+                    the
                     :class:`Usage` class.
 
             supported_output_filetypes:
@@ -156,8 +160,10 @@ classes:
                 range: SupportedFileTypes
                 description: >-
                     An enumeration of the possible output formats of an :class:`Extractor`.
-                    These should match :class:`FileTypes` present in the registry. They
-                    can be specified on extractor execution using the `{{ output_type }}`
+                    These should match :class:`FileTypes` present in the registry.
+                    They
+                    can be specified on extractor execution using the `{{ output_type
+                    }}`
                     parameter in `usage->command`. If provided in the schema, when
                     a user passes the `{{ output_type }}`, a resource of
                     that type is expected to be found at the corresponding `{{ output_path
