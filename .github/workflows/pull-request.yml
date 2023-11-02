@@ -37,7 +37,7 @@ jobs:
                   name: public-main
                   path: public.tar
 
-            - uses: Untar archive
+            - name: Untar archive
               run: tar -xvf public.tar
 
             - uses: peaceiris/actions-gh-pages@v3
