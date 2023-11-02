@@ -121,7 +121,7 @@ classes:
                     targets, to be installed using the Installer.
 
     Extractor:
-        class_uri:  marda-extractor:Extractor
+        class_uri: marda-extractor:Extractor
         description: >-
             A script, code, or web service that, when executed, can extract information
             from a supplied "file" with a specific [`FileType`](FileType.md). The
