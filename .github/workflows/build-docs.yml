@@ -46,19 +46,27 @@ jobs:
               run: |
                   gen-doc schemas/extractor.yml -d docs/source/gen-doc --template-directory docs/source/_templates
 
+            - name: Tar gen-doc files
+              run: tar -cvf gen-doc.tar docs/source/gen-doc
+
             - name: Upload gen-doc artifact
               uses: actions/upload-artifact@v3
               with:
                   name: gen-doc
-                  path: docs/source/gen-doc
+                  path: gen-doc.tar
 
             - name: Build Sphinx docs
               shell: bash
               run: |
                   sphinx-build -b html docs/source public/main
 
+            - name: Tar public/main files
+              run: tar -cvf public.tar public
+
             - name: Upload docs artifact
               uses: actions/upload-artifact@v3
               with:
                   name: public-main
-                  path: public/main
+                  path: public.tar
+
+
