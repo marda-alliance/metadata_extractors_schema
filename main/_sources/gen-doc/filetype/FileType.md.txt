@@ -7,7 +7,7 @@ _A specific encoding of data for storage purposes, defined by a set of common ch
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype/:FileType](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype/:FileType)
+URI: [filetype:FileType](filetype:FileType)
 
 
 
@@ -97,7 +97,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/f
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype/:FileType |
+| self | filetype:FileType |
 | native | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype/:FileType |
 | close | schema_org:fileFormat, schema_org:encodingFormat |
 
@@ -172,6 +172,7 @@ attributes:
     rank: 1000
     multivalued: true
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
+class_uri: filetype:FileType
 
 ```
 
@@ -319,6 +320,7 @@ attributes:
     domain_of:
     - FileType
     range: string
+class_uri: filetype:FileType
 
 ```
 

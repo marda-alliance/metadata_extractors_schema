@@ -7,7 +7,7 @@ _A script, code, or web service that, when executed, can extract information fro
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:Extractor](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:Extractor)
+URI: [extractor:Extractor](extractor:Extractor)
 
 
 
@@ -109,7 +109,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/e
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:Extractor |
+| self | extractor:Extractor |
 | native | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:Extractor |
 | close | schema_org:SoftwareApplication, schema_org:ServiceChannel, dcmitype:Software, dcmitype:Service |
 
@@ -348,6 +348,7 @@ attributes:
       Please use the `installation` and `usage` fields for that purpose.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
     rank: 1000
+class_uri: extractor:Extractor
 
 ```
 
@@ -555,6 +556,7 @@ attributes:
     - Extractor
     range: License
     required: true
+class_uri: extractor:Extractor
 
 ```
 
