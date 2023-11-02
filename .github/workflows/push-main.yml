@@ -1,0 +1,38 @@
+---
+name: CI main tests + docs + deploy
+
+on:
+    push:
+        branches:
+            - main
+
+
+jobs:
+    check-linkml-schemas:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  submodules: true
+
+            - uses: ./.github/workflows/check-schemas
+
+    build-docs:
+        runs-on: windows-latest
+        needs: [check-linkml-schemas]
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  submodules: true
+
+            - uses: ./.github/workflows/build-docs
+
+    deploy-pages:
+        runs-on: ubuntu-latest
+        needs:
+            - build-pages
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: ./.github/workflows/deploy-pages
