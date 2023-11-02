@@ -1,5 +1,5 @@
 ---
-name: marda-filetype
+name: filetype
 version: 0.2.0
 id: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype
 prefixes:
@@ -15,7 +15,7 @@ description: >-
 
 classes:
     FileType:
-        class_uri: marda-filetype:FileType
+        class_uri: filetype:FileType
         description: >-
             A specific encoding of data for storage purposes, defined by a set of
             common characteristics and expectations, that can be assumed for all files

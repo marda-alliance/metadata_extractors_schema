@@ -1,5 +1,5 @@
 ---
-name: marda-extractor
+name: extractor
 version: 0.2.0
 id: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
 prefixes:
@@ -121,7 +121,7 @@ classes:
                     targets, to be installed using the Installer.
 
     Extractor:
-        class_uri: marda-extractor:Extractor
+        class_uri: extractor:Extractor
         description: >-
             A script, code, or web service that, when executed, can extract information
             from a supplied "file" with a specific [`FileType`](FileType.md). The
