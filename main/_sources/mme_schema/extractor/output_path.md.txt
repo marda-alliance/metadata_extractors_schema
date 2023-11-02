@@ -1,0 +1,69 @@
+# Slot: output_path
+
+
+_The location of the output to write to disk with the results of the extraction, if successful (OPTIONAL)._
+
+
+
+URI: [mme_schema:output_path](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/output_path)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UsageTemplate](UsageTemplate.md) | None |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: output_path
+description: The location of the output to write to disk with the results of the extraction,
+  if successful (OPTIONAL).
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+rank: 1000
+alias: output_path
+owner: UsageTemplate
+domain_of:
+- UsageTemplate
+range: string
+
+```
+</details>

@@ -1,0 +1,99 @@
+# extractor
+
+This file describes the `Extractor` model created by the MaRDA extractors WG.
+
+URI: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+
+Name: extractor
+
+
+
+## Classes
+
+| Class | Description |
+| --- | --- |
+| [Citation](Citation.md) | None |
+| [Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |
+| [Installation](Installation.md) | None |
+| [License](License.md) | None |
+| [SupportedFileTypes](SupportedFileTypes.md) | None |
+| [Usage](Usage.md) | None |
+| [UsageTemplate](UsageTemplate.md) | None |
+
+
+
+## Slots
+
+| Slot | Description |
+| --- | --- |
+| [citations](citations.md) | A citation or citations for the entry, to be provided should it be used in ac... |
+| [command](command.md) | A machine-executable command by which the Extractor functionality can be acce... |
+| [contributors](contributors.md) | A list of the contributors to the resource |
+| [creators](creators.md) | A list of the creators of the resource |
+| [description](description.md) | A human-readable outline of the entry, its format, data content and uses |
+| [documentation](documentation.md) | A URL or URI for any online documentation associated with this extractor |
+| [id](id.md) | A unique identifier for the entry within the MaRDA registry namespace, this s... |
+| [input_path](input_path.md) | The location of the resource (e |
+| [input_type](input_type.md) | The registry ID of the file type to parse Will default to the ID of the file ... |
+| [installation](installation.md) | A machine-actionable set of installation instructions to obtain a working set... |
+| [instructions](instructions.md) | Any usage notes or installation instructions for this Extractor |
+| [license](license.md) | A URL, URI or SPDX license identifier for a legal document giving official pe... |
+| [method](method.md) | Usage invocation method, e |
+| [name](name.md) | A recognisable name for the entry |
+| [output_path](output_path.md) | The location of the output to write to disk with the results of the extractio... |
+| [output_type](output_type.md) | The registry ID of the file type to write to disk |
+| [packages](packages.md) | A list of packages, including versioned packages or `git+https://` targets, t... |
+| [requirements](requirements.md) | Contents of a 'requirements |
+| [requires_python](requires_python.md) | A PEP 440 version string for the version constraints on the Python version re... |
+| [scope](scope.md) | This enumeration field allows extractor usage to be described in one of two m... |
+| [setup](setup.md) | Any necessary setup step for the 'command' to become available: |
+| [source_repository](source_repository.md) | A URL or URI for a source code repository associated with this extractor |
+| [spdx](spdx.md) | An SPDX License Identifier entry |
+| [subject](subject.md) | Any keywords, phrases or classification codes that are relevant to the entry,... |
+| [supported_filetypes](supported_filetypes.md) | An enumeration of the [`FileType`](FileType |
+| [supported_output_filetypes](supported_output_filetypes.md) | An enumeration of the possible output formats of an :class:`Extractor` |
+| [template](template.md) | A mechanism for overriding the template values for this file type in the usag... |
+| [title](title.md) | A name given to the resource [from DC] |
+| [type](type.md) | Any bibliographic resource type (e |
+| [uri](uri.md) | An unambiguous reference to the resource within a given context |
+| [usage](usage.md) | A machine-actionable description of the usage of the Extractor |
+
+
+## Enumerations
+
+| Enumeration | Description |
+| --- | --- |
+| [InstallerTypes](InstallerTypes.md) |  |
+| [UsageScope](UsageScope.md) |  |
+| [UsageTypes](UsageTypes.md) |  |
+
+
+## Types
+
+| Type | Description |
+| --- | --- |
+| [Boolean](Boolean.md) | A binary (true or false) value |
+| [Curie](Curie.md) | a compact URI |
+| [Date](Date.md) | a date (year, month and day) in an idealized calendar |
+| [DateOrDatetime](DateOrDatetime.md) | Either a date or a datetime |
+| [Datetime](Datetime.md) | The combination of a date and time |
+| [Decimal](Decimal.md) | A real number with arbitrary precision that conforms to the xsd:decimal speci... |
+| [Double](Double.md) | A real number that conforms to the xsd:double specification |
+| [Float](Float.md) | A real number that conforms to the xsd:float specification |
+| [Integer](Integer.md) | An integer |
+| [Jsonpath](Jsonpath.md) | A string encoding a JSON Path |
+| [Jsonpointer](Jsonpointer.md) | A string encoding a JSON Pointer |
+| [Ncname](Ncname.md) | Prefix part of CURIE |
+| [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
+| [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |
+| [Sparqlpath](Sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [String](String.md) | A character string |
+| [Time](Time.md) | A time object represents a (local) time of day, independent of any particular... |
+| [Uri](Uri.md) | a complete URI |
+| [Uriorcurie](Uriorcurie.md) | a URI or a CURIE |
+
+
+## Subsets
+
+| Subset | Description |
+| --- | --- |

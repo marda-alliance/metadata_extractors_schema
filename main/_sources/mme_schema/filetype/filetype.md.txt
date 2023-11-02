@@ -1,0 +1,5 @@
+# filetype
+
+This file describes the `FileType` model created by the MaRDA extractors WG.
+
+URI: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/filetype

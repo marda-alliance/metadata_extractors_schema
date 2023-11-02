@@ -1,0 +1,5 @@
+# base
+
+This file describes the generic slots used by models in the MaRDA extractors WG.
+
+URI: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/base

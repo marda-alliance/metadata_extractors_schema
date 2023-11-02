@@ -1,0 +1,72 @@
+# Slot: packages
+
+
+_A list of packages, including versioned packages or `git+https://` targets, to be installed using the Installer._
+
+
+
+URI: [mme_schema:packages](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/packages)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Installation](Installation.md) | None |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: packages
+description: A list of packages, including versioned packages or `git+https://` targets,
+  to be installed using the Installer.
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+rank: 1000
+multivalued: true
+alias: packages
+owner: Installation
+domain_of:
+- Installation
+range: string
+
+```
+</details>

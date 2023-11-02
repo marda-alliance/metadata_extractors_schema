@@ -1,0 +1,72 @@
+# base
+
+This file describes the generic slots used by models in the MaRDA extractors WG.
+
+URI: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/base
+
+Name: base
+
+
+
+## Classes
+
+| Class | Description |
+| --- | --- |
+| [Citation](Citation.md) | None |
+| [License](License.md) | None |
+
+
+
+## Slots
+
+| Slot | Description |
+| --- | --- |
+| [citations](citations.md) | A citation or citations for the entry, to be provided should it be used in ac... |
+| [contributors](contributors.md) | A list of the contributors to the resource |
+| [creators](creators.md) | A list of the creators of the resource |
+| [description](description.md) | A human-readable outline of the entry, its format, data content and uses |
+| [id](id.md) | A unique identifier for the entry within the MaRDA registry namespace, this s... |
+| [license](license.md) | A URL, URI or SPDX license identifier for a legal document giving official pe... |
+| [name](name.md) | A recognisable name for the entry |
+| [spdx](spdx.md) | An SPDX License Identifier entry |
+| [subject](subject.md) | Any keywords, phrases or classification codes that are relevant to the entry,... |
+| [title](title.md) | A name given to the resource [from DC] |
+| [type](type.md) | Any bibliographic resource type (e |
+| [uri](uri.md) | An unambiguous reference to the resource within a given context |
+
+
+## Enumerations
+
+| Enumeration | Description |
+| --- | --- |
+
+
+## Types
+
+| Type | Description |
+| --- | --- |
+| [Boolean](Boolean.md) | A binary (true or false) value |
+| [Curie](Curie.md) | a compact URI |
+| [Date](Date.md) | a date (year, month and day) in an idealized calendar |
+| [DateOrDatetime](DateOrDatetime.md) | Either a date or a datetime |
+| [Datetime](Datetime.md) | The combination of a date and time |
+| [Decimal](Decimal.md) | A real number with arbitrary precision that conforms to the xsd:decimal speci... |
+| [Double](Double.md) | A real number that conforms to the xsd:double specification |
+| [Float](Float.md) | A real number that conforms to the xsd:float specification |
+| [Integer](Integer.md) | An integer |
+| [Jsonpath](Jsonpath.md) | A string encoding a JSON Path |
+| [Jsonpointer](Jsonpointer.md) | A string encoding a JSON Pointer |
+| [Ncname](Ncname.md) | Prefix part of CURIE |
+| [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
+| [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |
+| [Sparqlpath](Sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [String](String.md) | A character string |
+| [Time](Time.md) | A time object represents a (local) time of day, independent of any particular... |
+| [Uri](Uri.md) | a complete URI |
+| [Uriorcurie](Uriorcurie.md) | a URI or a CURIE |
+
+
+## Subsets
+
+| Subset | Description |
+| --- | --- |

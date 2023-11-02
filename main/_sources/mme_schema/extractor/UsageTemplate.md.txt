@@ -1,0 +1,176 @@
+# Class: UsageTemplate
+
+
+
+URI: [mme_schema:UsageTemplate](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/UsageTemplate)
+
+
+
+
+```{mermaid}
+ classDiagram
+    class UsageTemplate
+      UsageTemplate : input_path
+        
+      UsageTemplate : input_type
+        
+      UsageTemplate : output_path
+        
+      UsageTemplate : output_type
+        
+      
+```
+
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [input_path](input_path.md) | 0..1 <br/> [String](String.md) | The location of the resource (e.g., file, or directory) on disk to parse. | direct |
+| [input_type](input_type.md) | 0..1 <br/> [String](String.md) | The registry ID of the file type to parse Will default to the ID of the file<br/>type. | direct |
+| [output_path](output_path.md) | 0..1 <br/> [String](String.md) | The location of the output to write to disk with the results of the extraction,<br/>if successful (OPTIONAL). | direct |
+| [output_type](output_type.md) | 0..1 <br/> [String](String.md) | The registry ID of the file type to write to disk. | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [SupportedFileTypes](SupportedFileTypes.md) | [template](template.md) | range | [UsageTemplate](UsageTemplate.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | mme_schema:UsageTemplate |
+| native | mme_schema:UsageTemplate |
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+
+```yaml
+name: UsageTemplate
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+attributes:
+  input_path:
+    name: input_path
+    description: The location of the resource (e.g., file, or directory) on disk to
+      parse.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    rank: 1000
+  input_type:
+    name: input_type
+    description: The registry ID of the file type to parse Will default to the ID
+      of the file type.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    rank: 1000
+  output_path:
+    name: output_path
+    description: The location of the output to write to disk with the results of the
+      extraction, if successful (OPTIONAL).
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    rank: 1000
+  output_type:
+    name: output_type
+    description: The registry ID of the file type to write to disk.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    rank: 1000
+
+```
+
+</details>
+
+### Induced
+
+<details>
+
+```yaml
+name: UsageTemplate
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+attributes:
+  input_path:
+    name: input_path
+    description: The location of the resource (e.g., file, or directory) on disk to
+      parse.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    rank: 1000
+    alias: input_path
+    owner: UsageTemplate
+    domain_of:
+    - UsageTemplate
+    range: string
+  input_type:
+    name: input_type
+    description: The registry ID of the file type to parse Will default to the ID
+      of the file type.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    rank: 1000
+    alias: input_type
+    owner: UsageTemplate
+    domain_of:
+    - UsageTemplate
+    range: string
+  output_path:
+    name: output_path
+    description: The location of the output to write to disk with the results of the
+      extraction, if successful (OPTIONAL).
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    rank: 1000
+    alias: output_path
+    owner: UsageTemplate
+    domain_of:
+    - UsageTemplate
+    range: string
+  output_type:
+    name: output_type
+    description: The registry ID of the file type to write to disk.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    rank: 1000
+    alias: output_type
+    owner: UsageTemplate
+    domain_of:
+    - UsageTemplate
+    range: string
+
+```
+
+</details>

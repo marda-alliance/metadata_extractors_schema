@@ -1,0 +1,73 @@
+# Slot: associated_vendors
+
+
+_If this file type is associated with particular software or instrument vendors, they can be listed here._
+
+
+
+URI: [schema_org:vendor](http://schema.org/vendor)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[FileType](FileType.md) | A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/filetype
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: associated_vendors
+description: If this file type is associated with particular software or instrument
+  vendors, they can be listed here.
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/filetype
+rank: 1000
+slot_uri: schema_org:vendor
+multivalued: true
+alias: associated_vendors
+owner: FileType
+domain_of:
+- FileType
+range: string
+
+```
+</details>

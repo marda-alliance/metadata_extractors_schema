@@ -1,0 +1,73 @@
+# Slot: citations
+
+
+_A citation or citations for the entry, to be provided should it be used in academic work (or otherwise)._
+
+
+
+URI: [dcmitype:BibliographicReference](http://purl.org/dc/dcmitype/1.1BibliographicReference)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [Citation](Citation.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: citations
+description: A citation or citations for the entry, to be provided should it be used
+  in academic work (or otherwise).
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+rank: 1000
+slot_uri: dcmitype:BibliographicReference
+multivalued: true
+alias: citations
+domain_of:
+- Extractor
+range: Citation
+required: false
+
+```
+</details>

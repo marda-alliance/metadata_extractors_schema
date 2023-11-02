@@ -1,5 +1,0 @@
-# extractor
-
-This file describes the `Extractor` model created by the MaRDA extractors WG.
-
-URI: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
