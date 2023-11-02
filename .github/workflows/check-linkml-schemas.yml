@@ -6,7 +6,6 @@ on:
 jobs:
     check-linkml-schemas:
         runs-on: ubuntu-latest
-        description: Set-up, generate and validate schemas
         steps:
             - uses: actions/checkout@v3
               with:
