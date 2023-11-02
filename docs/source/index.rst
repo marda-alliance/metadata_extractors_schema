@@ -26,9 +26,7 @@ The repository contains two user-facing schemas:
    :caption: Schema Docs
    :hidden:
 
-   gen-doc/filetype
-   gen-doc/Filetype
-   gen-doc/extractor
+   gen-doc/FileType
    gen-doc/Extractor
 
 .. |MMESchemaRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_schema/?icon=github
