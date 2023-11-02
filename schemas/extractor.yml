@@ -1,11 +1,15 @@
 ---
 name: extractor
 version: 0.2.0
-id: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+id: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
     dcmitype: http://purl.org/dc/dcmitype/1.1
+    mme_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+default_prefix: mme_schema
+emit_prefixes:
+    - mme_schema
 imports:
     - linkml:types
     - base
@@ -121,7 +125,6 @@ classes:
                     targets, to be installed using the Installer.
 
     Extractor:
-        class_uri: extractor:Extractor
         description: >-
             A script, code, or web service that, when executed, can extract information
             from a supplied "file" with a specific [`FileType`](FileType.md). The
