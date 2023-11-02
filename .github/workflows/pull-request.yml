@@ -15,8 +15,8 @@ concurrency:
 jobs:
 
     call-check-linkml-schemas:
-        uses: marda-alliance/metadata_extractors/schema/.github/workflows/check-linkml-schemas.yml@cleaner_ci
+        uses: ./.github/workflows/check-linkml-schemas.yml
 
     call-build-docs:
         needs: [call-check-linkml-schemas]
-        uses: marda-alliance/metadata_extractors/schema/.github/workflows/build-docs.yml@cleaner_ci
+        uses: ./.github/workflows/build-docs.yml
