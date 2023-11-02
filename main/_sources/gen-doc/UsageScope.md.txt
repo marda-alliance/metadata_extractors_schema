@@ -36,7 +36,7 @@ URI: [UsageScope](UsageScope)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/extractor
 
 
 
@@ -46,7 +46,7 @@ URI: [UsageScope](UsageScope)
 <details>
 ```yaml
 name: UsageScope
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/extractor
 rank: 1000
 permissible_values:
   meta-only:

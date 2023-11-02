@@ -5,7 +5,7 @@ _The registry ID of the file type to parse Will default to the ID of the file ty
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:input_type](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:input_type)
+URI: [https://www.marda-alliance.org/extractors/extractor/:input_type](https://www.marda-alliance.org/extractors/extractor/:input_type)
 
 
 
@@ -45,7 +45,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/extractor
 
 
 
@@ -57,7 +57,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 name: input_type
 description: The registry ID of the file type to parse Will default to the ID of the
   file type.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/extractor
 rank: 1000
 alias: input_type
 owner: UsageTemplate

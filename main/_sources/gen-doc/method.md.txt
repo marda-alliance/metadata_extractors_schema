@@ -1,6 +1,6 @@
 # Slot: method
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:method](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:method)
+URI: [https://www.marda-alliance.org/extractors/extractor/:method](https://www.marda-alliance.org/extractors/extractor/:method)
 
 
 

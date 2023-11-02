@@ -1,45 +1,36 @@
-# Class: License
+# Slot: license
+
+
+_A URL, URI or SPDX license identifier for a legal document giving official permission to do something with the resource._
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:License](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:License)
-
-
-
-
-```{mermaid}
- classDiagram
-    class License
-      License : spdx
-        
-      License : uri
-        
-      
-```
-
+URI: [dc_terms:license](http://purl.org/dc/terms/1.1/license)
 
 
 
 <!-- no inheritance hierarchy -->
 
 
-## Slots
-
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [uri](uri.md) | 0..1 <br/> [String](String.md) | An unambiguous reference to the resource within a given context. | direct |
-| [spdx](spdx.md) | 0..1 <br/> [String](String.md) | An SPDX License Identifier entry. | direct |
 
 
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
 
 
 
-## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Extractor](Extractor.md) | [license](license.md) | range | [License](License.md) |
 
+
+
+## Properties
+
+* Range: [License](License.md)
+
+* Required: True
 
 
 
@@ -56,86 +47,26 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
-
-
-
-
-
-## Mappings
-
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:License |
-| native | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:License |
-
+* from schema: https://www.marda-alliance.org/extractors/extractor
 
 
 
 
 ## LinkML Source
 
-<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
-
-### Direct
-
 <details>
-
 ```yaml
-name: License
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
-attributes:
-  uri:
-    name: uri
-    description: An unambiguous reference to the resource within a given context.
-    from_schema: https://www.marda-alliance.org/extractors/base
-    slot_uri: dc_terms:identifier
-    required: false
-  spdx:
-    name: spdx
-    description: An SPDX License Identifier entry.
-    from_schema: https://www.marda-alliance.org/extractors/base
-    rank: 1000
-    slot_uri: dc_terms:identifier
-    required: false
+name: license
+description: A URL, URI or SPDX license identifier for a legal document giving official
+  permission to do something with the resource.
+from_schema: https://www.marda-alliance.org/extractors/extractor
+rank: 1000
+slot_uri: dc_terms:license
+alias: license
+domain_of:
+- Extractor
+range: License
+required: true
 
 ```
-
-</details>
-
-### Induced
-
-<details>
-
-```yaml
-name: License
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
-attributes:
-  uri:
-    name: uri
-    description: An unambiguous reference to the resource within a given context.
-    from_schema: https://www.marda-alliance.org/extractors/base
-    slot_uri: dc_terms:identifier
-    alias: uri
-    owner: License
-    domain_of:
-    - Citation
-    - License
-    range: string
-    required: false
-  spdx:
-    name: spdx
-    description: An SPDX License Identifier entry.
-    from_schema: https://www.marda-alliance.org/extractors/base
-    rank: 1000
-    slot_uri: dc_terms:identifier
-    alias: spdx
-    owner: License
-    domain_of:
-    - License
-    range: string
-    required: false
-
-```
-
 </details>

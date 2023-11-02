@@ -5,7 +5,7 @@ _A PEP 440 version string for the version constraints on the Python version requ
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:requires_python](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:requires_python)
+URI: [https://www.marda-alliance.org/extractors/extractor/:requires_python](https://www.marda-alliance.org/extractors/extractor/:requires_python)
 
 
 
@@ -45,7 +45,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/extractor
 
 
 
@@ -57,7 +57,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 name: requires_python
 description: A PEP 440 version string for the version constraints on the Python version
   required for this extractor.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/extractor
 rank: 1000
 alias: requires_python
 owner: Installation

@@ -5,7 +5,7 @@ _The location of the output to write to disk with the results of the extraction,
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:output_path](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:output_path)
+URI: [https://www.marda-alliance.org/extractors/extractor/:output_path](https://www.marda-alliance.org/extractors/extractor/:output_path)
 
 
 
@@ -45,7 +45,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/extractor
 
 
 
@@ -57,7 +57,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 name: output_path
 description: The location of the output to write to disk with the results of the extraction,
   if successful (OPTIONAL).
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/extractor
 rank: 1000
 alias: output_path
 owner: UsageTemplate

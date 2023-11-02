@@ -1,11 +1,11 @@
 # Slot: supported_filetypes
 
 
-_An enumeration of the :class:`FileType` that an :class:`Extractor` supports, matching :class:`FileTypes` present in the registry. The :obj:`FileType:id` can be passed to the :class:`Extractor`, see the :class:`Usage` class._
+_Container for links to the file types that this extractor supports, matching the registry file types. The ID values can be passed to an extractor with the `{{ input_type }}` parameter in `usage->command`._
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:supported_filetypes](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:supported_filetypes)
+URI: [https://www.marda-alliance.org/extractors/extractor/:supported_filetypes](https://www.marda-alliance.org/extractors/extractor/:supported_filetypes)
 
 
 
@@ -18,7 +18,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific `FileType`. The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
+[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
 
 
 
@@ -49,7 +49,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/extractor
 
 
 
@@ -59,10 +59,10 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 <details>
 ```yaml
 name: supported_filetypes
-description: An enumeration of the :class:`FileType` that an :class:`Extractor` supports,
-  matching :class:`FileTypes` present in the registry. The :obj:`FileType:id` can
-  be passed to the :class:`Extractor`, see the :class:`Usage` class.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+description: Container for links to the file types that this extractor supports, matching
+  the registry file types. The ID values can be passed to an extractor with the `{{
+  input_type }}` parameter in `usage->command`.
+from_schema: https://www.marda-alliance.org/extractors/extractor
 rank: 1000
 multivalued: true
 alias: supported_filetypes

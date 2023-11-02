@@ -2,7 +2,7 @@
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:Citation](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:Citation)
+URI: [https://www.marda-alliance.org/extractors/extractor/:Citation](https://www.marda-alliance.org/extractors/extractor/:Citation)
 
 
 
@@ -65,7 +65,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/extractor
 
 
 
@@ -75,8 +75,8 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:Citation |
-| native | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:Citation |
+| self | https://www.marda-alliance.org/extractors/extractor/:Citation |
+| native | https://www.marda-alliance.org/extractors/extractor/:Citation |
 
 
 
@@ -92,7 +92,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 
 ```yaml
 name: Citation
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/extractor
 attributes:
   uri:
     name: uri
@@ -145,7 +145,7 @@ attributes:
 
 ```yaml
 name: Citation
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/extractor
 attributes:
   uri:
     name: uri

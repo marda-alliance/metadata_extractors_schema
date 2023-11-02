@@ -7,7 +7,7 @@ _  - for `method: python`, this is an argument to Python's `import`_
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:setup](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:setup)
+URI: [https://www.marda-alliance.org/extractors/extractor/:setup](https://www.marda-alliance.org/extractors/extractor/:setup)
 
 
 
@@ -47,7 +47,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/extractor
 
 
 
@@ -59,7 +59,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 name: setup
 description: "Any necessary setup step for the 'command' to become available:\n  -\
   \ for `method: python`, this is an argument to Python's `import`"
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/extractor
 rank: 1000
 alias: setup
 owner: Usage

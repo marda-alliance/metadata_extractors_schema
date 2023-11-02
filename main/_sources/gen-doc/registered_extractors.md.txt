@@ -5,7 +5,7 @@ _A list of MaRDA extractor IDs that support this file type. This field should be
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:registered_extractors](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:registered_extractors)
+URI: [https://www.marda-alliance.org/extractors/filetype/:registered_extractors](https://www.marda-alliance.org/extractors/filetype/:registered_extractors)
 
 
 
@@ -49,7 +49,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/filetype
 
 
 
@@ -61,7 +61,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 name: registered_extractors
 description: A list of MaRDA extractor IDs that support this file type. This field
   should be auto-populated by a registry.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/filetype
 rank: 1000
 multivalued: true
 alias: registered_extractors

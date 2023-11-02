@@ -5,7 +5,7 @@ _Any software (proprietary or otherwise) that produces such files._
 
 
 
-URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:associated_software](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:associated_software)
+URI: [https://www.marda-alliance.org/extractors/filetype/:associated_software](https://www.marda-alliance.org/extractors/filetype/:associated_software)
 
 
 
@@ -47,7 +47,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/filetype
 
 
 
@@ -58,7 +58,7 @@ URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/:
 ```yaml
 name: associated_software
 description: Any software (proprietary or otherwise) that produces such files.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/filetype
 rank: 1000
 multivalued: true
 alias: associated_software

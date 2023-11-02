@@ -47,7 +47,7 @@ URI: [schema_org:vendor](http://schema.org/vendor)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+* from schema: https://www.marda-alliance.org/extractors/filetype
 
 
 
@@ -59,7 +59,7 @@ URI: [schema_org:vendor](http://schema.org/vendor)
 name: associated_vendors
 description: If this file type is associated with particular software or instrument
   vendors, they can be listed here.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/
+from_schema: https://www.marda-alliance.org/extractors/filetype
 rank: 1000
 slot_uri: schema_org:vendor
 multivalued: true
