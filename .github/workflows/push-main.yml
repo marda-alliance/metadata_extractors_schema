@@ -1,5 +1,5 @@
 ---
-name: CI main tests + docs + deploy
+name: CI main
 
 on:
     push:

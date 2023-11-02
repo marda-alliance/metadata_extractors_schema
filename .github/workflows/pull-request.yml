@@ -1,5 +1,5 @@
 ---
-name: CI PR tests + docs
+name: CI PR
 
 on:
     pull_request:
