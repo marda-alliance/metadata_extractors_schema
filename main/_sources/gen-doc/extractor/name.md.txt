@@ -1,0 +1,71 @@
+# Slot: name
+
+
+_A recognisable name for the entry._
+
+
+
+URI: [schema_org:name](http://schema.org/name)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Required: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: name
+description: A recognisable name for the entry.
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+rank: 1000
+slot_uri: schema_org:name
+alias: name
+domain_of:
+- Extractor
+range: string
+required: true
+
+```
+</details>

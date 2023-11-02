@@ -1,0 +1,70 @@
+# Slot: title
+
+
+_A name given to the resource [from DC]._
+
+
+
+URI: [dc_terms:title](http://purl.org/dc/terms/1.1/title)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Citation](Citation.md) | None |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: title
+description: A name given to the resource [from DC].
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+rank: 1000
+slot_uri: dc_terms:title
+alias: title
+owner: Citation
+domain_of:
+- Citation
+range: string
+required: false
+
+```
+</details>

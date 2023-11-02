@@ -1,0 +1,77 @@
+# Slot: id
+
+
+_A unique identifier for the entry within the MaRDA registry namespace, this should be a shorthand label rather than a UUID. Only lower-case alphanumeric and dash ("-") characters are permitted._
+
+
+
+URI: [schema_org:identifier](http://schema.org/identifier)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[FileType](FileType.md) | A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Required: True
+
+* Regex pattern: `^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$`
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: id
+description: A unique identifier for the entry within the MaRDA registry namespace,
+  this should be a shorthand label rather than a UUID. Only lower-case alphanumeric
+  and dash ("-") characters are permitted.
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype
+rank: 1000
+slot_uri: schema_org:identifier
+identifier: true
+alias: id
+domain_of:
+- FileType
+range: string
+required: true
+pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
+
+```
+</details>

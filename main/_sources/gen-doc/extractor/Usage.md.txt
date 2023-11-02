@@ -1,0 +1,219 @@
+# Class: Usage
+
+
+
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:Usage](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:Usage)
+
+
+
+
+```{mermaid}
+ classDiagram
+    class Usage
+      Usage : command
+        
+      Usage : method
+        
+          Usage --|> UsageTypes : method
+        
+      Usage : scope
+        
+          Usage --|> UsageScope : scope
+        
+      Usage : setup
+        
+      
+```
+
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [method](method.md) | 1..1 <br/> [UsageTypes](UsageTypes.md) | Usage invocation method, e.g. from a command line or from Python. | direct |
+| [setup](setup.md) | 0..1 <br/> [String](String.md) | Any necessary setup step for the 'command' to become available:<br/>  - for `method: python`, this is an argument to Python's `import` | direct |
+| [command](command.md) | 1..1 <br/> [String](String.md) | A machine-executable command by which the Extractor functionality can be<br/>accessed:<br/><br/>  - for `method: cli` a parametrized executable invocation which<br/>    should be available after installing the :class:`Extractor`;<br/>  - for `method: python` a parametrized function invocation which<br/>    should be available after installing and setting up the :class:`Extractor`.<br/><br/>The following templated parameters can be requested from the user, using the<br/>`{{}}` syntax, as described by the `UsageTemplate` class:<br/>  - `{{ input_path }}`: the location of the resource (e.g., file,<br/>or directory) on disk to parse (REQUIRED).<br/>  - `{{ input_type }}`: the registry ID of the file type to parse<br/>(OPTIONAL).<br/>  - `{{ output_path }}`: the location of the output to write to<br/>disk with the results of the extraction, if successful (OPTIONAL).<br/>  - `{{ output_type }}`: the registry ID of the file type to write<br/>to disk (OPTIONAL). | direct |
+| [scope](scope.md) | 0..1 <br/> [UsageScope](UsageScope.md) | This enumeration field allows extractor usage to be described in one of two<br/>modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,<br/>or the full file is returned by the extractor, respectively. In practice, this<br/>means that extractors may have multiple defined usage modes for each scope and<br/>each execution method. The default is to assume the 'worst case' that the<br/>extractor indeed returns as much of the data in the file that it supports, plus<br/>potentially additional analysis. | direct |
+
+
+
+
+
+## Usages
+
+| used by | used in | type | used |
+| ---  | --- | --- | --- |
+| [Extractor](Extractor.md) | [usage](usage.md) | range | [Usage](Usage.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:Usage |
+| native | https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:Usage |
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+
+```yaml
+name: Usage
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+attributes:
+  method:
+    name: method
+    description: Usage invocation method, e.g. from a command line or from Python.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+    rank: 1000
+    range: UsageTypes
+    required: true
+  setup:
+    name: setup
+    description: "Any necessary setup step for the 'command' to become available:\n\
+      \  - for `method: python`, this is an argument to Python's `import`"
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+    rank: 1000
+  command:
+    name: command
+    description: "A machine-executable command by which the Extractor functionality\
+      \ can be accessed:\n\n  - for `method: cli` a parametrized executable invocation\
+      \ which\n    should be available after installing the :class:`Extractor`;\n\
+      \  - for `method: python` a parametrized function invocation which\n    should\
+      \ be available after installing and setting up the :class:`Extractor`.\n\nThe\
+      \ following templated parameters can be requested from the user, using the `{{}}`\
+      \ syntax, as described by the `UsageTemplate` class:\n  - `{{ input_path }}`:\
+      \ the location of the resource (e.g., file,\nor directory) on disk to parse\
+      \ (REQUIRED).\n  - `{{ input_type }}`: the registry ID of the file type to parse\n\
+      (OPTIONAL).\n  - `{{ output_path }}`: the location of the output to write to\n\
+      disk with the results of the extraction, if successful (OPTIONAL).\n  - `{{\
+      \ output_type }}`: the registry ID of the file type to write\nto disk (OPTIONAL)."
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+    rank: 1000
+    required: true
+  scope:
+    name: scope
+    description: This enumeration field allows extractor usage to be described in
+      one of two modes, `meta-only` and `meta+data`, whereby either a summary of file
+      metadata, or the full file is returned by the extractor, respectively. In practice,
+      this means that extractors may have multiple defined usage modes for each scope
+      and each execution method. The default is to assume the 'worst case' that the
+      extractor indeed returns as much of the data in the file that it supports, plus
+      potentially additional analysis.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+    rank: 1000
+    range: UsageScope
+    required: false
+
+```
+
+</details>
+
+### Induced
+
+<details>
+
+```yaml
+name: Usage
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+attributes:
+  method:
+    name: method
+    description: Usage invocation method, e.g. from a command line or from Python.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+    rank: 1000
+    alias: method
+    owner: Usage
+    domain_of:
+    - Usage
+    - Installation
+    range: UsageTypes
+    required: true
+  setup:
+    name: setup
+    description: "Any necessary setup step for the 'command' to become available:\n\
+      \  - for `method: python`, this is an argument to Python's `import`"
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+    rank: 1000
+    alias: setup
+    owner: Usage
+    domain_of:
+    - Usage
+    range: string
+  command:
+    name: command
+    description: "A machine-executable command by which the Extractor functionality\
+      \ can be accessed:\n\n  - for `method: cli` a parametrized executable invocation\
+      \ which\n    should be available after installing the :class:`Extractor`;\n\
+      \  - for `method: python` a parametrized function invocation which\n    should\
+      \ be available after installing and setting up the :class:`Extractor`.\n\nThe\
+      \ following templated parameters can be requested from the user, using the `{{}}`\
+      \ syntax, as described by the `UsageTemplate` class:\n  - `{{ input_path }}`:\
+      \ the location of the resource (e.g., file,\nor directory) on disk to parse\
+      \ (REQUIRED).\n  - `{{ input_type }}`: the registry ID of the file type to parse\n\
+      (OPTIONAL).\n  - `{{ output_path }}`: the location of the output to write to\n\
+      disk with the results of the extraction, if successful (OPTIONAL).\n  - `{{\
+      \ output_type }}`: the registry ID of the file type to write\nto disk (OPTIONAL)."
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+    rank: 1000
+    alias: command
+    owner: Usage
+    domain_of:
+    - Usage
+    range: string
+    required: true
+  scope:
+    name: scope
+    description: This enumeration field allows extractor usage to be described in
+      one of two modes, `meta-only` and `meta+data`, whereby either a summary of file
+      metadata, or the full file is returned by the extractor, respectively. In practice,
+      this means that extractors may have multiple defined usage modes for each scope
+      and each execution method. The default is to assume the 'worst case' that the
+      extractor indeed returns as much of the data in the file that it supports, plus
+      potentially additional analysis.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+    rank: 1000
+    alias: scope
+    owner: Usage
+    domain_of:
+    - Usage
+    range: UsageScope
+    required: false
+
+```
+
+</details>

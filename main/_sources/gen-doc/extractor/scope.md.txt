@@ -1,0 +1,74 @@
+# Slot: scope
+
+
+_This enumeration field allows extractor usage to be described in one of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata, or the full file is returned by the extractor, respectively. In practice, this means that extractors may have multiple defined usage modes for each scope and each execution method. The default is to assume the 'worst case' that the extractor indeed returns as much of the data in the file that it supports, plus potentially additional analysis._
+
+
+
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:scope](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:scope)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Usage](Usage.md) | None |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [UsageScope](UsageScope.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: scope
+description: This enumeration field allows extractor usage to be described in one
+  of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,
+  or the full file is returned by the extractor, respectively. In practice, this means
+  that extractors may have multiple defined usage modes for each scope and each execution
+  method. The default is to assume the 'worst case' that the extractor indeed returns
+  as much of the data in the file that it supports, plus potentially additional analysis.
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+rank: 1000
+alias: scope
+owner: Usage
+domain_of:
+- Usage
+range: UsageScope
+required: false
+
+```
+</details>

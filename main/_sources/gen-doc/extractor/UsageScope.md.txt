@@ -1,0 +1,72 @@
+# Enum: UsageScope
+
+
+
+URI: [UsageScope](UsageScope)
+
+## Permissible Values
+
+| Value | Meaning | Description |
+| --- | --- | --- |
+| meta-only | None | This usage scope only returns metadata associated with the file, according to... |
+| meta+data | None | This usage scope refers to a "full" extraction of the file, whereby the extra... |
+
+
+
+
+## Slots
+
+| Name | Description |
+| ---  | --- |
+| [scope](scope.md) | This enumeration field allows extractor usage to be described in one of two m... |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: UsageScope
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+rank: 1000
+permissible_values:
+  meta-only:
+    text: meta-only
+    description: This usage scope only returns metadata associated with the file,
+      according to the extractor's own interpretation of metadata. This may include,
+      but is not limited to, timestamps, column headings, data types and data shapes.
+      The size of data returned in this mode should be limited and will typically
+      be much smaller than the file size. This metadata SHOULD be expressed as a JSON-serializable
+      document that can, for example, be loaded into Python with only standard library
+      imports.
+  meta+data:
+    text: meta+data
+    description: This usage scope refers to a "full" extraction of the file, whereby
+      the extractor tries to faithfully interpret and return all supported information
+      contained within the file, including binary data, large multi-dimensional arrays,
+      plus all of the associated metadata from a `meta-only` extraction. The size
+      of the data returned in this mode is not limited and could be significantly
+      larger than the input file size (in the case of binary data, or additional analysis
+      being performed upon extraction).
+
+```
+</details>

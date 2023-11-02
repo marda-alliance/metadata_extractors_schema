@@ -1,0 +1,54 @@
+# Slot: uri
+
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype/:uri](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype/:uri)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Citation](Citation.md) | None |  no  |
+[License](License.md) | None |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: uri
+alias: uri
+domain_of:
+- Citation
+- License
+range: string
+
+```
+</details>

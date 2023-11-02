@@ -1,0 +1,71 @@
+# Slot: description
+
+
+_A human-readable outline of the entry, its format, data content and uses._
+
+
+
+URI: [schema_org:description](http://schema.org/description)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[FileType](FileType.md) | A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Required: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: description
+description: A human-readable outline of the entry, its format, data content and uses.
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/filetype
+rank: 1000
+slot_uri: schema_org:description
+alias: description
+domain_of:
+- FileType
+range: string
+required: true
+
+```
+</details>

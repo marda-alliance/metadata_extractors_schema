@@ -1,0 +1,76 @@
+# Slot: supported_filetypes
+
+
+_An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md) supports, matching `FileTypes` present in the registry. The `FileType:id` can be passed to the `Extractor`, see the :class:`Usage` class._
+
+
+
+URI: [https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:supported_filetypes](https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor/:supported_filetypes)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [SupportedFileTypes](SupportedFileTypes.md)
+
+* Multivalued: True
+
+* Required: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: supported_filetypes
+description: An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md)
+  supports, matching `FileTypes` present in the registry. The `FileType:id` can be
+  passed to the `Extractor`, see the :class:`Usage` class.
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/gen-doc/extractor
+rank: 1000
+multivalued: true
+alias: supported_filetypes
+owner: Extractor
+domain_of:
+- Extractor
+range: SupportedFileTypes
+required: true
+
+```
+</details>
