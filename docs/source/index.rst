@@ -29,6 +29,8 @@ The repository contains two user-facing schemas:
    mme_schema/filetype/FileType
    mme_schema/extractor/Extractor
 
+.. include:: mme_schema/toctree.txt
+
 
 .. |MMESchemaRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_schema/?icon=github
 
@@ -40,8 +42,8 @@ The repository contains two user-facing schemas:
 
 .. |FileType| replace:: :class:`FileType`
 
-.. _FileType: filetype/filetype.html#class-filetype
+.. _FileType: mme_schema/filetype/FileType.html#class-filetype
 
 .. |Extractor| replace:: :class:`Extractor`
 
-.. _Extractor: extractor/extractor.html#class-extractor
+.. _Extractor: mme_schema/extractor/Extractor.html#class-extractor
