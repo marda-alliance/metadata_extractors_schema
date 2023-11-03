@@ -102,6 +102,55 @@ URI: [mme_schema:FileType](https://marda-alliance.github.io/metadata_extractors_
 | close | schema_org:fileFormat, schema_org:encodingFormat |
 
 
+## Examples
+### Example: FileType-netcdf
+
+```yaml
+---
+id: >-
+    netcdf
+name: >-
+    Network Common Data Form (NetCDF) file.
+description: >-
+    A file format for storing multidimensional scientific data (variables) such as
+    temperature, humidity, pressure, wind speed, and direction. This particular record
+    represents NetCDF version 4, which used HDF5+ as a container.
+associated_vendors:
+    - UCAR
+subject:
+    - climatology
+    - meteorology
+    - oceanography
+associated_software:
+    - ArcGIS
+    - OriginPro
+
+```
+### Example: FileType-example
+
+```yaml
+---
+id: >-
+    example-filetype
+name: >-
+    Example Filetype
+description: >-
+    A binary data file with a random description. Can be multilined. It is just an
+    example.
+associated_vendors:
+    - Example Vendor
+subject:
+    - science
+    - engineering
+associated_instruments:
+    - Example Machine
+    - Bunch of Junk
+associated_software:
+    - Example Software
+    - Bitrot Software
+
+```
+
 
 
 

@@ -66,11 +66,11 @@ The generated files are intended to be used in downstream codes such as in the `
 
 .. |FileType| replace:: :class:`FileType`
 
-.. _FileType: filetype/filetype.html#class-filetype
+.. _FileType: mme_schema/filetype/FileType.html#class-filetype
 
 .. |Extractor| replace:: :class:`Extractor`
 
-.. _Extractor: extractor/extractor.html#class-extractor
+.. _Extractor: mme_schema/extractor/Extractor.html#class-extractor
 
 .. |examples| replace:: ``examples``
 

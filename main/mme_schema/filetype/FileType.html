@@ -65,6 +65,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#mappings">Mappings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-filetype-netcdf">Example: FileType-netcdf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-filetype-example">Example: FileType-example</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#linkml-source">LinkML Source</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#direct">Direct</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#induced">Induced</a></li>
@@ -242,6 +247,56 @@
 </tr>
 </tbody>
 </table>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="example-filetype-netcdf">
+<h3>Example: FileType-netcdf<a class="headerlink" href="#example-filetype-netcdf" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">netcdf</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">Network Common Data Form (NetCDF) file.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">A file format for storing multidimensional scientific data (variables) such as</span>
+<span class="w">    </span><span class="no">temperature, humidity, pressure, wind speed, and direction. This particular record</span>
+<span class="w">    </span><span class="no">represents NetCDF version 4, which used HDF5+ as a container.</span>
+<span class="nt">associated_vendors</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UCAR</span>
+<span class="nt">subject</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">climatology</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meteorology</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oceanography</span>
+<span class="nt">associated_software</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ArcGIS</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OriginPro</span>
+</pre></div>
+</div>
+</section>
+<section id="example-filetype-example">
+<h3>Example: FileType-example<a class="headerlink" href="#example-filetype-example" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">example-filetype</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">Example Filetype</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">A binary data file with a random description. Can be multilined. It is just an</span>
+<span class="w">    </span><span class="no">example.</span>
+<span class="nt">associated_vendors</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example Vendor</span>
+<span class="nt">subject</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">science</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">engineering</span>
+<span class="nt">associated_instruments</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example Machine</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bunch of Junk</span>
+<span class="nt">associated_software</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example Software</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bitrot Software</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
