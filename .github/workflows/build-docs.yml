@@ -55,13 +55,13 @@ jobs:
                   echo "   :hidden:" >> docs/source/mme_schema/toctree.txt
                   echo "" >> docs/source/mme_schema/toctree.txt
                   for f in $(ls docs/source/mme_schema/base/*.md); do
-                    echo "    ${f:5:-3}" >> docs/source/mme_schema/toctree.txt
+                    echo "    ${f:12:-3}" >> docs/source/mme_schema/toctree.txt
                   done
                   for f in $(ls docs/source/mme_schema/filetype/*.md); do
-                    echo "    ${f:5:-3}" >> docs/source/mme_schema/toctree.txt
+                    echo "    ${f:12:-3}" >> docs/source/mme_schema/toctree.txt
                   done
                   for f in $(ls docs/source/mme_schema/extractor/*.md); do
-                    echo "    ${f:5:-3}" >> docs/source/mme_schema/toctree.txt
+                    echo "    ${f:12:-3}" >> docs/source/mme_schema/toctree.txt
                   done
 
             - name: Tar gen-doc files
