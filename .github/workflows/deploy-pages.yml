@@ -32,7 +32,7 @@ jobs:
                   echo "    <title>Redirecting to main branch</title>" >> public/index.html
                   echo '    <meta charset="utf-8">' >> public/index.html
                   echo '    <meta http-equiv="refresh" content="0; url=./main/index.html">' >> public/index.html
-                  echo '    <link rel='canonical' href='https://marda-alliance.github.io/marda_extractors_schema/main/index.html">' >> public/index.html
+                  echo '    <link rel="canonical" href='https://marda-alliance.github.io/marda_extractors_schema/main/index.html">' >> public/index.html
                   echo "  </head> >> public/index.html
                   echo "</html>" >> public/index.html
 
