@@ -1,7 +1,7 @@
 # Slot: base_formats
 
 
-_If this format uses any particular underlying generic formats, e.g., CSV, JSON, HDF5, then they can be listed here._
+_A list of any particular underlying generic formats which this `FileType` is based on, e.g., CSV, JSON, HDF5, XML._
 
 
 
@@ -18,7 +18,7 @@ URI: [mme_schema:base_formats](https://marda-alliance.github.io/metadata_extract
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[FileType](FileType.md) | A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
+[FileType](FileType.md) | A specific encoding of data for storage purposes. A `FileType` is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
 
 
 
@@ -57,8 +57,8 @@ URI: [mme_schema:base_formats](https://marda-alliance.github.io/metadata_extract
 <details>
 ```yaml
 name: base_formats
-description: If this format uses any particular underlying generic formats, e.g.,
-  CSV, JSON, HDF5, then they can be listed here.
+description: A list of any particular underlying generic formats which this `FileType`
+  is based on, e.g., CSV, JSON, HDF5, XML.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true

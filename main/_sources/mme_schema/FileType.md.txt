@@ -1,7 +1,7 @@
 # Class: FileType
 
 
-_A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type._
+_A specific encoding of data for storage purposes. A `FileType` is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type._
 
 
 
@@ -42,12 +42,12 @@ FileType ||--}o FileType : "base_formats"
 | [description](description.md) | 1..1 <br/> [String](String.md) | A human-readable outline of the entry, its format, data content and uses. | direct |
 | [name](name.md) | 1..1 <br/> [String](String.md) | A recognisable name for the entry. | direct |
 | [subject](subject.md) | 0..* <br/> [String](String.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. | direct |
-| [associated_vendors](associated_vendors.md) | 0..* <br/> [String](String.md) | If this file type is associated with particular software or instrument vendors,<br/>they can be listed here. | direct |
-| [associated_instruments](associated_instruments.md) | 0..* <br/> [String](String.md) | Any instrument, or class of instruments, that typically create the data encoded<br/>into such files. | direct |
-| [associated_software](associated_software.md) | 0..* <br/> [String](String.md) | Any software (proprietary or otherwise) that produces such files. | direct |
-| [base_formats](base_formats.md) | 0..* <br/> [FileType](FileType.md) | If this format uses any particular underlying generic formats, e.g., CSV, JSON,<br/>HDF5, then they can be listed here. | direct |
-| [associated_standards](associated_standards.md) | 0..* <br/> [String](String.md) | If this is a subformat that follows a particular well-defined standard, e.g.,<br/>CIF, NeXus, then it can be listed here. | direct |
-| [registered_extractors](registered_extractors.md) | 0..* <br/> [String](String.md) | A list of MaRDA extractor IDs that support this file type. This field should be<br/>auto-populated by a registry. | direct |
+| [associated_vendors](associated_vendors.md) | 0..* <br/> [String](String.md) | A list of software or instrument vendors that can be associated with this<br/>particular `FileType`. | direct |
+| [associated_instruments](associated_instruments.md) | 0..* <br/> [String](String.md) | A list of any instruments, or classes of instruments, that typically create the<br/>data encoded into this `FileType`. | direct |
+| [associated_software](associated_software.md) | 0..* <br/> [String](String.md) | A list of any known software (proprietary or otherwise) that produces such<br/>`FileType`. | direct |
+| [base_formats](base_formats.md) | 0..* <br/> [FileType](FileType.md) | A list of any particular underlying generic formats which this `FileType` is<br/>based on, e.g., CSV, JSON, HDF5, XML. | direct |
+| [associated_standards](associated_standards.md) | 0..* <br/> [String](String.md) | A list of any particular well-defined file format standards relevant to this<br/>`FileType`, e.g., CIF, NeXus, then it can be listed here. | direct |
+| [registered_extractors](registered_extractors.md) | 0..* <br/> [String](String.md) | A slot for an automatically-generated enumeration of `Extractor` IDs that<br/>support this file type. This slot should be auto-populated by a registry. | direct |
 
 
 
@@ -152,9 +152,9 @@ associated_software:
 
 ```yaml
 name: FileType
-description: A specific encoding of data for storage purposes, defined by a set of
-  common characteristics and expectations, that can be assumed for all files of a
-  given file type.
+description: A specific encoding of data for storage purposes. A `FileType` is defined
+  by a set of common characteristics and expectations, that can be assumed for all
+  files of a given file type.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 close_mappings:
 - schema_org:fileFormat
@@ -167,44 +167,45 @@ slots:
 attributes:
   associated_vendors:
     name: associated_vendors
-    description: If this file type is associated with particular software or instrument
-      vendors, they can be listed here.
+    description: A list of software or instrument vendors that can be associated with
+      this particular `FileType`.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: schema_org:vendor
     multivalued: true
   associated_instruments:
     name: associated_instruments
-    description: Any instrument, or class of instruments, that typically create the
-      data encoded into such files.
+    description: A list of any instruments, or classes of instruments, that typically
+      create the data encoded into this `FileType`.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
   associated_software:
     name: associated_software
-    description: Any software (proprietary or otherwise) that produces such files.
+    description: A list of any known software (proprietary or otherwise) that produces
+      such `FileType`.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
   base_formats:
     name: base_formats
-    description: If this format uses any particular underlying generic formats, e.g.,
-      CSV, JSON, HDF5, then they can be listed here.
+    description: A list of any particular underlying generic formats which this `FileType`
+      is based on, e.g., CSV, JSON, HDF5, XML.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
     range: FileType
   associated_standards:
     name: associated_standards
-    description: If this is a subformat that follows a particular well-defined standard,
-      e.g., CIF, NeXus, then it can be listed here.
+    description: A list of any particular well-defined file format standards relevant
+      to this `FileType`, e.g., CIF, NeXus, then it can be listed here.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
   registered_extractors:
     name: registered_extractors
-    description: A list of MaRDA extractor IDs that support this file type. This field
-      should be auto-populated by a registry.
+    description: A slot for an automatically-generated enumeration of `Extractor`
+      IDs that support this file type. This slot should be auto-populated by a registry.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -220,9 +221,9 @@ attributes:
 
 ```yaml
 name: FileType
-description: A specific encoding of data for storage purposes, defined by a set of
-  common characteristics and expectations, that can be assumed for all files of a
-  given file type.
+description: A specific encoding of data for storage purposes. A `FileType` is defined
+  by a set of common characteristics and expectations, that can be assumed for all
+  files of a given file type.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 close_mappings:
 - schema_org:fileFormat
@@ -230,8 +231,8 @@ close_mappings:
 attributes:
   associated_vendors:
     name: associated_vendors
-    description: If this file type is associated with particular software or instrument
-      vendors, they can be listed here.
+    description: A list of software or instrument vendors that can be associated with
+      this particular `FileType`.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: schema_org:vendor
@@ -243,8 +244,8 @@ attributes:
     range: string
   associated_instruments:
     name: associated_instruments
-    description: Any instrument, or class of instruments, that typically create the
-      data encoded into such files.
+    description: A list of any instruments, or classes of instruments, that typically
+      create the data encoded into this `FileType`.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -255,7 +256,8 @@ attributes:
     range: string
   associated_software:
     name: associated_software
-    description: Any software (proprietary or otherwise) that produces such files.
+    description: A list of any known software (proprietary or otherwise) that produces
+      such `FileType`.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -266,8 +268,8 @@ attributes:
     range: string
   base_formats:
     name: base_formats
-    description: If this format uses any particular underlying generic formats, e.g.,
-      CSV, JSON, HDF5, then they can be listed here.
+    description: A list of any particular underlying generic formats which this `FileType`
+      is based on, e.g., CSV, JSON, HDF5, XML.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -278,8 +280,8 @@ attributes:
     range: FileType
   associated_standards:
     name: associated_standards
-    description: If this is a subformat that follows a particular well-defined standard,
-      e.g., CIF, NeXus, then it can be listed here.
+    description: A list of any particular well-defined file format standards relevant
+      to this `FileType`, e.g., CIF, NeXus, then it can be listed here.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -290,8 +292,8 @@ attributes:
     range: string
   registered_extractors:
     name: registered_extractors
-    description: A list of MaRDA extractor IDs that support this file type. This field
-      should be auto-populated by a registry.
+    description: A slot for an automatically-generated enumeration of `Extractor`
+      IDs that support this file type. This slot should be auto-populated by a registry.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true

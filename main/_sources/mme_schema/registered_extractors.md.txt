@@ -1,7 +1,7 @@
 # Slot: registered_extractors
 
 
-_A list of MaRDA extractor IDs that support this file type. This field should be auto-populated by a registry._
+_A slot for an automatically-generated enumeration of `Extractor` IDs that support this file type. This slot should be auto-populated by a registry._
 
 
 
@@ -18,7 +18,7 @@ URI: [mme_schema:registered_extractors](https://marda-alliance.github.io/metadat
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[FileType](FileType.md) | A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
+[FileType](FileType.md) | A specific encoding of data for storage purposes. A `FileType` is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
 
 
 
@@ -59,8 +59,8 @@ URI: [mme_schema:registered_extractors](https://marda-alliance.github.io/metadat
 <details>
 ```yaml
 name: registered_extractors
-description: A list of MaRDA extractor IDs that support this file type. This field
-  should be auto-populated by a registry.
+description: A slot for an automatically-generated enumeration of `Extractor` IDs
+  that support this file type. This slot should be auto-populated by a registry.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true

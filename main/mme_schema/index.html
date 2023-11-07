@@ -185,7 +185,7 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <td><p>A script, code, or web service that, when executed, can extract information from a supplied “file” with a specific <a class="reference internal" href="FileType.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">FileType</span></code></span></a>. The supplied “file” may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="FileType.html"><span class="std std-doc">FileType</span></a></p></td>
-<td><p>A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type.</p></td>
+<td><p>A specific encoding of data for storage purposes. A <code class="docutils literal notranslate"><span class="pre">FileType</span></code> is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="Installation.html"><span class="std std-doc">Installation</span></a></p></td>
 <td><p>None</p></td>
@@ -215,19 +215,19 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="associated_instruments.html"><span class="std std-doc">associated_instruments</span></a></p></td>
-<td><p>Any instrument, or class of instruments, that typically create the data encod…</p></td>
+<td><p>A list of any instruments, or classes of instruments, that typically create t…</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="associated_software.html"><span class="std std-doc">associated_software</span></a></p></td>
-<td><p>Any software (proprietary or otherwise) that produces such files</p></td>
+<td><p>A list of any known software (proprietary or otherwise) that produces such `F…</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="associated_standards.html"><span class="std std-doc">associated_standards</span></a></p></td>
-<td><p>If this is a subformat that follows a particular well-defined standard, e</p></td>
+<td><p>A list of any particular well-defined file format standards relevant to this …</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="associated_vendors.html"><span class="std std-doc">associated_vendors</span></a></p></td>
-<td><p>If this file type is associated with particular software or instrument vendor…</p></td>
+<td><p>A list of software or instrument vendors that can be associated with this par…</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="base_formats.html"><span class="std std-doc">base_formats</span></a></p></td>
-<td><p>If this format uses any particular underlying generic formats, e</p></td>
+<td><p>A list of any particular underlying generic formats which this <code class="docutils literal notranslate"><span class="pre">FileType</span></code> is …</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="citations.html"><span class="std std-doc">citations</span></a></p></td>
 <td><p>A citation or citations for the entry, to be provided should it be used in ac…</p></td>
@@ -281,7 +281,7 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <td><p>A list of packages, including versioned packages or <code class="docutils literal notranslate"><span class="pre">git+https://</span></code> targets, t…</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="registered_extractors.html"><span class="std std-doc">registered_extractors</span></a></p></td>
-<td><p>A list of MaRDA extractor IDs that support this file type</p></td>
+<td><p>A slot for an automatically-generated enumeration of <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> IDs that sup…</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="requirements.html"><span class="std std-doc">requirements</span></a></p></td>
 <td><p>Contents of a ‘requirements</p></td>
