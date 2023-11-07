@@ -1,7 +1,7 @@
 ---
 name: filetype
 version: 0.2.0
-id: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+id: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/filetype
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
