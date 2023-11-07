@@ -34,7 +34,7 @@ jobs:
             - name: Build Extractor docs
               shell: bash
               run: |
-                  gen-doc schemas/extractor.yaml -d docs/source/mme_schema/ --template-directory docs/source/_templates --example-directory examples/
+                  gen-doc schemas/extractor.yaml -d docs/source/mme_schema/ --template-directory docs/source/_templates --example-directory examples/ --include-top-level-diagram --diagram-type er_diagram
 
             - name: Tar gen-doc files
               run: tar -cvf gen-doc.tar docs/source/mme_schema

@@ -1,7 +1,8 @@
 ---
+title: MaRDA Metadata Extractors Schema
 name: extractor
 version: 0.2.0
-id: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+id: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 prefixes:
     linkml: https://w3id.org/linkml/
     schema_org: http://schema.org/
