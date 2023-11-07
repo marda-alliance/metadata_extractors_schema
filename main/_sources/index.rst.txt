@@ -26,8 +26,8 @@ The repository contains two user-facing schemas:
    :caption: Schema Docs
    :hidden:
 
-   mme_schema/extractor/FileType
-   mme_schema/extractor/Extractor
+   mme_schema/FileType
+   mme_schema/Extractor
 
 .. toctree::
    :maxdepth: 2
@@ -35,7 +35,7 @@ The repository contains two user-facing schemas:
    :hidden:
    :glob:
 
-   mme_schema/extractor/index
+   mme_schema/index
 
 
 
