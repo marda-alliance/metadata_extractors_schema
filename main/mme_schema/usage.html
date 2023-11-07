@@ -87,7 +87,7 @@
              
   <section id="slot-usage">
 <h1>Slot: usage<a class="headerlink" href="#slot-usage" title="Link to this heading"></a></h1>
-<p><em>A machine-actionable description of the usage of the Extractor. The described usage pattern shall be available after the <code class="docutils literal notranslate"><span class="pre">installation</span></code> instructions have been followed.</em></p>
+<p><em>A machine-actionable instructions for the usage of the Extractor. The described usage pattern shall be available after the instructions specified in <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;installation</span></code> slot have been followed.</em></p>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/usage">mme_schema:usage</a></p>
 <!-- no inheritance hierarchy -->
 <section id="applicable-classes">
@@ -114,21 +114,6 @@
 <li><p>Multivalued: True</p></li>
 </ul>
 </section>
-<section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Value</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>JsonObj(method=’cli’, command=’parse –type=example {{ file_path }}’)</p></td>
-</tr>
-<tr class="row-odd"><td><p>JsonObj(method=’python’, setup=’example.extractors’, command=’example.extractors.extract({{ file_path }}, type=”example”)’)</p></td>
-</tr>
-</tbody>
-</table>
-</section>
 <section id="identifier-and-mapping-information">
 <h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
 <section id="schema-source">
@@ -143,13 +128,9 @@
 <details>
 ```yaml
 name: usage
-description: A machine-actionable description of the usage of the Extractor. The described
-  usage pattern shall be available after the `installation` instructions have been
-  followed.
-examples:
-- value: JsonObj(method='cli', command='parse --type=example {{ file_path }}')
-- value: JsonObj(method='python', setup='example.extractors', command='example.extractors.extract({{
-    file_path }}, type="example")')
+description: A machine-actionable instructions for the usage of the Extractor. The
+  described usage pattern shall be available after the instructions specified in `Extractor->installation`
+  slot have been followed.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true

@@ -87,7 +87,7 @@
              
   <section id="slot-installation">
 <h1>Slot: installation<a class="headerlink" href="#slot-installation" title="Link to this heading"></a></h1>
-<p><em>A machine-actionable set of installation instructions to obtain a working set-up of the Extractor.</em></p>
+<p><em>A machine-actionable set of installation instructions to obtain a working set-up of the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</em></p>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/installation">mme_schema:installation</a></p>
 <!-- no inheritance hierarchy -->
 <section id="applicable-classes">
@@ -114,21 +114,6 @@
 <li><p>Multivalued: True</p></li>
 </ul>
 </section>
-<section id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Value</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>JsonObj(method=’pip’, packages=’my-pypi-package==1.0.0’, requires_python=’&gt;=3.9’)</p></td>
-</tr>
-<tr class="row-odd"><td><p>JsonObj(method=’conda’, requirements=’dependencies:\n  - python=3.10\n  - numpy’)</p></td>
-</tr>
-</tbody>
-</table>
-</section>
 <section id="identifier-and-mapping-information">
 <h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
 <section id="schema-source">
@@ -144,11 +129,7 @@
 ```yaml
 name: installation
 description: A machine-actionable set of installation instructions to obtain a working
-  set-up of the Extractor.
-examples:
-- value: JsonObj(method='pip', packages='my-pypi-package==1.0.0', requires_python='>=3.9')
-- value: JsonObj(method='conda', requirements='dependencies:\n  - python=3.10\n  -
-    numpy')
+  set-up of the `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true

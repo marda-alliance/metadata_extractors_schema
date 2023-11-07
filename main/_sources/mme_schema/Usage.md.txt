@@ -73,6 +73,55 @@ Usage {
 | native | mme_schema:Usage |
 
 
+## Examples
+### Example: Usage-python+templating+scope
+
+```yaml
+---
+method: python
+setup: example
+command: >-
+    '{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()'
+scope: meta+data
+
+```
+### Example: Usage-python+setup+scope
+
+```yaml
+---
+method: python
+setup: example
+scope: meta-only
+command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
+
+```
+### Example: Usage-cli+scope
+
+```yaml
+---
+method: cli
+scope: meta-only
+command: parse --type=example --summary {{ file_path }}
+
+```
+### Example: Usage-python+setup
+
+```yaml
+---
+method: python
+setup: example.extractors
+command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
+
+```
+### Example: Usage-cli
+
+```yaml
+---
+method: cli
+command: parse --type={{ input_type }} {{ file_path }}
+
+```
+
 
 
 

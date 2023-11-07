@@ -182,6 +182,56 @@ Usage {
 </tbody>
 </table>
 </section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="example-usage-python-templating-scope">
+<h3>Example: Usage-python+templating+scope<a class="headerlink" href="#example-usage-python-templating-scope" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">&#39;{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()&#39;</span>
+<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta+data</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage-python-setup-scope">
+<h3>Example: Usage-python+setup+scope<a class="headerlink" href="#example-usage-python-setup-scope" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage-cli-scope">
+<h3>Example: Usage-cli+scope<a class="headerlink" href="#example-usage-cli-scope" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
+<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type=example --summary {{ file_path }}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage-python-setup">
+<h3>Example: Usage-python+setup<a class="headerlink" href="#example-usage-python-setup" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract({{ file_path }}, type=&quot;{{ input_type }}&quot;)</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage-cli">
+<h3>Example: Usage-cli<a class="headerlink" href="#example-usage-cli" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type={{ input_type }} {{ file_path }}</span>
+</pre></div>
+</div>
+</section>
+</section>
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->

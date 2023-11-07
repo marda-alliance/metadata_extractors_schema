@@ -81,13 +81,13 @@ SupportedFileTypes ||--|o UsageTemplate : "template"
 | [subject](subject.md) | 0..* <br/> [String](String.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. | direct |
 | [citations](citations.md) | 0..* <br/> [Citation](Citation.md) | A citation or citations for the entry, to be provided should it be used in<br/>academic work (or otherwise). | direct |
 | [license](license.md) | 1..1 <br/> [License](License.md) | A URL, URI or SPDX license identifier for a legal document giving official<br/>permission to do something with the resource. | direct |
-| [supported_filetypes](supported_filetypes.md) | 1..* <br/> [SupportedFileTypes](SupportedFileTypes.md) | An enumeration of the [`FileType`](FileType.md) that an<br/>[`Extractor`](Extractor.md) supports, matching `FileTypes` present in the<br/>registry. The `FileType:id` can be passed to the `Extractor`, see the<br/>:class:`Usage` class. | direct |
-| [supported_output_filetypes](supported_output_filetypes.md) | 0..* <br/> [SupportedFileTypes](SupportedFileTypes.md) | An enumeration of the possible output formats of an :class:`Extractor`. These<br/>should match :class:`FileTypes` present in the registry. They can be specified<br/>on extractor execution using the `{{ output_type }}` parameter in<br/>`usage->command`. If provided in the schema, when a user passes the `{{<br/>output_type }}`, a resource of that type is expected to be found at the<br/>corresponding `{{ output_path }}` (or its default value, if missing). | direct |
+| [supported_filetypes](supported_filetypes.md) | 1..* <br/> [SupportedFileTypes](SupportedFileTypes.md) | An enumeration of the `FileType` that an `Extractor` supports, matching<br/>`FileTypes` present in the registry. The `FileType->id` slot can be passed to<br/>the `Extractor`, [see the `Usage` class](Usage.md). | direct |
+| [supported_output_filetypes](supported_output_filetypes.md) | 0..* <br/> [SupportedFileTypes](SupportedFileTypes.md) | An enumeration of the possible output formats of an `Extractor`. These should<br/>match `FileTypes` present in the registry. They can be specified on extractor<br/>execution using the templates described in the `Extractor->Usage->command` slot,<br/>[see the `Usage` class](Usage.md). | direct |
 | [source_repository](source_repository.md) | 0..1 <br/> [String](String.md) | A URL or URI for a source code repository associated with this extractor. | direct |
 | [documentation](documentation.md) | 0..1 <br/> [String](String.md) | A URL or URI for any online documentation associated with this extractor. | direct |
-| [usage](usage.md) | 0..* <br/> [Usage](Usage.md) | A machine-actionable description of the usage of the Extractor. The described<br/>usage pattern shall be available after the `installation` instructions have been<br/>followed. | direct |
-| [installation](installation.md) | 0..* <br/> [Installation](Installation.md) | A machine-actionable set of installation instructions to obtain a working set-up<br/>of the Extractor. | direct |
-| [instructions](instructions.md) | 0..1 <br/> [String](String.md) | Any usage notes or installation instructions for this Extractor. This field is<br/>intended for human use only and is not intended to be machine-actionable. Please<br/>use the `installation` and `usage` fields for that purpose. | direct |
+| [usage](usage.md) | 0..* <br/> [Usage](Usage.md) | A machine-actionable instructions for the usage of the Extractor. The described<br/>usage pattern shall be available after the instructions specified in<br/>`Extractor->installation` slot have been followed. | direct |
+| [installation](installation.md) | 0..* <br/> [Installation](Installation.md) | A machine-actionable set of installation instructions to obtain a working set-up<br/>of the `Extractor`. | direct |
+| [instructions](instructions.md) | 0..1 <br/> [String](String.md) | Any human-readable usage notes or installation instructions for this<br/>`Extractor`. This field is intended for human use only and is not intended to be<br/>machine-actionable. Please use the `Extractor->installation` and<br/>`Extractor->usage` slots for that purpose. | direct |
 
 
 
@@ -144,35 +144,7 @@ documentation: >-
 usage:
     - method: cli
       command: parse --type={{ input_type }} {{ file_path }}
-    - method: cli
-      scope: meta-only
-      command: parse --type=example --summary {{ file_path }}
-    - method: python
-      setup: example.extractors
-      command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
-    - method: python
-      setup: example
-      command: >-
-          '{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()'
-      scope: meta+data
-    - method: python
-      setup: example
-      scope: meta-only
-      command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
 installation:
-    - method: conda
-      requirements: >-
-          dependencies:
-            - python=3.4
-            - numpy
-            - toolz
-            - matplotlib
-            - dill
-            - pandas
-            - partd
-            - bokeh
-            - pip:
-              - git+https://github.com/example/extractor.git#egg=example[all]
     - method: pip
       packages:
           - example-extractor
@@ -290,9 +262,9 @@ slots:
 attributes:
   supported_filetypes:
     name: supported_filetypes
-    description: An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md)
-      supports, matching `FileTypes` present in the registry. The `FileType:id` can
-      be passed to the `Extractor`, see the :class:`Usage` class.
+    description: An enumeration of the `FileType` that an `Extractor` supports, matching
+      `FileTypes` present in the registry. The `FileType->id` slot can be passed to
+      the `Extractor`, [see the `Usage` class](Usage.md).
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -300,12 +272,10 @@ attributes:
     required: true
   supported_output_filetypes:
     name: supported_output_filetypes
-    description: An enumeration of the possible output formats of an :class:`Extractor`.
-      These should match :class:`FileTypes` present in the registry. They can be specified
-      on extractor execution using the `{{ output_type }}` parameter in `usage->command`.
-      If provided in the schema, when a user passes the `{{ output_type }}`, a resource
-      of that type is expected to be found at the corresponding `{{ output_path }}`
-      (or its default value, if missing).
+    description: An enumeration of the possible output formats of an `Extractor`.
+      These should match `FileTypes` present in the registry. They can be specified
+      on extractor execution using the templates described in the `Extractor->Usage->command`
+      slot, [see the `Usage` class](Usage.md).
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -323,13 +293,9 @@ attributes:
     rank: 1000
   usage:
     name: usage
-    description: A machine-actionable description of the usage of the Extractor. The
-      described usage pattern shall be available after the `installation` instructions
-      have been followed.
-    examples:
-    - value: JsonObj(method='cli', command='parse --type=example {{ file_path }}')
-    - value: JsonObj(method='python', setup='example.extractors', command='example.extractors.extract({{
-        file_path }}, type="example")')
+    description: A machine-actionable instructions for the usage of the Extractor.
+      The described usage pattern shall be available after the instructions specified
+      in `Extractor->installation` slot have been followed.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -339,11 +305,7 @@ attributes:
   installation:
     name: installation
     description: A machine-actionable set of installation instructions to obtain a
-      working set-up of the Extractor.
-    examples:
-    - value: JsonObj(method='pip', packages='my-pypi-package==1.0.0', requires_python='>=3.9')
-    - value: JsonObj(method='conda', requirements='dependencies:\n  - python=3.10\n  -
-        numpy')
+      working set-up of the `Extractor`.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -352,9 +314,10 @@ attributes:
     inlined_as_list: true
   instructions:
     name: instructions
-    description: Any usage notes or installation instructions for this Extractor.
-      This field is intended for human use only and is not intended to be machine-actionable.
-      Please use the `installation` and `usage` fields for that purpose.
+    description: Any human-readable usage notes or installation instructions for this
+      `Extractor`. This field is intended for human use only and is not intended to
+      be machine-actionable. Please use the `Extractor->installation` and `Extractor->usage`
+      slots for that purpose.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
 
@@ -382,9 +345,9 @@ close_mappings:
 attributes:
   supported_filetypes:
     name: supported_filetypes
-    description: An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md)
-      supports, matching `FileTypes` present in the registry. The `FileType:id` can
-      be passed to the `Extractor`, see the :class:`Usage` class.
+    description: An enumeration of the `FileType` that an `Extractor` supports, matching
+      `FileTypes` present in the registry. The `FileType->id` slot can be passed to
+      the `Extractor`, [see the `Usage` class](Usage.md).
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -396,12 +359,10 @@ attributes:
     required: true
   supported_output_filetypes:
     name: supported_output_filetypes
-    description: An enumeration of the possible output formats of an :class:`Extractor`.
-      These should match :class:`FileTypes` present in the registry. They can be specified
-      on extractor execution using the `{{ output_type }}` parameter in `usage->command`.
-      If provided in the schema, when a user passes the `{{ output_type }}`, a resource
-      of that type is expected to be found at the corresponding `{{ output_path }}`
-      (or its default value, if missing).
+    description: An enumeration of the possible output formats of an `Extractor`.
+      These should match `FileTypes` present in the registry. They can be specified
+      on extractor execution using the templates described in the `Extractor->Usage->command`
+      slot, [see the `Usage` class](Usage.md).
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -433,13 +394,9 @@ attributes:
     range: string
   usage:
     name: usage
-    description: A machine-actionable description of the usage of the Extractor. The
-      described usage pattern shall be available after the `installation` instructions
-      have been followed.
-    examples:
-    - value: JsonObj(method='cli', command='parse --type=example {{ file_path }}')
-    - value: JsonObj(method='python', setup='example.extractors', command='example.extractors.extract({{
-        file_path }}, type="example")')
+    description: A machine-actionable instructions for the usage of the Extractor.
+      The described usage pattern shall be available after the instructions specified
+      in `Extractor->installation` slot have been followed.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -453,11 +410,7 @@ attributes:
   installation:
     name: installation
     description: A machine-actionable set of installation instructions to obtain a
-      working set-up of the Extractor.
-    examples:
-    - value: JsonObj(method='pip', packages='my-pypi-package==1.0.0', requires_python='>=3.9')
-    - value: JsonObj(method='conda', requirements='dependencies:\n  - python=3.10\n  -
-        numpy')
+      working set-up of the `Extractor`.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
@@ -470,9 +423,10 @@ attributes:
     inlined_as_list: true
   instructions:
     name: instructions
-    description: Any usage notes or installation instructions for this Extractor.
-      This field is intended for human use only and is not intended to be machine-actionable.
-      Please use the `installation` and `usage` fields for that purpose.
+    description: Any human-readable usage notes or installation instructions for this
+      `Extractor`. This field is intended for human use only and is not intended to
+      be machine-actionable. Please use the `Extractor->installation` and `Extractor->usage`
+      slots for that purpose.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: instructions

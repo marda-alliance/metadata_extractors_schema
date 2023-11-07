@@ -1,7 +1,7 @@
 # Slot: usage
 
 
-_A machine-actionable description of the usage of the Extractor. The described usage pattern shall be available after the `installation` instructions have been followed._
+_A machine-actionable instructions for the usage of the Extractor. The described usage pattern shall be available after the instructions specified in `Extractor->installation` slot have been followed._
 
 
 
@@ -36,14 +36,6 @@ URI: [mme_schema:usage](https://marda-alliance.github.io/metadata_extractors_sch
 
 
 
-
-## Examples
-
-| Value |
-| --- |
-| JsonObj(method='cli', command='parse --type=example {{ file_path }}') |
-| JsonObj(method='python', setup='example.extractors', command='example.extractors.extract({{ file_path }}, type="example")') |
-
 ## Identifier and Mapping Information
 
 
@@ -65,13 +57,9 @@ URI: [mme_schema:usage](https://marda-alliance.github.io/metadata_extractors_sch
 <details>
 ```yaml
 name: usage
-description: A machine-actionable description of the usage of the Extractor. The described
-  usage pattern shall be available after the `installation` instructions have been
-  followed.
-examples:
-- value: JsonObj(method='cli', command='parse --type=example {{ file_path }}')
-- value: JsonObj(method='python', setup='example.extractors', command='example.extractors.extract({{
-    file_path }}, type="example")')
+description: A machine-actionable instructions for the usage of the Extractor. The
+  described usage pattern shall be available after the instructions specified in `Extractor->installation`
+  slot have been followed.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true

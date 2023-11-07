@@ -73,6 +73,49 @@ Installation {
 | native | mme_schema:Installation |
 
 
+## Examples
+### Example: Installation-conda+reqs
+
+```yaml
+---
+method: conda
+requirements: >-
+    dependencies:
+    - python=3.4
+    - numpy
+    - toolz
+    - matplotlib
+    - dill
+    - pandas
+    - partd
+    - bokeh
+    - pip:
+        - git+https://github.com/example/extractor.git#egg=example[all]
+
+```
+### Example: Installation-pip+reqs
+
+```yaml
+---
+method: pip
+requirements: >-
+    linkml >= 1.5.2, < 1.6.2
+    linkml-runtime != 1.6.1
+    pre-commit ~= 2.20
+requires_python: '>=3.8'
+
+```
+### Example: Installation-pip
+
+```yaml
+---
+method: pip
+packages:
+    - example-extractor
+requires_python: ==3.4
+
+```
+
 
 
 

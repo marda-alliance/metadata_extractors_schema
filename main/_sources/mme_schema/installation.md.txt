@@ -1,7 +1,7 @@
 # Slot: installation
 
 
-_A machine-actionable set of installation instructions to obtain a working set-up of the Extractor._
+_A machine-actionable set of installation instructions to obtain a working set-up of the `Extractor`._
 
 
 
@@ -36,14 +36,6 @@ URI: [mme_schema:installation](https://marda-alliance.github.io/metadata_extract
 
 
 
-
-## Examples
-
-| Value |
-| --- |
-| JsonObj(method='pip', packages='my-pypi-package==1.0.0', requires_python='>=3.9') |
-| JsonObj(method='conda', requirements='dependencies:\n  - python=3.10\n  - numpy') |
-
 ## Identifier and Mapping Information
 
 
@@ -66,11 +58,7 @@ URI: [mme_schema:installation](https://marda-alliance.github.io/metadata_extract
 ```yaml
 name: installation
 description: A machine-actionable set of installation instructions to obtain a working
-  set-up of the Extractor.
-examples:
-- value: JsonObj(method='pip', packages='my-pypi-package==1.0.0', requires_python='>=3.9')
-- value: JsonObj(method='conda', requirements='dependencies:\n  - python=3.10\n  -
-    numpy')
+  set-up of the `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true

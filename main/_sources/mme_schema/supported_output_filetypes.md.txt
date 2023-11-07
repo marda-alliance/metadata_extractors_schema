@@ -1,7 +1,7 @@
 # Slot: supported_output_filetypes
 
 
-_An enumeration of the possible output formats of an :class:`Extractor`. These should match :class:`FileTypes` present in the registry. They can be specified on extractor execution using the `{{ output_type }}` parameter in `usage->command`. If provided in the schema, when a user passes the `{{ output_type }}`, a resource of that type is expected to be found at the corresponding `{{ output_path }}` (or its default value, if missing)._
+_An enumeration of the possible output formats of an `Extractor`. These should match `FileTypes` present in the registry. They can be specified on extractor execution using the templates described in the `Extractor->Usage->command` slot, [see the `Usage` class](Usage.md)._
 
 
 
@@ -57,12 +57,10 @@ URI: [mme_schema:supported_output_filetypes](https://marda-alliance.github.io/me
 <details>
 ```yaml
 name: supported_output_filetypes
-description: An enumeration of the possible output formats of an :class:`Extractor`.
-  These should match :class:`FileTypes` present in the registry. They can be specified
-  on extractor execution using the `{{ output_type }}` parameter in `usage->command`.
-  If provided in the schema, when a user passes the `{{ output_type }}`, a resource
-  of that type is expected to be found at the corresponding `{{ output_path }}` (or
-  its default value, if missing).
+description: An enumeration of the possible output formats of an `Extractor`. These
+  should match `FileTypes` present in the registry. They can be specified on extractor
+  execution using the templates described in the `Extractor->Usage->command` slot,
+  [see the `Usage` class](Usage.md).
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true

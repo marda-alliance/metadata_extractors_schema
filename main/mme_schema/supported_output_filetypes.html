@@ -87,7 +87,7 @@
              
   <section id="slot-supported-output-filetypes">
 <h1>Slot: supported_output_filetypes<a class="headerlink" href="#slot-supported-output-filetypes" title="Link to this heading"></a></h1>
-<p><em>An enumeration of the possible output formats of an :class:<code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. These should match :class:<code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. They can be specified on extractor execution using the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_type</span> <span class="pre">}}</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">usage-&gt;command</span></code>. If provided in the schema, when a user passes the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_type</span> <span class="pre">}}</span></code>, a resource of that type is expected to be found at the corresponding <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_path</span> <span class="pre">}}</span></code> (or its default value, if missing).</em></p>
+<p><em>An enumeration of the possible output formats of an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. These should match <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. They can be specified on extractor execution using the templates described in the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;Usage-&gt;command</span></code> slot, <a class="reference internal" href="Usage.html"><span class="std std-doc">see the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</em></p>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/supported_output_filetypes">mme_schema:supported_output_filetypes</a></p>
 <!-- no inheritance hierarchy -->
 <section id="applicable-classes">
@@ -128,12 +128,10 @@
 <details>
 ```yaml
 name: supported_output_filetypes
-description: An enumeration of the possible output formats of an :class:`Extractor`.
-  These should match :class:`FileTypes` present in the registry. They can be specified
-  on extractor execution using the `{{ output_type }}` parameter in `usage->command`.
-  If provided in the schema, when a user passes the `{{ output_type }}`, a resource
-  of that type is expected to be found at the corresponding `{{ output_path }}` (or
-  its default value, if missing).
+description: An enumeration of the possible output formats of an `Extractor`. These
+  should match `FileTypes` present in the registry. They can be specified on extractor
+  execution using the templates described in the `Extractor->Usage->command` slot,
+  [see the `Usage` class](Usage.md).
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true

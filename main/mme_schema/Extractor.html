@@ -208,12 +208,12 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="supported_filetypes.html"><span class="std std-doc">supported_filetypes</span></a></p></td>
 <td><p>1..* <br/> <a class="reference internal" href="SupportedFileTypes.html"><span class="std std-doc">SupportedFileTypes</span></a></p></td>
-<td><p>An enumeration of the <a class="reference internal" href="FileType.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">FileType</span></code></span></a> that an<br/><a class="reference internal" href="#"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">Extractor</span></code></span></a> supports, matching <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the<br/>registry. The <code class="docutils literal notranslate"><span class="pre">FileType:id</span></code> can be passed to the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>, see the<br/>:class:<code class="docutils literal notranslate"><span class="pre">Usage</span></code> class.</p></td>
+<td><p>An enumeration of the <code class="docutils literal notranslate"><span class="pre">FileType</span></code> that an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> supports, matching<br/><code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. The <code class="docutils literal notranslate"><span class="pre">FileType-&gt;id</span></code> slot can be passed to<br/>the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>, <a class="reference internal" href="Usage.html"><span class="std std-doc">see the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="supported_output_filetypes.html"><span class="std std-doc">supported_output_filetypes</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="SupportedFileTypes.html"><span class="std std-doc">SupportedFileTypes</span></a></p></td>
-<td><p>An enumeration of the possible output formats of an :class:<code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. These<br/>should match :class:<code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. They can be specified<br/>on extractor execution using the <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_type</span> <span class="pre">}}</span></code> parameter in<br/><code class="docutils literal notranslate"><span class="pre">usage-&gt;command</span></code>. If provided in the schema, when a user passes the <code class="docutils literal notranslate"><span class="pre">{{&lt;br/&gt;output_type</span> <span class="pre">}}</span></code>, a resource of that type is expected to be found at the<br/>corresponding <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_path</span> <span class="pre">}}</span></code> (or its default value, if missing).</p></td>
+<td><p>An enumeration of the possible output formats of an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. These should<br/>match <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. They can be specified on extractor<br/>execution using the templates described in the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;Usage-&gt;command</span></code> slot,<br/><a class="reference internal" href="Usage.html"><span class="std std-doc">see the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="source_repository.html"><span class="std std-doc">source_repository</span></a></p></td>
@@ -228,17 +228,17 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="usage.html"><span class="std std-doc">usage</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Usage.html"><span class="std std-doc">Usage</span></a></p></td>
-<td><p>A machine-actionable description of the usage of the Extractor. The described<br/>usage pattern shall be available after the <code class="docutils literal notranslate"><span class="pre">installation</span></code> instructions have been<br/>followed.</p></td>
+<td><p>A machine-actionable instructions for the usage of the Extractor. The described<br/>usage pattern shall be available after the instructions specified in<br/><code class="docutils literal notranslate"><span class="pre">Extractor-&gt;installation</span></code> slot have been followed.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="installation.html"><span class="std std-doc">installation</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="Installation.html"><span class="std std-doc">Installation</span></a></p></td>
-<td><p>A machine-actionable set of installation instructions to obtain a working set-up<br/>of the Extractor.</p></td>
+<td><p>A machine-actionable set of installation instructions to obtain a working set-up<br/>of the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="instructions.html"><span class="std std-doc">instructions</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>Any usage notes or installation instructions for this Extractor. This field is<br/>intended for human use only and is not intended to be machine-actionable. Please<br/>use the <code class="docutils literal notranslate"><span class="pre">installation</span></code> and <code class="docutils literal notranslate"><span class="pre">usage</span></code> fields for that purpose.</p></td>
+<td><p>Any human-readable usage notes or installation instructions for this<br/><code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. This field is intended for human use only and is not intended to be<br/>machine-actionable. Please use the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;installation</span></code> and<br/><code class="docutils literal notranslate"><span class="pre">Extractor-&gt;usage</span></code> slots for that purpose.</p></td>
 <td><p>direct</p></td>
 </tr>
 </tbody>
@@ -295,35 +295,7 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="nt">usage</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
 <span class="w">      </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type={{ input_type }} {{ file_path }}</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
-<span class="w">      </span><span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
-<span class="w">      </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type=example --summary {{ file_path }}</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
-<span class="w">      </span><span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors</span>
-<span class="w">      </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract({{ file_path }}, type=&quot;{{ input_type }}&quot;)</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
-<span class="w">      </span><span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
-<span class="w">      </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<span class="w">          </span><span class="no">&#39;{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()&#39;</span>
-<span class="w">      </span><span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta+data</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
-<span class="w">      </span><span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
-<span class="w">      </span><span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
-<span class="w">      </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()</span>
 <span class="nt">installation</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda</span>
-<span class="w">      </span><span class="nt">requirements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<span class="w">          </span><span class="no">dependencies:</span>
-<span class="w">            </span><span class="no">- python=3.4</span>
-<span class="w">            </span><span class="no">- numpy</span>
-<span class="w">            </span><span class="no">- toolz</span>
-<span class="w">            </span><span class="no">- matplotlib</span>
-<span class="w">            </span><span class="no">- dill</span>
-<span class="w">            </span><span class="no">- pandas</span>
-<span class="w">            </span><span class="no">- partd</span>
-<span class="w">            </span><span class="no">- bokeh</span>
-<span class="w">            </span><span class="no">- pip:</span>
-<span class="w">              </span><span class="no">- git+https://github.com/example/extractor.git#egg=example[all]</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
 <span class="w">      </span><span class="nt">packages</span><span class="p">:</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example-extractor</span>
@@ -436,9 +408,9 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">supported_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md)</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">supports, matching `FileTypes` present in the registry. The `FileType:id` can</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be passed to the `Extractor`, see the :class:`Usage` class.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the `FileType` that an `Extractor` supports, matching</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">`FileTypes` present in the registry. The `FileType-&gt;id` slot can be passed to</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the `Extractor`, [see the `Usage` class](Usage.md).</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -446,12 +418,10 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">supported_output_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_output_filetypes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the possible output formats of an :class:`Extractor`.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">These should match :class:`FileTypes` present in the registry. They can be specified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">on extractor execution using the `{{ output_type }}` parameter in `usage-&gt;command`.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">If provided in the schema, when a user passes the `{{ output_type }}`, a resource</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of that type is expected to be found at the corresponding `{{ output_path }}`</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(or its default value, if missing).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the possible output formats of an `Extractor`.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">These should match `FileTypes` present in the registry. They can be specified</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">on extractor execution using the templates described in the `Extractor-&gt;Usage-&gt;command`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">slot, [see the `Usage` class](Usage.md).</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -469,13 +439,9 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">  </span><span class="nt">usage</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usage</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A machine-actionable description of the usage of the Extractor. The</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">described usage pattern shall be available after the `installation` instructions</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">have been followed.</span>
-<span class="w">    </span><span class="nt">examples</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;cli&#39;, command=&#39;parse --type=example {{ file_path }}&#39;)</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;python&#39;, setup=&#39;example.extractors&#39;, command=&#39;example.extractors.extract({{</span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">file_path }}, type=&quot;example&quot;)&#39;)</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A machine-actionable instructions for the usage of the Extractor.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The described usage pattern shall be available after the instructions specified</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in `Extractor-&gt;installation` slot have been followed.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -485,11 +451,7 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">  </span><span class="nt">installation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">installation</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A machine-actionable set of installation instructions to obtain a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">working set-up of the Extractor.</span>
-<span class="w">    </span><span class="nt">examples</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;pip&#39;, packages=&#39;my-pypi-package==1.0.0&#39;, requires_python=&#39;&gt;=3.9&#39;)</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;conda&#39;, requirements=&#39;dependencies:\n  - python=3.10\n  -</span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">numpy&#39;)</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">working set-up of the `Extractor`.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -498,9 +460,10 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">inlined_as_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">instructions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instructions</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any usage notes or installation instructions for this Extractor.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This field is intended for human use only and is not intended to be machine-actionable.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Please use the `installation` and `usage` fields for that purpose.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any human-readable usage notes or installation instructions for this</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">`Extractor`. This field is intended for human use only and is not intended to</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be machine-actionable. Please use the `Extractor-&gt;installation` and `Extractor-&gt;usage`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">slots for that purpose.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </pre></div>
@@ -525,9 +488,9 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">supported_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md)</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">supports, matching `FileTypes` present in the registry. The `FileType:id` can</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be passed to the `Extractor`, see the :class:`Usage` class.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the `FileType` that an `Extractor` supports, matching</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">`FileTypes` present in the registry. The `FileType-&gt;id` slot can be passed to</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the `Extractor`, [see the `Usage` class](Usage.md).</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -539,12 +502,10 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">supported_output_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_output_filetypes</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the possible output formats of an :class:`Extractor`.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">These should match :class:`FileTypes` present in the registry. They can be specified</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">on extractor execution using the `{{ output_type }}` parameter in `usage-&gt;command`.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">If provided in the schema, when a user passes the `{{ output_type }}`, a resource</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of that type is expected to be found at the corresponding `{{ output_path }}`</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(or its default value, if missing).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the possible output formats of an `Extractor`.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">These should match `FileTypes` present in the registry. They can be specified</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">on extractor execution using the templates described in the `Extractor-&gt;Usage-&gt;command`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">slot, [see the `Usage` class](Usage.md).</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -576,13 +537,9 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">usage</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usage</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A machine-actionable description of the usage of the Extractor. The</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">described usage pattern shall be available after the `installation` instructions</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">have been followed.</span>
-<span class="w">    </span><span class="nt">examples</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;cli&#39;, command=&#39;parse --type=example {{ file_path }}&#39;)</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;python&#39;, setup=&#39;example.extractors&#39;, command=&#39;example.extractors.extract({{</span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">file_path }}, type=&quot;example&quot;)&#39;)</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A machine-actionable instructions for the usage of the Extractor.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">The described usage pattern shall be available after the instructions specified</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in `Extractor-&gt;installation` slot have been followed.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -596,11 +553,7 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">  </span><span class="nt">installation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">installation</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A machine-actionable set of installation instructions to obtain a</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">working set-up of the Extractor.</span>
-<span class="w">    </span><span class="nt">examples</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;pip&#39;, packages=&#39;my-pypi-package==1.0.0&#39;, requires_python=&#39;&gt;=3.9&#39;)</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JsonObj(method=&#39;conda&#39;, requirements=&#39;dependencies:\n  - python=3.10\n  -</span>
-<span class="w">        </span><span class="l l-Scalar l-Scalar-Plain">numpy&#39;)</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">working set-up of the `Extractor`.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -613,9 +566,10 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">inlined_as_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">instructions</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instructions</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any usage notes or installation instructions for this Extractor.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">This field is intended for human use only and is not intended to be machine-actionable.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Please use the `installation` and `usage` fields for that purpose.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any human-readable usage notes or installation instructions for this</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">`Extractor`. This field is intended for human use only and is not intended to</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be machine-actionable. Please use the `Extractor-&gt;installation` and `Extractor-&gt;usage`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">slots for that purpose.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">instructions</span>

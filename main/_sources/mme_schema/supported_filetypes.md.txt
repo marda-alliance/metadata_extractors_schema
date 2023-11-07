@@ -1,7 +1,7 @@
 # Slot: supported_filetypes
 
 
-_An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md) supports, matching `FileTypes` present in the registry. The `FileType:id` can be passed to the `Extractor`, see the :class:`Usage` class._
+_An enumeration of the `FileType` that an `Extractor` supports, matching `FileTypes` present in the registry. The `FileType->id` slot can be passed to the `Extractor`, [see the `Usage` class](Usage.md)._
 
 
 
@@ -59,9 +59,9 @@ URI: [mme_schema:supported_filetypes](https://marda-alliance.github.io/metadata_
 <details>
 ```yaml
 name: supported_filetypes
-description: An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md)
-  supports, matching `FileTypes` present in the registry. The `FileType:id` can be
-  passed to the `Extractor`, see the :class:`Usage` class.
+description: An enumeration of the `FileType` that an `Extractor` supports, matching
+  `FileTypes` present in the registry. The `FileType->id` slot can be passed to the
+  `Extractor`, [see the `Usage` class](Usage.md).
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
