@@ -48,7 +48,7 @@ URI: [dc_terms:subject](http://purl.org/dc/terms/1.1/subject)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -60,7 +60,7 @@ URI: [dc_terms:subject](http://purl.org/dc/terms/1.1/subject)
 name: subject
 description: Any keywords, phrases or classification codes that are relevant to the
   entry, e.g., particular scientific domains of applicability, or experimental techniques.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 slot_uri: dc_terms:subject
 multivalued: true

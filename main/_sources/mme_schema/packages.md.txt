@@ -47,7 +47,7 @@ URI: [mme_schema:packages](https://marda-alliance.github.io/metadata_extractors_
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -59,7 +59,7 @@ URI: [mme_schema:packages](https://marda-alliance.github.io/metadata_extractors_
 name: packages
 description: A list of packages, including versioned packages or `git+https://` targets,
   to be installed using the Installer.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: packages

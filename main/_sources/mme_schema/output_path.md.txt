@@ -45,7 +45,7 @@ URI: [mme_schema:output_path](https://marda-alliance.github.io/metadata_extracto
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -57,7 +57,7 @@ URI: [mme_schema:output_path](https://marda-alliance.github.io/metadata_extracto
 name: output_path
 description: The location of the output to write to disk with the results of the extraction,
   if successful (OPTIONAL).
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: output_path
 owner: UsageTemplate

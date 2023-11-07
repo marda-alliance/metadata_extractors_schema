@@ -47,7 +47,7 @@ URI: [mme_schema:associated_instruments](https://marda-alliance.github.io/metada
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -59,7 +59,7 @@ URI: [mme_schema:associated_instruments](https://marda-alliance.github.io/metada
 name: associated_instruments
 description: Any instrument, or class of instruments, that typically create the data
   encoded into such files.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: associated_instruments

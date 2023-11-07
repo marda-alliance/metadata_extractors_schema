@@ -47,7 +47,7 @@ URI: [dcmitype:BibliographicReference](http://purl.org/dc/dcmitype/1.1Bibliograp
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -59,7 +59,7 @@ URI: [dcmitype:BibliographicReference](http://purl.org/dc/dcmitype/1.1Bibliograp
 name: citations
 description: A citation or citations for the entry, to be provided should it be used
   in academic work (or otherwise).
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 slot_uri: dcmitype:BibliographicReference
 multivalued: true

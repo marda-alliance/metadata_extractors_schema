@@ -1,11 +1,81 @@
-# extractor
+# MaRDA Metadata Extractors Schema
 
 This file describes the `Extractor` model created by the MaRDA extractors WG.
 
-URI: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+URI: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 Name: extractor
 
+
+
+## Schema Diagram
+
+```{mermaid}
+erDiagram
+SupportedFileTypes {
+    string id  
+    string description  
+}
+UsageTemplate {
+    string input_path  
+    string input_type  
+    string output_path  
+    string output_type  
+}
+Usage {
+    UsageTypes method  
+    string setup  
+    string command  
+    UsageScope scope  
+}
+Installation {
+    InstallerTypes method  
+    string requires_python  
+    string requirements  
+    stringList packages  
+}
+Extractor {
+    string id  
+    string name  
+    string description  
+    stringList subject  
+    string source_repository  
+    string documentation  
+    string instructions  
+}
+FileType {
+    string id  
+    string description  
+    string name  
+    stringList subject  
+    stringList associated_vendors  
+    stringList associated_instruments  
+    stringList associated_software  
+    stringList associated_standards  
+    stringList registered_extractors  
+}
+Citation {
+    string uri  
+    stringList creators  
+    stringList contributors  
+    string title  
+    string type  
+}
+License {
+    string uri  
+    string spdx  
+}
+
+SupportedFileTypes ||--|o UsageTemplate : "template"
+Extractor ||--}o Citation : "citations"
+Extractor ||--|| License : "license"
+Extractor ||--}| SupportedFileTypes : "supported_filetypes"
+Extractor ||--}o SupportedFileTypes : "supported_output_filetypes"
+Extractor ||--}o Usage : "usage"
+Extractor ||--}o Installation : "installation"
+FileType ||--}o FileType : "base_formats"
+
+```
 
 
 ## Classes

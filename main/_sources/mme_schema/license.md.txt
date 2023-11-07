@@ -47,7 +47,7 @@ URI: [dc_terms:license](http://purl.org/dc/terms/1.1/license)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -59,7 +59,7 @@ URI: [dc_terms:license](http://purl.org/dc/terms/1.1/license)
 name: license
 description: A URL, URI or SPDX license identifier for a legal document giving official
   permission to do something with the resource.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 slot_uri: dc_terms:license
 alias: license

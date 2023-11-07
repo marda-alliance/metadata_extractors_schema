@@ -45,7 +45,7 @@ URI: [mme_schema:template](https://marda-alliance.github.io/metadata_extractors_
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -57,7 +57,7 @@ URI: [mme_schema:template](https://marda-alliance.github.io/metadata_extractors_
 name: template
 description: A mechanism for overriding the template values for this file type in
   the usage instructions.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: template
 owner: SupportedFileTypes

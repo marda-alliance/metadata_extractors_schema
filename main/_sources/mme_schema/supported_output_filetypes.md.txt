@@ -47,7 +47,7 @@ URI: [mme_schema:supported_output_filetypes](https://marda-alliance.github.io/me
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -63,7 +63,7 @@ description: An enumeration of the possible output formats of an :class:`Extract
   If provided in the schema, when a user passes the `{{ output_type }}`, a resource
   of that type is expected to be found at the corresponding `{{ output_path }}` (or
   its default value, if missing).
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: supported_output_filetypes

@@ -48,7 +48,7 @@ URI: [schema_org:name](http://schema.org/name)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -59,7 +59,7 @@ URI: [schema_org:name](http://schema.org/name)
 ```yaml
 name: name
 description: A recognisable name for the entry.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 slot_uri: schema_org:name
 alias: name

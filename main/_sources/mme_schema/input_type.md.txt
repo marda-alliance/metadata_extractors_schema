@@ -45,7 +45,7 @@ URI: [mme_schema:input_type](https://marda-alliance.github.io/metadata_extractor
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -57,7 +57,7 @@ URI: [mme_schema:input_type](https://marda-alliance.github.io/metadata_extractor
 name: input_type
 description: The registry ID of the file type to parse Will default to the ID of the
   file type.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: input_type
 owner: UsageTemplate

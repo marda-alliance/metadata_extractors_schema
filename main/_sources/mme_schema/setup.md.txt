@@ -47,7 +47,7 @@ URI: [mme_schema:setup](https://marda-alliance.github.io/metadata_extractors_sch
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -59,7 +59,7 @@ URI: [mme_schema:setup](https://marda-alliance.github.io/metadata_extractors_sch
 name: setup
 description: "Any necessary setup step for the 'command' to become available:\n  -\
   \ for `method: python`, this is an argument to Python's `import`"
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: setup
 owner: Usage

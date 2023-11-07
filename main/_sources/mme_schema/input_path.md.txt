@@ -45,7 +45,7 @@ URI: [mme_schema:input_path](https://marda-alliance.github.io/metadata_extractor
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -56,7 +56,7 @@ URI: [mme_schema:input_path](https://marda-alliance.github.io/metadata_extractor
 ```yaml
 name: input_path
 description: The location of the resource (e.g., file, or directory) on disk to parse.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: input_path
 owner: UsageTemplate

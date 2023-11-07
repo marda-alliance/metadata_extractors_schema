@@ -49,7 +49,7 @@ URI: [mme_schema:supported_filetypes](https://marda-alliance.github.io/metadata_
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -62,7 +62,7 @@ name: supported_filetypes
 description: An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md)
   supports, matching `FileTypes` present in the registry. The `FileType:id` can be
   passed to the `Extractor`, see the :class:`Usage` class.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: supported_filetypes

@@ -45,7 +45,7 @@ URI: [dc_terms:identifier](http://purl.org/dc/terms/1.1/identifier)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -56,7 +56,7 @@ URI: [dc_terms:identifier](http://purl.org/dc/terms/1.1/identifier)
 ```yaml
 name: spdx
 description: An SPDX License Identifier entry.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 slot_uri: dc_terms:identifier
 alias: spdx

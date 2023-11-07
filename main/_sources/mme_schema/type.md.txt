@@ -45,7 +45,7 @@ URI: [dc_terms:type](http://purl.org/dc/terms/1.1/type)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -57,7 +57,7 @@ URI: [dc_terms:type](http://purl.org/dc/terms/1.1/type)
 name: type
 description: Any bibliographic resource type (e.g., article, dataset, software) enumerated
   in the DCMI Type Vocabulary.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 slot_uri: dc_terms:type
 alias: type

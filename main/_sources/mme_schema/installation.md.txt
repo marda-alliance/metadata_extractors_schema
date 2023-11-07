@@ -55,7 +55,7 @@ URI: [mme_schema:installation](https://marda-alliance.github.io/metadata_extract
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -71,7 +71,7 @@ examples:
 - value: JsonObj(method='pip', packages='my-pypi-package==1.0.0', requires_python='>=3.9')
 - value: JsonObj(method='conda', requirements='dependencies:\n  - python=3.10\n  -
     numpy')
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: installation

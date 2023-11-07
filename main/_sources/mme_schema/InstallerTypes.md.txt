@@ -30,7 +30,7 @@ URI: [InstallerTypes](InstallerTypes)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -40,7 +40,7 @@ URI: [InstallerTypes](InstallerTypes)
 <details>
 ```yaml
 name: InstallerTypes
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 permissible_values:
   pip:

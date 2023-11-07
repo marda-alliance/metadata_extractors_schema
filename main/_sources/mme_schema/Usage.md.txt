@@ -6,25 +6,18 @@ URI: [mme_schema:Usage](https://marda-alliance.github.io/metadata_extractors_sch
 
 
 
-
 ```{mermaid}
- classDiagram
-    class Usage
-      Usage : command
-        
-      Usage : method
-        
-          Usage --|> UsageTypes : method
-        
-      Usage : scope
-        
-          Usage --|> UsageScope : scope
-        
-      Usage : setup
-        
-      
-```
+erDiagram
+Usage {
+    UsageTypes method  
+    string setup  
+    string command  
+    UsageScope scope  
+}
 
+
+
+```
 
 
 
@@ -66,7 +59,7 @@ URI: [mme_schema:Usage](https://marda-alliance.github.io/metadata_extractors_sch
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -93,12 +86,12 @@ URI: [mme_schema:Usage](https://marda-alliance.github.io/metadata_extractors_sch
 
 ```yaml
 name: Usage
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   method:
     name: method
     description: Usage invocation method, e.g. from a command line or from Python.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     range: UsageTypes
     required: true
@@ -106,7 +99,7 @@ attributes:
     name: setup
     description: "Any necessary setup step for the 'command' to become available:\n\
       \  - for `method: python`, this is an argument to Python's `import`"
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
   command:
     name: command
@@ -122,7 +115,7 @@ attributes:
       (OPTIONAL).\n  - `{{ output_path }}`: the location of the output to write to\n\
       disk with the results of the extraction, if successful (OPTIONAL).\n  - `{{\
       \ output_type }}`: the registry ID of the file type to write\nto disk (OPTIONAL)."
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     required: true
   scope:
@@ -134,7 +127,7 @@ attributes:
       and each execution method. The default is to assume the 'worst case' that the
       extractor indeed returns as much of the data in the file that it supports, plus
       potentially additional analysis.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     range: UsageScope
     required: false
@@ -149,12 +142,12 @@ attributes:
 
 ```yaml
 name: Usage
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   method:
     name: method
     description: Usage invocation method, e.g. from a command line or from Python.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: method
     owner: Usage
@@ -167,7 +160,7 @@ attributes:
     name: setup
     description: "Any necessary setup step for the 'command' to become available:\n\
       \  - for `method: python`, this is an argument to Python's `import`"
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: setup
     owner: Usage
@@ -188,7 +181,7 @@ attributes:
       (OPTIONAL).\n  - `{{ output_path }}`: the location of the output to write to\n\
       disk with the results of the extraction, if successful (OPTIONAL).\n  - `{{\
       \ output_type }}`: the registry ID of the file type to write\nto disk (OPTIONAL)."
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: command
     owner: Usage
@@ -205,7 +198,7 @@ attributes:
       and each execution method. The default is to assume the 'worst case' that the
       extractor indeed returns as much of the data in the file that it supports, plus
       potentially additional analysis.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: scope
     owner: Usage

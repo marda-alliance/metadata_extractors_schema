@@ -55,7 +55,7 @@ URI: [mme_schema:usage](https://marda-alliance.github.io/metadata_extractors_sch
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -72,7 +72,7 @@ examples:
 - value: JsonObj(method='cli', command='parse --type=example {{ file_path }}')
 - value: JsonObj(method='python', setup='example.extractors', command='example.extractors.extract({{
     file_path }}, type="example")')
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: usage

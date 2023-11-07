@@ -45,7 +45,7 @@ URI: [mme_schema:requires_python](https://marda-alliance.github.io/metadata_extr
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -57,7 +57,7 @@ URI: [mme_schema:requires_python](https://marda-alliance.github.io/metadata_extr
 name: requires_python
 description: A PEP 440 version string for the version constraints on the Python version
   required for this extractor.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: requires_python
 owner: Installation

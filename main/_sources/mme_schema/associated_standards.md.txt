@@ -47,7 +47,7 @@ URI: [mme_schema:associated_standards](https://marda-alliance.github.io/metadata
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -59,7 +59,7 @@ URI: [mme_schema:associated_standards](https://marda-alliance.github.io/metadata
 name: associated_standards
 description: If this is a subformat that follows a particular well-defined standard,
   e.g., CIF, NeXus, then it can be listed here.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: associated_standards

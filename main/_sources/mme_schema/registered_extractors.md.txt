@@ -49,7 +49,7 @@ URI: [mme_schema:registered_extractors](https://marda-alliance.github.io/metadat
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -61,7 +61,7 @@ URI: [mme_schema:registered_extractors](https://marda-alliance.github.io/metadat
 name: registered_extractors
 description: A list of MaRDA extractor IDs that support this file type. This field
   should be auto-populated by a registry.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: registered_extractors

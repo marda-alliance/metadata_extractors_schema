@@ -45,7 +45,7 @@ URI: [mme_schema:output_type](https://marda-alliance.github.io/metadata_extracto
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -56,7 +56,7 @@ URI: [mme_schema:output_type](https://marda-alliance.github.io/metadata_extracto
 ```yaml
 name: output_type
 description: The registry ID of the file type to write to disk.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: output_type
 owner: UsageTemplate

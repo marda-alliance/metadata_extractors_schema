@@ -77,7 +77,7 @@ URI: [mme_schema:command](https://marda-alliance.github.io/metadata_extractors_s
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -99,7 +99,7 @@ description: "A machine-executable command by which the Extractor functionality 
   \ of the output to write to\ndisk with the results of the extraction, if successful\
   \ (OPTIONAL).\n  - `{{ output_type }}`: the registry ID of the file type to write\n\
   to disk (OPTIONAL)."
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: command
 owner: Usage

@@ -6,17 +6,16 @@ URI: [mme_schema:License](https://marda-alliance.github.io/metadata_extractors_s
 
 
 
-
 ```{mermaid}
- classDiagram
-    class License
-      License : spdx
-        
-      License : uri
-        
-      
-```
+erDiagram
+License {
+    string uri  
+    string spdx  
+}
 
+
+
+```
 
 
 
@@ -56,7 +55,7 @@ URI: [mme_schema:License](https://marda-alliance.github.io/metadata_extractors_s
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -83,18 +82,18 @@ URI: [mme_schema:License](https://marda-alliance.github.io/metadata_extractors_s
 
 ```yaml
 name: License
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   uri:
     name: uri
     description: An unambiguous reference to the resource within a given context.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     slot_uri: dc_terms:identifier
     required: false
   spdx:
     name: spdx
     description: An SPDX License Identifier entry.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: dc_terms:identifier
     required: false
@@ -109,12 +108,12 @@ attributes:
 
 ```yaml
 name: License
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   uri:
     name: uri
     description: An unambiguous reference to the resource within a given context.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     slot_uri: dc_terms:identifier
     alias: uri
     owner: License
@@ -126,7 +125,7 @@ attributes:
   spdx:
     name: spdx
     description: An SPDX License Identifier entry.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/base
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: dc_terms:identifier
     alias: spdx

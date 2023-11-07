@@ -51,7 +51,7 @@ URI: [schema_org:identifier](http://schema.org/identifier)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -64,7 +64,7 @@ name: id
 description: A unique identifier for the entry within the MaRDA registry namespace,
   this should be a shorthand label rather than a UUID. Only lower-case alphanumeric
   and dash ("-") characters are permitted.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 slot_uri: schema_org:identifier
 identifier: true

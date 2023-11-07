@@ -47,7 +47,7 @@ URI: [mme_schema:associated_software](https://marda-alliance.github.io/metadata_
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -58,7 +58,7 @@ URI: [mme_schema:associated_software](https://marda-alliance.github.io/metadata_
 ```yaml
 name: associated_software
 description: Any software (proprietary or otherwise) that produces such files.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: associated_software

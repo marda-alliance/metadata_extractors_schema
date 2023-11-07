@@ -49,7 +49,7 @@ URI: [schema_org:description](http://schema.org/description)
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -60,7 +60,7 @@ URI: [schema_org:description](http://schema.org/description)
 ```yaml
 name: description
 description: A human-readable outline of the entry, its format, data content and uses.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 slot_uri: schema_org:description
 alias: description

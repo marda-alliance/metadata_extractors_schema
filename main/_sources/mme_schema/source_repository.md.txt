@@ -45,7 +45,7 @@ URI: [mme_schema:source_repository](https://marda-alliance.github.io/metadata_ex
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -56,7 +56,7 @@ URI: [mme_schema:source_repository](https://marda-alliance.github.io/metadata_ex
 ```yaml
 name: source_repository
 description: A URL or URI for a source code repository associated with this extractor.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: source_repository
 owner: Extractor

@@ -6,23 +6,18 @@ URI: [mme_schema:Installation](https://marda-alliance.github.io/metadata_extract
 
 
 
-
 ```{mermaid}
- classDiagram
-    class Installation
-      Installation : method
-        
-          Installation --|> InstallerTypes : method
-        
-      Installation : packages
-        
-      Installation : requirements
-        
-      Installation : requires_python
-        
-      
-```
+erDiagram
+Installation {
+    InstallerTypes method  
+    string requires_python  
+    string requirements  
+    stringList packages  
+}
 
+
+
+```
 
 
 
@@ -64,7 +59,7 @@ URI: [mme_schema:Installation](https://marda-alliance.github.io/metadata_extract
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -91,20 +86,20 @@ URI: [mme_schema:Installation](https://marda-alliance.github.io/metadata_extract
 
 ```yaml
 name: Installation
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   method:
     name: method
     description: Extractor installer, specifying the package manager to process the
       installation instructions with.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     range: InstallerTypes
     required: true
   requires_python:
     name: requires_python
     description: A PEP 440 version string for the version constraints on the Python
       version required for this extractor.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     required: false
   requirements:
@@ -112,13 +107,13 @@ attributes:
     description: Contents of a 'requirements.txt'-like file. Will be installed by
       the selected Installer using an appropriate method, e.g., `pip install -r requirements.txt`
       for pip, or `conda env create -f requirements.txt` for conda.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
   packages:
     name: packages
     description: A list of packages, including versioned packages or `git+https://`
       targets, to be installed using the Installer.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
 
@@ -132,13 +127,13 @@ attributes:
 
 ```yaml
 name: Installation
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   method:
     name: method
     description: Extractor installer, specifying the package manager to process the
       installation instructions with.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     alias: method
     owner: Installation
     domain_of:
@@ -150,7 +145,7 @@ attributes:
     name: requires_python
     description: A PEP 440 version string for the version constraints on the Python
       version required for this extractor.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: requires_python
     owner: Installation
@@ -163,7 +158,7 @@ attributes:
     description: Contents of a 'requirements.txt'-like file. Will be installed by
       the selected Installer using an appropriate method, e.g., `pip install -r requirements.txt`
       for pip, or `conda env create -f requirements.txt` for conda.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: requirements
     owner: Installation
@@ -174,7 +169,7 @@ attributes:
     name: packages
     description: A list of packages, including versioned packages or `git+https://`
       targets, to be installed using the Installer.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
     alias: packages

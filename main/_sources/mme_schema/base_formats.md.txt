@@ -47,7 +47,7 @@ URI: [mme_schema:base_formats](https://marda-alliance.github.io/metadata_extract
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -59,7 +59,7 @@ URI: [mme_schema:base_formats](https://marda-alliance.github.io/metadata_extract
 name: base_formats
 description: If this format uses any particular underlying generic formats, e.g.,
   CSV, JSON, HDF5, then they can be listed here.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 multivalued: true
 alias: base_formats

@@ -45,7 +45,7 @@ URI: [mme_schema:scope](https://marda-alliance.github.io/metadata_extractors_sch
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -61,7 +61,7 @@ description: This enumeration field allows extractor usage to be described in on
   that extractors may have multiple defined usage modes for each scope and each execution
   method. The default is to assume the 'worst case' that the extractor indeed returns
   as much of the data in the file that it supports, plus potentially additional analysis.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: scope
 owner: Usage

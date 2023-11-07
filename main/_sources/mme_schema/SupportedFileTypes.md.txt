@@ -6,21 +6,22 @@ URI: [mme_schema:SupportedFileTypes](https://marda-alliance.github.io/metadata_e
 
 
 
-
 ```{mermaid}
- classDiagram
-    class SupportedFileTypes
-      SupportedFileTypes : description
-        
-      SupportedFileTypes : id
-        
-      SupportedFileTypes : template
-        
-          SupportedFileTypes --|> UsageTemplate : template
-        
-      
-```
+erDiagram
+SupportedFileTypes {
+    string id  
+    string description  
+}
+UsageTemplate {
+    string input_path  
+    string input_type  
+    string output_path  
+    string output_type  
+}
 
+SupportedFileTypes ||--|o UsageTemplate : "template"
+
+```
 
 
 
@@ -62,7 +63,7 @@ URI: [mme_schema:SupportedFileTypes](https://marda-alliance.github.io/metadata_e
 ### Schema Source
 
 
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 
@@ -89,22 +90,22 @@ URI: [mme_schema:SupportedFileTypes](https://marda-alliance.github.io/metadata_e
 
 ```yaml
 name: SupportedFileTypes
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   id:
     name: id
     description: Registered MarDA extractors ID for this file type.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
   description:
     name: description
     description: Free-text description of caveats or instructions specific to this
       file type.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
   template:
     name: template
     description: A mechanism for overriding the template values for this file type
       in the usage instructions.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     range: UsageTemplate
     required: false
@@ -119,12 +120,12 @@ attributes:
 
 ```yaml
 name: SupportedFileTypes
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   id:
     name: id
     description: Registered MarDA extractors ID for this file type.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     alias: id
     owner: SupportedFileTypes
     domain_of:
@@ -136,7 +137,7 @@ attributes:
     name: description
     description: Free-text description of caveats or instructions specific to this
       file type.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     alias: description
     owner: SupportedFileTypes
     domain_of:
@@ -148,7 +149,7 @@ attributes:
     name: template
     description: A mechanism for overriding the template values for this file type
       in the usage instructions.
-    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/extractor
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: template
     owner: SupportedFileTypes
