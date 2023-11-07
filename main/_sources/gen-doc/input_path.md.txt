@@ -1,0 +1,68 @@
+# Slot: input_path
+
+
+_The location of the resource (e.g., file, or directory) on disk to parse._
+
+
+
+URI: [https://www.marda-alliance.org/extractors/extractor/:input_path](https://www.marda-alliance.org/extractors/extractor/:input_path)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UsageTemplate](UsageTemplate.md) | None |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: input_path
+description: The location of the resource (e.g., file, or directory) on disk to parse.
+from_schema: https://www.marda-alliance.org/extractors/extractor
+rank: 1000
+alias: input_path
+owner: UsageTemplate
+domain_of:
+- UsageTemplate
+range: string
+
+```
+</details>

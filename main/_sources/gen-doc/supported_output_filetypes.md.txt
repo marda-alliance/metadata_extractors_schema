@@ -1,0 +1,76 @@
+# Slot: supported_output_filetypes
+
+
+_Container for enumerating the possible output formats of this extractor. These should match registry entries and can be specified on extractor execution using the `{{ output_type }}` parameter in `usage->command`. If provided in the schema, when a user passes the `{{ output_type }}`, a resource of that type is expected to be found at the corresponding `{{ output_path }}` (or its default value, if missing)._
+
+
+
+URI: [https://www.marda-alliance.org/extractors/extractor/:supported_output_filetypes](https://www.marda-alliance.org/extractors/extractor/:supported_output_filetypes)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Extractor](Extractor.md) | A code object or web service that when executed can read a file with specific file type, or a set of files with a given structure, and extract or transform the scientific data and/or metadata contained within the file. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [SupportedFileTypes](SupportedFileTypes.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: supported_output_filetypes
+description: Container for enumerating the possible output formats of this extractor.
+  These should match registry entries and can be specified on extractor execution
+  using the `{{ output_type }}` parameter in `usage->command`. If provided in the
+  schema, when a user passes the `{{ output_type }}`, a resource of that type is expected
+  to be found at the corresponding `{{ output_path }}` (or its default value, if missing).
+from_schema: https://www.marda-alliance.org/extractors/extractor
+rank: 1000
+multivalued: true
+alias: supported_output_filetypes
+owner: Extractor
+domain_of:
+- Extractor
+range: SupportedFileTypes
+required: false
+
+```
+</details>

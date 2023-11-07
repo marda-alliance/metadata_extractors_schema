@@ -1,0 +1,72 @@
+# Slot: base_formats
+
+
+_If this format uses any particular underlying generic formats, e.g., CSV, JSON, HDF5, then they can be listed here._
+
+
+
+URI: [https://www.marda-alliance.org/extractors/filetype/:base_formats](https://www.marda-alliance.org/extractors/filetype/:base_formats)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[FileType](FileType.md) | A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [FileType](FileType.md)
+
+* Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/filetype
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: base_formats
+description: If this format uses any particular underlying generic formats, e.g.,
+  CSV, JSON, HDF5, then they can be listed here.
+from_schema: https://www.marda-alliance.org/extractors/filetype
+rank: 1000
+multivalued: true
+alias: base_formats
+owner: FileType
+domain_of:
+- FileType
+range: FileType
+
+```
+</details>

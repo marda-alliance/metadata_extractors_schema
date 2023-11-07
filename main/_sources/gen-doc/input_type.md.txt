@@ -1,0 +1,69 @@
+# Slot: input_type
+
+
+_The registry ID of the file type to parse Will default to the ID of the file type._
+
+
+
+URI: [https://www.marda-alliance.org/extractors/extractor/:input_type](https://www.marda-alliance.org/extractors/extractor/:input_type)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UsageTemplate](UsageTemplate.md) | None |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://www.marda-alliance.org/extractors/extractor
+
+
+
+
+## LinkML Source
+
+<details>
+```yaml
+name: input_type
+description: The registry ID of the file type to parse Will default to the ID of the
+  file type.
+from_schema: https://www.marda-alliance.org/extractors/extractor
+rank: 1000
+alias: input_type
+owner: UsageTemplate
+domain_of:
+- UsageTemplate
+range: string
+
+```
+</details>
