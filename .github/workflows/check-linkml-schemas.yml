@@ -34,7 +34,7 @@ jobs:
             - name: Run LinkML generators
               shell: bash
               run: |
-                  #gen-pydantic -vvv --stacktrace schemas/extractor.yaml
+                  gen-pydantic -vvv --stacktrace schemas/extractor.yaml
                   gen-json-schema -vvv --stacktrace schemas/extractor.yaml
 
             - name: Validate examples
