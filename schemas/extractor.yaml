@@ -33,8 +33,7 @@ classes:
             template:
                 description: >-
                     A mechanism for overriding the template values for this file type
-                    in the
-                    usage instructions.
+                    in the usage instructions.
                 range: UsageTemplate
                 required: false
 
@@ -151,26 +150,13 @@ classes:
                 required: true
                 range: SupportedFileTypes
                 description: >-
-                    An enumeration of the [`FileType`](FileType.md) that an [`Extractor`](Extractor.md)
-                    supports, matching `FileTypes` present in the registry. The `FileType:id`
-                    can be passed to the `Extractor`, see the
-                    :class:`Usage` class.
-
+                    An enumeration of the `FileType` that an `Extractor` supports, matching `FileTypes` present in the registry. The `FileType->id` slot can be passed to the `Extractor`, [see the `Usage` class](Usage.md).
             supported_output_filetypes:
                 multivalued: true
                 required: false
                 range: SupportedFileTypes
                 description: >-
-                    An enumeration of the possible output formats of an :class:`Extractor`.
-                    These should match :class:`FileTypes` present in the registry.
-                    They
-                    can be specified on extractor execution using the `{{ output_type
-                    }}`
-                    parameter in `usage->command`. If provided in the schema, when
-                    a user passes the `{{ output_type }}`, a resource of
-                    that type is expected to be found at the corresponding `{{ output_path
-                    }}` (or its default value, if missing).
-
+                    An enumeration of the possible output formats of an `Extractor`. These should match `FileTypes` present in the registry. They can be specified on extractor execution using the templates described in the `Extractor->Usage->command` slot, [see the `Usage` class](Usage.md).
             source_repository:
                 description: >-
                     A URL or URI for a source code repository associated with this
@@ -184,43 +170,17 @@ classes:
                 inlined_as_list: true
                 range: Usage
                 description: >-
-                    A machine-actionable description of the usage of the Extractor.
-                    The described usage pattern shall be available after the
-                    `installation` instructions have been followed.
-                examples:
-                    - value:
-                          method: cli
-                          command: parse --type=example {{ file_path }}
-                    - value:
-                          method: python
-                          setup: example.extractors
-                          command: example.extractors.extract({{ file_path }}, type="example")
-
+                    A machine-actionable instructions for the usage of the Extractor. The described usage pattern shall be available after the instructions specified in `Extractor->installation` slot have been followed.
             installation:
                 multivalued: true
                 inlined_as_list: true
                 range: Installation
                 description: >-
                     A machine-actionable set of installation instructions to obtain
-                    a working set-up of the Extractor.
-                examples:
-                    - value:
-                          method: pip
-                          packages: my-pypi-package==1.0.0
-                          requires_python: '>=3.9'
-                    - value:
-                          method: conda
-                          requirements: >-
-                              dependencies:
-                                - python=3.10
-                                - numpy
-
+                    a working set-up of the `Extractor`.
             instructions:
                 description: >-
-                    Any usage notes or installation instructions for this Extractor.
-                    This field is intended for human use only and is not intended
-                    to be machine-actionable. Please use the `installation` and
-                    `usage` fields for that purpose.
+                    Any human-readable usage notes or installation instructions for this `Extractor`. This field is intended for human use only and is not intended to be machine-actionable. Please use the `Extractor->installation` and `Extractor->usage` slots for that purpose.
 
 
 enums:
