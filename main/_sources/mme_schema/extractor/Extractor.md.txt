@@ -114,139 +114,6 @@ URI: [mme_schema:Extractor](https://marda-alliance.github.io/metadata_extractors
 | close | schema_org:SoftwareApplication, schema_org:ServiceChannel, dcmitype:Software, dcmitype:Service |
 
 
-## Examples
-### Example: Extractor-example
-
-```yaml
----
-id: >-
-    example
-name: >-
-    Example Extractor
-description: >-
-    An example extractor entry, using all features from the schema.
-subject:
-    - science
-    - engineering
-source_repository: >-
-    https://github.com/example/extractor
-documentation: >-
-    https://example.github.io/extractor
-usage:
-    - method: cli
-      command: parse --type={{ input_type }} {{ file_path }}
-    - method: cli
-      scope: meta-only
-      command: parse --type=example --summary {{ file_path }}
-    - method: python
-      setup: example.extractors
-      command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
-    - method: python
-      setup: example
-      command: >-
-          '{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()'
-      scope: meta+data
-    - method: python
-      setup: example
-      scope: meta-only
-      command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
-installation:
-    - method: conda
-      requirements: >-
-          dependencies:
-            - python=3.4
-            - numpy
-            - toolz
-            - matplotlib
-            - dill
-            - pandas
-            - partd
-            - bokeh
-            - pip:
-              - git+https://github.com/example/extractor.git#egg=example[all]
-    - method: pip
-      packages:
-          - example-extractor
-      requires_python: ==3.4
-instructions: >-
-    Install the package into a Python 3.4 environment with
-    `pip install example-extractor`. After activating the
-    environment, the `parse` entrypoint will be available at
-    the command-line, and functions can be directly invoked
-    from Python code.
-citations:
-    - title: An example extractor paper using DOI
-      uri: doi:10.1000/182
-      creators:
-          - A. Uthor
-          - M. A. Nuscript
-      contributors:
-          - E. Ditor
-      type: article
-    - title: Example extractor code repo
-      uri: https://github.com/example/extractor
-      creators:
-          - S. Omeone
-          - A. Nother
-      contributors:
-          - A. Person
-      type: software
-supported_filetypes:
-    - id: example-filetype
-      description: >-
-          Example Extractor can parse example-filetype once in a blue moon.
-      template:
-          input_type: example
-license:
-    uri: https://example.com
-
-```
-### Example: Extractor-datatree
-
-```yaml
----
-id: >-
-    datatree
-name: >-
-    Datatree is a prototype implementation of a tree-like hierarchical
-    data structure for xarray.
-description: >-
-    Extractor for netCDF files using xarray's Datasets.
-subject:
-    - data science
-source_repository: >-
-    https://github.com/xarray-contrib/datatree
-documentation: >-
-    https://xarray-datatree.readthedocs.io/en/latest/
-usage:
-    - method: python
-      scope: meta+data
-      setup: datatree
-      command: datatree.open_datatree({{ file_path }})
-installation:
-    - method: pip
-      packages:
-          - xarray-datatree==0.0.12
-      requires_python: '>=3.9'
-instructions: >-
-    Install the xarray-datatree package into a Python 3.9+ environment with
-    `pip install xarray-datatree`. After importing, netCDF files can be read
-    as DataTrees using the 'datatree.open_datatree()' function.
-citations:
-    - title: Datatree documentation
-      uri: https://xarray-datatree.readthedocs.io/en/latest/
-      creators:
-          - T. Nicholas
-      type: software
-supported_filetypes:
-    - id: netcdf
-      description: >-
-          Can load netCDF files into Datatree objects.
-license:
-    spdx: Apache-2.0
-
-```
-
 
 
 
@@ -485,6 +352,7 @@ attributes:
     domain_of:
     - SupportedFileTypes
     - Extractor
+    - FileType
     range: string
     required: true
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
@@ -498,6 +366,7 @@ attributes:
     owner: Extractor
     domain_of:
     - Extractor
+    - FileType
     range: string
     required: true
   description:
@@ -512,6 +381,7 @@ attributes:
     domain_of:
     - SupportedFileTypes
     - Extractor
+    - FileType
     range: string
     required: true
   subject:
@@ -527,6 +397,7 @@ attributes:
     owner: Extractor
     domain_of:
     - Extractor
+    - FileType
     range: string
   citations:
     name: citations

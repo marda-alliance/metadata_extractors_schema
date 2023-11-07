@@ -130,6 +130,7 @@ attributes:
     domain_of:
     - SupportedFileTypes
     - Extractor
+    - FileType
     range: string
   description:
     name: description
@@ -141,6 +142,7 @@ attributes:
     domain_of:
     - SupportedFileTypes
     - Extractor
+    - FileType
     range: string
   template:
     name: template

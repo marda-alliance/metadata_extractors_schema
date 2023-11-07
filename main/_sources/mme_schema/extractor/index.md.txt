@@ -14,6 +14,7 @@ Name: extractor
 | --- | --- |
 | [Citation](Citation.md) | None |
 | [Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |
+| [FileType](FileType.md) | A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |
 | [Installation](Installation.md) | None |
 | [License](License.md) | None |
 | [SupportedFileTypes](SupportedFileTypes.md) | None |
@@ -26,6 +27,11 @@ Name: extractor
 
 | Slot | Description |
 | --- | --- |
+| [associated_instruments](associated_instruments.md) | Any instrument, or class of instruments, that typically create the data encod... |
+| [associated_software](associated_software.md) | Any software (proprietary or otherwise) that produces such files |
+| [associated_standards](associated_standards.md) | If this is a subformat that follows a particular well-defined standard, e |
+| [associated_vendors](associated_vendors.md) | If this file type is associated with particular software or instrument vendor... |
+| [base_formats](base_formats.md) | If this format uses any particular underlying generic formats, e |
 | [citations](citations.md) | A citation or citations for the entry, to be provided should it be used in ac... |
 | [command](command.md) | A machine-executable command by which the Extractor functionality can be acce... |
 | [contributors](contributors.md) | A list of the contributors to the resource |
@@ -43,6 +49,7 @@ Name: extractor
 | [output_path](output_path.md) | The location of the output to write to disk with the results of the extractio... |
 | [output_type](output_type.md) | The registry ID of the file type to write to disk |
 | [packages](packages.md) | A list of packages, including versioned packages or `git+https://` targets, t... |
+| [registered_extractors](registered_extractors.md) | A list of MaRDA extractor IDs that support this file type |
 | [requirements](requirements.md) | Contents of a 'requirements |
 | [requires_python](requires_python.md) | A PEP 440 version string for the version constraints on the Python version re... |
 | [scope](scope.md) | This enumeration field allows extractor usage to be described in one of two m... |

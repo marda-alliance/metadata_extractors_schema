@@ -19,6 +19,7 @@ URI: [dc_terms:subject](http://purl.org/dc/terms/1.1/subject)
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 [Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
+[FileType](FileType.md) | A specific encoding of data for storage purposes, defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
 
 
 
@@ -66,6 +67,7 @@ multivalued: true
 alias: subject
 domain_of:
 - Extractor
+- FileType
 range: string
 
 ```
