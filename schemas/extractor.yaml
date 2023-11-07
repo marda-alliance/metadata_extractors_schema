@@ -150,13 +150,18 @@ classes:
                 required: true
                 range: SupportedFileTypes
                 description: >-
-                    An enumeration of the `FileType` that an `Extractor` supports, matching `FileTypes` present in the registry. The `FileType->id` slot can be passed to the `Extractor`, [see the `Usage` class](Usage.md).
+                    An enumeration of the `FileType` that an `Extractor` supports,
+                    matching `FileTypes` present in the registry. The `FileType->id`
+                    slot can be passed to the `Extractor`, [see the `Usage` class](Usage.md).
             supported_output_filetypes:
                 multivalued: true
                 required: false
                 range: SupportedFileTypes
                 description: >-
-                    An enumeration of the possible output formats of an `Extractor`. These should match `FileTypes` present in the registry. They can be specified on extractor execution using the templates described in the `Extractor->Usage->command` slot, [see the `Usage` class](Usage.md).
+                    An enumeration of the possible output formats of an `Extractor`.
+                    These should match `FileTypes` present in the registry. They can
+                    be specified on extractor execution using the templates described
+                    in the `Extractor->Usage->command` slot, [see the `Usage` class](Usage.md).
             source_repository:
                 description: >-
                     A URL or URI for a source code repository associated with this
@@ -170,7 +175,9 @@ classes:
                 inlined_as_list: true
                 range: Usage
                 description: >-
-                    A machine-actionable instructions for the usage of the Extractor. The described usage pattern shall be available after the instructions specified in `Extractor->installation` slot have been followed.
+                    A machine-actionable instructions for the usage of the Extractor.
+                    The described usage pattern shall be available after the instructions
+                    specified in `Extractor->installation` slot have been followed.
             installation:
                 multivalued: true
                 inlined_as_list: true
@@ -180,7 +187,10 @@ classes:
                     a working set-up of the `Extractor`.
             instructions:
                 description: >-
-                    Any human-readable usage notes or installation instructions for this `Extractor`. This field is intended for human use only and is not intended to be machine-actionable. Please use the `Extractor->installation` and `Extractor->usage` slots for that purpose.
+                    Any human-readable usage notes or installation instructions for
+                    this `Extractor`. This field is intended for human use only and
+                    is not intended to be machine-actionable. Please use the `Extractor->installation`
+                    and `Extractor->usage` slots for that purpose.
 
 
 enums:
