@@ -43,9 +43,9 @@ jobs:
               shell: bash
               run: |
                   for f in $(ls examples/extractor/*.yml); do
-                    linkml-validate -s schemas/extractor.yml -C Extractor $f
+                    linkml-validate -s schemas/extractor.yaml -C Extractor $f
                   done
 
                   for f in $(ls examples/filetype/*.yml); do
-                    linkml-validate -s schemas/filetype.yml -C FileType $f
+                    linkml-validate -s schemas/filetype.yaml -C FileType $f
                   done

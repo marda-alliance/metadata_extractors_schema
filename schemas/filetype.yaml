@@ -20,6 +20,7 @@ description: >-
 
 classes:
     FileType:
+        class_uri: extractor:FileType
         description: >-
             A specific encoding of data for storage purposes, defined by a set of
             common characteristics and expectations, that can be assumed for all files
