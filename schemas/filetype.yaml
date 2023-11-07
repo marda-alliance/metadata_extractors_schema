@@ -21,9 +21,7 @@ description: >-
 classes:
     FileType:
         description: >-
-            A specific encoding of data for storage purposes, defined by a set of
-            common characteristics and expectations, that can be assumed for all files
-            of a given file type.
+            A specific encoding of data for storage purposes. A `FileType` is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type.
         close_mappings:
             - schema_org:fileFormat
             - schema_org:encodingFormat
@@ -37,31 +35,26 @@ classes:
                 slot_uri: schema_org:vendor
                 multivalued: true
                 description: >-
-                    If this file type is associated with particular software or instrument
-                    vendors, they can be listed here.
+                    A list of software or instrument vendors that can be associated with this particular `FileType`.
             associated_instruments:
                 multivalued: true
                 description: >-
-                    Any instrument, or class of instruments, that typically create
-                    the data encoded into such files.
+                    A list of any instruments, or classes of instruments, that typically create the data encoded into this `FileType`.
             associated_software:
                 multivalued: true
                 description: >-
-                    Any software (proprietary or otherwise) that produces such files.
+                    A list of any known software (proprietary or otherwise) that produces such `FileType`.
             base_formats:
                 multivalued: true
                 range: FileType
                 description: >-
-                    If this format uses any particular underlying generic formats,
-                    e.g., CSV, JSON, HDF5, then they can be listed here.
+                    A list of any particular underlying generic formats which this `FileType` is based on, e.g., CSV, JSON, HDF5, XML.
             associated_standards:
                 multivalued: true
                 description: >-
-                    If this is a subformat that follows a particular well-defined
-                    standard, e.g., CIF, NeXus, then it can be listed here.
+                    A list of any particular well-defined file format standards relevant to this `FileType`, e.g., CIF, NeXus, then it can be listed here.
             registered_extractors:
                 multivalued: true
                 pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
                 description: >-
-                    A list of MaRDA extractor IDs that support this file type. This
-                    field should be auto-populated by a registry.
+                    A slot for an automatically-generated enumeration of `Extractor` IDs that support this file type. This slot should be auto-populated by a registry.

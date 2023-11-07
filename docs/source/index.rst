@@ -49,8 +49,8 @@ The repository contains two user-facing schemas:
 
 .. |FileType| replace:: :class:`FileType`
 
-.. _FileType: mme_schema/filetype/FileType.html#class-filetype
+.. _FileType: mme_schema/FileType.html#class-filetype
 
 .. |Extractor| replace:: :class:`Extractor`
 
-.. _Extractor: mme_schema/extractor/Extractor.html#class-extractor
+.. _Extractor: mme_schema/Extractor.html#class-extractor
