@@ -1,0 +1,5 @@
+method: python
+setup: example
+command: >-
+    '{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()'
+scope: meta+data

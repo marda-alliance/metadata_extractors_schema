@@ -1,0 +1,4 @@
+method: python
+setup: example
+scope: meta-only
+command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()

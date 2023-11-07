@@ -37,16 +37,11 @@ jobs:
                   gen-pydantic -vvv --stacktrace schemas/extractor.yaml
                   gen-json-schema -vvv --stacktrace schemas/extractor.yaml
 
-            - name: Validate Extractor examples
+            - name: Validate All examples
               shell: bash
               run: |
-                  for f in $(ls examples/Extractor-*.yaml); do
-                    linkml-validate -s schemas/extractor.yaml -C Extractor $f
-                  done
-
-            - name: Validate FileType examples
-              shell: bash
-              run: |
-                  for f in $(ls examples/FileType-*.yaml); do
-                    linkml-validate -s schemas/extractor.yaml -C FileType $f
+                  for f in $(ls examples/*.yaml); do
+                    cls=`basename $f | cut -d "-" -f 1`
+                    echo "$cls $f"
+                    linkml-validate -s schemas/extractor.yaml -C $cls $f
                   done

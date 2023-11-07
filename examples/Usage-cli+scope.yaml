@@ -1,0 +1,3 @@
+method: cli
+scope: meta-only
+command: parse --type=example --summary {{ file_path }}

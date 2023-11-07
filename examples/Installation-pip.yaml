@@ -1,0 +1,4 @@
+method: pip
+packages:
+    - example-extractor
+requires_python: ==3.4
