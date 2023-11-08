@@ -37,7 +37,7 @@ jobs:
                   gen-pydantic -vvv --stacktrace schemas/extractor.yaml
                   gen-json-schema -vvv --stacktrace schemas/extractor.yaml
 
-            - name: Validate All examples
+            - name: Validate all examples
               shell: bash
               run: |
                   for f in $(ls examples/*.yaml); do

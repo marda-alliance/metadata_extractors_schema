@@ -21,110 +21,6 @@ description: >-
 
 
 classes:
-
-    SupportedFileTypes:
-        attributes:
-            id:
-                description: >-
-                    Registered MarDA extractors ID for this file type.
-            description:
-                description: Free-text description of caveats or instructions specific
-                    to this file type.
-            template:
-                description: >-
-                    A mechanism for overriding the template values for this file type
-                    in the usage instructions.
-                range: UsageTemplate
-                required: false
-
-    UsageTemplate:
-        attributes:
-            input_path:
-                description: >-
-                    The location of the resource (e.g., file, or directory) on disk
-                    to parse.
-            input_type:
-                description: >-
-                    The registry ID of the file type to parse Will default to the
-                    ID of the file type.
-            output_path:
-                description: >-
-                    The location of the output to write to disk with the results of
-                    the extraction, if successful (OPTIONAL).
-            output_type:
-                description: >-
-                    The registry ID of the file type to write to disk.
-
-    Usage:
-        attributes:
-            method:
-                required: true
-                range: UsageTypes
-                description: >-
-                    Usage invocation method, e.g. from a command line or from Python.
-            setup:
-                description: >-
-                    Any necessary setup step for the 'command' to become available:
-                      - for `method: python`, this is an argument to Python's `import`
-            command:
-                required: true
-                description: >-
-                    A machine-executable command by which the Extractor functionality
-                    can be accessed:
-
-                      - for `method: cli` a parametrized executable invocation which
-                        should be available after installing the :class:`Extractor`;
-                      - for `method: python` a parametrized function invocation which
-                        should be available after installing and setting up the :class:`Extractor`.
-
-                    The following templated parameters can be requested from the user,
-                    using the `{{}}` syntax, as described by the `UsageTemplate` class:
-                      - `{{ input_path }}`: the location of the resource (e.g., file,
-                    or directory) on disk to parse (REQUIRED).
-                      - `{{ input_type }}`: the registry ID of the file type to parse
-                    (OPTIONAL).
-                      - `{{ output_path }}`: the location of the output to write to
-                    disk with the results of the extraction, if successful (OPTIONAL).
-                      - `{{ output_type }}`: the registry ID of the file type to write
-                    to disk (OPTIONAL).
-            scope:
-                required: false
-                range: UsageScope
-                description: >-
-                    This enumeration field allows extractor usage to be described
-                    in one of two modes, `meta-only` and `meta+data`, whereby
-                    either a summary of file metadata, or the full file is returned
-                    by the extractor, respectively. In practice, this means that extractors
-                    may have multiple defined usage modes for each scope and each
-                    execution method. The default is to assume the 'worst case' that
-                    the extractor indeed returns as much of the data in the file that
-                    it supports, plus potentially additional analysis.
-
-    Installation:
-        attributes:
-            method:
-                required: true
-                range: InstallerTypes
-                description: >-
-                    Extractor installer, specifying the package manager to process
-                    the installation instructions with.
-            requires_python:
-                required: false
-                description: >-
-                    A PEP 440 version string for the version constraints on the
-                    Python version required for this extractor.
-            requirements:
-                description: >-
-                    Contents of a 'requirements.txt'-like file. Will be installed
-                    by the selected Installer using an appropriate method, e.g.,
-                    `pip install -r requirements.txt` for pip, or
-                    `conda env create -f requirements.txt` for conda.
-            packages:
-                multivalued: true
-                description: >-
-                    A list of packages, including versioned packages or `git+https://`
-                    targets, to be installed using the Installer.
-
     Extractor:
         description: >-
             A script, code, or web service that, when executed, can extract information
@@ -148,7 +44,7 @@ classes:
             supported_filetypes:
                 multivalued: true
                 required: true
-                range: SupportedFileTypes
+                range: SupportedFileType
                 description: >-
                     An enumeration of the `FileType` that an `Extractor` supports,
                     matching `FileTypes` present in the registry. The `FileType->id`
@@ -156,7 +52,7 @@ classes:
             supported_output_filetypes:
                 multivalued: true
                 required: false
-                range: SupportedFileTypes
+                range: SupportedFileType
                 description: >-
                     An enumeration of the possible output formats of an `Extractor`.
                     These should match `FileTypes` present in the registry. They can
@@ -191,54 +87,3 @@ classes:
                     this `Extractor`. This field is intended for human use only and
                     is not intended to be machine-actionable. Please use the `Extractor->installation`
                     and `Extractor->usage` slots for that purpose.
-
-
-enums:
-    UsageTypes:
-        permissible_values:
-            cli:
-                description: >-
-                    Access the Extractor as a command line executable. The executable
-                    as well as the invocation syntax, parametrised using arguments,
-                    shall be supplied in the `command` slot.
-            python:
-                description: >-
-                    Access the Extractor as a Python function. The function should
-                    be available when `import <setup>` is called, and should be
-                    specified including relevant namespaces. The function signature,
-                    parametrised using arguments, shall be supplied in the `command`
-                    slot.
-
-    UsageScope:
-        permissible_values:
-            meta-only:
-                description: >-
-                    This usage scope only returns metadata associated with the file,
-                    according to the extractor's own interpretation of metadata. This
-                    may include, but is not limited to, timestamps, column headings,
-                    data types and data shapes. The size of data returned in this
-                    mode should be limited and will typically be much smaller than
-                    the file size. This metadata SHOULD be expressed as a JSON-serializable
-                    document that can, for example, be loaded into Python with only
-                    standard library imports.
-
-            meta+data:
-                description: >-
-                    This usage scope refers to a "full" extraction of the file, whereby
-                    the extractor tries to faithfully interpret and return all supported
-                    information contained within the file, including binary data,
-                    large multi-dimensional arrays, plus all of the associated metadata
-                    from a `meta-only` extraction. The size of the data returned in
-                    this mode is not limited and could be significantly larger than
-                    the input file size (in the case of binary data, or additional
-                    analysis being performed upon extraction).
-
-    InstallerTypes:
-        permissible_values:
-            pip:
-                description: >-
-                    Install the Extractor using 'pip'. Will process `packages` using
-                    `pip install` and `requirements` using `pip install -r`.
-            conda:
-                description: >-
-                    Install the Extractor using 'conda'. Not yet implemented / supported.
