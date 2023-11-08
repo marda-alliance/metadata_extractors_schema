@@ -1,5 +1,17 @@
 # Slot: uri
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+
 URI: [mme_schema:uri](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/uri)
 
 
@@ -25,18 +37,6 @@ URI: [mme_schema:uri](https://marda-alliance.github.io/metadata_extractors_schem
 ## Properties
 
 * Range: [String](String.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
 
 
 ## LinkML Source

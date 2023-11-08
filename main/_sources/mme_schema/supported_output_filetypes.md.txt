@@ -5,6 +5,25 @@ _An enumeration of the possible output formats of an `Extractor`. These should m
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [mme_schema:supported_output_filetypes](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/supported_output_filetypes)
 
 
@@ -31,25 +50,6 @@ URI: [mme_schema:supported_output_filetypes](https://marda-alliance.github.io/me
 * Range: [SupportedFileType](SupportedFileType.md)
 
 * Multivalued: True
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

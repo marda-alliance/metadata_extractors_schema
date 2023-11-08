@@ -5,6 +5,25 @@ _A URL or URI for a source code repository associated with this extractor._
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [mme_schema:source_repository](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/source_repository)
 
 
@@ -29,25 +48,6 @@ URI: [mme_schema:source_repository](https://marda-alliance.github.io/metadata_ex
 ## Properties
 
 * Range: [String](String.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

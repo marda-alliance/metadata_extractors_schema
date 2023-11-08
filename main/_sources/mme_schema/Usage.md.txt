@@ -7,6 +7,25 @@ _A machine-actionable specification of a set of usage instructions of the parent
 
 
 
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
+
+
 URI: [mme_schema:Usage](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/Usage)
 
 
@@ -35,7 +54,7 @@ Usage {
 | ---  | --- | --- | --- |
 | [method](method.md) | 1..1 <br/> [UsageTypes](UsageTypes.md) | Usage invocation method, e.g. from a command line or from Python. | direct |
 | [setup](setup.md) | 0..1 <br/> [String](String.md) | Any necessary setup step for the 'command' to become available:<br/>  - for `method: python`, this is an argument to Python's `import` | direct |
-| [command](command.md) | 1..1 <br/> [String](String.md) | A machine-executable command by which the Extractor functionality can be<br/>accessed. | direct |
+| [command](command.md) | 1..1 <br/> [String](String.md) | A machine-executable command by which the `Extractor` functionality can be<br/>accessed. | direct |
 | [scope](scope.md) | 0..1 <br/> [UsageScope](UsageScope.md) | This enumeration field allows extractor usage to be described in one of two<br/>modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,<br/>or the full file is returned by the extractor, respectively. In practice, this<br/>means that extractors may have multiple defined usage modes for each scope and<br/>each execution method. The default is to assume the 'worst case' that the<br/>extractor indeed returns as much of the data in the file that it supports, plus<br/>potentially additional analysis. | direct |
 
 
@@ -47,25 +66,6 @@ Usage {
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Extractor](Extractor.md) | [usage](usage.md) | range | [Usage](Usage.md) |
-
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
 
 
 
@@ -159,20 +159,15 @@ attributes:
     rank: 1000
   command:
     name: command
-    description: A machine-executable command by which the Extractor functionality
+    description: A machine-executable command by which the `Extractor` functionality
       can be accessed.
     comments:
-    - "- for `method: cli` a parametrized executable invocation which should be available\
-      \ after installing the `Extractor`; - for `method: python` a parametrized function\
-      \ invocation which should be available after installing and setting up the `Extractor`.\n\
-      The following templated parameters can be requested from the user, using the\
-      \ `{{}}` syntax, as described by the `UsageTemplate` class:\n    - `{{ input_path\
-      \ }}`: the location of the resource (e.g.,\nfile, or directory) on disk to parse\
-      \ (REQUIRED).\n    - `{{ input_type }}`: the registry ID of the file type to\n\
-      parse (OPTIONAL).\n    - `{{ output_path }}`: the location of the output to\
-      \ write\nto disk with the results of the extraction, if successful (OPTIONAL).\n\
-      \    - `{{ output_type }}`: the registry ID of the file type\nto write to disk\
-      \ (OPTIONAL)."
+    - '{''For `method'': ''cli`, a parametrized executable invocation which should
+      be available after installing the `Extractor`;''}'
+    - '{''For `method'': ''python`, a parametrized function invocation which should
+      be available after installing and setting up the `Extractor`.''}'
+    - The templated parameters which can be requested from the user are [described
+      by the `UsageTemplate` class](UsageTemplate.md).
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     required: true
@@ -229,20 +224,15 @@ attributes:
     range: string
   command:
     name: command
-    description: A machine-executable command by which the Extractor functionality
+    description: A machine-executable command by which the `Extractor` functionality
       can be accessed.
     comments:
-    - "- for `method: cli` a parametrized executable invocation which should be available\
-      \ after installing the `Extractor`; - for `method: python` a parametrized function\
-      \ invocation which should be available after installing and setting up the `Extractor`.\n\
-      The following templated parameters can be requested from the user, using the\
-      \ `{{}}` syntax, as described by the `UsageTemplate` class:\n    - `{{ input_path\
-      \ }}`: the location of the resource (e.g.,\nfile, or directory) on disk to parse\
-      \ (REQUIRED).\n    - `{{ input_type }}`: the registry ID of the file type to\n\
-      parse (OPTIONAL).\n    - `{{ output_path }}`: the location of the output to\
-      \ write\nto disk with the results of the extraction, if successful (OPTIONAL).\n\
-      \    - `{{ output_type }}`: the registry ID of the file type\nto write to disk\
-      \ (OPTIONAL)."
+    - '{''For `method'': ''cli`, a parametrized executable invocation which should
+      be available after installing the `Extractor`;''}'
+    - '{''For `method'': ''python`, a parametrized function invocation which should
+      be available after installing and setting up the `Extractor`.''}'
+    - The templated parameters which can be requested from the user are [described
+      by the `UsageTemplate` class](UsageTemplate.md).
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: command

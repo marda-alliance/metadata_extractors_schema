@@ -88,8 +88,17 @@
   <section id="slot-input-path">
 <h1>Slot: input_path<a class="headerlink" href="#slot-input-path" title="Link to this heading"></a></h1>
 <p><em>The location of the resource (e.g., file, or directory) on disk to be extracted. Required.</em></p>
+<section id="identifier-and-mapping-information">
+<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
+<section id="schema-source">
+<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
+</ul>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/input_path">mme_schema:input_path</a></p>
 <!-- no inheritance hierarchy -->
+</section>
+</section>
 <section id="applicable-classes">
 <h2>Applicable Classes<a class="headerlink" href="#applicable-classes" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -101,7 +110,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="UsageTemplate.html"><span class="std std-doc">UsageTemplate</span></a></p></td>
-<td><p>A container for specifying string substitution templates for usage specification, <a class="reference internal" href="Usage.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>. The attributes below can be applied as templates using <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">attr</span> <span class="pre">}}</span></code> notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">SupportedFileType</span></code> class</span></a>. For instance, if an <code class="docutils literal notranslate"><span class="pre">extractor</span></code> supports the <code class="docutils literal notranslate"><span class="pre">example</span></code> file type, but expects <code class="docutils literal notranslate"><span class="pre">xmpl</span></code> on the command line instead of <code class="docutils literal notranslate"><span class="pre">example</span></code>, one could set <code class="docutils literal notranslate"><span class="pre">input_type=xmpl</span></code> here, and then use <code class="docutils literal notranslate"><span class="pre">extractor</span> <span class="pre">{{</span> <span class="pre">input_type</span> <span class="pre">}}</span></code> in the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class to achieve the desired behaviour.</p></td>
+<td><p>A container for specifying string substitution templates for usage specification, <a class="reference internal" href="Usage.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</p></td>
 <td><p>no</p></td>
 </tr>
 </tbody>
@@ -112,15 +121,6 @@
 <ul class="simple">
 <li><p>Range: <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></li>
 </ul>
-</section>
-<section id="identifier-and-mapping-information">
-<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
-<section id="schema-source">
-<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
-</ul>
-</section>
 </section>
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>

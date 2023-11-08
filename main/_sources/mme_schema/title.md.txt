@@ -5,6 +5,25 @@ _A name given to the resource [from DC]._
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [dc_terms:title](http://purl.org/dc/terms/1.1/title)
 
 
@@ -29,25 +48,6 @@ URI: [dc_terms:title](http://purl.org/dc/terms/1.1/title)
 ## Properties
 
 * Range: [String](String.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

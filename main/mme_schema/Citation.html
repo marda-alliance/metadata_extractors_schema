@@ -90,6 +90,13 @@
   <section id="class-citation">
 <h1>Class: Citation<a class="headerlink" href="#class-citation" title="Link to this heading"></a></h1>
 <p><em>A container for a citation or another form of attribution for the parent resource.</em></p>
+<section id="identifier-and-mapping-information">
+<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
+<section id="schema-source">
+<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
+</ul>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/Citation">mme_schema:Citation</a></p>
 <div class="mermaid">
             erDiagram
@@ -104,6 +111,8 @@ Citation {
 
 
         </div><!-- no inheritance hierarchy -->
+</section>
+</section>
 <section id="slots">
 <h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -117,7 +126,7 @@ Citation {
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="uri.html"><span class="std std-doc">uri</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>An unambiguous reference to the resource within a given context. Recommended<br/>practice is to identify the resource by means of a string conforming to an<br/>identification system. Examples include International Standard Book Number<br/>(ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).<br/>Persistent identifiers should be provided as HTTP URIs [from DC].</p></td>
+<td><p>An unambiguous reference to the resource within a given context.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="creators.html"><span class="std std-doc">creators</span></a></p></td>
@@ -162,15 +171,6 @@ Citation {
 </tbody>
 </table>
 </section>
-<section id="identifier-and-mapping-information">
-<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
-<section id="schema-source">
-<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
-</ul>
-</section>
-</section>
 <section id="mappings">
 <h2>Mappings<a class="headerlink" href="#mappings" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -203,10 +203,12 @@ Citation {
 <span class="w">  </span><span class="nt">uri</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uri</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An unambiguous reference to the resource within a given context.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Recommended practice is to identify the resource by means of a string conforming</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an identification system. Examples include International Standard Book Number</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">identifiers should be provided as HTTP URIs [from DC].</span>
+<span class="w">    </span><span class="nt">comments</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recommended practice is to identify the resource by means of a string conforming</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an identification system.</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Examples</span><span class="nv"> </span><span class="s">include:\n</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">International</span><span class="nv"> </span><span class="s">Standard</span><span class="nv"> </span><span class="s">Book</span><span class="nv"> </span><span class="s">Number</span><span class="nv"> </span><span class="s">(ISBN),\n</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Digital\</span>
+<span class="w">      </span><span class="s">\ Object</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">(DOI),</span><span class="nv"> </span><span class="s">and\n</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Uniform</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">Name</span><span class="nv"> </span><span class="s">(URN).\nPersistent\</span>
+<span class="w">      </span><span class="s">\ identifiers</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">provided</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">URIs.&quot;</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dc_terms:identifier</span>
@@ -255,10 +257,12 @@ Citation {
 <span class="w">  </span><span class="nt">uri</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uri</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An unambiguous reference to the resource within a given context.</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">Recommended practice is to identify the resource by means of a string conforming</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an identification system. Examples include International Standard Book Number</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">(ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">identifiers should be provided as HTTP URIs [from DC].</span>
+<span class="w">    </span><span class="nt">comments</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recommended practice is to identify the resource by means of a string conforming</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">to an identification system.</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Examples</span><span class="nv"> </span><span class="s">include:\n</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">International</span><span class="nv"> </span><span class="s">Standard</span><span class="nv"> </span><span class="s">Book</span><span class="nv"> </span><span class="s">Number</span><span class="nv"> </span><span class="s">(ISBN),\n</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Digital\</span>
+<span class="w">      </span><span class="s">\ Object</span><span class="nv"> </span><span class="s">Identifier</span><span class="nv"> </span><span class="s">(DOI),</span><span class="nv"> </span><span class="s">and\n</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Uniform</span><span class="nv"> </span><span class="s">Resource</span><span class="nv"> </span><span class="s">Name</span><span class="nv"> </span><span class="s">(URN).\nPersistent\</span>
+<span class="w">      </span><span class="s">\ identifiers</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">provided</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">HTTP</span><span class="nv"> </span><span class="s">URIs.&quot;</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dc_terms:identifier</span>

@@ -5,6 +5,25 @@ _A mechanism for overriding the template values for this file type in the usage 
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [mme_schema:template](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/template)
 
 
@@ -29,25 +48,6 @@ URI: [mme_schema:template](https://marda-alliance.github.io/metadata_extractors_
 ## Properties
 
 * Range: [UsageTemplate](UsageTemplate.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

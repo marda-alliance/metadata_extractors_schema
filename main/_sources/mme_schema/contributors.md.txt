@@ -5,6 +5,25 @@ _A list of the contributors to the resource._
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [dc_terms:contributor](http://purl.org/dc/terms/1.1/contributor)
 
 
@@ -31,25 +50,6 @@ URI: [dc_terms:contributor](http://purl.org/dc/terms/1.1/contributor)
 * Range: [String](String.md)
 
 * Multivalued: True
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

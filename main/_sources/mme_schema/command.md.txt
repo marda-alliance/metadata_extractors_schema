@@ -1,7 +1,26 @@
 # Slot: command
 
 
-_A machine-executable command by which the Extractor functionality can be accessed._
+_A machine-executable command by which the `Extractor` functionality can be accessed._
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
 
 
 
@@ -33,56 +52,20 @@ URI: [mme_schema:command](https://marda-alliance.github.io/metadata_extractors_s
 * Required: True
 
 
-
-
-
-## Comments
-
-* - for `method: cli` a parametrized executable invocation which should be available after installing the `Extractor`; - for `method: python` a parametrized function invocation which should be available after installing and setting up the `Extractor`.
-The following templated parameters can be requested from the user, using the `{{}}` syntax, as described by the `UsageTemplate` class:
-    - `{{ input_path }}`: the location of the resource (e.g.,
-file, or directory) on disk to parse (REQUIRED).
-    - `{{ input_type }}`: the registry ID of the file type to
-parse (OPTIONAL).
-    - `{{ output_path }}`: the location of the output to write
-to disk with the results of the extraction, if successful (OPTIONAL).
-    - `{{ output_type }}`: the registry ID of the file type
-to write to disk (OPTIONAL).
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 ## LinkML Source
 
 <details>
 ```yaml
 name: command
-description: A machine-executable command by which the Extractor functionality can
+description: A machine-executable command by which the `Extractor` functionality can
   be accessed.
 comments:
-- "- for `method: cli` a parametrized executable invocation which should be available\
-  \ after installing the `Extractor`; - for `method: python` a parametrized function\
-  \ invocation which should be available after installing and setting up the `Extractor`.\n\
-  The following templated parameters can be requested from the user, using the `{{}}`\
-  \ syntax, as described by the `UsageTemplate` class:\n    - `{{ input_path }}`:\
-  \ the location of the resource (e.g.,\nfile, or directory) on disk to parse (REQUIRED).\n\
-  \    - `{{ input_type }}`: the registry ID of the file type to\nparse (OPTIONAL).\n\
-  \    - `{{ output_path }}`: the location of the output to write\nto disk with the\
-  \ results of the extraction, if successful (OPTIONAL).\n    - `{{ output_type }}`:\
-  \ the registry ID of the file type\nto write to disk (OPTIONAL)."
+- '{''For `method'': ''cli`, a parametrized executable invocation which should be
+  available after installing the `Extractor`;''}'
+- '{''For `method'': ''python`, a parametrized function invocation which should be
+  available after installing and setting up the `Extractor`.''}'
+- The templated parameters which can be requested from the user are [described by
+  the `UsageTemplate` class](UsageTemplate.md).
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: command

@@ -5,6 +5,25 @@ _This enumeration field allows extractor usage to be described in one of two mod
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [mme_schema:scope](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/scope)
 
 
@@ -29,25 +48,6 @@ URI: [mme_schema:scope](https://marda-alliance.github.io/metadata_extractors_sch
 ## Properties
 
 * Range: [UsageScope](UsageScope.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

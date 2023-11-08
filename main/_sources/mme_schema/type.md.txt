@@ -5,6 +5,25 @@ _Any bibliographic resource type (e.g., article, dataset, software) enumerated i
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [dc_terms:type](http://purl.org/dc/terms/1.1/type)
 
 
@@ -29,25 +48,6 @@ URI: [dc_terms:type](http://purl.org/dc/terms/1.1/type)
 ## Properties
 
 * Range: [String](String.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

@@ -7,6 +7,25 @@ _  - for `method: python`, this is an argument to Python's `import`_
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [mme_schema:setup](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/setup)
 
 
@@ -31,25 +50,6 @@ URI: [mme_schema:setup](https://marda-alliance.github.io/metadata_extractors_sch
 ## Properties
 
 * Range: [String](String.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

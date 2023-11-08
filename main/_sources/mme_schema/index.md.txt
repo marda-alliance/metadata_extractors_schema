@@ -89,7 +89,7 @@ SupportedFileType ||--|o UsageTemplate : "template"
 | [License](License.md) | A container for the licensing information related to the parent resource. |
 | [SupportedFileType](SupportedFileType.md) | An specification of a `FileType`, supported by the parent `Extractor`. |
 | [Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the parent `Extractor`. |
-| [UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). The attributes below can be applied as templates using `{{ attr }}` notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md). For instance, if an `extractor` supports the `example` file type, but expects `xmpl` on the command line instead of `example`, one could set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage` class to achieve the desired behaviour. |
+| [UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). |
 
 
 
@@ -103,7 +103,7 @@ SupportedFileType ||--|o UsageTemplate : "template"
 | [associated_vendors](associated_vendors.md) | A list of software or instrument vendors that can be associated with this par... |
 | [base_formats](base_formats.md) | A list of any particular underlying generic formats which this `FileType` is ... |
 | [citations](citations.md) | A citation or citations for the entry, to be provided should it be used in ac... |
-| [command](command.md) | A machine-executable command by which the Extractor functionality can be acce... |
+| [command](command.md) | A machine-executable command by which the `Extractor` functionality can be ac... |
 | [contributors](contributors.md) | A list of the contributors to the resource |
 | [creators](creators.md) | A list of the creators of the resource |
 | [description](description.md) | A human-readable outline of the entry, its format, data content and uses |

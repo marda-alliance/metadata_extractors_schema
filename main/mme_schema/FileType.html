@@ -58,12 +58,12 @@
 <p class="caption" role="heading"><span class="caption-text">Schema Docs</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Class: FileType</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#slots">Slots</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#usages">Usages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#identifier-and-mapping-information">Identifier and Mapping Information</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#schema-source">Schema Source</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#slots">Slots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usages">Usages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mappings">Mappings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#example-filetype-netcdf">Example: FileType-netcdf</a></li>
@@ -111,6 +111,13 @@
   <section id="class-filetype">
 <h1>Class: FileType<a class="headerlink" href="#class-filetype" title="Link to this heading"></a></h1>
 <p><em>A specific encoding of data for storage purposes. A <code class="docutils literal notranslate"><span class="pre">FileType</span></code> is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type.</em></p>
+<section id="identifier-and-mapping-information">
+<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
+<section id="schema-source">
+<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
+</ul>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/FileType">mme_schema:FileType</a></p>
 <div class="mermaid">
             erDiagram
@@ -129,6 +136,8 @@ FileType {
 FileType ||--}o FileType : &quot;base_formats&quot;
 
         </div><!-- no inheritance hierarchy -->
+</section>
+</section>
 <section id="slots">
 <h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -211,15 +220,6 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 </tr>
 </tbody>
 </table>
-</section>
-<section id="identifier-and-mapping-information">
-<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
-<section id="schema-source">
-<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
-</ul>
-</section>
 </section>
 <section id="mappings">
 <h2>Mappings<a class="headerlink" href="#mappings" title="Link to this heading"></a></h2>

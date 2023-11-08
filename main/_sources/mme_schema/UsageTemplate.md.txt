@@ -1,7 +1,26 @@
 # Class: UsageTemplate
 
 
-_A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). The attributes below can be applied as templates using `{{ attr }}` notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md). For instance, if an `extractor` supports the `example` file type, but expects `xmpl` on the command line instead of `example`, one could set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage` class to achieve the desired behaviour._
+_A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md)._
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
 
 
 
@@ -51,25 +70,6 @@ UsageTemplate {
 
 
 
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
-
 ## Mappings
 
 | Mapping Type | Mapped Value |
@@ -92,13 +92,15 @@ UsageTemplate {
 ```yaml
 name: UsageTemplate
 description: A container for specifying string substitution templates for usage specification,
-  [see `Usage` class](Usage.md). The attributes below can be applied as templates
-  using `{{ attr }}` notation. The default values of the listed attributes can be
-  overriden in this way using the specification of supported filetypes, [see `SupportedFileType`
-  class](SupportedFileType.md). For instance, if an `extractor` supports the `example`
-  file type, but expects `xmpl` on the command line instead of `example`, one could
-  set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage`
-  class to achieve the desired behaviour.
+  [see `Usage` class](Usage.md).
+comments:
+- The attributes below can be applied as templates using `{{ attr }}` notation.
+- The default values of the listed attributes can be overriden in this way using the
+  specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md).
+- 'For instance, if an `extractor` supports the `example` file type, but expects:
+  ```extractor --filetype xmpl inputfile.bla``` one could set `input_type: xmpl` and
+  specify the following in the `Usage` class: ```extractor --filetype {{ input_type
+  }} {{ input_path }}```'
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   input_path:
@@ -138,13 +140,15 @@ attributes:
 ```yaml
 name: UsageTemplate
 description: A container for specifying string substitution templates for usage specification,
-  [see `Usage` class](Usage.md). The attributes below can be applied as templates
-  using `{{ attr }}` notation. The default values of the listed attributes can be
-  overriden in this way using the specification of supported filetypes, [see `SupportedFileType`
-  class](SupportedFileType.md). For instance, if an `extractor` supports the `example`
-  file type, but expects `xmpl` on the command line instead of `example`, one could
-  set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage`
-  class to achieve the desired behaviour.
+  [see `Usage` class](Usage.md).
+comments:
+- The attributes below can be applied as templates using `{{ attr }}` notation.
+- The default values of the listed attributes can be overriden in this way using the
+  specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md).
+- 'For instance, if an `extractor` supports the `example` file type, but expects:
+  ```extractor --filetype xmpl inputfile.bla``` one could set `input_type: xmpl` and
+  specify the following in the `Usage` class: ```extractor --filetype {{ input_type
+  }} {{ input_path }}```'
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   input_path:

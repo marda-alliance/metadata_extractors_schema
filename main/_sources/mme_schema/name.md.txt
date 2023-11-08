@@ -5,6 +5,25 @@ _A recognisable name for the entry._
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [schema_org:name](http://schema.org/name)
 
 
@@ -32,25 +51,6 @@ URI: [schema_org:name](http://schema.org/name)
 * Range: [String](String.md)
 
 * Required: True
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

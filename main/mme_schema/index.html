@@ -200,7 +200,7 @@ SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 <td><p>A machine-actionable specification of a set of usage instructions of the parent <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="UsageTemplate.html"><span class="std std-doc">UsageTemplate</span></a></p></td>
-<td><p>A container for specifying string substitution templates for usage specification, <a class="reference internal" href="Usage.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>. The attributes below can be applied as templates using <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">attr</span> <span class="pre">}}</span></code> notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">SupportedFileType</span></code> class</span></a>. For instance, if an <code class="docutils literal notranslate"><span class="pre">extractor</span></code> supports the <code class="docutils literal notranslate"><span class="pre">example</span></code> file type, but expects <code class="docutils literal notranslate"><span class="pre">xmpl</span></code> on the command line instead of <code class="docutils literal notranslate"><span class="pre">example</span></code>, one could set <code class="docutils literal notranslate"><span class="pre">input_type=xmpl</span></code> here, and then use <code class="docutils literal notranslate"><span class="pre">extractor</span> <span class="pre">{{</span> <span class="pre">input_type</span> <span class="pre">}}</span></code> in the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class to achieve the desired behaviour.</p></td>
+<td><p>A container for specifying string substitution templates for usage specification, <a class="reference internal" href="Usage.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -233,7 +233,7 @@ SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 <td><p>A citation or citations for the entry, to be provided should it be used in ac…</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="command.html"><span class="std std-doc">command</span></a></p></td>
-<td><p>A machine-executable command by which the Extractor functionality can be acce…</p></td>
+<td><p>A machine-executable command by which the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> functionality can be ac…</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="contributors.html"><span class="std std-doc">contributors</span></a></p></td>
 <td><p>A list of the contributors to the resource</p></td>

@@ -5,6 +5,25 @@ _Any human-readable usage notes or installation instructions for this `Extractor
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [mme_schema:instructions](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/instructions)
 
 
@@ -29,25 +48,6 @@ URI: [mme_schema:instructions](https://marda-alliance.github.io/metadata_extract
 ## Properties
 
 * Range: [String](String.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

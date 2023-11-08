@@ -1,5 +1,17 @@
 # Slot: method
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+
 URI: [mme_schema:method](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/method)
 
 
@@ -25,18 +37,6 @@ URI: [mme_schema:method](https://marda-alliance.github.io/metadata_extractors_sc
 ## Properties
 
 * Range: [String](String.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
 
 
 ## LinkML Source

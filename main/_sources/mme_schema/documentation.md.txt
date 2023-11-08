@@ -5,6 +5,25 @@ _A URL or URI for any online documentation associated with this extractor._
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [mme_schema:documentation](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/documentation)
 
 
@@ -29,25 +48,6 @@ URI: [mme_schema:documentation](https://marda-alliance.github.io/metadata_extrac
 ## Properties
 
 * Range: [String](String.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

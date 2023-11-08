@@ -5,6 +5,25 @@ _A list of any known software (proprietary or otherwise) that produces such `Fil
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [mme_schema:associated_software](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/associated_software)
 
 
@@ -31,25 +50,6 @@ URI: [mme_schema:associated_software](https://marda-alliance.github.io/metadata_
 * Range: [String](String.md)
 
 * Multivalued: True
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

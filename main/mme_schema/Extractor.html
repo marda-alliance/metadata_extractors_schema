@@ -59,11 +59,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="FileType.html">Class: FileType</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Class: Extractor</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#slots">Slots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#identifier-and-mapping-information">Identifier and Mapping Information</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#schema-source">Schema Source</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#slots">Slots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mappings">Mappings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#example-extractor-example">Example: Extractor-example</a></li>
@@ -110,6 +110,13 @@
   <section id="class-extractor">
 <h1>Class: Extractor<a class="headerlink" href="#class-extractor" title="Link to this heading"></a></h1>
 <p><em>A script, code, or web service that, when executed, can extract information from a supplied “file” with a specific <a class="reference internal" href="FileType.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">FileType</span></code></span></a>. The supplied “file” may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.</em></p>
+<section id="identifier-and-mapping-information">
+<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
+<section id="schema-source">
+<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
+</ul>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/Extractor">mme_schema:Extractor</a></p>
 <div class="mermaid">
             erDiagram
@@ -165,6 +172,8 @@ Extractor ||--}o Installation : &quot;installation&quot;
 SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 
         </div><!-- no inheritance hierarchy -->
+</section>
+</section>
 <section id="slots">
 <h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -243,15 +252,6 @@ SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 </tr>
 </tbody>
 </table>
-</section>
-<section id="identifier-and-mapping-information">
-<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
-<section id="schema-source">
-<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
-</ul>
-</section>
 </section>
 <section id="mappings">
 <h2>Mappings<a class="headerlink" href="#mappings" title="Link to this heading"></a></h2>

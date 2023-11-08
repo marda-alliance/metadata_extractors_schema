@@ -5,6 +5,25 @@ _A URL, URI or SPDX license identifier for a legal document giving official perm
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [dc_terms:license](http://purl.org/dc/terms/1.1/license)
 
 
@@ -31,25 +50,6 @@ URI: [dc_terms:license](http://purl.org/dc/terms/1.1/license)
 * Range: [License](License.md)
 
 * Required: True
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

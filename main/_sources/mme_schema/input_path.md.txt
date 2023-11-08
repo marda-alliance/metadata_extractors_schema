@@ -5,32 +5,6 @@ _The location of the resource (e.g., file, or directory) on disk to be extracted
 
 
 
-URI: [mme_schema:input_path](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/input_path)
-
-
-
-<!-- no inheritance hierarchy -->
-
-
-
-
-## Applicable Classes
-
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-[UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). The attributes below can be applied as templates using `{{ attr }}` notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md). For instance, if an `extractor` supports the `example` file type, but expects `xmpl` on the command line instead of `example`, one could set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage` class to achieve the desired behaviour. |  no  |
-
-
-
-
-
-
-
-## Properties
-
-* Range: [String](String.md)
-
-
 
 
 
@@ -48,6 +22,32 @@ URI: [mme_schema:input_path](https://marda-alliance.github.io/metadata_extractor
 * from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
+
+
+URI: [mme_schema:input_path](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/input_path)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
 
 
 ## LinkML Source

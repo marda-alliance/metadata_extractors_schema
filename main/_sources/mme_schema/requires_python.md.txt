@@ -5,6 +5,25 @@ _A PEP 440 version string for the version constraints on the Python version requ
 
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 URI: [mme_schema:requires_python](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/requires_python)
 
 
@@ -29,25 +48,6 @@ URI: [mme_schema:requires_python](https://marda-alliance.github.io/metadata_extr
 ## Properties
 
 * Range: [String](String.md)
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
 
 
 ## LinkML Source

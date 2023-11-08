@@ -7,6 +7,25 @@ _A container for a citation or another form of attribution for the parent resour
 
 
 
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
+
+
 URI: [mme_schema:Citation](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/Citation)
 
 
@@ -34,7 +53,7 @@ Citation {
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [uri](uri.md) | 0..1 <br/> [String](String.md) | An unambiguous reference to the resource within a given context. Recommended<br/>practice is to identify the resource by means of a string conforming to an<br/>identification system. Examples include International Standard Book Number<br/>(ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).<br/>Persistent identifiers should be provided as HTTP URIs [from DC]. | direct |
+| [uri](uri.md) | 0..1 <br/> [String](String.md) | An unambiguous reference to the resource within a given context. | direct |
 | [creators](creators.md) | 0..* <br/> [String](String.md) | A list of the creators of the resource. | direct |
 | [contributors](contributors.md) | 0..* <br/> [String](String.md) | A list of the contributors to the resource. | direct |
 | [title](title.md) | 0..1 <br/> [String](String.md) | A name given to the resource [from DC]. | direct |
@@ -49,25 +68,6 @@ Citation {
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Extractor](Extractor.md) | [citations](citations.md) | range | [Citation](Citation.md) |
-
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
 
 
 
@@ -100,10 +100,12 @@ attributes:
   uri:
     name: uri
     description: An unambiguous reference to the resource within a given context.
-      Recommended practice is to identify the resource by means of a string conforming
-      to an identification system. Examples include International Standard Book Number
-      (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent
-      identifiers should be provided as HTTP URIs [from DC].
+    comments:
+    - Recommended practice is to identify the resource by means of a string conforming
+      to an identification system.
+    - "Examples include:\n - International Standard Book Number (ISBN),\n - Digital\
+      \ Object Identifier (DOI), and\n - Uniform Resource Name (URN).\nPersistent\
+      \ identifiers should be provided as HTTP URIs."
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: dc_terms:identifier
@@ -155,10 +157,12 @@ attributes:
   uri:
     name: uri
     description: An unambiguous reference to the resource within a given context.
-      Recommended practice is to identify the resource by means of a string conforming
-      to an identification system. Examples include International Standard Book Number
-      (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent
-      identifiers should be provided as HTTP URIs [from DC].
+    comments:
+    - Recommended practice is to identify the resource by means of a string conforming
+      to an identification system.
+    - "Examples include:\n - International Standard Book Number (ISBN),\n - Digital\
+      \ Object Identifier (DOI), and\n - Uniform Resource Name (URN).\nPersistent\
+      \ identifiers should be provided as HTTP URIs."
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: dc_terms:identifier
