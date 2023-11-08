@@ -137,6 +137,7 @@ name: Installation
 description: A machine-actionable specification of a set of installation instructions
   for the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   method:
     name: method
@@ -180,6 +181,7 @@ name: Installation
 description: A machine-actionable specification of a set of installation instructions
   for the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   method:
     name: method

@@ -59,6 +59,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="FileType.html">Class: FileType</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Class: Extractor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#comments">Comments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#slots">Slots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#identifier-and-mapping-information">Identifier and Mapping Information</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#schema-source">Schema Source</a></li>
@@ -85,6 +86,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#classes">Classes</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Citation.html">Class: Citation</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Class: Extractor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#comments">Comments</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#slots">Slots</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#identifier-and-mapping-information">Identifier and Mapping Information</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#schema-source">Schema Source</a></li>
@@ -144,7 +146,13 @@
              
   <section id="class-extractor">
 <h1>Class: Extractor<a class="headerlink" href="#class-extractor" title="Link to this heading"></a></h1>
-<p><em>A script, code, or web service that, when executed, can extract information from a supplied “file” with a specific <a class="reference internal" href="FileType.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">FileType</span></code></span></a>. The supplied “file” may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.</em></p>
+<p><em>A script, code, or web service that, when executed, can extract information from a supplied “file” with a specific <a class="reference internal" href="FileType.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">FileType</span></code></span></a>.</em></p>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The supplied “file” may also be a set of files with a given structure.</p></li>
+<li><p>The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.</p></li>
+</ul>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/Extractor">mme_schema:Extractor</a></p>
 <div class="mermaid">
             erDiagram
@@ -200,6 +208,7 @@ Extractor ||--}o Installation : &quot;installation&quot;
 SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 
         </div><!-- no inheritance hierarchy -->
+</section>
 <section id="slots">
 <h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -423,16 +432,18 @@ SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 <details>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A script, code, or web service that, when executed, can extract information</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">from a supplied &quot;file&quot; with a specific [`FileType`](FileType.md). The supplied &quot;file&quot;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">may also be a set of files with a given structure. The extracted information may</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">be verbatim or transformed, and include the scientific data and/or metadata contained</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">within the file.</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">from a supplied &quot;file&quot; with a specific [`FileType`](FileType.md).</span>
+<span class="nt">comments</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supplied &quot;file&quot; may also be a set of files with a given structure.</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The extracted information may be verbatim or transformed, and include the scientific</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">data and/or metadata contained within the file.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="nt">close_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:SoftwareApplication</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:ServiceChannel</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dcmitype:Software</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dcmitype:Service</span>
+<span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">slots</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
@@ -510,16 +521,18 @@ SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 <details>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
 <span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A script, code, or web service that, when executed, can extract information</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">from a supplied &quot;file&quot; with a specific [`FileType`](FileType.md). The supplied &quot;file&quot;</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">may also be a set of files with a given structure. The extracted information may</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">be verbatim or transformed, and include the scientific data and/or metadata contained</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">within the file.</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">from a supplied &quot;file&quot; with a specific [`FileType`](FileType.md).</span>
+<span class="nt">comments</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The supplied &quot;file&quot; may also be a set of files with a given structure.</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The extracted information may be verbatim or transformed, and include the scientific</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">data and/or metadata contained within the file.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="nt">close_mappings</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:SoftwareApplication</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema_org:ServiceChannel</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dcmitype:Software</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dcmitype:Service</span>
+<span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">supported_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>

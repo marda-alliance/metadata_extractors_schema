@@ -96,6 +96,7 @@ name: Citation
 description: A container for a citation or another form of attribution for the parent
   resource.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   uri:
     name: uri
@@ -153,6 +154,7 @@ name: Citation
 description: A container for a citation or another form of attribution for the parent
   resource.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   uri:
     name: uri

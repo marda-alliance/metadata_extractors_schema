@@ -120,6 +120,7 @@ comments:
   in the `Usage` class:\n\n  ```bash\n  extractor --filetype {{ input_type }} {{ input_path\
   \ }}\n  ```"
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   input_path:
     name: input_path
@@ -169,6 +170,7 @@ comments:
   in the `Usage` class:\n\n  ```bash\n  extractor --filetype {{ input_type }} {{ input_path\
   \ }}\n  ```"
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   input_path:
     name: input_path

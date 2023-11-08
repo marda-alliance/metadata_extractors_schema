@@ -18,7 +18,7 @@ URI: [mme_schema:supported_output_filetypes](https://marda-alliance.github.io/me
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). |  no  |
 
 
 

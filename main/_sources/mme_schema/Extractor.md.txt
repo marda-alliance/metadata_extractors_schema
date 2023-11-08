@@ -1,11 +1,16 @@
 # Class: Extractor
 
 
-_A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file._
+_A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md)._
 
 
 
 
+
+## Comments
+
+* The supplied "file" may also be a set of files with a given structure.
+* The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.
 
 URI: [mme_schema:Extractor](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/Extractor)
 
@@ -242,16 +247,18 @@ license:
 ```yaml
 name: Extractor
 description: A script, code, or web service that, when executed, can extract information
-  from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file"
-  may also be a set of files with a given structure. The extracted information may
-  be verbatim or transformed, and include the scientific data and/or metadata contained
-  within the file.
+  from a supplied "file" with a specific [`FileType`](FileType.md).
+comments:
+- The supplied "file" may also be a set of files with a given structure.
+- The extracted information may be verbatim or transformed, and include the scientific
+  data and/or metadata contained within the file.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 close_mappings:
 - schema_org:SoftwareApplication
 - schema_org:ServiceChannel
 - dcmitype:Software
 - dcmitype:Service
+rank: 1000
 slots:
 - id
 - name
@@ -332,16 +339,18 @@ attributes:
 ```yaml
 name: Extractor
 description: A script, code, or web service that, when executed, can extract information
-  from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file"
-  may also be a set of files with a given structure. The extracted information may
-  be verbatim or transformed, and include the scientific data and/or metadata contained
-  within the file.
+  from a supplied "file" with a specific [`FileType`](FileType.md).
+comments:
+- The supplied "file" may also be a set of files with a given structure.
+- The extracted information may be verbatim or transformed, and include the scientific
+  data and/or metadata contained within the file.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 close_mappings:
 - schema_org:SoftwareApplication
 - schema_org:ServiceChannel
 - dcmitype:Software
 - dcmitype:Service
+rank: 1000
 attributes:
   supported_filetypes:
     name: supported_filetypes

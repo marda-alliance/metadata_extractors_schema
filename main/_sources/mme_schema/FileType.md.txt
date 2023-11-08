@@ -159,6 +159,7 @@ from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mm
 close_mappings:
 - schema_org:fileFormat
 - schema_org:encodingFormat
+rank: 1000
 slots:
 - id
 - description
@@ -228,6 +229,7 @@ from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mm
 close_mappings:
 - schema_org:fileFormat
 - schema_org:encodingFormat
+rank: 1000
 attributes:
   associated_vendors:
     name: associated_vendors

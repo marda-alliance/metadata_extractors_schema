@@ -97,6 +97,7 @@ SupportedFileType ||--|o UsageTemplate : "template"
 name: SupportedFileType
 description: An specification of a `FileType`, supported by the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   id:
     name: id
@@ -129,6 +130,7 @@ attributes:
 name: SupportedFileType
 description: An specification of a `FileType`, supported by the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   id:
     name: id

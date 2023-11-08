@@ -89,6 +89,7 @@ License {
 name: License
 description: A container for the licensing information related to the parent resource.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   uri:
     name: uri
@@ -116,6 +117,7 @@ attributes:
 name: License
 description: A container for the licensing information related to the parent resource.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   uri:
     name: uri

@@ -143,6 +143,7 @@ name: Usage
 description: A machine-actionable specification of a set of usage instructions of
   the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   method:
     name: method
@@ -193,6 +194,7 @@ name: Usage
 description: A machine-actionable specification of a set of usage instructions of
   the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
 attributes:
   method:
     name: method
