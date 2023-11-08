@@ -20,4 +20,3 @@ jobs:
     call-build-docs:
         needs: [call-check-linkml-schemas]
         uses: ./.github/workflows/build-docs.yml
-
