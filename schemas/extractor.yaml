@@ -27,7 +27,8 @@ classes:
             from a supplied "file" with a specific [`FileType`](FileType.md).
         comments:
             - The supplied "file" may also be a set of files with a given structure.
-            - The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.
+            - The extracted information may be verbatim or transformed, and include
+              the scientific data and/or metadata contained within the file.
         close_mappings:
             - schema_org:SoftwareApplication
             - schema_org:ServiceChannel
