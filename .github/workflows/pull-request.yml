@@ -21,6 +21,3 @@ jobs:
         needs: [call-check-linkml-schemas]
         uses: ./.github/workflows/build-docs.yml
 
-    call-deploy-pages:
-        needs: [call-build-docs]
-        uses: ./.github/workflows/deploy-pages.yml
