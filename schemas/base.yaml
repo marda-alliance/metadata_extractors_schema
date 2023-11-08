@@ -18,7 +18,8 @@ description: >-
 classes:
     Citation:
         description: >-
-            A container for a citation or another form of attribution for the parent resource.
+            A container for a citation or another form of attribution for the parent
+            resource.
         attributes:
             uri:
                 slot_uri: dc_terms:identifier
@@ -72,7 +73,8 @@ classes:
         attributes:
             id:
                 description: >-
-                    A reference to the registered MarDA `FileType->id` for this file type.
+                    A reference to the registered MarDA `FileType->id` for this file
+                    type.
             description:
                 description: Free-text description of caveats or instructions specific
                     to this file type.
@@ -85,24 +87,38 @@ classes:
 
     UsageTemplate:
         description: >-
-            A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). The attributes below can be applied as templates using `{{ attr }}` notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md). For instance, if an `extractor` supports the `example` file type, but expects `xmpl` on the command line instead of `example`, one could set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage` class to achieve the desired behaviour.
+            A container for specifying string substitution templates for usage specification,
+            [see `Usage` class](Usage.md). The attributes below can be applied as
+            templates using `{{ attr }}` notation. The default values of the listed
+            attributes can be overriden in this way using the specification of supported
+            filetypes, [see `SupportedFileType` class](SupportedFileType.md). For
+            instance, if an `extractor` supports the `example` file type, but expects
+            `xmpl` on the command line instead of `example`, one could set `input_type=xmpl`
+            here, and then use `extractor {{ input_type }}` in the `Usage` class to
+            achieve the desired behaviour.
         attributes:
             input_path:
                 description: >-
-                    The location of the resource (e.g., file, or directory) on disk to be extracted. Required.
+                    The location of the resource (e.g., file, or directory) on disk
+                    to be extracted. Required.
             input_type:
                 description: >-
-                    The `FileType` of the `input_path`. Defaults to the `FileType->id` for each supported file type.
+                    The `FileType` of the `input_path`. Defaults to the `FileType->id`
+                    for each supported file type.
             output_path:
                 description: >-
-                    The location where the output of the extraction will be written to disk. Defaults to the `Extractor` default.
+                    The location where the output of the extraction will be written
+                    to disk. Defaults to the `Extractor` default.
             output_type:
                 description: >-
-                    The `FileType` of the `output_path`, for `Extractors` supporting multiple output `FileTypes`. Defaults to the `FileType->id` for each supported output file type.
+                    The `FileType` of the `output_path`, for `Extractors` supporting
+                    multiple output `FileTypes`. Defaults to the `FileType->id` for
+                    each supported output file type.
 
     Usage:
         description: >-
-            A machine-actionable specification of a set of usage instructions of the parent `Extractor`.
+            A machine-actionable specification of a set of usage instructions of the
+            parent `Extractor`.
         attributes:
             method:
                 required: true
@@ -120,14 +136,22 @@ classes:
                     can be accessed.
                 comments:
                     - >-
-                        - for `method: cli` a parametrized executable invocation which should be available after installing the `Extractor`;
-                        - for `method: python` a parametrized function invocation which should be available after installing and setting up the `Extractor`.
+                      - for `method: cli` a parametrized executable invocation which
+                      should be available after installing the `Extractor`;
+                      - for `method: python` a parametrized function invocation which
+                      should be available after installing and setting up the `Extractor`.
 
-                        The following templated parameters can be requested from the user, using the `{{}}` syntax, as described by the `UsageTemplate` class:
-                            - `{{ input_path }}`: the location of the resource (e.g., file, or directory) on disk to parse (REQUIRED).
-                            - `{{ input_type }}`: the registry ID of the file type to parse (OPTIONAL).
-                            - `{{ output_path }}`: the location of the output to write to disk with the results of the extraction, if successful (OPTIONAL).
-                            - `{{ output_type }}`: the registry ID of the file type to write to disk (OPTIONAL).
+                      The following templated parameters can be requested from the
+                      user, using the `{{}}` syntax, as described by the `UsageTemplate`
+                      class:
+                          - `{{ input_path }}`: the location of the resource (e.g.,
+                      file, or directory) on disk to parse (REQUIRED).
+                          - `{{ input_type }}`: the registry ID of the file type to
+                      parse (OPTIONAL).
+                          - `{{ output_path }}`: the location of the output to write
+                      to disk with the results of the extraction, if successful (OPTIONAL).
+                          - `{{ output_type }}`: the registry ID of the file type
+                      to write to disk (OPTIONAL).
             scope:
                 required: false
                 range: UsageScope
