@@ -80,10 +80,10 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#mappings">Mappings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-templating-scope">Example: Usage-python+templating+scope</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup-scope">Example: Usage-python+setup+scope</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-cli-scope">Example: Usage-cli+scope</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup">Example: Usage-python+setup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup-scope">Example: Usage-python_setup_scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-templating-scope">Example: Usage-python_templating_scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup">Example: Usage-python_setup</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-cli-scope">Example: Usage-cli_scope</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#example-usage-cli">Example: Usage-cli</a></li>
 </ul>
 </li>
@@ -227,8 +227,18 @@ Usage {
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="example-usage-python-setup-scope">
+<h3>Example: Usage-python_setup_scope<a class="headerlink" href="#example-usage-python-setup-scope" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()</span>
+</pre></div>
+</div>
+</section>
 <section id="example-usage-python-templating-scope">
-<h3>Example: Usage-python+templating+scope<a class="headerlink" href="#example-usage-python-templating-scope" title="Link to this heading"></a></h3>
+<h3>Example: Usage-python_templating_scope<a class="headerlink" href="#example-usage-python-templating-scope" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
 <span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
@@ -238,31 +248,21 @@ Usage {
 </pre></div>
 </div>
 </section>
-<section id="example-usage-python-setup-scope">
-<h3>Example: Usage-python+setup+scope<a class="headerlink" href="#example-usage-python-setup-scope" title="Link to this heading"></a></h3>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
-<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
-<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
-<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()</span>
-</pre></div>
-</div>
-</section>
-<section id="example-usage-cli-scope">
-<h3>Example: Usage-cli+scope<a class="headerlink" href="#example-usage-cli-scope" title="Link to this heading"></a></h3>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
-<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
-<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type=example --summary {{ file_path }}</span>
-</pre></div>
-</div>
-</section>
 <section id="example-usage-python-setup">
-<h3>Example: Usage-python+setup<a class="headerlink" href="#example-usage-python-setup" title="Link to this heading"></a></h3>
+<h3>Example: Usage-python_setup<a class="headerlink" href="#example-usage-python-setup" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
 <span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors</span>
 <span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract({{ file_path }}, type=&quot;{{ input_type }}&quot;)</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage-cli-scope">
+<h3>Example: Usage-cli_scope<a class="headerlink" href="#example-usage-cli-scope" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
+<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type=example --summary {{ file_path }}</span>
 </pre></div>
 </div>
 </section>

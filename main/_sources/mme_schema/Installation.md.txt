@@ -79,7 +79,7 @@ Installation {
 
 
 ## Examples
-### Example: Installation-conda+reqs
+### Example: Installation-conda_reqs
 
 ```yaml
 ---
@@ -98,7 +98,7 @@ requirements: >-
         - git+https://github.com/example/extractor.git#egg=example[all]
 
 ```
-### Example: Installation-pip+reqs
+### Example: Installation-pip_reqs
 
 ```yaml
 ---

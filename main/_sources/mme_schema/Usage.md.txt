@@ -79,7 +79,17 @@ Usage {
 
 
 ## Examples
-### Example: Usage-python+templating+scope
+### Example: Usage-python_setup_scope
+
+```yaml
+---
+method: python
+setup: example
+scope: meta-only
+command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
+
+```
+### Example: Usage-python_templating_scope
 
 ```yaml
 ---
@@ -90,32 +100,22 @@ command: >-
 scope: meta+data
 
 ```
-### Example: Usage-python+setup+scope
-
-```yaml
----
-method: python
-setup: example
-scope: meta-only
-command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
-
-```
-### Example: Usage-cli+scope
-
-```yaml
----
-method: cli
-scope: meta-only
-command: parse --type=example --summary {{ file_path }}
-
-```
-### Example: Usage-python+setup
+### Example: Usage-python_setup
 
 ```yaml
 ---
 method: python
 setup: example.extractors
 command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
+
+```
+### Example: Usage-cli_scope
+
+```yaml
+---
+method: cli
+scope: meta-only
+command: parse --type=example --summary {{ file_path }}
 
 ```
 ### Example: Usage-cli

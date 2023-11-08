@@ -247,33 +247,3 @@ UsageTypes
 | [Time](Time.md) | A time object represents a (local) time of day, independent of any particular... |
 | [Uri](Uri.md) | a complete URI |
 | [Uriorcurie](Uriorcurie.md) | a URI or a CURIE |
-
-
-```{toctree}
----
-caption: Types
-maxdepth: 0
-hidden: true
----
-
-boolean
-curie
-date
-date_or_datetime
-datetime
-decimal
-double
-float
-integer
-jsonpath
-jsonpointer
-ncname
-nodeidentifier
-objectidentifier
-sparqlpath
-string
-time
-uri
-uriorcurie
-
-```
