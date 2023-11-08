@@ -27,8 +27,7 @@ classes:
                 description: >-
                     An unambiguous reference to the resource within a given context.
                 comments:
-                    - Recommended practice is to identify the resource by means of
-                      a string conforming to an identification system.
+                    - Recommended practice is to identify the resource by means of a string conforming to an identification system.
                     - >-
                       Examples include:
                        - International Standard Book Number (ISBN),
@@ -102,10 +101,13 @@ classes:
             - >-
               For instance, if an `extractor` supports the `example` file type, but
               expects:
-              ```extractor --filetype xmpl inputfile.bla```
+
+                extractor --filetype xmpl inputfile.bla
+
               one could set `input_type: xmpl` and specify the following in the `Usage`
               class:
-              ```extractor --filetype {{ input_type }} {{ input_path }}```
+
+                extractor --filetype {{ input_type }} {{ input_path }}
 
         attributes:
             input_path:
@@ -146,27 +148,22 @@ classes:
                     A machine-executable command by which the `Extractor` functionality
                     can be accessed.
                 comments:
-                    - For `method: cli`, a parametrized executable invocation which
-                          should be available after installing the `Extractor`;
-                    - For `method: python`, a parametrized function invocation which
-                          should be available after installing and setting up the
-                          `Extractor`.
+                    - >-
+                      For `method: cli`, a parametrized executable invocation which should be available after installing the `Extractor`;
+                    - >-
+                      For `method: python`, a parametrized function invocation which should be available after installing and setting up the `Extractor`.
                     - The templated parameters which can be requested from the user
                       are [described by the `UsageTemplate` class](UsageTemplate.md).
             scope:
                 required: false
                 range: UsageScope
                 description: >-
-                    This enumeration field allows extractor usage to be described
-                    in one of two modes, `meta-only` and `meta+data`, whereby
-                    either a summary of file metadata, or the full file is returned
-                    by the extractor, respectively. In practice, this means that extractors
-                    may have multiple defined usage modes for each scope and each
-                    execution method. The default is to assume the 'worst case' that
-                    the extractor indeed returns as much of the data in the file that
-                    it supports, plus potentially additional analysis.
+                    Specification of extraction scope.
+
 
     Installation:
+        description: >-
+            A machine-actionable specification of a set of installation instructions for the parent `Extractor`.
         attributes:
             method:
                 required: true
@@ -254,28 +251,44 @@ enums:
                     parametrised using arguments, shall be supplied in the `command`
                     slot.
     UsageScope:
+        description: >-
+            This enumeration allows the `Extractor->usage` to be described
+            in one of two modes, `meta-only` and `meta+data`, whereby
+            either a summary of file metadata, or the full file is returned
+            by the `Extractor`, respectively. In practice, this means that extractors
+            may have multiple defined usage modes for each scope and each
+            execution method. The default is to assume the 'worst case', i.e. that
+            the extractor returns as much of the data in the input file as
+            it supports, plus potentially additional analysis.
         permissible_values:
             meta-only:
                 description: >-
                     This usage scope only returns metadata associated with the file,
-                    according to the extractor's own interpretation of metadata. This
-                    may include, but is not limited to, timestamps, column headings,
-                    data types and data shapes. The size of data returned in this
-                    mode should be limited and will typically be much smaller than
-                    the file size. This metadata SHOULD be expressed as a JSON-serializable
-                    document that can, for example, be loaded into Python with only
-                    standard library imports.
+                    with the interpretatio of "metadata" left up to the `Extractor`.
+                comments:
+                    - >-
+                      This may include, but is not limited to:
+                        - timestamps,
+                        - column headings,
+                        - data types, and
+                        - data shapes.
+                    - The size of data returned in this mode should be limited and will typically be much smaller than the file size.
+                    - This metadata SHOULD be expressed as a JSON-serializable document that can, for example, be loaded into Python with only standard library imports.
             meta+data:
                 description: >-
                     This usage scope refers to a "full" extraction of the file, whereby
                     the extractor tries to faithfully interpret and return all supported
-                    information contained within the file, including binary data,
-                    large multi-dimensional arrays, plus all of the associated metadata
-                    from a `meta-only` extraction. The size of the data returned in
-                    this mode is not limited and could be significantly larger than
-                    the input file size (in the case of binary data, or additional
-                    analysis being performed upon extraction).
+                    information contained within the file.
+                comments:
+                    - >-
+                      This may include, but is not limited to:
+                        - binary data,
+                        - large multi-dimensional arrays,
+                        - plus all of the associated metadata from a `meta-only` extraction.
+                    - The size of the data returned in this mode is not limited and could be significantly larger than the input file size (in the case of binary data, or additional analysis being performed upon extraction).
     InstallerTypes:
+        description: >-
+            This enumeration allows the `Extractor->installation` to specify which installer software is to be used for the installation of the `Extractor`.
         permissible_values:
             pip:
                 description: >-
@@ -283,4 +296,6 @@ enums:
                     `pip install` and `requirements` using `pip install -r`.
             conda:
                 description: >-
-                    Install the Extractor using 'conda'. Not yet implemented / supported.
+                    Install the Extractor using 'conda'.
+                comments:
+                    - Note that installation using `conda` is not yet supported by the API.

@@ -11,7 +11,13 @@ _{{ element_description_line }}_
 {% endfor %}
 {% endif %}
 
-{% include "common_metadata.md.jinja2" %}
+{% if element.comments -%}
+## Comments
+
+{% for x in element.comments -%}
+* {{x}}
+{% endfor %}
+{% endif -%}
 
 URI: {{ gen.uri_link(element) }}
 
@@ -82,6 +88,8 @@ URI: {{ gen.uri_link(element) }}
 | {{gen.link(usage.used_by)}} | {{gen.link(usage.slot)}} | {{usage.metaslot}} | {{ gen.link(usage.used) }} |
 {% endfor %}
 {% endif %}
+
+{% include "common_metadata.md.jinja2" %}
 
 ## LinkML Source
 
