@@ -100,13 +100,15 @@ classes:
               way using the specification of supported filetypes, [see `SupportedFileType`
               class](SupportedFileType.md).
             - >-
-              For instance, if an `extractor` supports the `example` file type, but expects `xmpl` as an argument:
+              For instance, if an `extractor` supports the `example` file type, but
+              expects `xmpl` as an argument:
 
                 ```bash
                 extractor --filetype xmpl inputfile.bla
                 ```
 
-                one could set `input_type: xmpl` here, and specify the following `command` in the `Usage` class:
+                one could set `input_type: xmpl` here, and specify the following `command`
+              in the `Usage` class:
 
                 ```bash
                 extractor --filetype {{ input_type }} {{ input_path }}
