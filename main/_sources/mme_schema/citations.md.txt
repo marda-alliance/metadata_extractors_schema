@@ -5,25 +5,6 @@ _A citation or citations for the entry, to be provided should it be used in acad
 
 
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 URI: [dcmitype:BibliographicReference](http://purl.org/dc/dcmitype/1.1BibliographicReference)
 
 
@@ -50,6 +31,25 @@ URI: [dcmitype:BibliographicReference](http://purl.org/dc/dcmitype/1.1Bibliograp
 * Range: [Citation](Citation.md)
 
 * Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
 
 
 ## LinkML Source

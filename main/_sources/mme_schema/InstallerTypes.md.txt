@@ -2,6 +2,11 @@
 
 
 
+
+_This enumeration allows the `Extractor->installation` to specify which installer software is to be used for the installation of the `Extractor`._
+
+
+
 URI: [InstallerTypes](InstallerTypes)
 
 ## Permissible Values
@@ -40,6 +45,8 @@ URI: [InstallerTypes](InstallerTypes)
 <details>
 ```yaml
 name: InstallerTypes
+description: This enumeration allows the `Extractor->installation` to specify which
+  installer software is to be used for the installation of the `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 permissible_values:
@@ -49,7 +56,9 @@ permissible_values:
       `pip install` and `requirements` using `pip install -r`.
   conda:
     text: conda
-    description: Install the Extractor using 'conda'. Not yet implemented / supported.
+    description: Install the Extractor using 'conda'.
+    comments:
+    - Note that installation using `conda` is not yet supported by the API.
 
 ```
 </details>

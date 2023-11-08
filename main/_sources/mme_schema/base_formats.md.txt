@@ -5,25 +5,6 @@ _A list of any particular underlying generic formats which this `FileType` is ba
 
 
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 URI: [mme_schema:base_formats](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/base_formats)
 
 
@@ -50,6 +31,25 @@ URI: [mme_schema:base_formats](https://marda-alliance.github.io/metadata_extract
 * Range: [FileType](FileType.md)
 
 * Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
 
 
 ## LinkML Source

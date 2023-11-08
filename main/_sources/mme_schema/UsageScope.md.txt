@@ -2,13 +2,18 @@
 
 
 
+
+_This enumeration allows the `Extractor->usage` to be described in one of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata, or the full file is returned by the `Extractor`, respectively. In practice, this means that extractors may have multiple defined usage modes for each scope and each execution method. The default is to assume the 'worst case', i.e. that the extractor returns as much of the data in the input file as it supports, plus potentially additional analysis._
+
+
+
 URI: [UsageScope](UsageScope)
 
 ## Permissible Values
 
 | Value | Meaning | Description |
 | --- | --- | --- |
-| meta-only | None | This usage scope only returns metadata associated with the file, according to... |
+| meta-only | None | This usage scope only returns metadata associated with the file, with the int... |
 | meta+data | None | This usage scope refers to a "full" extraction of the file, whereby the extra... |
 
 
@@ -18,7 +23,7 @@ URI: [UsageScope](UsageScope)
 
 | Name | Description |
 | ---  | --- |
-| [scope](scope.md) | This enumeration field allows extractor usage to be described in one of two m... |
+| [scope](scope.md) | Specification of extraction scope |
 
 
 
@@ -46,25 +51,36 @@ URI: [UsageScope](UsageScope)
 <details>
 ```yaml
 name: UsageScope
+description: This enumeration allows the `Extractor->usage` to be described in one
+  of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,
+  or the full file is returned by the `Extractor`, respectively. In practice, this
+  means that extractors may have multiple defined usage modes for each scope and each
+  execution method. The default is to assume the 'worst case', i.e. that the extractor
+  returns as much of the data in the input file as it supports, plus potentially additional
+  analysis.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 permissible_values:
   meta-only:
     text: meta-only
     description: This usage scope only returns metadata associated with the file,
-      according to the extractor's own interpretation of metadata. This may include,
-      but is not limited to, timestamps, column headings, data types and data shapes.
-      The size of data returned in this mode should be limited and will typically
-      be much smaller than the file size. This metadata SHOULD be expressed as a JSON-serializable
-      document that can, for example, be loaded into Python with only standard library
-      imports.
+      with the interpretatio of "metadata" left up to the `Extractor`.
+    comments:
+    - "This may include, but is not limited to:\n  - timestamps,\n  - column headings,\n\
+      \  - data types, and\n  - data shapes."
+    - The size of data returned in this mode should be limited and will typically
+      be much smaller than the file size.
+    - This metadata SHOULD be expressed as a JSON-serializable document that can,
+      for example, be loaded into Python with only standard library imports.
   meta+data:
     text: meta+data
     description: This usage scope refers to a "full" extraction of the file, whereby
       the extractor tries to faithfully interpret and return all supported information
-      contained within the file, including binary data, large multi-dimensional arrays,
-      plus all of the associated metadata from a `meta-only` extraction. The size
-      of the data returned in this mode is not limited and could be significantly
+      contained within the file.
+    comments:
+    - "This may include, but is not limited to:\n  - binary data,\n  - large multi-dimensional\
+      \ arrays,\n  - plus all of the associated metadata from a `meta-only` extraction."
+    - The size of the data returned in this mode is not limited and could be significantly
       larger than the input file size (in the case of binary data, or additional analysis
       being performed upon extraction).
 

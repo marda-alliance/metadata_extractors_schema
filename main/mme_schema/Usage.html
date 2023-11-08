@@ -90,13 +90,6 @@
   <section id="class-usage">
 <h1>Class: Usage<a class="headerlink" href="#class-usage" title="Link to this heading"></a></h1>
 <p><em>A machine-actionable specification of a set of usage instructions of the parent <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</em></p>
-<section id="identifier-and-mapping-information">
-<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
-<section id="schema-source">
-<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
-</ul>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/Usage">mme_schema:Usage</a></p>
 <div class="mermaid">
             erDiagram
@@ -110,8 +103,6 @@ Usage {
 
 
         </div><!-- no inheritance hierarchy -->
-</section>
-</section>
 <section id="slots">
 <h2>Slots<a class="headerlink" href="#slots" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -140,7 +131,7 @@ Usage {
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="scope.html"><span class="std std-doc">scope</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="UsageScope.html"><span class="std std-doc">UsageScope</span></a></p></td>
-<td><p>This enumeration field allows extractor usage to be described in one of two<br/>modes, <code class="docutils literal notranslate"><span class="pre">meta-only</span></code> and <code class="docutils literal notranslate"><span class="pre">meta+data</span></code>, whereby either a summary of file metadata,<br/>or the full file is returned by the extractor, respectively. In practice, this<br/>means that extractors may have multiple defined usage modes for each scope and<br/>each execution method. The default is to assume the ‘worst case’ that the<br/>extractor indeed returns as much of the data in the file that it supports, plus<br/>potentially additional analysis.</p></td>
+<td><p>Specification of extraction scope.</p></td>
 <td><p>direct</p></td>
 </tr>
 </tbody>
@@ -164,6 +155,15 @@ Usage {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="identifier-and-mapping-information">
+<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
+<section id="schema-source">
+<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
+</ul>
+</section>
 </section>
 <section id="mappings">
 <h2>Mappings<a class="headerlink" href="#mappings" title="Link to this heading"></a></h2>
@@ -262,10 +262,10 @@ Usage {
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A machine-executable command by which the `Extractor` functionality</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be accessed.</span>
 <span class="w">    </span><span class="nt">comments</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{</span><span class="se">&#39;&#39;</span><span class="s">For</span><span class="nv"> </span><span class="s">`method</span><span class="se">&#39;&#39;</span><span class="s">:</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">cli`,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parametrized</span><span class="nv"> </span><span class="s">executable</span><span class="nv"> </span><span class="s">invocation</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">should</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">available</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">installing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">`Extractor`;</span><span class="se">&#39;&#39;</span><span class="s">}&#39;</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{</span><span class="se">&#39;&#39;</span><span class="s">For</span><span class="nv"> </span><span class="s">`method</span><span class="se">&#39;&#39;</span><span class="s">:</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">python`,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parametrized</span><span class="nv"> </span><span class="s">function</span><span class="nv"> </span><span class="s">invocation</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">should</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">available</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">installing</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">setting</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">`Extractor`.</span><span class="se">&#39;&#39;</span><span class="s">}&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;For</span><span class="nv"> </span><span class="s">`method:</span><span class="nv"> </span><span class="s">cli`,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parametrized</span><span class="nv"> </span><span class="s">executable</span><span class="nv"> </span><span class="s">invocation</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">available</span>
+<span class="w">      </span><span class="s">after</span><span class="nv"> </span><span class="s">installing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">`Extractor`;&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;For</span><span class="nv"> </span><span class="s">`method:</span><span class="nv"> </span><span class="s">python`,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parametrized</span><span class="nv"> </span><span class="s">function</span><span class="nv"> </span><span class="s">invocation</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">available</span>
+<span class="w">      </span><span class="s">after</span><span class="nv"> </span><span class="s">installing</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">setting</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">`Extractor`.&#39;</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The templated parameters which can be requested from the user are [described</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the `UsageTemplate` class](UsageTemplate.md).</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
@@ -273,13 +273,7 @@ Usage {
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">scope</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scope</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This enumeration field allows extractor usage to be described in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">one of two modes, `meta-only` and `meta+data`, whereby either a summary of file</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">metadata, or the full file is returned by the extractor, respectively. In practice,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this means that extractors may have multiple defined usage modes for each scope</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and each execution method. The default is to assume the &#39;worst case&#39; that the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">extractor indeed returns as much of the data in the file that it supports, plus</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">potentially additional analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specification of extraction scope.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageScope</span>
@@ -324,10 +318,10 @@ Usage {
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A machine-executable command by which the `Extractor` functionality</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">can be accessed.</span>
 <span class="w">    </span><span class="nt">comments</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{</span><span class="se">&#39;&#39;</span><span class="s">For</span><span class="nv"> </span><span class="s">`method</span><span class="se">&#39;&#39;</span><span class="s">:</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">cli`,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parametrized</span><span class="nv"> </span><span class="s">executable</span><span class="nv"> </span><span class="s">invocation</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">should</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">available</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">installing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">`Extractor`;</span><span class="se">&#39;&#39;</span><span class="s">}&#39;</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;{</span><span class="se">&#39;&#39;</span><span class="s">For</span><span class="nv"> </span><span class="s">`method</span><span class="se">&#39;&#39;</span><span class="s">:</span><span class="nv"> </span><span class="se">&#39;&#39;</span><span class="s">python`,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parametrized</span><span class="nv"> </span><span class="s">function</span><span class="nv"> </span><span class="s">invocation</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">should</span>
-<span class="w">      </span><span class="s">be</span><span class="nv"> </span><span class="s">available</span><span class="nv"> </span><span class="s">after</span><span class="nv"> </span><span class="s">installing</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">setting</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">`Extractor`.</span><span class="se">&#39;&#39;</span><span class="s">}&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;For</span><span class="nv"> </span><span class="s">`method:</span><span class="nv"> </span><span class="s">cli`,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parametrized</span><span class="nv"> </span><span class="s">executable</span><span class="nv"> </span><span class="s">invocation</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">available</span>
+<span class="w">      </span><span class="s">after</span><span class="nv"> </span><span class="s">installing</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">`Extractor`;&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;For</span><span class="nv"> </span><span class="s">`method:</span><span class="nv"> </span><span class="s">python`,</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">parametrized</span><span class="nv"> </span><span class="s">function</span><span class="nv"> </span><span class="s">invocation</span><span class="nv"> </span><span class="s">which</span><span class="nv"> </span><span class="s">should</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">available</span>
+<span class="w">      </span><span class="s">after</span><span class="nv"> </span><span class="s">installing</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">setting</span><span class="nv"> </span><span class="s">up</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">`Extractor`.&#39;</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The templated parameters which can be requested from the user are [described</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the `UsageTemplate` class](UsageTemplate.md).</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
@@ -340,13 +334,7 @@ Usage {
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">scope</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scope</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This enumeration field allows extractor usage to be described in</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">one of two modes, `meta-only` and `meta+data`, whereby either a summary of file</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">metadata, or the full file is returned by the extractor, respectively. In practice,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">this means that extractors may have multiple defined usage modes for each scope</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and each execution method. The default is to assume the &#39;worst case&#39; that the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">extractor indeed returns as much of the data in the file that it supports, plus</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">potentially additional analysis.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specification of extraction scope.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scope</span>

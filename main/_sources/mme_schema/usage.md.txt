@@ -5,25 +5,6 @@ _A machine-actionable instructions for the usage of the Extractor. The described
 
 
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 URI: [mme_schema:usage](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/usage)
 
 
@@ -50,6 +31,25 @@ URI: [mme_schema:usage](https://marda-alliance.github.io/metadata_extractors_sch
 * Range: [Usage](Usage.md)
 
 * Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
 
 
 ## LinkML Source

@@ -5,30 +5,11 @@ _A machine-executable command by which the `Extractor` functionality can be acce
 
 
 
-
-
-
 ## Comments
 
-* {'For `method': 'cli`, a parametrized executable invocation which should be available after installing the `Extractor`;'}
-* {'For `method': 'python`, a parametrized function invocation which should be available after installing and setting up the `Extractor`.'}
+* For `method: cli`, a parametrized executable invocation which should be available after installing the `Extractor`;
+* For `method: python`, a parametrized function invocation which should be available after installing and setting up the `Extractor`.
 * The templated parameters which can be requested from the user are [described by the `UsageTemplate` class](UsageTemplate.md).
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
 
 URI: [mme_schema:command](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/command)
 
@@ -58,6 +39,25 @@ URI: [mme_schema:command](https://marda-alliance.github.io/metadata_extractors_s
 * Required: True
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 ## LinkML Source
 
 <details>
@@ -66,10 +66,10 @@ name: command
 description: A machine-executable command by which the `Extractor` functionality can
   be accessed.
 comments:
-- '{''For `method'': ''cli`, a parametrized executable invocation which should be
-  available after installing the `Extractor`;''}'
-- '{''For `method'': ''python`, a parametrized function invocation which should be
-  available after installing and setting up the `Extractor`.''}'
+- 'For `method: cli`, a parametrized executable invocation which should be available
+  after installing the `Extractor`;'
+- 'For `method: python`, a parametrized function invocation which should be available
+  after installing and setting up the `Extractor`.'
 - The templated parameters which can be requested from the user are [described by
   the `UsageTemplate` class](UsageTemplate.md).
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/

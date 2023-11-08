@@ -1,17 +1,5 @@
 # Slot: method
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-
 URI: [mme_schema:method](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/method)
 
 
@@ -26,7 +14,7 @@ URI: [mme_schema:method](https://marda-alliance.github.io/metadata_extractors_sc
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 [Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the parent `Extractor`. |  no  |
-[Installation](Installation.md) | None |  no  |
+[Installation](Installation.md) | A machine-actionable specification of a set of installation instructions for the parent `Extractor`. |  no  |
 
 
 
@@ -37,6 +25,18 @@ URI: [mme_schema:method](https://marda-alliance.github.io/metadata_extractors_sc
 ## Properties
 
 * Range: [String](String.md)
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
 
 
 ## LinkML Source

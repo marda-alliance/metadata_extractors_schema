@@ -91,21 +91,12 @@
 <section id="comments">
 <h2>Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>{‘For <code class="docutils literal notranslate"><span class="pre">method':</span> <span class="pre">'cli</span></code>, a parametrized executable invocation which should be available after installing the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>;’}</p></li>
-<li><p>{‘For <code class="docutils literal notranslate"><span class="pre">method':</span> <span class="pre">'python</span></code>, a parametrized function invocation which should be available after installing and setting up the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.’}</p></li>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">method:</span> <span class="pre">cli</span></code>, a parametrized executable invocation which should be available after installing the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>;</p></li>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">method:</span> <span class="pre">python</span></code>, a parametrized function invocation which should be available after installing and setting up the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></li>
 <li><p>The templated parameters which can be requested from the user are <a class="reference internal" href="UsageTemplate.html"><span class="std std-doc">described by the <code class="docutils literal notranslate"><span class="pre">UsageTemplate</span></code> class</span></a>.</p></li>
-</ul>
-</section>
-<section id="identifier-and-mapping-information">
-<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
-<section id="schema-source">
-<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
 </ul>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/command">mme_schema:command</a></p>
 <!-- no inheritance hierarchy -->
-</section>
 </section>
 <section id="applicable-classes">
 <h2>Applicable Classes<a class="headerlink" href="#applicable-classes" title="Link to this heading"></a></h2>
@@ -131,6 +122,15 @@
 <li><p>Required: True</p></li>
 </ul>
 </section>
+<section id="identifier-and-mapping-information">
+<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
+<section id="schema-source">
+<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
+</ul>
+</section>
+</section>
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <details>
@@ -139,10 +139,10 @@ name: command
 description: A machine-executable command by which the `Extractor` functionality can
   be accessed.
 comments:
-- '{''For `method'': ''cli`, a parametrized executable invocation which should be
-  available after installing the `Extractor`;''}'
-- '{''For `method'': ''python`, a parametrized function invocation which should be
-  available after installing and setting up the `Extractor`.''}'
+- 'For `method: cli`, a parametrized executable invocation which should be available
+  after installing the `Extractor`;'
+- 'For `method: python`, a parametrized function invocation which should be available
+  after installing and setting up the `Extractor`.'
 - The templated parameters which can be requested from the user are [described by
   the `UsageTemplate` class](UsageTemplate.md).
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/

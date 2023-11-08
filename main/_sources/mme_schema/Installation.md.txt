@@ -1,21 +1,7 @@
 # Class: Installation
 
 
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
+_A machine-actionable specification of a set of installation instructions for the parent `Extractor`._
 
 
 
@@ -61,6 +47,25 @@ Installation {
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Extractor](Extractor.md) | [installation](installation.md) | range | [Installation](Installation.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
 
 
 
@@ -129,6 +134,8 @@ requires_python: ==3.4
 
 ```yaml
 name: Installation
+description: A machine-actionable specification of a set of installation instructions
+  for the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   method:
@@ -170,6 +177,8 @@ attributes:
 
 ```yaml
 name: Installation
+description: A machine-actionable specification of a set of installation instructions
+  for the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   method:

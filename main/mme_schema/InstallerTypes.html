@@ -87,6 +87,7 @@
              
   <section id="enum-installertypes">
 <h1>Enum: InstallerTypes<a class="headerlink" href="#enum-installertypes" title="Link to this heading"></a></h1>
+<p><em>This enumeration allows the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;installation</span></code> to specify which installer software is to be used for the installation of the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</em></p>
 <p>URI: <a class="reference internal" href="#"><span class="doc std std-doc">InstallerTypes</span></a></p>
 <section id="permissible-values">
 <h2>Permissible Values<a class="headerlink" href="#permissible-values" title="Link to this heading"></a></h2>
@@ -123,6 +124,8 @@
 <details>
 ```yaml
 name: InstallerTypes
+description: This enumeration allows the `Extractor->installation` to specify which
+  installer software is to be used for the installation of the `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 permissible_values:
@@ -132,7 +135,9 @@ permissible_values:
       `pip install` and `requirements` using `pip install -r`.
   conda:
     text: conda
-    description: Install the Extractor using 'conda'. Not yet implemented / supported.
+    description: Install the Extractor using 'conda'.
+    comments:
+    - Note that installation using `conda` is not yet supported by the API.
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
 </pre></div>
 </div>

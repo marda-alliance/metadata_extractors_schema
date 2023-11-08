@@ -7,25 +7,6 @@ _A container for the licensing information related to the parent resource._
 
 
 
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
-
-
 URI: [mme_schema:License](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/License)
 
 
@@ -62,6 +43,25 @@ License {
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Extractor](Extractor.md) | [license](license.md) | range | [License](License.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
 
 
 

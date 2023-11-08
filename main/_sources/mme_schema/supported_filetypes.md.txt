@@ -5,25 +5,6 @@ _An enumeration of the `FileType` that an `Extractor` supports, matching `FileTy
 
 
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 URI: [mme_schema:supported_filetypes](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/supported_filetypes)
 
 
@@ -52,6 +33,25 @@ URI: [mme_schema:supported_filetypes](https://marda-alliance.github.io/metadata_
 * Multivalued: True
 
 * Required: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
 
 
 ## LinkML Source

@@ -5,25 +5,6 @@ _Any keywords, phrases or classification codes that are relevant to the entry, e
 
 
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 URI: [dc_terms:subject](http://purl.org/dc/terms/1.1/subject)
 
 
@@ -51,6 +32,25 @@ URI: [dc_terms:subject](http://purl.org/dc/terms/1.1/subject)
 * Range: [String](String.md)
 
 * Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
 
 
 ## LinkML Source

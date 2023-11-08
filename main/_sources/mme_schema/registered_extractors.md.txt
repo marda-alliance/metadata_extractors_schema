@@ -5,25 +5,6 @@ _A slot for an automatically-generated enumeration of `Extractor` IDs that suppo
 
 
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 URI: [mme_schema:registered_extractors](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/registered_extractors)
 
 
@@ -52,6 +33,25 @@ URI: [mme_schema:registered_extractors](https://marda-alliance.github.io/metadat
 * Multivalued: True
 
 * Regex pattern: `^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$`
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
 
 
 ## LinkML Source

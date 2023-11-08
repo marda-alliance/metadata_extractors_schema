@@ -5,6 +5,34 @@ _A list of packages, including versioned packages or `git+https://` targets, to 
 
 
 
+URI: [mme_schema:packages](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/packages)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Installation](Installation.md) | A machine-actionable specification of a set of installation instructions for the parent `Extractor`. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Multivalued: True
+
+
 
 
 
@@ -22,34 +50,6 @@ _A list of packages, including versioned packages or `git+https://` targets, to 
 * from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
-
-
-URI: [mme_schema:packages](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/packages)
-
-
-
-<!-- no inheritance hierarchy -->
-
-
-
-
-## Applicable Classes
-
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-[Installation](Installation.md) | None |  no  |
-
-
-
-
-
-
-
-## Properties
-
-* Range: [String](String.md)
-
-* Multivalued: True
 
 
 ## LinkML Source

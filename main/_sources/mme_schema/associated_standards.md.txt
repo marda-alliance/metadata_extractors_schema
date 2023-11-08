@@ -5,25 +5,6 @@ _A list of any particular well-defined file format standards relevant to this `F
 
 
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 URI: [mme_schema:associated_standards](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/associated_standards)
 
 
@@ -50,6 +31,25 @@ URI: [mme_schema:associated_standards](https://marda-alliance.github.io/metadata
 * Range: [String](String.md)
 
 * Multivalued: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
 
 
 ## LinkML Source

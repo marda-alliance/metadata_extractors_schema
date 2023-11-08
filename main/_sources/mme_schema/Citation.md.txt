@@ -7,25 +7,6 @@ _A container for a citation or another form of attribution for the parent resour
 
 
 
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
-
-
 URI: [mme_schema:Citation](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/Citation)
 
 
@@ -68,6 +49,25 @@ Citation {
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [Extractor](Extractor.md) | [citations](citations.md) | range | [Citation](Citation.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
 
 
 

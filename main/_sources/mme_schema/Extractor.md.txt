@@ -7,25 +7,6 @@ _A script, code, or web service that, when executed, can extract information fro
 
 
 
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
-
-
 URI: [mme_schema:Extractor](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/Extractor)
 
 
@@ -109,6 +90,25 @@ SupportedFileType ||--|o UsageTemplate : "template"
 | [instructions](instructions.md) | 0..1 <br/> [String](String.md) | Any human-readable usage notes or installation instructions for this<br/>`Extractor`. This field is intended for human use only and is not intended to be<br/>machine-actionable. Please use the `Extractor->installation` and<br/>`Extractor->usage` slots for that purpose. | direct |
 
 
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
 

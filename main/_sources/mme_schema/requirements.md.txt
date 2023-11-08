@@ -5,6 +5,32 @@ _Contents of a 'requirements.txt'-like file. Will be installed by the selected I
 
 
 
+URI: [mme_schema:requirements](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/requirements)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Installation](Installation.md) | A machine-actionable specification of a set of installation instructions for the parent `Extractor`. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
 
 
 
@@ -22,32 +48,6 @@ _Contents of a 'requirements.txt'-like file. Will be installed by the selected I
 * from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
-
-
-URI: [mme_schema:requirements](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/requirements)
-
-
-
-<!-- no inheritance hierarchy -->
-
-
-
-
-## Applicable Classes
-
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-[Installation](Installation.md) | None |  no  |
-
-
-
-
-
-
-
-## Properties
-
-* Range: [String](String.md)
 
 
 ## LinkML Source

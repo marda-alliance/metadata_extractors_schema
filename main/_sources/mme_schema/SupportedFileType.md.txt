@@ -7,25 +7,6 @@ _An specification of a `FileType`, supported by the parent `Extractor`._
 
 
 
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
-
-
 URI: [mme_schema:SupportedFileType](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/SupportedFileType)
 
 
@@ -70,6 +51,25 @@ SupportedFileType ||--|o UsageTemplate : "template"
 | ---  | --- | --- | --- |
 | [Extractor](Extractor.md) | [supported_filetypes](supported_filetypes.md) | range | [SupportedFileType](SupportedFileType.md) |
 | [Extractor](Extractor.md) | [supported_output_filetypes](supported_output_filetypes.md) | range | [SupportedFileType](SupportedFileType.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
 
 
 

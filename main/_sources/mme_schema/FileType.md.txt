@@ -7,25 +7,6 @@ _A specific encoding of data for storage purposes. A `FileType` is defined by a 
 
 
 
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
-
-
 URI: [mme_schema:FileType](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/FileType)
 
 
@@ -77,6 +58,25 @@ FileType ||--}o FileType : "base_formats"
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
 | [FileType](FileType.md) | [base_formats](base_formats.md) | range | [FileType](FileType.md) |
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
 
 
 

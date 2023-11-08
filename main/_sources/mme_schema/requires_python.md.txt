@@ -5,6 +5,32 @@ _A PEP 440 version string for the version constraints on the Python version requ
 
 
 
+URI: [mme_schema:requires_python](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/requires_python)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[Installation](Installation.md) | A machine-actionable specification of a set of installation instructions for the parent `Extractor`. |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+
 
 
 
@@ -22,32 +48,6 @@ _A PEP 440 version string for the version constraints on the Python version requ
 * from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 
 
-
-
-URI: [mme_schema:requires_python](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/requires_python)
-
-
-
-<!-- no inheritance hierarchy -->
-
-
-
-
-## Applicable Classes
-
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-[Installation](Installation.md) | None |  no  |
-
-
-
-
-
-
-
-## Properties
-
-* Range: [String](String.md)
 
 
 ## LinkML Source

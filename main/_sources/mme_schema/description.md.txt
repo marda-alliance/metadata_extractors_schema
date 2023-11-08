@@ -5,25 +5,6 @@ _A human-readable outline of the entry, its format, data content and uses._
 
 
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 URI: [schema_org:description](http://schema.org/description)
 
 
@@ -52,6 +33,25 @@ URI: [schema_org:description](http://schema.org/description)
 * Range: [String](String.md)
 
 * Required: True
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
 
 
 ## LinkML Source

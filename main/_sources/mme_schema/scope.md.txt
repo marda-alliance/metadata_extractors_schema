@@ -1,26 +1,7 @@
 # Slot: scope
 
 
-_This enumeration field allows extractor usage to be described in one of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata, or the full file is returned by the extractor, respectively. In practice, this means that extractors may have multiple defined usage modes for each scope and each execution method. The default is to assume the 'worst case' that the extractor indeed returns as much of the data in the file that it supports, plus potentially additional analysis._
-
-
-
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
+_Specification of extraction scope._
 
 
 
@@ -50,17 +31,31 @@ URI: [mme_schema:scope](https://marda-alliance.github.io/metadata_extractors_sch
 * Range: [UsageScope](UsageScope.md)
 
 
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
 ## LinkML Source
 
 <details>
 ```yaml
 name: scope
-description: This enumeration field allows extractor usage to be described in one
-  of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,
-  or the full file is returned by the extractor, respectively. In practice, this means
-  that extractors may have multiple defined usage modes for each scope and each execution
-  method. The default is to assume the 'worst case' that the extractor indeed returns
-  as much of the data in the file that it supports, plus potentially additional analysis.
+description: Specification of extraction scope.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: scope

@@ -87,18 +87,9 @@
              
   <section id="slot-scope">
 <h1>Slot: scope<a class="headerlink" href="#slot-scope" title="Link to this heading"></a></h1>
-<p><em>This enumeration field allows extractor usage to be described in one of two modes, <code class="docutils literal notranslate"><span class="pre">meta-only</span></code> and <code class="docutils literal notranslate"><span class="pre">meta+data</span></code>, whereby either a summary of file metadata, or the full file is returned by the extractor, respectively. In practice, this means that extractors may have multiple defined usage modes for each scope and each execution method. The default is to assume the ‘worst case’ that the extractor indeed returns as much of the data in the file that it supports, plus potentially additional analysis.</em></p>
-<section id="identifier-and-mapping-information">
-<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
-<section id="schema-source">
-<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
-</ul>
+<p><em>Specification of extraction scope.</em></p>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/scope">mme_schema:scope</a></p>
 <!-- no inheritance hierarchy -->
-</section>
-</section>
 <section id="applicable-classes">
 <h2>Applicable Classes<a class="headerlink" href="#applicable-classes" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -122,17 +113,21 @@
 <li><p>Range: <a class="reference internal" href="UsageScope.html"><span class="std std-doc">UsageScope</span></a></p></li>
 </ul>
 </section>
+<section id="identifier-and-mapping-information">
+<h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
+<section id="schema-source">
+<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
+</ul>
+</section>
+</section>
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <details>
 ```yaml
 name: scope
-description: This enumeration field allows extractor usage to be described in one
-  of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,
-  or the full file is returned by the extractor, respectively. In practice, this means
-  that extractors may have multiple defined usage modes for each scope and each execution
-  method. The default is to assume the 'worst case' that the extractor indeed returns
-  as much of the data in the file that it supports, plus potentially additional analysis.
+description: Specification of extraction scope.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: scope

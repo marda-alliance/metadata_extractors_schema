@@ -85,7 +85,7 @@ SupportedFileType ||--|o UsageTemplate : "template"
 | [Citation](Citation.md) | A container for a citation or another form of attribution for the parent resource. |
 | [Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |
 | [FileType](FileType.md) | A specific encoding of data for storage purposes. A `FileType` is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |
-| [Installation](Installation.md) | None |
+| [Installation](Installation.md) | A machine-actionable specification of a set of installation instructions for the parent `Extractor`. |
 | [License](License.md) | A container for the licensing information related to the parent resource. |
 | [SupportedFileType](SupportedFileType.md) | An specification of a `FileType`, supported by the parent `Extractor`. |
 | [Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the parent `Extractor`. |
@@ -122,7 +122,7 @@ SupportedFileType ||--|o UsageTemplate : "template"
 | [registered_extractors](registered_extractors.md) | A slot for an automatically-generated enumeration of `Extractor` IDs that sup... |
 | [requirements](requirements.md) | Contents of a 'requirements |
 | [requires_python](requires_python.md) | A PEP 440 version string for the version constraints on the Python version re... |
-| [scope](scope.md) | This enumeration field allows extractor usage to be described in one of two m... |
+| [scope](scope.md) | Specification of extraction scope |
 | [setup](setup.md) | Any necessary setup step for the 'command' to become available: |
 | [source_repository](source_repository.md) | A URL or URI for a source code repository associated with this extractor |
 | [spdx](spdx.md) | An SPDX License Identifier entry |
@@ -140,8 +140,8 @@ SupportedFileType ||--|o UsageTemplate : "template"
 
 | Enumeration | Description |
 | --- | --- |
-| [InstallerTypes](InstallerTypes.md) |  |
-| [UsageScope](UsageScope.md) |  |
+| [InstallerTypes](InstallerTypes.md) | This enumeration allows the `Extractor->installation` to specify which instal... |
+| [UsageScope](UsageScope.md) | This enumeration allows the `Extractor->usage` to be described in one of two ... |
 | [UsageTypes](UsageTypes.md) |  |
 
 

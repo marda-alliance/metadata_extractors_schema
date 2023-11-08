@@ -5,25 +5,6 @@ _A unique identifier for the entry within the MaRDA registry namespace, this sho
 
 
 
-
-
-
-## Identifier and Mapping Information
-
-
-
-
-
-
-
-### Schema Source
-
-
-* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-
-
-
-
 URI: [schema_org:identifier](http://schema.org/identifier)
 
 
@@ -54,6 +35,25 @@ URI: [schema_org:identifier](http://schema.org/identifier)
 * Required: True
 
 * Regex pattern: `^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$`
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
 
 
 ## LinkML Source
