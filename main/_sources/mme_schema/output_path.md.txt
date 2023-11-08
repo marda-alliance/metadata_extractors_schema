@@ -1,7 +1,7 @@
 # Slot: output_path
 
 
-_The location of the output to write to disk with the results of the extraction, if successful (OPTIONAL)._
+_The location where the output of the extraction will be written to disk. Defaults to the `Extractor` default._
 
 
 
@@ -18,7 +18,7 @@ URI: [mme_schema:output_path](https://marda-alliance.github.io/metadata_extracto
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[UsageTemplate](UsageTemplate.md) | None |  no  |
+[UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). The attributes below can be applied as templates using `{{ attr }}` notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md). For instance, if an `extractor` supports the `example` file type, but expects `xmpl` on the command line instead of `example`, one could set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage` class to achieve the desired behaviour. |  no  |
 
 
 
@@ -55,8 +55,8 @@ URI: [mme_schema:output_path](https://marda-alliance.github.io/metadata_extracto
 <details>
 ```yaml
 name: output_path
-description: The location of the output to write to disk with the results of the extraction,
-  if successful (OPTIONAL).
+description: The location where the output of the extraction will be written to disk.
+  Defaults to the `Extractor` default.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: output_path

@@ -13,8 +13,8 @@ URI: [mme_schema:uri](https://marda-alliance.github.io/metadata_extractors_schem
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Citation](Citation.md) | None |  no  |
-[License](License.md) | None |  no  |
+[Citation](Citation.md) | A container for a citation or another form of attribution for the parent resource. |  no  |
+[License](License.md) | A container for the licensing information related to the parent resource. |  no  |
 
 
 

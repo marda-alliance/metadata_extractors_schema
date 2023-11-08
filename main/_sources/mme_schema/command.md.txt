@@ -1,37 +1,7 @@
 # Slot: command
 
 
-_A machine-executable command by which the Extractor functionality can be accessed:_
-
-__
-
-_  - for `method: cli` a parametrized executable invocation which_
-
-_    should be available after installing the :class:`Extractor`;_
-
-_  - for `method: python` a parametrized function invocation which_
-
-_    should be available after installing and setting up the :class:`Extractor`._
-
-__
-
-_The following templated parameters can be requested from the user, using the `{{}}` syntax, as described by the `UsageTemplate` class:_
-
-_  - `{{ input_path }}`: the location of the resource (e.g., file,_
-
-_or directory) on disk to parse (REQUIRED)._
-
-_  - `{{ input_type }}`: the registry ID of the file type to parse_
-
-_(OPTIONAL)._
-
-_  - `{{ output_path }}`: the location of the output to write to_
-
-_disk with the results of the extraction, if successful (OPTIONAL)._
-
-_  - `{{ output_type }}`: the registry ID of the file type to write_
-
-_to disk (OPTIONAL)._
+_A machine-executable command by which the Extractor functionality can be accessed._
 
 
 
@@ -48,7 +18,7 @@ URI: [mme_schema:command](https://marda-alliance.github.io/metadata_extractors_s
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Usage](Usage.md) | None |  no  |
+[Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the parent `Extractor`. |  no  |
 
 
 
@@ -65,6 +35,19 @@ URI: [mme_schema:command](https://marda-alliance.github.io/metadata_extractors_s
 
 
 
+
+## Comments
+
+* - for `method: cli` a parametrized executable invocation which should be available after installing the `Extractor`; - for `method: python` a parametrized function invocation which should be available after installing and setting up the `Extractor`.
+The following templated parameters can be requested from the user, using the `{{}}` syntax, as described by the `UsageTemplate` class:
+    - `{{ input_path }}`: the location of the resource (e.g.,
+file, or directory) on disk to parse (REQUIRED).
+    - `{{ input_type }}`: the registry ID of the file type to
+parse (OPTIONAL).
+    - `{{ output_path }}`: the location of the output to write
+to disk with the results of the extraction, if successful (OPTIONAL).
+    - `{{ output_type }}`: the registry ID of the file type
+to write to disk (OPTIONAL).
 
 ## Identifier and Mapping Information
 
@@ -87,18 +70,19 @@ URI: [mme_schema:command](https://marda-alliance.github.io/metadata_extractors_s
 <details>
 ```yaml
 name: command
-description: "A machine-executable command by which the Extractor functionality can\
-  \ be accessed:\n\n  - for `method: cli` a parametrized executable invocation which\n\
-  \    should be available after installing the :class:`Extractor`;\n  - for `method:\
-  \ python` a parametrized function invocation which\n    should be available after\
-  \ installing and setting up the :class:`Extractor`.\n\nThe following templated parameters\
-  \ can be requested from the user, using the `{{}}` syntax, as described by the `UsageTemplate`\
-  \ class:\n  - `{{ input_path }}`: the location of the resource (e.g., file,\nor\
-  \ directory) on disk to parse (REQUIRED).\n  - `{{ input_type }}`: the registry\
-  \ ID of the file type to parse\n(OPTIONAL).\n  - `{{ output_path }}`: the location\
-  \ of the output to write to\ndisk with the results of the extraction, if successful\
-  \ (OPTIONAL).\n  - `{{ output_type }}`: the registry ID of the file type to write\n\
-  to disk (OPTIONAL)."
+description: A machine-executable command by which the Extractor functionality can
+  be accessed.
+comments:
+- "- for `method: cli` a parametrized executable invocation which should be available\
+  \ after installing the `Extractor`; - for `method: python` a parametrized function\
+  \ invocation which should be available after installing and setting up the `Extractor`.\n\
+  The following templated parameters can be requested from the user, using the `{{}}`\
+  \ syntax, as described by the `UsageTemplate` class:\n    - `{{ input_path }}`:\
+  \ the location of the resource (e.g.,\nfile, or directory) on disk to parse (REQUIRED).\n\
+  \    - `{{ input_type }}`: the registry ID of the file type to\nparse (OPTIONAL).\n\
+  \    - `{{ output_path }}`: the location of the output to write\nto disk with the\
+  \ results of the extraction, if successful (OPTIONAL).\n    - `{{ output_type }}`:\
+  \ the registry ID of the file type\nto write to disk (OPTIONAL)."
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: command

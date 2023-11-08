@@ -89,6 +89,7 @@
              
   <section id="class-usagetemplate">
 <h1>Class: UsageTemplate<a class="headerlink" href="#class-usagetemplate" title="Link to this heading"></a></h1>
+<p><em>A container for specifying string substitution templates for usage specification, <a class="reference internal" href="Usage.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>. The attributes below can be applied as templates using <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">attr</span> <span class="pre">}}</span></code> notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">SupportedFileType</span></code> class</span></a>. For instance, if an <code class="docutils literal notranslate"><span class="pre">extractor</span></code> supports the <code class="docutils literal notranslate"><span class="pre">example</span></code> file type, but expects <code class="docutils literal notranslate"><span class="pre">xmpl</span></code> on the command line instead of <code class="docutils literal notranslate"><span class="pre">example</span></code>, one could set <code class="docutils literal notranslate"><span class="pre">input_type=xmpl</span></code> here, and then use <code class="docutils literal notranslate"><span class="pre">extractor</span> <span class="pre">{{</span> <span class="pre">input_type</span> <span class="pre">}}</span></code> in the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class to achieve the desired behaviour.</em></p>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/UsageTemplate">mme_schema:UsageTemplate</a></p>
 <div class="mermaid">
             erDiagram
@@ -115,22 +116,22 @@ UsageTemplate {
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="input_path.html"><span class="std std-doc">input_path</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>The location of the resource (e.g., file, or directory) on disk to parse.</p></td>
+<td><p>The location of the resource (e.g., file, or directory) on disk to be extracted.<br/>Required.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="input_type.html"><span class="std std-doc">input_type</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>The registry ID of the file type to parse Will default to the ID of the file<br/>type.</p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">FileType</span></code> of the <code class="docutils literal notranslate"><span class="pre">input_path</span></code>. Defaults to the <code class="docutils literal notranslate"><span class="pre">FileType-&gt;id</span></code> for each<br/>supported file type.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="output_path.html"><span class="std std-doc">output_path</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>The location of the output to write to disk with the results of the extraction,<br/>if successful (OPTIONAL).</p></td>
+<td><p>The location where the output of the extraction will be written to disk.<br/>Defaults to the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> default.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="output_type.html"><span class="std std-doc">output_type</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
-<td><p>The registry ID of the file type to write to disk.</p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">FileType</span></code> of the <code class="docutils literal notranslate"><span class="pre">output_path</span></code>, for <code class="docutils literal notranslate"><span class="pre">Extractors</span></code> supporting multiple output<br/><code class="docutils literal notranslate"><span class="pre">FileTypes</span></code>. Defaults to the <code class="docutils literal notranslate"><span class="pre">FileType-&gt;id</span></code> for each supported output file type.</p></td>
 <td><p>direct</p></td>
 </tr>
 </tbody>
@@ -147,7 +148,7 @@ UsageTemplate {
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="SupportedFileTypes.html"><span class="std std-doc">SupportedFileTypes</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">SupportedFileType</span></a></p></td>
 <td><p><a class="reference internal" href="template.html"><span class="std std-doc">template</span></a></p></td>
 <td><p>range</p></td>
 <td><p><a class="reference internal" href="#"><span class="std std-doc">UsageTemplate</span></a></p></td>
@@ -189,29 +190,39 @@ UsageTemplate {
 <h3>Direct<a class="headerlink" href="#direct" title="Link to this heading"></a></h3>
 <details>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A container for specifying string substitution templates for usage specification,</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">[see `Usage` class](Usage.md). The attributes below can be applied as templates</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">using `{{ attr }}` notation. The default values of the listed attributes can be</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">overriden in this way using the specification of supported filetypes, [see `SupportedFileType`</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">class](SupportedFileType.md). For instance, if an `extractor` supports the `example`</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">file type, but expects `xmpl` on the command line instead of `example`, one could</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage`</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">class to achieve the desired behaviour.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">input_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_path</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location of the resource (e.g., file, or directory) on disk to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">parse.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be extracted. Required.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">  </span><span class="nt">input_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry ID of the file type to parse Will default to the ID</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the file type.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The `FileType` of the `input_path`. Defaults to the `FileType-&gt;id`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for each supported file type.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">  </span><span class="nt">output_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_path</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location of the output to write to disk with the results of the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">extraction, if successful (OPTIONAL).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location where the output of the extraction will be written to</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disk. Defaults to the `Extractor` default.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">  </span><span class="nt">output_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry ID of the file type to write to disk.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The `FileType` of the `output_path`, for `Extractors` supporting</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">multiple output `FileTypes`. Defaults to the `FileType-&gt;id` for each supported</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">output file type.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </pre></div>
@@ -222,12 +233,20 @@ UsageTemplate {
 <h3>Induced<a class="headerlink" href="#induced" title="Link to this heading"></a></h3>
 <details>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A container for specifying string substitution templates for usage specification,</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">[see `Usage` class](Usage.md). The attributes below can be applied as templates</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">using `{{ attr }}` notation. The default values of the listed attributes can be</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">overriden in this way using the specification of supported filetypes, [see `SupportedFileType`</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">class](SupportedFileType.md). For instance, if an `extractor` supports the `example`</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">file type, but expects `xmpl` on the command line instead of `example`, one could</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage`</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">class to achieve the desired behaviour.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">input_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_path</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location of the resource (e.g., file, or directory) on disk to</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">parse.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be extracted. Required.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_path</span>
@@ -237,8 +256,8 @@ UsageTemplate {
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">input_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry ID of the file type to parse Will default to the ID</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">of the file type.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The `FileType` of the `input_path`. Defaults to the `FileType-&gt;id`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for each supported file type.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">input_type</span>
@@ -248,8 +267,8 @@ UsageTemplate {
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">output_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_path</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location of the output to write to disk with the results of the</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">extraction, if successful (OPTIONAL).</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The location where the output of the extraction will be written to</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">disk. Defaults to the `Extractor` default.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_path</span>
@@ -259,7 +278,9 @@ UsageTemplate {
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">  </span><span class="nt">output_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_type</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The registry ID of the file type to write to disk.</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The `FileType` of the `output_path`, for `Extractors` supporting</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">multiple output `FileTypes`. Defaults to the `FileType-&gt;id` for each supported</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">output file type.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_type</span>

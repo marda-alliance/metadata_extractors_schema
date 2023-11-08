@@ -134,7 +134,7 @@ Usage {
     string command  
     UsageScope scope  
 }
-SupportedFileTypes {
+SupportedFileType {
     string id  
     string description  
 }
@@ -158,11 +158,11 @@ Citation {
 
 Extractor ||--}o Citation : &quot;citations&quot;
 Extractor ||--|| License : &quot;license&quot;
-Extractor ||--}| SupportedFileTypes : &quot;supported_filetypes&quot;
-Extractor ||--}o SupportedFileTypes : &quot;supported_output_filetypes&quot;
+Extractor ||--}| SupportedFileType : &quot;supported_filetypes&quot;
+Extractor ||--}o SupportedFileType : &quot;supported_output_filetypes&quot;
 Extractor ||--}o Usage : &quot;usage&quot;
 Extractor ||--}o Installation : &quot;installation&quot;
-SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
+SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 
         </div><!-- no inheritance hierarchy -->
 <section id="slots">
@@ -207,12 +207,12 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <td><p>direct</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="supported_filetypes.html"><span class="std std-doc">supported_filetypes</span></a></p></td>
-<td><p>1..* <br/> <a class="reference internal" href="SupportedFileTypes.html"><span class="std std-doc">SupportedFileTypes</span></a></p></td>
+<td><p>1..* <br/> <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">SupportedFileType</span></a></p></td>
 <td><p>An enumeration of the <code class="docutils literal notranslate"><span class="pre">FileType</span></code> that an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> supports, matching<br/><code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. The <code class="docutils literal notranslate"><span class="pre">FileType-&gt;id</span></code> slot can be passed to<br/>the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>, <a class="reference internal" href="Usage.html"><span class="std std-doc">see the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</p></td>
 <td><p>direct</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="supported_output_filetypes.html"><span class="std std-doc">supported_output_filetypes</span></a></p></td>
-<td><p>0..* <br/> <a class="reference internal" href="SupportedFileTypes.html"><span class="std std-doc">SupportedFileTypes</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">SupportedFileType</span></a></p></td>
 <td><p>An enumeration of the possible output formats of an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. These should<br/>match <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. They can be specified on extractor<br/>execution using the templates described in the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;Usage-&gt;command</span></code> slot,<br/><a class="reference internal" href="Usage.html"><span class="std std-doc">see the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</p></td>
 <td><p>direct</p></td>
 </tr>
@@ -414,7 +414,7 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileType</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">supported_output_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_output_filetypes</span>
@@ -425,7 +425,7 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileType</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">source_repository</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source_repository</span>
@@ -498,7 +498,7 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileType</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">supported_output_filetypes</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_output_filetypes</span>
@@ -513,7 +513,7 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileType</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">source_repository</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source_repository</span>
@@ -589,9 +589,9 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FileType</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileType</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$</span>
@@ -618,9 +618,9 @@ SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 <span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileTypes</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FileType</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileType</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">subject</span><span class="p">:</span>

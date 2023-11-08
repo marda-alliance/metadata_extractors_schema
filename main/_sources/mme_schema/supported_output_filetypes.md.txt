@@ -28,7 +28,7 @@ URI: [mme_schema:supported_output_filetypes](https://marda-alliance.github.io/me
 
 ## Properties
 
-* Range: [SupportedFileTypes](SupportedFileTypes.md)
+* Range: [SupportedFileType](SupportedFileType.md)
 
 * Multivalued: True
 
@@ -68,7 +68,7 @@ alias: supported_output_filetypes
 owner: Extractor
 domain_of:
 - Extractor
-range: SupportedFileTypes
+range: SupportedFileType
 required: false
 
 ```

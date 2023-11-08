@@ -1,14 +1,19 @@
-# Class: SupportedFileTypes
+# Class: SupportedFileType
+
+
+_An specification of a `FileType`, supported by the parent `Extractor`._
 
 
 
-URI: [mme_schema:SupportedFileTypes](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/SupportedFileTypes)
+
+
+URI: [mme_schema:SupportedFileType](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/SupportedFileType)
 
 
 
 ```{mermaid}
 erDiagram
-SupportedFileTypes {
+SupportedFileType {
     string id  
     string description  
 }
@@ -19,7 +24,7 @@ UsageTemplate {
     string output_type  
 }
 
-SupportedFileTypes ||--|o UsageTemplate : "template"
+SupportedFileType ||--|o UsageTemplate : "template"
 
 ```
 
@@ -32,7 +37,7 @@ SupportedFileTypes ||--|o UsageTemplate : "template"
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [id](id.md) | 0..1 <br/> [String](String.md) | Registered MarDA extractors ID for this file type. | direct |
+| [id](id.md) | 0..1 <br/> [String](String.md) | A reference to the registered MarDA `FileType->id` for this file type. | direct |
 | [description](description.md) | 0..1 <br/> [String](String.md) | Free-text description of caveats or instructions specific to this file type. | direct |
 | [template](template.md) | 0..1 <br/> [UsageTemplate](UsageTemplate.md) | A mechanism for overriding the template values for this file type in the usage<br/>instructions. | direct |
 
@@ -44,8 +49,8 @@ SupportedFileTypes ||--|o UsageTemplate : "template"
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Extractor](Extractor.md) | [supported_filetypes](supported_filetypes.md) | range | [SupportedFileTypes](SupportedFileTypes.md) |
-| [Extractor](Extractor.md) | [supported_output_filetypes](supported_output_filetypes.md) | range | [SupportedFileTypes](SupportedFileTypes.md) |
+| [Extractor](Extractor.md) | [supported_filetypes](supported_filetypes.md) | range | [SupportedFileType](SupportedFileType.md) |
+| [Extractor](Extractor.md) | [supported_output_filetypes](supported_output_filetypes.md) | range | [SupportedFileType](SupportedFileType.md) |
 
 
 
@@ -73,8 +78,8 @@ SupportedFileTypes ||--|o UsageTemplate : "template"
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | mme_schema:SupportedFileTypes |
-| native | mme_schema:SupportedFileTypes |
+| self | mme_schema:SupportedFileType |
+| native | mme_schema:SupportedFileType |
 
 
 
@@ -89,12 +94,14 @@ SupportedFileTypes ||--|o UsageTemplate : "template"
 <details>
 
 ```yaml
-name: SupportedFileTypes
+name: SupportedFileType
+description: An specification of a `FileType`, supported by the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   id:
     name: id
-    description: Registered MarDA extractors ID for this file type.
+    description: A reference to the registered MarDA `FileType->id` for this file
+      type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
   description:
     name: description
@@ -119,19 +126,21 @@ attributes:
 <details>
 
 ```yaml
-name: SupportedFileTypes
+name: SupportedFileType
+description: An specification of a `FileType`, supported by the parent `Extractor`.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   id:
     name: id
-    description: Registered MarDA extractors ID for this file type.
+    description: A reference to the registered MarDA `FileType->id` for this file
+      type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     alias: id
-    owner: SupportedFileTypes
+    owner: SupportedFileType
     domain_of:
-    - SupportedFileTypes
     - Extractor
     - FileType
+    - SupportedFileType
     range: string
   description:
     name: description
@@ -139,11 +148,11 @@ attributes:
       file type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     alias: description
-    owner: SupportedFileTypes
+    owner: SupportedFileType
     domain_of:
-    - SupportedFileTypes
     - Extractor
     - FileType
+    - SupportedFileType
     range: string
   template:
     name: template
@@ -152,9 +161,9 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: template
-    owner: SupportedFileTypes
+    owner: SupportedFileType
     domain_of:
-    - SupportedFileTypes
+    - SupportedFileType
     range: UsageTemplate
     required: false
 

@@ -12,28 +12,6 @@ Name: extractor
 
 ```{mermaid}
 erDiagram
-SupportedFileTypes {
-    string id  
-    string description  
-}
-UsageTemplate {
-    string input_path  
-    string input_type  
-    string output_path  
-    string output_type  
-}
-Usage {
-    UsageTypes method  
-    string setup  
-    string command  
-    UsageScope scope  
-}
-Installation {
-    InstallerTypes method  
-    string requires_python  
-    string requirements  
-    stringList packages  
-}
 Extractor {
     string id  
     string name  
@@ -65,15 +43,37 @@ License {
     string uri  
     string spdx  
 }
+SupportedFileType {
+    string id  
+    string description  
+}
+UsageTemplate {
+    string input_path  
+    string input_type  
+    string output_path  
+    string output_type  
+}
+Usage {
+    UsageTypes method  
+    string setup  
+    string command  
+    UsageScope scope  
+}
+Installation {
+    InstallerTypes method  
+    string requires_python  
+    string requirements  
+    stringList packages  
+}
 
-SupportedFileTypes ||--|o UsageTemplate : "template"
 Extractor ||--}o Citation : "citations"
 Extractor ||--|| License : "license"
-Extractor ||--}| SupportedFileTypes : "supported_filetypes"
-Extractor ||--}o SupportedFileTypes : "supported_output_filetypes"
+Extractor ||--}| SupportedFileType : "supported_filetypes"
+Extractor ||--}o SupportedFileType : "supported_output_filetypes"
 Extractor ||--}o Usage : "usage"
 Extractor ||--}o Installation : "installation"
 FileType ||--}o FileType : "base_formats"
+SupportedFileType ||--|o UsageTemplate : "template"
 
 ```
 
@@ -82,14 +82,14 @@ FileType ||--}o FileType : "base_formats"
 
 | Class | Description |
 | --- | --- |
-| [Citation](Citation.md) | None |
+| [Citation](Citation.md) | A container for a citation or another form of attribution for the parent resource. |
 | [Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). The supplied "file" may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file. |
 | [FileType](FileType.md) | A specific encoding of data for storage purposes. A `FileType` is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |
 | [Installation](Installation.md) | None |
-| [License](License.md) | None |
-| [SupportedFileTypes](SupportedFileTypes.md) | None |
-| [Usage](Usage.md) | None |
-| [UsageTemplate](UsageTemplate.md) | None |
+| [License](License.md) | A container for the licensing information related to the parent resource. |
+| [SupportedFileType](SupportedFileType.md) | An specification of a `FileType`, supported by the parent `Extractor`. |
+| [Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the parent `Extractor`. |
+| [UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). The attributes below can be applied as templates using `{{ attr }}` notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md). For instance, if an `extractor` supports the `example` file type, but expects `xmpl` on the command line instead of `example`, one could set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage` class to achieve the desired behaviour. |
 
 
 
@@ -110,14 +110,14 @@ FileType ||--}o FileType : "base_formats"
 | [documentation](documentation.md) | A URL or URI for any online documentation associated with this extractor |
 | [id](id.md) | A unique identifier for the entry within the MaRDA registry namespace, this s... |
 | [input_path](input_path.md) | The location of the resource (e |
-| [input_type](input_type.md) | The registry ID of the file type to parse Will default to the ID of the file ... |
+| [input_type](input_type.md) | The `FileType` of the `input_path` |
 | [installation](installation.md) | A machine-actionable set of installation instructions to obtain a working set... |
 | [instructions](instructions.md) | Any human-readable usage notes or installation instructions for this `Extract... |
 | [license](license.md) | A URL, URI or SPDX license identifier for a legal document giving official pe... |
 | [method](method.md) | Usage invocation method, e |
 | [name](name.md) | A recognisable name for the entry |
-| [output_path](output_path.md) | The location of the output to write to disk with the results of the extractio... |
-| [output_type](output_type.md) | The registry ID of the file type to write to disk |
+| [output_path](output_path.md) | The location where the output of the extraction will be written to disk |
+| [output_type](output_type.md) | The `FileType` of the `output_path`, for `Extractors` supporting multiple out... |
 | [packages](packages.md) | A list of packages, including versioned packages or `git+https://` targets, t... |
 | [registered_extractors](registered_extractors.md) | A slot for an automatically-generated enumeration of `Extractor` IDs that sup... |
 | [requirements](requirements.md) | Contents of a 'requirements |

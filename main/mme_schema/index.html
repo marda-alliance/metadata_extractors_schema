@@ -105,28 +105,6 @@
 <h2>Schema Diagram<a class="headerlink" href="#schema-diagram" title="Link to this heading"></a></h2>
 <div class="mermaid">
             erDiagram
-SupportedFileTypes {
-    string id  
-    string description  
-}
-UsageTemplate {
-    string input_path  
-    string input_type  
-    string output_path  
-    string output_type  
-}
-Usage {
-    UsageTypes method  
-    string setup  
-    string command  
-    UsageScope scope  
-}
-Installation {
-    InstallerTypes method  
-    string requires_python  
-    string requirements  
-    stringList packages  
-}
 Extractor {
     string id  
     string name  
@@ -158,15 +136,37 @@ License {
     string uri  
     string spdx  
 }
+SupportedFileType {
+    string id  
+    string description  
+}
+UsageTemplate {
+    string input_path  
+    string input_type  
+    string output_path  
+    string output_type  
+}
+Usage {
+    UsageTypes method  
+    string setup  
+    string command  
+    UsageScope scope  
+}
+Installation {
+    InstallerTypes method  
+    string requires_python  
+    string requirements  
+    stringList packages  
+}
 
-SupportedFileTypes ||--|o UsageTemplate : &quot;template&quot;
 Extractor ||--}o Citation : &quot;citations&quot;
 Extractor ||--|| License : &quot;license&quot;
-Extractor ||--}| SupportedFileTypes : &quot;supported_filetypes&quot;
-Extractor ||--}o SupportedFileTypes : &quot;supported_output_filetypes&quot;
+Extractor ||--}| SupportedFileType : &quot;supported_filetypes&quot;
+Extractor ||--}o SupportedFileType : &quot;supported_output_filetypes&quot;
 Extractor ||--}o Usage : &quot;usage&quot;
 Extractor ||--}o Installation : &quot;installation&quot;
 FileType ||--}o FileType : &quot;base_formats&quot;
+SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 
         </div></section>
 <section id="classes">
@@ -179,7 +179,7 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="Citation.html"><span class="std std-doc">Citation</span></a></p></td>
-<td><p>None</p></td>
+<td><p>A container for a citation or another form of attribution for the parent resource.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="Extractor.html"><span class="std std-doc">Extractor</span></a></p></td>
 <td><p>A script, code, or web service that, when executed, can extract information from a supplied “file” with a specific <a class="reference internal" href="FileType.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">FileType</span></code></span></a>. The supplied “file” may also be a set of files with a given structure. The extracted information may be verbatim or transformed, and include the scientific data and/or metadata contained within the file.</p></td>
@@ -191,16 +191,16 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <td><p>None</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="License.html"><span class="std std-doc">License</span></a></p></td>
-<td><p>None</p></td>
+<td><p>A container for the licensing information related to the parent resource.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="SupportedFileTypes.html"><span class="std std-doc">SupportedFileTypes</span></a></p></td>
-<td><p>None</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">SupportedFileType</span></a></p></td>
+<td><p>An specification of a <code class="docutils literal notranslate"><span class="pre">FileType</span></code>, supported by the parent <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="Usage.html"><span class="std std-doc">Usage</span></a></p></td>
-<td><p>None</p></td>
+<td><p>A machine-actionable specification of a set of usage instructions of the parent <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="UsageTemplate.html"><span class="std std-doc">UsageTemplate</span></a></p></td>
-<td><p>None</p></td>
+<td><p>A container for specifying string substitution templates for usage specification, <a class="reference internal" href="Usage.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>. The attributes below can be applied as templates using <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">attr</span> <span class="pre">}}</span></code> notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">SupportedFileType</span></code> class</span></a>. For instance, if an <code class="docutils literal notranslate"><span class="pre">extractor</span></code> supports the <code class="docutils literal notranslate"><span class="pre">example</span></code> file type, but expects <code class="docutils literal notranslate"><span class="pre">xmpl</span></code> on the command line instead of <code class="docutils literal notranslate"><span class="pre">example</span></code>, one could set <code class="docutils literal notranslate"><span class="pre">input_type=xmpl</span></code> here, and then use <code class="docutils literal notranslate"><span class="pre">extractor</span> <span class="pre">{{</span> <span class="pre">input_type</span> <span class="pre">}}</span></code> in the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class to achieve the desired behaviour.</p></td>
 </tr>
 </tbody>
 </table>
@@ -254,7 +254,7 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <td><p>The location of the resource (e</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="input_type.html"><span class="std std-doc">input_type</span></a></p></td>
-<td><p>The registry ID of the file type to parse Will default to the ID of the file …</p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">FileType</span></code> of the <code class="docutils literal notranslate"><span class="pre">input_path</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="installation.html"><span class="std std-doc">installation</span></a></p></td>
 <td><p>A machine-actionable set of installation instructions to obtain a working set…</p></td>
@@ -272,10 +272,10 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <td><p>A recognisable name for the entry</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="output_path.html"><span class="std std-doc">output_path</span></a></p></td>
-<td><p>The location of the output to write to disk with the results of the extractio…</p></td>
+<td><p>The location where the output of the extraction will be written to disk</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="output_type.html"><span class="std std-doc">output_type</span></a></p></td>
-<td><p>The registry ID of the file type to write to disk</p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">FileType</span></code> of the <code class="docutils literal notranslate"><span class="pre">output_path</span></code>, for <code class="docutils literal notranslate"><span class="pre">Extractors</span></code> supporting multiple out…</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="packages.html"><span class="std std-doc">packages</span></a></p></td>
 <td><p>A list of packages, including versioned packages or <code class="docutils literal notranslate"><span class="pre">git+https://</span></code> targets, t…</p></td>

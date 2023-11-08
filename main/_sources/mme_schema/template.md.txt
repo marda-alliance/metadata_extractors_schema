@@ -18,7 +18,7 @@ URI: [mme_schema:template](https://marda-alliance.github.io/metadata_extractors_
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[SupportedFileTypes](SupportedFileTypes.md) | None |  no  |
+[SupportedFileType](SupportedFileType.md) | An specification of a `FileType`, supported by the parent `Extractor`. |  no  |
 
 
 
@@ -60,9 +60,9 @@ description: A mechanism for overriding the template values for this file type i
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: template
-owner: SupportedFileTypes
+owner: SupportedFileType
 domain_of:
-- SupportedFileTypes
+- SupportedFileType
 range: UsageTemplate
 required: false
 

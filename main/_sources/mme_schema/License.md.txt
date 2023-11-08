@@ -1,6 +1,11 @@
 # Class: License
 
 
+_A container for the licensing information related to the parent resource._
+
+
+
+
 
 URI: [mme_schema:License](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/License)
 
@@ -82,6 +87,7 @@ License {
 
 ```yaml
 name: License
+description: A container for the licensing information related to the parent resource.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   uri:
@@ -108,6 +114,7 @@ attributes:
 
 ```yaml
 name: License
+description: A container for the licensing information related to the parent resource.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   uri:

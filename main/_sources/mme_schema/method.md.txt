@@ -13,7 +13,7 @@ URI: [mme_schema:method](https://marda-alliance.github.io/metadata_extractors_sc
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Usage](Usage.md) | None |  no  |
+[Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the parent `Extractor`. |  no  |
 [Installation](Installation.md) | None |  no  |
 
 

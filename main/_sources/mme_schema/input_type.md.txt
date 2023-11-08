@@ -1,7 +1,7 @@
 # Slot: input_type
 
 
-_The registry ID of the file type to parse Will default to the ID of the file type._
+_The `FileType` of the `input_path`. Defaults to the `FileType->id` for each supported file type._
 
 
 
@@ -18,7 +18,7 @@ URI: [mme_schema:input_type](https://marda-alliance.github.io/metadata_extractor
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[UsageTemplate](UsageTemplate.md) | None |  no  |
+[UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). The attributes below can be applied as templates using `{{ attr }}` notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md). For instance, if an `extractor` supports the `example` file type, but expects `xmpl` on the command line instead of `example`, one could set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage` class to achieve the desired behaviour. |  no  |
 
 
 
@@ -55,8 +55,8 @@ URI: [mme_schema:input_type](https://marda-alliance.github.io/metadata_extractor
 <details>
 ```yaml
 name: input_type
-description: The registry ID of the file type to parse Will default to the ID of the
-  file type.
+description: The `FileType` of the `input_path`. Defaults to the `FileType->id` for
+  each supported file type.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: input_type

@@ -87,22 +87,7 @@
              
   <section id="slot-command">
 <h1>Slot: command<a class="headerlink" href="#slot-command" title="Link to this heading"></a></h1>
-<p><em>A machine-executable command by which the Extractor functionality can be accessed:</em></p>
-<p>__</p>
-<p>_  - for <code class="docutils literal notranslate"><span class="pre">method:</span> <span class="pre">cli</span></code> a parametrized executable invocation which_</p>
-<p>_    should be available after installing the :class:<code class="docutils literal notranslate"><span class="pre">Extractor</span></code>;_</p>
-<p>_  - for <code class="docutils literal notranslate"><span class="pre">method:</span> <span class="pre">python</span></code> a parametrized function invocation which_</p>
-<p>_    should be available after installing and setting up the :class:<code class="docutils literal notranslate"><span class="pre">Extractor</span></code>._</p>
-<p>__</p>
-<p><em>The following templated parameters can be requested from the user, using the <code class="docutils literal notranslate"><span class="pre">{{}}</span></code> syntax, as described by the <code class="docutils literal notranslate"><span class="pre">UsageTemplate</span></code> class:</em></p>
-<p>_  - <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">input_path</span> <span class="pre">}}</span></code>: the location of the resource (e.g., file,_</p>
-<p><em>or directory) on disk to parse (REQUIRED).</em></p>
-<p>_  - <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">input_type</span> <span class="pre">}}</span></code>: the registry ID of the file type to parse_</p>
-<p><em>(OPTIONAL).</em></p>
-<p>_  - <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_path</span> <span class="pre">}}</span></code>: the location of the output to write to_</p>
-<p><em>disk with the results of the extraction, if successful (OPTIONAL).</em></p>
-<p>_  - <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_type</span> <span class="pre">}}</span></code>: the registry ID of the file type to write_</p>
-<p><em>to disk (OPTIONAL).</em></p>
+<p><em>A machine-executable command by which the Extractor functionality can be accessed.</em></p>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/command">mme_schema:command</a></p>
 <!-- no inheritance hierarchy -->
 <section id="applicable-classes">
@@ -116,7 +101,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="Usage.html"><span class="std std-doc">Usage</span></a></p></td>
-<td><p>None</p></td>
+<td><p>A machine-actionable specification of a set of usage instructions of the parent <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
 <td><p>no</p></td>
 </tr>
 </tbody>
@@ -127,6 +112,27 @@
 <ul class="simple">
 <li><p>Range: <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></li>
 <li><p>Required: True</p></li>
+</ul>
+</section>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><ul>
+<li><p>for <code class="docutils literal notranslate"><span class="pre">method:</span> <span class="pre">cli</span></code> a parametrized executable invocation which should be available after installing the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>; - for <code class="docutils literal notranslate"><span class="pre">method:</span> <span class="pre">python</span></code> a parametrized function invocation which should be available after installing and setting up the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.
+The following templated parameters can be requested from the user, using the <code class="docutils literal notranslate"><span class="pre">{{}}</span></code> syntax, as described by the <code class="docutils literal notranslate"><span class="pre">UsageTemplate</span></code> class:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">input_path</span> <span class="pre">}}</span></code>: the location of the resource (e.g.,
+file, or directory) on disk to parse (REQUIRED).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">input_type</span> <span class="pre">}}</span></code>: the registry ID of the file type to
+parse (OPTIONAL).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_path</span> <span class="pre">}}</span></code>: the location of the output to write
+to disk with the results of the extraction, if successful (OPTIONAL).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">output_type</span> <span class="pre">}}</span></code>: the registry ID of the file type
+to write to disk (OPTIONAL).</p></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="identifier-and-mapping-information">
@@ -143,18 +149,19 @@
 <details>
 ```yaml
 name: command
-description: "A machine-executable command by which the Extractor functionality can\
-  \ be accessed:\n\n  - for `method: cli` a parametrized executable invocation which\n\
-  \    should be available after installing the :class:`Extractor`;\n  - for `method:\
-  \ python` a parametrized function invocation which\n    should be available after\
-  \ installing and setting up the :class:`Extractor`.\n\nThe following templated parameters\
-  \ can be requested from the user, using the `{{}}` syntax, as described by the `UsageTemplate`\
-  \ class:\n  - `{{ input_path }}`: the location of the resource (e.g., file,\nor\
-  \ directory) on disk to parse (REQUIRED).\n  - `{{ input_type }}`: the registry\
-  \ ID of the file type to parse\n(OPTIONAL).\n  - `{{ output_path }}`: the location\
-  \ of the output to write to\ndisk with the results of the extraction, if successful\
-  \ (OPTIONAL).\n  - `{{ output_type }}`: the registry ID of the file type to write\n\
-  to disk (OPTIONAL)."
+description: A machine-executable command by which the Extractor functionality can
+  be accessed.
+comments:
+- "- for `method: cli` a parametrized executable invocation which should be available\
+  \ after installing the `Extractor`; - for `method: python` a parametrized function\
+  \ invocation which should be available after installing and setting up the `Extractor`.\n\
+  The following templated parameters can be requested from the user, using the `{{}}`\
+  \ syntax, as described by the `UsageTemplate` class:\n    - `{{ input_path }}`:\
+  \ the location of the resource (e.g.,\nfile, or directory) on disk to parse (REQUIRED).\n\
+  \    - `{{ input_type }}`: the registry ID of the file type to\nparse (OPTIONAL).\n\
+  \    - `{{ output_path }}`: the location of the output to write\nto disk with the\
+  \ results of the extraction, if successful (OPTIONAL).\n    - `{{ output_type }}`:\
+  \ the registry ID of the file type\nto write to disk (OPTIONAL)."
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: command

@@ -315,9 +315,9 @@ attributes:
     alias: id
     owner: FileType
     domain_of:
-    - SupportedFileTypes
     - Extractor
     - FileType
+    - SupportedFileType
     range: string
     required: true
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
@@ -331,9 +331,9 @@ attributes:
     alias: description
     owner: FileType
     domain_of:
-    - SupportedFileTypes
     - Extractor
     - FileType
+    - SupportedFileType
     range: string
     required: true
   name:

@@ -1,6 +1,11 @@
 # Class: UsageTemplate
 
 
+_A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). The attributes below can be applied as templates using `{{ attr }}` notation. The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md). For instance, if an `extractor` supports the `example` file type, but expects `xmpl` on the command line instead of `example`, one could set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage` class to achieve the desired behaviour._
+
+
+
+
 
 URI: [mme_schema:UsageTemplate](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/UsageTemplate)
 
@@ -28,10 +33,10 @@ UsageTemplate {
 
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
-| [input_path](input_path.md) | 0..1 <br/> [String](String.md) | The location of the resource (e.g., file, or directory) on disk to parse. | direct |
-| [input_type](input_type.md) | 0..1 <br/> [String](String.md) | The registry ID of the file type to parse Will default to the ID of the file<br/>type. | direct |
-| [output_path](output_path.md) | 0..1 <br/> [String](String.md) | The location of the output to write to disk with the results of the extraction,<br/>if successful (OPTIONAL). | direct |
-| [output_type](output_type.md) | 0..1 <br/> [String](String.md) | The registry ID of the file type to write to disk. | direct |
+| [input_path](input_path.md) | 0..1 <br/> [String](String.md) | The location of the resource (e.g., file, or directory) on disk to be extracted.<br/>Required. | direct |
+| [input_type](input_type.md) | 0..1 <br/> [String](String.md) | The `FileType` of the `input_path`. Defaults to the `FileType->id` for each<br/>supported file type. | direct |
+| [output_path](output_path.md) | 0..1 <br/> [String](String.md) | The location where the output of the extraction will be written to disk.<br/>Defaults to the `Extractor` default. | direct |
+| [output_type](output_type.md) | 0..1 <br/> [String](String.md) | The `FileType` of the `output_path`, for `Extractors` supporting multiple output<br/>`FileTypes`. Defaults to the `FileType->id` for each supported output file type. | direct |
 
 
 
@@ -41,7 +46,7 @@ UsageTemplate {
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [SupportedFileTypes](SupportedFileTypes.md) | [template](template.md) | range | [UsageTemplate](UsageTemplate.md) |
+| [SupportedFileType](SupportedFileType.md) | [template](template.md) | range | [UsageTemplate](UsageTemplate.md) |
 
 
 
@@ -86,29 +91,39 @@ UsageTemplate {
 
 ```yaml
 name: UsageTemplate
+description: A container for specifying string substitution templates for usage specification,
+  [see `Usage` class](Usage.md). The attributes below can be applied as templates
+  using `{{ attr }}` notation. The default values of the listed attributes can be
+  overriden in this way using the specification of supported filetypes, [see `SupportedFileType`
+  class](SupportedFileType.md). For instance, if an `extractor` supports the `example`
+  file type, but expects `xmpl` on the command line instead of `example`, one could
+  set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage`
+  class to achieve the desired behaviour.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   input_path:
     name: input_path
     description: The location of the resource (e.g., file, or directory) on disk to
-      parse.
+      be extracted. Required.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
   input_type:
     name: input_type
-    description: The registry ID of the file type to parse Will default to the ID
-      of the file type.
+    description: The `FileType` of the `input_path`. Defaults to the `FileType->id`
+      for each supported file type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
   output_path:
     name: output_path
-    description: The location of the output to write to disk with the results of the
-      extraction, if successful (OPTIONAL).
+    description: The location where the output of the extraction will be written to
+      disk. Defaults to the `Extractor` default.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
   output_type:
     name: output_type
-    description: The registry ID of the file type to write to disk.
+    description: The `FileType` of the `output_path`, for `Extractors` supporting
+      multiple output `FileTypes`. Defaults to the `FileType->id` for each supported
+      output file type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
 
@@ -122,12 +137,20 @@ attributes:
 
 ```yaml
 name: UsageTemplate
+description: A container for specifying string substitution templates for usage specification,
+  [see `Usage` class](Usage.md). The attributes below can be applied as templates
+  using `{{ attr }}` notation. The default values of the listed attributes can be
+  overriden in this way using the specification of supported filetypes, [see `SupportedFileType`
+  class](SupportedFileType.md). For instance, if an `extractor` supports the `example`
+  file type, but expects `xmpl` on the command line instead of `example`, one could
+  set `input_type=xmpl` here, and then use `extractor {{ input_type }}` in the `Usage`
+  class to achieve the desired behaviour.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   input_path:
     name: input_path
     description: The location of the resource (e.g., file, or directory) on disk to
-      parse.
+      be extracted. Required.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: input_path
@@ -137,8 +160,8 @@ attributes:
     range: string
   input_type:
     name: input_type
-    description: The registry ID of the file type to parse Will default to the ID
-      of the file type.
+    description: The `FileType` of the `input_path`. Defaults to the `FileType->id`
+      for each supported file type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: input_type
@@ -148,8 +171,8 @@ attributes:
     range: string
   output_path:
     name: output_path
-    description: The location of the output to write to disk with the results of the
-      extraction, if successful (OPTIONAL).
+    description: The location where the output of the extraction will be written to
+      disk. Defaults to the `Extractor` default.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: output_path
@@ -159,7 +182,9 @@ attributes:
     range: string
   output_type:
     name: output_type
-    description: The registry ID of the file type to write to disk.
+    description: The `FileType` of the `output_path`, for `Extractors` supporting
+      multiple output `FileTypes`. Defaults to the `FileType->id` for each supported
+      output file type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: output_type

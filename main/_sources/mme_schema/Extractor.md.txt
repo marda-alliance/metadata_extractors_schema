@@ -34,7 +34,7 @@ Usage {
     string command  
     UsageScope scope  
 }
-SupportedFileTypes {
+SupportedFileType {
     string id  
     string description  
 }
@@ -58,11 +58,11 @@ Citation {
 
 Extractor ||--}o Citation : "citations"
 Extractor ||--|| License : "license"
-Extractor ||--}| SupportedFileTypes : "supported_filetypes"
-Extractor ||--}o SupportedFileTypes : "supported_output_filetypes"
+Extractor ||--}| SupportedFileType : "supported_filetypes"
+Extractor ||--}o SupportedFileType : "supported_output_filetypes"
 Extractor ||--}o Usage : "usage"
 Extractor ||--}o Installation : "installation"
-SupportedFileTypes ||--|o UsageTemplate : "template"
+SupportedFileType ||--|o UsageTemplate : "template"
 
 ```
 
@@ -81,8 +81,8 @@ SupportedFileTypes ||--|o UsageTemplate : "template"
 | [subject](subject.md) | 0..* <br/> [String](String.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. | direct |
 | [citations](citations.md) | 0..* <br/> [Citation](Citation.md) | A citation or citations for the entry, to be provided should it be used in<br/>academic work (or otherwise). | direct |
 | [license](license.md) | 1..1 <br/> [License](License.md) | A URL, URI or SPDX license identifier for a legal document giving official<br/>permission to do something with the resource. | direct |
-| [supported_filetypes](supported_filetypes.md) | 1..* <br/> [SupportedFileTypes](SupportedFileTypes.md) | An enumeration of the `FileType` that an `Extractor` supports, matching<br/>`FileTypes` present in the registry. The `FileType->id` slot can be passed to<br/>the `Extractor`, [see the `Usage` class](Usage.md). | direct |
-| [supported_output_filetypes](supported_output_filetypes.md) | 0..* <br/> [SupportedFileTypes](SupportedFileTypes.md) | An enumeration of the possible output formats of an `Extractor`. These should<br/>match `FileTypes` present in the registry. They can be specified on extractor<br/>execution using the templates described in the `Extractor->Usage->command` slot,<br/>[see the `Usage` class](Usage.md). | direct |
+| [supported_filetypes](supported_filetypes.md) | 1..* <br/> [SupportedFileType](SupportedFileType.md) | An enumeration of the `FileType` that an `Extractor` supports, matching<br/>`FileTypes` present in the registry. The `FileType->id` slot can be passed to<br/>the `Extractor`, [see the `Usage` class](Usage.md). | direct |
+| [supported_output_filetypes](supported_output_filetypes.md) | 0..* <br/> [SupportedFileType](SupportedFileType.md) | An enumeration of the possible output formats of an `Extractor`. These should<br/>match `FileTypes` present in the registry. They can be specified on extractor<br/>execution using the templates described in the `Extractor->Usage->command` slot,<br/>[see the `Usage` class](Usage.md). | direct |
 | [source_repository](source_repository.md) | 0..1 <br/> [String](String.md) | A URL or URI for a source code repository associated with this extractor. | direct |
 | [documentation](documentation.md) | 0..1 <br/> [String](String.md) | A URL or URI for any online documentation associated with this extractor. | direct |
 | [usage](usage.md) | 0..* <br/> [Usage](Usage.md) | A machine-actionable instructions for the usage of the Extractor. The described<br/>usage pattern shall be available after the instructions specified in<br/>`Extractor->installation` slot have been followed. | direct |
@@ -268,7 +268,7 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
-    range: SupportedFileTypes
+    range: SupportedFileType
     required: true
   supported_output_filetypes:
     name: supported_output_filetypes
@@ -279,7 +279,7 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
-    range: SupportedFileTypes
+    range: SupportedFileType
     required: false
   source_repository:
     name: source_repository
@@ -355,7 +355,7 @@ attributes:
     owner: Extractor
     domain_of:
     - Extractor
-    range: SupportedFileTypes
+    range: SupportedFileType
     required: true
   supported_output_filetypes:
     name: supported_output_filetypes
@@ -370,7 +370,7 @@ attributes:
     owner: Extractor
     domain_of:
     - Extractor
-    range: SupportedFileTypes
+    range: SupportedFileType
     required: false
   source_repository:
     name: source_repository
@@ -446,9 +446,9 @@ attributes:
     alias: id
     owner: Extractor
     domain_of:
-    - SupportedFileTypes
     - Extractor
     - FileType
+    - SupportedFileType
     range: string
     required: true
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
@@ -475,9 +475,9 @@ attributes:
     alias: description
     owner: Extractor
     domain_of:
-    - SupportedFileTypes
     - Extractor
     - FileType
+    - SupportedFileType
     range: string
     required: true
   subject:
