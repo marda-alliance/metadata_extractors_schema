@@ -11,13 +11,18 @@ _A container for specifying string substitution templates for usage specificatio
 
 * The attributes below can be applied as templates using `{{ attr }}` notation.
 * The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md).
-* For instance, if an `extractor` supports the `example` file type, but expects:
+* For instance, if an `extractor` supports the `example` file type, but expects `xmpl` as an argument:
 
+  ```bash
   extractor --filetype xmpl inputfile.bla
+  ```
 
-one could set `input_type: xmpl` and specify the following in the `Usage` class:
+  one could set `input_type: xmpl` here, and specify the following `command`
+in the `Usage` class:
 
+  ```bash
   extractor --filetype {{ input_type }} {{ input_path }}
+  ```
 
 URI: [mme_schema:UsageTemplate](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/UsageTemplate)
 
@@ -109,10 +114,11 @@ comments:
 - The attributes below can be applied as templates using `{{ attr }}` notation.
 - The default values of the listed attributes can be overriden in this way using the
   specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md).
-- "For instance, if an `extractor` supports the `example` file type, but expects:\n\
-  \n  extractor --filetype xmpl inputfile.bla\n\none could set `input_type: xmpl`\
-  \ and specify the following in the `Usage` class:\n\n  extractor --filetype {{ input_type\
-  \ }} {{ input_path }}"
+- "For instance, if an `extractor` supports the `example` file type, but expects `xmpl`\
+  \ as an argument:\n\n  ```bash\n  extractor --filetype xmpl inputfile.bla\n  ```\n\
+  \n  one could set `input_type: xmpl` here, and specify the following `command`\n\
+  in the `Usage` class:\n\n  ```bash\n  extractor --filetype {{ input_type }} {{ input_path\
+  \ }}\n  ```"
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   input_path:
@@ -157,10 +163,11 @@ comments:
 - The attributes below can be applied as templates using `{{ attr }}` notation.
 - The default values of the listed attributes can be overriden in this way using the
   specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md).
-- "For instance, if an `extractor` supports the `example` file type, but expects:\n\
-  \n  extractor --filetype xmpl inputfile.bla\n\none could set `input_type: xmpl`\
-  \ and specify the following in the `Usage` class:\n\n  extractor --filetype {{ input_type\
-  \ }} {{ input_path }}"
+- "For instance, if an `extractor` supports the `example` file type, but expects `xmpl`\
+  \ as an argument:\n\n  ```bash\n  extractor --filetype xmpl inputfile.bla\n  ```\n\
+  \n  one could set `input_type: xmpl` here, and specify the following `command`\n\
+  in the `Usage` class:\n\n  ```bash\n  extractor --filetype {{ input_type }} {{ input_path\
+  \ }}\n  ```"
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 attributes:
   input_path:

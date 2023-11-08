@@ -1,11 +1,13 @@
 # Slot: setup
 
 
-_Any necessary setup step for the 'command' to become available:_
-
-_  - for `method: python`, this is an argument to Python's `import`_
+_Any necessary setup step for the 'command' to become available._
 
 
+
+## Comments
+
+* For `method: python`, this is an argument to Python's `import`.
 
 URI: [mme_schema:setup](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/setup)
 
@@ -57,8 +59,9 @@ URI: [mme_schema:setup](https://marda-alliance.github.io/metadata_extractors_sch
 <details>
 ```yaml
 name: setup
-description: "Any necessary setup step for the 'command' to become available:\n  -\
-  \ for `method: python`, this is an argument to Python's `import`"
+description: Any necessary setup step for the 'command' to become available.
+comments:
+- 'For `method: python`, this is an argument to Python''s `import`.'
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 alias: setup

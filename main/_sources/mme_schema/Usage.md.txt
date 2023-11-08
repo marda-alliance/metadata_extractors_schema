@@ -34,7 +34,7 @@ Usage {
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [method](method.md) | 1..1 <br/> [UsageTypes](UsageTypes.md) | Usage invocation method, e.g. from a command line or from Python. | direct |
-| [setup](setup.md) | 0..1 <br/> [String](String.md) | Any necessary setup step for the 'command' to become available:<br/>  - for `method: python`, this is an argument to Python's `import` | direct |
+| [setup](setup.md) | 0..1 <br/> [String](String.md) | Any necessary setup step for the 'command' to become available. | direct |
 | [command](command.md) | 1..1 <br/> [String](String.md) | A machine-executable command by which the `Extractor` functionality can be<br/>accessed. | direct |
 | [scope](scope.md) | 0..1 <br/> [UsageScope](UsageScope.md) | Specification of extraction scope. | direct |
 
@@ -153,8 +153,9 @@ attributes:
     required: true
   setup:
     name: setup
-    description: "Any necessary setup step for the 'command' to become available:\n\
-      \  - for `method: python`, this is an argument to Python's `import`"
+    description: Any necessary setup step for the 'command' to become available.
+    comments:
+    - 'For `method: python`, this is an argument to Python''s `import`.'
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
   command:
@@ -207,8 +208,9 @@ attributes:
     required: true
   setup:
     name: setup
-    description: "Any necessary setup step for the 'command' to become available:\n\
-      \  - for `method: python`, this is an argument to Python's `import`"
+    description: Any necessary setup step for the 'command' to become available.
+    comments:
+    - 'For `method: python`, this is an argument to Python''s `import`.'
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     alias: setup
