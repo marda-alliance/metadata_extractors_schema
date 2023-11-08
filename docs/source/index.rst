@@ -1,9 +1,9 @@
 MaRDA Metadata Extractors Schema
 ================================
 
-A repository at |MMESchemaRepo|_, containing the |LinkML|_-based schemas backing the MaRDA Metadata Extractors Registry and API.
+A repository at |MMESchemaRepo|_, containing the |LinkML|_-based schemas backing the |MMERegistryRepo|_.
 
-The schemas implemented here are machine-actionable. They are used by the `Registry <https://github.com/marda-alliance/metadata_extractors_registry/>`_ to validate entries; a reference implementation demonstrating their pracical use is shown in the `API <https://github.com/marda-alliance/metadata_extractors_api/>`_.
+The schemas implemented here are machine-actionable. They are used by the `Registry <https://marda-registry.fly.dev/>`_ to validate entries; a reference implementation demonstrating their pracical use is shown in the |MMEAPIRepo|_.
 
 Contents
 ````````
@@ -42,6 +42,14 @@ The repository contains a schema two user-facing classes:
 .. |MMESchemaRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_schema/?icon=github
 
 .. _MMESchemaRepo: https://github.com/marda-alliance/metadata_extractors_schema/
+
+.. |MMERegistryRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_registry/?icon=github
+
+.. _MMERegistryRepo: https://github.com/marda-alliance/metadata_extractors_registry/
+
+.. |MMEAPIRepo| image:: https://badgen.net/static/marda-alliance/metadata_extractors_api/?icon=github
+
+.. _MMEAPIRepo: https://github.com/marda-alliance/metadata_extractors_api/
 
 .. |LinkML| replace:: :mod:`LinkML`
 
