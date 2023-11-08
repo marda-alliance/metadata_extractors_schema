@@ -10,7 +10,7 @@ Name: {{ schema.name }}
 
 ## Schema Diagram
 
-```{{ gen.mermaid_directive() }}
+```{mermaid}
 {{ gen.mermaid_diagram() }}
 ```
 {% endif %}
@@ -29,6 +29,18 @@ Name: {{ schema.name }}
 {% endfor %}
 {% endif %}
 
+```{toctree}
+---
+caption: Classes
+maxdepth: 0
+hidden: true
+---
+
+{% for c in gen.all_class_objects()|sort(attribute=sort_by) -%}
+{{c.name}}
+{% endfor %}
+```
+
 ## Slots
 
 | Slot | Description |
@@ -36,6 +48,19 @@ Name: {{ schema.name }}
 {% for s in gen.all_slot_objects()|sort(attribute=sort_by) -%}
 | {{gen.link(s)}} | {{s.description|enshorten}} |
 {% endfor %}
+
+
+```{toctree}
+---
+caption: Slots
+maxdepth: 0
+hidden: true
+---
+
+{% for s in gen.all_slot_objects()|sort(attribute=sort_by) -%}
+{{s.name}}
+{% endfor %}
+```
 
 ## Enumerations
 
@@ -45,18 +70,22 @@ Name: {{ schema.name }}
 | {{gen.link(e)}} | {{e.description|enshorten}} |
 {% endfor %}
 
+```{toctree}
+---
+caption: Enumerations
+maxdepth: 0
+hidden: true
+---
+
+{% for e in gen.all_enum_objects()|sort(attribute=sort_by) -%}
+{{e.name}}
+{% endfor %}
+```
+
 ## Types
 
 | Type | Description |
 | --- | --- |
 {% for t in gen.all_type_objects()|sort(attribute=sort_by) -%}
 | {{gen.link(t)}} | {{t.description|enshorten}} |
-{% endfor %}
-
-## Subsets
-
-| Subset | Description |
-| --- | --- |
-{% for ss in schemaview.all_subsets().values()|sort(attribute='name') -%}
-| {{gen.link(ss)}} | {{ss.description|enshorten}} |
 {% endfor %}

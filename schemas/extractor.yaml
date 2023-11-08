@@ -1,0 +1,90 @@
+---
+title: MaRDA Metadata Extractors Schema
+name: extractor
+version: 0.2.0
+id: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+prefixes:
+    linkml: https://w3id.org/linkml/
+    schema_org: http://schema.org/
+    dcmitype: http://purl.org/dc/dcmitype/1.1
+    mme_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+default_prefix: mme_schema
+emit_prefixes:
+    - mme_schema
+imports:
+    - linkml:types
+    - base
+    - filetype
+default_range: string
+description: >-
+    This file describes the `Extractor` model created by the MaRDA extractors WG.
+
+
+classes:
+    Extractor:
+        description: >-
+            A script, code, or web service that, when executed, can extract information
+            from a supplied "file" with a specific [`FileType`](FileType.md).
+        comments:
+            - The supplied "file" may also be a set of files with a given structure.
+            - The extracted information may be verbatim or transformed, and include
+              the scientific data and/or metadata contained within the file.
+        close_mappings:
+            - schema_org:SoftwareApplication
+            - schema_org:ServiceChannel
+            - dcmitype:Software
+            - dcmitype:Service
+        slots:
+            - id
+            - name
+            - description
+            - subject
+            - citations
+            - license
+        attributes:
+            supported_filetypes:
+                multivalued: true
+                required: true
+                range: SupportedFileType
+                description: >-
+                    An enumeration of the `FileType` that an `Extractor` supports,
+                    matching `FileTypes` present in the registry. The `FileType->id`
+                    slot can be passed to the `Extractor`, [see the `Usage` class](Usage.md).
+            supported_output_filetypes:
+                multivalued: true
+                required: false
+                range: SupportedFileType
+                description: >-
+                    An enumeration of the possible output formats of an `Extractor`.
+                    These should match `FileTypes` present in the registry. They can
+                    be specified on extractor execution using the templates described
+                    in the `Extractor->Usage->command` slot, [see the `Usage` class](Usage.md).
+            source_repository:
+                description: >-
+                    A URL or URI for a source code repository associated with this
+                    extractor.
+            documentation:
+                description: >-
+                    A URL or URI for any online documentation associated with this
+                    extractor.
+            usage:
+                multivalued: true
+                inlined_as_list: true
+                range: Usage
+                description: >-
+                    A machine-actionable instructions for the usage of the Extractor.
+                    The described usage pattern shall be available after the instructions
+                    specified in `Extractor->installation` slot have been followed.
+            installation:
+                multivalued: true
+                inlined_as_list: true
+                range: Installation
+                description: >-
+                    A machine-actionable set of installation instructions to obtain
+                    a working set-up of the `Extractor`.
+            instructions:
+                description: >-
+                    Any human-readable usage notes or installation instructions for
+                    this `Extractor`. This field is intended for human use only and
+                    is not intended to be machine-actionable. Please use the `Extractor->installation`
+                    and `Extractor->usage` slots for that purpose.

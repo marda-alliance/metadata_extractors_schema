@@ -7,6 +7,14 @@ _{{ element_description_line }}_
 {% endfor %}
 {% endif %}
 
+{% if element.comments -%}
+## Comments
+
+{% for x in element.comments -%}
+* {{x}}
+{% endfor %}
+{% endif -%}
+
 URI: {{ gen.uri_link(element) }}
 
 {% if element.permissible_values -%}

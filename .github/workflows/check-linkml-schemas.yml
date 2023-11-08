@@ -34,18 +34,14 @@ jobs:
             - name: Run LinkML generators
               shell: bash
               run: |
-                  for f in $(ls schemas/*); do
-                    gen-pydantic -vvv --stacktrace $f
-                    gen-json-schema -vvv --stacktrace $f
-                  done
+                  gen-pydantic -vvv --stacktrace schemas/extractor.yaml
+                  gen-json-schema -vvv --stacktrace schemas/extractor.yaml
 
-            - name: Validate examples
+            - name: Validate all examples
               shell: bash
               run: |
-                  for f in $(ls examples/extractor/*.yml); do
-                    linkml-validate -s schemas/extractor.yml -C Extractor $f
-                  done
-
-                  for f in $(ls examples/filetype/*.yml); do
-                    linkml-validate -s schemas/filetype.yml -C FileType $f
+                  for f in $(ls examples/*.yaml); do
+                    cls=`basename $f | cut -d "-" -f 1`
+                    echo "$cls $f"
+                    linkml-validate -s schemas/extractor.yaml -C $cls $f
                   done

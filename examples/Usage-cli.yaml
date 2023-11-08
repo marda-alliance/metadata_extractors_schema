@@ -1,0 +1,3 @@
+---
+method: cli
+command: parse --type={{ input_type }} {{ file_path }}

@@ -1,0 +1,34 @@
+---
+name: Deploy docs
+on:
+    workflow_call:
+
+jobs:
+    deploy-pages:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: '3.10'
+
+            - uses: actions/download-artifact@v3
+              with:
+                  name: public.tar
+
+            - name: run ls
+              run: ls -la
+
+            - name: Untar archive
+              run: tar -xvf public.tar
+
+            - name: Create index
+              run: cp docs/source/_templates/index.template public/index.html
+
+            - uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./public
+                  keep_files: false

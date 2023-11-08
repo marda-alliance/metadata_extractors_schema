@@ -1,0 +1,14 @@
+---
+method: conda
+requirements: >-
+    dependencies:
+    - python=3.4
+    - numpy
+    - toolz
+    - matplotlib
+    - dill
+    - pandas
+    - partd
+    - bokeh
+    - pip:
+        - git+https://github.com/example/extractor.git#egg=example[all]

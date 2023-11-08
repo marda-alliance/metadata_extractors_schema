@@ -1,0 +1,7 @@
+---
+method: pip
+requirements: >-
+    linkml >= 1.5.2, < 1.6.2
+    linkml-runtime != 1.6.1
+    pre-commit ~= 2.20
+requires_python: '>=3.8'

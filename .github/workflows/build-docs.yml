@@ -5,7 +5,7 @@ on:
 
 jobs:
     build-docs:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
               with:
@@ -31,34 +31,30 @@ jobs:
               run: |
                   pip freeze
 
-            - name: Build base docs
-              shell: bash
-              run: |
-                  gen-doc schemas/base.yaml -d docs/source/gen-doc --template-directory docs/source/_templates
-
-            - name: Build FileType docs
-              shell: bash
-              run: |
-                  gen-doc schemas/filetype.yml -d docs/source/gen-doc --template-directory docs/source/_templates
-
             - name: Build Extractor docs
               shell: bash
               run: |
-                  gen-doc schemas/extractor.yml -d docs/source/gen-doc --template-directory docs/source/_templates
+                  gen-doc schemas/extractor.yaml -d docs/source/mme_schema/ --template-directory docs/source/_templates --example-directory examples/ --include-top-level-diagram --diagram-type er_diagram
+
+            - name: Tar gen-doc files
+              run: tar -cvf gen-doc.tar docs/source/mme_schema
 
             - name: Upload gen-doc artifact
               uses: actions/upload-artifact@v3
               with:
                   name: gen-doc
-                  path: docs/source/gen-doc
+                  path: gen-doc.tar
 
             - name: Build Sphinx docs
               shell: bash
               run: |
                   sphinx-build -b html docs/source public/main
 
+            - name: Tar public/main files
+              run: tar -cvf public.tar public
+
             - name: Upload docs artifact
               uses: actions/upload-artifact@v3
               with:
-                  name: public-main
-                  path: public/main
+                  name: public.tar
+                  path: public.tar
