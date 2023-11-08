@@ -27,13 +27,14 @@ classes:
                 description: >-
                     An unambiguous reference to the resource within a given context.
                 comments:
-                    -  Recommended practice is to identify the resource by means of a string conforming to an identification system.
-                    -  >-
-                       Examples include:
-                        - International Standard Book Number (ISBN),
-                        - Digital Object Identifier (DOI), and
-                        - Uniform Resource Name (URN).
-                       Persistent identifiers should be provided as HTTP URIs.
+                    - Recommended practice is to identify the resource by means of
+                      a string conforming to an identification system.
+                    - >-
+                      Examples include:
+                       - International Standard Book Number (ISBN),
+                       - Digital Object Identifier (DOI), and
+                       - Uniform Resource Name (URN).
+                      Persistent identifiers should be provided as HTTP URIs.
             creators:
                 slot_uri: dc_terms:creator
                 multivalued: true
@@ -93,13 +94,18 @@ classes:
             A container for specifying string substitution templates for usage specification,
             [see `Usage` class](Usage.md).
         comments:
-            -  The attributes below can be applied as templates using `{{ attr }}` notation.
-            -  The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md).
-            -  >-
-               For instance, if an `extractor` supports the `example` file type, but expects:
-               ```extractor --filetype xmpl inputfile.bla```
-               one could set `input_type: xmpl` and specify the following in the `Usage` class:
-               ```extractor --filetype {{ input_type }} {{ input_path }}```
+            - The attributes below can be applied as templates using `{{ attr }}`
+              notation.
+            - The default values of the listed attributes can be overriden in this
+              way using the specification of supported filetypes, [see `SupportedFileType`
+              class](SupportedFileType.md).
+            - >-
+              For instance, if an `extractor` supports the `example` file type, but
+              expects:
+              ```extractor --filetype xmpl inputfile.bla```
+              one could set `input_type: xmpl` and specify the following in the `Usage`
+              class:
+              ```extractor --filetype {{ input_type }} {{ input_path }}```
 
         attributes:
             input_path:
@@ -140,9 +146,13 @@ classes:
                     A machine-executable command by which the `Extractor` functionality
                     can be accessed.
                 comments:
-                    - For `method: cli`, a parametrized executable invocation which should be available after installing the `Extractor`;
-                    - For `method: python`, a parametrized function invocation which should be available after installing and setting up the `Extractor`.
-                    - The templated parameters which can be requested from the user are [described by the `UsageTemplate` class](UsageTemplate.md).
+                    - For `method: cli`, a parametrized executable invocation which
+                          should be available after installing the `Extractor`;
+                    - For `method: python`, a parametrized function invocation which
+                          should be available after installing and setting up the
+                          `Extractor`.
+                    - The templated parameters which can be requested from the user
+                      are [described by the `UsageTemplate` class](UsageTemplate.md).
             scope:
                 required: false
                 range: UsageScope
