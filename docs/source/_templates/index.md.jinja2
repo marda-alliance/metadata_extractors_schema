@@ -36,8 +36,8 @@ maxdepth: 0
 hidden: true
 ---
 
-{% for u, v in gen.class_hierarchy_as_tuples() -%}
-{{v}}
+{% for c in gen.all_class_objects()|sort(attribute=sort_by) -%}
+{{c.name}}
 {% endfor %}
 ```
 
@@ -58,7 +58,7 @@ hidden: true
 ---
 
 {% for s in gen.all_slot_objects()|sort(attribute=sort_by) -%}
-{{s}}
+{{s.name}}
 {% endfor %}
 ```
 
@@ -78,7 +78,7 @@ hidden: true
 ---
 
 {% for e in gen.all_enum_objects()|sort(attribute=sort_by) -%}
-{{e}}
+{{e.name}}
 {% endfor %}
 ```
 
@@ -98,6 +98,6 @@ hidden: true
 ---
 
 {% for t in gen.all_type_objects()|sort(attribute=sort_by) -%}
-{{t}}
+{{t.name}}
 {% endfor %}
 ```
