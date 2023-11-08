@@ -90,6 +90,14 @@
   <section id="class-usagetemplate">
 <h1>Class: UsageTemplate<a class="headerlink" href="#class-usagetemplate" title="Link to this heading"></a></h1>
 <p><em>A container for specifying string substitution templates for usage specification, <a class="reference internal" href="Usage.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</em></p>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The attributes below can be applied as templates using <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">attr</span> <span class="pre">}}</span></code> notation.</p></li>
+<li><p>The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">see <code class="docutils literal notranslate"><span class="pre">SupportedFileType</span></code> class</span></a>.</p></li>
+<li><p>For instance, if an <code class="docutils literal notranslate"><span class="pre">extractor</span></code> supports the <code class="docutils literal notranslate"><span class="pre">example</span></code> file type, but expects: <code class="docutils literal notranslate"><span class="pre">extractor</span> <span class="pre">--filetype</span> <span class="pre">xmpl</span> <span class="pre">inputfile.bla</span></code> one could set <code class="docutils literal notranslate"><span class="pre">input_type:</span> <span class="pre">xmpl</span></code> and specify the following in the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class: <code class="docutils literal notranslate"><span class="pre">extractor</span> <span class="pre">--filetype</span> <span class="pre">{{</span> <span class="pre">input_type</span> <span class="pre">}}</span> <span class="pre">{{</span> <span class="pre">input_path</span> <span class="pre">}}</span></code></p></li>
+</ul>
+</section>
 <section id="identifier-and-mapping-information">
 <h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
 <section id="schema-source">

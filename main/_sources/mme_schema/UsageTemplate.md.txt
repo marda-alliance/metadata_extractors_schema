@@ -8,6 +8,12 @@ _A container for specifying string substitution templates for usage specificatio
 
 
 
+## Comments
+
+* The attributes below can be applied as templates using `{{ attr }}` notation.
+* The default values of the listed attributes can be overriden in this way using the specification of supported filetypes, [see `SupportedFileType` class](SupportedFileType.md).
+* For instance, if an `extractor` supports the `example` file type, but expects: ```extractor --filetype xmpl inputfile.bla``` one could set `input_type: xmpl` and specify the following in the `Usage` class: ```extractor --filetype {{ input_type }} {{ input_path }}```
+
 ## Identifier and Mapping Information
 
 
