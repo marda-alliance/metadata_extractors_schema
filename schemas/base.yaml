@@ -100,15 +100,17 @@ classes:
               way using the specification of supported filetypes, [see `SupportedFileType`
               class](SupportedFileType.md).
             - >-
-              For instance, if an `extractor` supports the `example` file type, but
-              expects:
+              For instance, if an `extractor` supports the `example` file type, but expects `xmpl` as an argument:
 
+                ```bash
                 extractor --filetype xmpl inputfile.bla
+                ```
 
-              one could set `input_type: xmpl` and specify the following in the `Usage`
-              class:
+                one could set `input_type: xmpl` here, and specify the following `command` in the `Usage` class:
 
+                ```bash
                 extractor --filetype {{ input_type }} {{ input_path }}
+                ```
 
         attributes:
             input_path:
@@ -141,8 +143,10 @@ classes:
                     Usage invocation method, e.g. from a command line or from Python.
             setup:
                 description: >-
-                    Any necessary setup step for the 'command' to become available:
-                      - for `method: python`, this is an argument to Python's `import`
+                    Any necessary setup step for the 'command' to become available.
+                comments:
+                    - >-
+                      For `method: python`, this is an argument to Python's `import`.
             command:
                 required: true
                 description: >-

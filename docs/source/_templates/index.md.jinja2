@@ -29,6 +29,18 @@ Name: {{ schema.name }}
 {% endfor %}
 {% endif %}
 
+```{toctree}
+---
+caption: Classes
+maxdepth: 0
+hidden: true
+---
+
+{% for u, v in gen.class_hierarchy_as_tuples() -%}
+{{v}}
+{% endfor %}
+```
+
 ## Slots
 
 | Slot | Description |
@@ -36,6 +48,19 @@ Name: {{ schema.name }}
 {% for s in gen.all_slot_objects()|sort(attribute=sort_by) -%}
 | {{gen.link(s)}} | {{s.description|enshorten}} |
 {% endfor %}
+
+
+```{toctree}
+---
+caption: Slots
+maxdepth: 0
+hidden: true
+---
+
+{% for s in gen.all_slot_objects()|sort(attribute=sort_by) -%}
+{{s}}
+{% endfor %}
+```
 
 ## Enumerations
 
@@ -45,6 +70,18 @@ Name: {{ schema.name }}
 | {{gen.link(e)}} | {{e.description|enshorten}} |
 {% endfor %}
 
+```{toctree}
+---
+caption: Enumerations
+maxdepth: 0
+hidden: true
+---
+
+{% for e in gen.all_enum_objects()|sort(attribute=sort_by) -%}
+{{e}}
+{% endfor %}
+```
+
 ## Types
 
 | Type | Description |
@@ -53,10 +90,15 @@ Name: {{ schema.name }}
 | {{gen.link(t)}} | {{t.description|enshorten}} |
 {% endfor %}
 
-## Subsets
+```{toctree}
+---
+caption: Types
+maxdepth: 0
+hidden: true
+---
 
-| Subset | Description |
-| --- | --- |
-{% for ss in schemaview.all_subsets().values()|sort(attribute='name') -%}
-| {{gen.link(ss)}} | {{ss.description|enshorten}} |
+{% for t in gen.all_type_objects()|sort(attribute=sort_by) -%}
+{{t}}
 {% endfor %}
+```
+
