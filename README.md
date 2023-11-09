@@ -21,12 +21,12 @@ their pracical use is shown in the [API](https://github.com/marda-alliance/metad
 The repository contains two user-facing schemas:
 
 - ``FileType`` schema, used to specify the types of files passed to the extractors by users.
-  The schema definition is located in [``filetype.yml``](./schemas/filetype.yml).
+  The schema definition is located in [``filetype.yaml``](./schemas/filetype.yaml).
 
 - ``Extractor`` schema, used to specify the download, installation, and usage instructions,
   allowing for machine execution of the defined extractor/parser code, as well as a list of
   ``FileTypes`` compatible with the ``Extractor``.
-  The schema definition is located in [``extractor.yml``](./schemas/extractor.yml).
+  The schema definition is located in [``extractor.yaml``](./schemas/extractor.yaml).
 
 ## Usage
 ### Validation
@@ -43,11 +43,11 @@ pip install -r requirements.txt
 
 Then, you can check the validity of your filetype or extractor definition against the provided
 schemas using ``linkml-validate``. For example, to validate the provided example filetype definition
-in [``biologic_mpr.yml``](./examples/filetype/biologic_mpr.yml) against the ``FileType`` schema
-from ``schemas/filetype.yml``, run:
+in [``FileType-netcdf.yaml``](./examples/FileType-netcdf.yaml) against the ``FileType`` class
+from ``schemas/filetype.yaml``, run:
 
 ```
-linkml-validate -s schemas/filetype.yml -C FileType examples/filetype/biologic_mpr.yml
+linkml-validate -s schemas/filetype.yaml -C FileType examples/FileType-netcdf.yaml
 ```
 
 If successful, you should see "``✓ No problems found``" returned by ``linkml-validate``.
@@ -58,9 +58,9 @@ The LinkML schemas provided here can be automatically translated to other format
 JSONSchema, Python dataclasses, or Pydantic classes:
 
 ```
-gen-json-schema schemas/filetype.yml >> filetype.json
-gen-python schemas/filetype.yml >> filetype.py
-gen-pydantic schemas/filetype.yml >> filetype.py
+gen-json-schema schemas/extractor.yaml >> extractor.json
+gen-python schemas/filetype.yaml >> filetype.py
+gen-pydantic schemas/extractor.yaml >> extractor.py
 ```
 
 The generated files can be used in downstream codes such as in the [validation function](https://github.com/marda-alliance/metadata_extractors_registry/blob/main/tasks.py#L33)
@@ -70,6 +70,8 @@ of the [MaRDA Metadata Extractors Registry](https://github.com/marda-alliance/me
 
 Contributions are welcome. We pledge to follow the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
-In particular, if you have any suggestions, technical queries, or a feature request related
+If you wish to contribute a new `FileType` or a new `Extractor` to the Registry, please open a pull request at [the Registry repo](https://github.com/marda-alliance/metadata_extractors_registry).
+
+If you have any suggestions, technical queries, or a feature request related
 to the schemas, please do not hesitate to open an issue in this repository. For general
 questions related to the MaRDA Metadata Extractors WG, please use the [discussion board](https://github.com/marda-alliance/metadata_extractors/discussions).
