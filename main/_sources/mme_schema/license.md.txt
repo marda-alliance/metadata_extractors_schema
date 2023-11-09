@@ -55,6 +55,7 @@ URI: [dc_terms:license](http://purl.org/dc/terms/1.1/license)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: license
 description: A URL, URI or SPDX license identifier for a legal document giving official
@@ -69,4 +70,5 @@ range: License
 required: true
 
 ```
+
 </details>

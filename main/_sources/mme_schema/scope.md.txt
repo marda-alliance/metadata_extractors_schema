@@ -53,6 +53,7 @@ URI: [mme_schema:scope](https://marda-alliance.github.io/metadata_extractors_sch
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: scope
 description: Specification of extraction scope.
@@ -66,4 +67,5 @@ range: UsageScope
 required: false
 
 ```
+
 </details>

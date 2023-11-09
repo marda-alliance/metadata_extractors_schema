@@ -57,6 +57,7 @@ URI: [schema_org:description](http://schema.org/description)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: description
 description: A human-readable outline of the entry, its format, data content and uses.
@@ -72,4 +73,5 @@ range: string
 required: true
 
 ```
+
 </details>

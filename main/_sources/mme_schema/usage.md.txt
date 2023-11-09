@@ -55,6 +55,7 @@ URI: [mme_schema:usage](https://marda-alliance.github.io/metadata_extractors_sch
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: usage
 description: A machine-actionable instructions for the usage of the Extractor. The
@@ -72,4 +73,5 @@ inlined: true
 inlined_as_list: true
 
 ```
+
 </details>

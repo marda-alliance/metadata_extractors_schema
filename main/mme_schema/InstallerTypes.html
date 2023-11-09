@@ -145,26 +145,24 @@
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <details>
-```yaml
-name: InstallerTypes
-description: This enumeration allows the `Extractor->installation` to specify which
-  installer software is to be used for the installation of the `Extractor`.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-rank: 1000
-permissible_values:
-  pip:
-    text: pip
-    description: Install the Extractor using 'pip'. Will process `packages` using
-      `pip install` and `requirements` using `pip install -r`.
-  conda:
-    text: conda
-    description: Install the Extractor using 'conda'.
-    comments:
-    - Note that installation using `conda` is not yet supported by the API.
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InstallerTypes</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This enumeration allows the `Extractor-&gt;installation` to specify which</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">installer software is to be used for the installation of the `Extractor`.</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
+<span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="nt">permissible_values</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">pip</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install the Extractor using &#39;pip&#39;. Will process `packages` using</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">`pip install` and `requirements` using `pip install -r`.</span>
+<span class="w">  </span><span class="nt">conda</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install the Extractor using &#39;conda&#39;.</span>
+<span class="w">    </span><span class="nt">comments</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Note that installation using `conda` is not yet supported by the API.</span>
 </pre></div>
 </div>
-</section>
+</details></section>
 </section>
 
 

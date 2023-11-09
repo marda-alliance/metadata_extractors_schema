@@ -55,6 +55,7 @@ URI: [mme_schema:supported_output_filetypes](https://marda-alliance.github.io/me
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: supported_output_filetypes
 description: An enumeration of the possible output formats of an `Extractor`. These
@@ -72,4 +73,5 @@ range: SupportedFileType
 required: false
 
 ```
+
 </details>

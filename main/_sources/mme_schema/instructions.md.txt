@@ -53,6 +53,7 @@ URI: [mme_schema:instructions](https://marda-alliance.github.io/metadata_extract
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: instructions
 description: Any human-readable usage notes or installation instructions for this
@@ -68,4 +69,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

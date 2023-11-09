@@ -43,6 +43,7 @@ URI: [InstallerTypes](InstallerTypes)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: InstallerTypes
 description: This enumeration allows the `Extractor->installation` to specify which
@@ -61,4 +62,5 @@ permissible_values:
     - Note that installation using `conda` is not yet supported by the API.
 
 ```
+
 </details>

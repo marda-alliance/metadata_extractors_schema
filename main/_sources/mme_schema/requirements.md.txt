@@ -53,6 +53,7 @@ URI: [mme_schema:requirements](https://marda-alliance.github.io/metadata_extract
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: requirements
 description: Contents of a 'requirements.txt'-like file. Will be installed by the
@@ -67,4 +68,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

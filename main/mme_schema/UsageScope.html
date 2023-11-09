@@ -161,44 +161,42 @@
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <details>
-```yaml
-name: UsageScope
-description: This enumeration allows the `Extractor->usage` to be described in one
-  of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,
-  or the full file is returned by the `Extractor`, respectively. In practice, this
-  means that extractors may have multiple defined usage modes for each scope and each
-  execution method. The default is to assume the 'worst case', i.e. that the extractor
-  returns as much of the data in the input file as it supports, plus potentially additional
-  analysis.
-from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
-rank: 1000
-permissible_values:
-  meta-only:
-    text: meta-only
-    description: This usage scope only returns metadata associated with the file,
-      with the interpretatio of "metadata" left up to the `Extractor`.
-    comments:
-    - "This may include, but is not limited to:\n  - timestamps,\n  - column headings,\n\
-      \  - data types, and\n  - data shapes."
-    - The size of data returned in this mode should be limited and will typically
-      be much smaller than the file size.
-    - This metadata SHOULD be expressed as a JSON-serializable document that can,
-      for example, be loaded into Python with only standard library imports.
-  meta+data:
-    text: meta+data
-    description: This usage scope refers to a "full" extraction of the file, whereby
-      the extractor tries to faithfully interpret and return all supported information
-      contained within the file.
-    comments:
-    - "This may include, but is not limited to:\n  - binary data,\n  - large multi-dimensional\
-      \ arrays,\n  - plus all of the associated metadata from a `meta-only` extraction."
-    - The size of the data returned in this mode is not limited and could be significantly
-      larger than the input file size (in the case of binary data, or additional analysis
-      being performed upon extraction).
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageScope</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This enumeration allows the `Extractor-&gt;usage` to be described in one</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or the full file is returned by the `Extractor`, respectively. In practice, this</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">means that extractors may have multiple defined usage modes for each scope and each</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">execution method. The default is to assume the &#39;worst case&#39;, i.e. that the extractor</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">returns as much of the data in the input file as it supports, plus potentially additional</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">analysis.</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
+<span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="nt">permissible_values</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">meta-only</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This usage scope only returns metadata associated with the file,</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the interpretatio of &quot;metadata&quot; left up to the `Extractor`.</span>
+<span class="w">    </span><span class="nt">comments</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">include,</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">limited</span><span class="nv"> </span><span class="s">to:\n</span><span class="nv">  </span><span class="s">-</span><span class="nv"> </span><span class="s">timestamps,\n</span><span class="nv">  </span><span class="s">-</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">headings,\n\</span>
+<span class="w">      </span><span class="s">\ </span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">types,</span><span class="nv"> </span><span class="s">and\n</span><span class="nv">  </span><span class="s">-</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">shapes.&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The size of data returned in this mode should be limited and will typically</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be much smaller than the file size.</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This metadata SHOULD be expressed as a JSON-serializable document that can,</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for example, be loaded into Python with only standard library imports.</span>
+<span class="w">  </span><span class="nt">meta+data</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta+data</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This usage scope refers to a &quot;full&quot; extraction of the file, whereby</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the extractor tries to faithfully interpret and return all supported information</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">contained within the file.</span>
+<span class="w">    </span><span class="nt">comments</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">include,</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">limited</span><span class="nv"> </span><span class="s">to:\n</span><span class="nv">  </span><span class="s">-</span><span class="nv"> </span><span class="s">binary</span><span class="nv"> </span><span class="s">data,\n</span><span class="nv">  </span><span class="s">-</span><span class="nv"> </span><span class="s">large</span><span class="nv"> </span><span class="s">multi-dimensional\</span>
+<span class="w">      </span><span class="s">\ arrays,\n</span><span class="nv">  </span><span class="s">-</span><span class="nv"> </span><span class="s">plus</span><span class="nv"> </span><span class="s">all</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">associated</span><span class="nv"> </span><span class="s">metadata</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">`meta-only`</span><span class="nv"> </span><span class="s">extraction.&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The size of the data returned in this mode is not limited and could be significantly</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">larger than the input file size (in the case of binary data, or additional analysis</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">being performed upon extraction).</span>
 </pre></div>
 </div>
-</section>
+</details></section>
 </section>
 
 

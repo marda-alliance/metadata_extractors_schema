@@ -61,6 +61,7 @@ URI: [mme_schema:command](https://marda-alliance.github.io/metadata_extractors_s
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: command
 description: A machine-executable command by which the `Extractor` functionality can
@@ -82,4 +83,5 @@ range: string
 required: true
 
 ```
+
 </details>

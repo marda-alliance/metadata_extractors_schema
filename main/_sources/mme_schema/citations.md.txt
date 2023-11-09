@@ -55,6 +55,7 @@ URI: [dcmitype:BibliographicReference](http://purl.org/dc/dcmitype/1.1Bibliograp
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: citations
 description: A citation or citations for the entry, to be provided should it be used
@@ -70,4 +71,5 @@ range: Citation
 required: false
 
 ```
+
 </details>

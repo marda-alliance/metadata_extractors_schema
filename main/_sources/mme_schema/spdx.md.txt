@@ -53,6 +53,7 @@ URI: [dc_terms:identifier](http://purl.org/dc/terms/1.1/identifier)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: spdx
 description: An SPDX License Identifier entry.
@@ -67,4 +68,5 @@ range: string
 required: false
 
 ```
+
 </details>

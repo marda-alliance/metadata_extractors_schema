@@ -57,6 +57,7 @@ URI: [mme_schema:setup](https://marda-alliance.github.io/metadata_extractors_sch
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: setup
 description: Any necessary setup step for the 'command' to become available.
@@ -71,4 +72,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

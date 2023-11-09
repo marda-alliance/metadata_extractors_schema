@@ -55,6 +55,7 @@ URI: [mme_schema:base_formats](https://marda-alliance.github.io/metadata_extract
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: base_formats
 description: A list of any particular underlying generic formats which this `FileType`
@@ -69,4 +70,5 @@ domain_of:
 range: FileType
 
 ```
+
 </details>

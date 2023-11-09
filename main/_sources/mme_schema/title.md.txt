@@ -53,6 +53,7 @@ URI: [dc_terms:title](http://purl.org/dc/terms/1.1/title)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: title
 description: A name given to the resource [from DC].
@@ -67,4 +68,5 @@ range: string
 required: false
 
 ```
+
 </details>

@@ -59,6 +59,7 @@ URI: [schema_org:identifier](http://schema.org/identifier)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: id
 description: A unique identifier for the entry within the MaRDA registry namespace,
@@ -78,4 +79,5 @@ required: true
 pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
 
 ```
+
 </details>

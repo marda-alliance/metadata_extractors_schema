@@ -55,6 +55,7 @@ URI: [mme_schema:associated_standards](https://marda-alliance.github.io/metadata
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: associated_standards
 description: A list of any particular well-defined file format standards relevant
@@ -69,4 +70,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

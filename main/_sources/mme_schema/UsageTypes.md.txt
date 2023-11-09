@@ -44,6 +44,7 @@ URI: [UsageTypes](UsageTypes)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: UsageTypes
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
@@ -62,4 +63,5 @@ permissible_values:
       be supplied in the `command` slot.
 
 ```
+
 </details>

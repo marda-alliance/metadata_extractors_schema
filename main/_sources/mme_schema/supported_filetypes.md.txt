@@ -57,6 +57,7 @@ URI: [mme_schema:supported_filetypes](https://marda-alliance.github.io/metadata_
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: supported_filetypes
 description: An enumeration of the `FileType` that an `Extractor` supports, matching
@@ -73,4 +74,5 @@ range: SupportedFileType
 required: true
 
 ```
+
 </details>

@@ -53,6 +53,7 @@ URI: [mme_schema:input_path](https://marda-alliance.github.io/metadata_extractor
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: input_path
 description: The location of the resource (e.g., file, or directory) on disk to be
@@ -66,4 +67,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

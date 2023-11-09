@@ -55,6 +55,7 @@ URI: [mme_schema:packages](https://marda-alliance.github.io/metadata_extractors_
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: packages
 description: A list of packages, including versioned packages or `git+https://` targets,
@@ -69,4 +70,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

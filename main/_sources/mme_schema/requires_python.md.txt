@@ -53,6 +53,7 @@ URI: [mme_schema:requires_python](https://marda-alliance.github.io/metadata_extr
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: requires_python
 description: A PEP 440 version string for the version constraints on the Python version
@@ -67,4 +68,5 @@ range: string
 required: false
 
 ```
+
 </details>

@@ -55,6 +55,7 @@ URI: [schema_org:vendor](http://schema.org/vendor)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: associated_vendors
 description: A list of software or instrument vendors that can be associated with
@@ -70,4 +71,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

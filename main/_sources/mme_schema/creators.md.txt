@@ -55,6 +55,7 @@ URI: [dc_terms:creator](http://purl.org/dc/terms/1.1/creator)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: creators
 description: A list of the creators of the resource.
@@ -69,4 +70,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

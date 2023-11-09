@@ -53,6 +53,7 @@ URI: [mme_schema:output_path](https://marda-alliance.github.io/metadata_extracto
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: output_path
 description: The location where the output of the extraction will be written to disk.
@@ -66,4 +67,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

@@ -53,6 +53,7 @@ URI: [mme_schema:template](https://marda-alliance.github.io/metadata_extractors_
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: template
 description: A mechanism for overriding the template values for this file type in
@@ -67,4 +68,5 @@ range: UsageTemplate
 required: false
 
 ```
+
 </details>

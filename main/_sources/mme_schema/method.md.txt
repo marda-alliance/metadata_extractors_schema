@@ -42,6 +42,7 @@ URI: [mme_schema:method](https://marda-alliance.github.io/metadata_extractors_sc
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: method
 alias: method
@@ -51,4 +52,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

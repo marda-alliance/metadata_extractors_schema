@@ -55,6 +55,7 @@ URI: [mme_schema:associated_software](https://marda-alliance.github.io/metadata_
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: associated_software
 description: A list of any known software (proprietary or otherwise) that produces
@@ -69,4 +70,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

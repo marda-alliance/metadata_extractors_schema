@@ -49,6 +49,7 @@ URI: [UsageScope](UsageScope)
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: UsageScope
 description: This enumeration allows the `Extractor->usage` to be described in one
@@ -85,4 +86,5 @@ permissible_values:
       being performed upon extraction).
 
 ```
+
 </details>

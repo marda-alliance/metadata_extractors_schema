@@ -55,6 +55,7 @@ URI: [mme_schema:associated_instruments](https://marda-alliance.github.io/metada
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: associated_instruments
 description: A list of any instruments, or classes of instruments, that typically
@@ -69,4 +70,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

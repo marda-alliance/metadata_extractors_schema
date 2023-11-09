@@ -53,6 +53,7 @@ URI: [mme_schema:output_type](https://marda-alliance.github.io/metadata_extracto
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: output_type
 description: The `FileType` of the `output_path`, for `Extractors` supporting multiple
@@ -67,4 +68,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

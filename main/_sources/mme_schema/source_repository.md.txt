@@ -53,6 +53,7 @@ URI: [mme_schema:source_repository](https://marda-alliance.github.io/metadata_ex
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: source_repository
 description: A URL or URI for a source code repository associated with this extractor.
@@ -65,4 +66,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

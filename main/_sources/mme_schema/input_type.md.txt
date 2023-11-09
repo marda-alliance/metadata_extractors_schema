@@ -53,6 +53,7 @@ URI: [mme_schema:input_type](https://marda-alliance.github.io/metadata_extractor
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: input_type
 description: The `FileType` of the `input_path`. Defaults to the `FileType->id` for
@@ -66,4 +67,5 @@ domain_of:
 range: string
 
 ```
+
 </details>

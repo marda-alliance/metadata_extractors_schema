@@ -57,6 +57,7 @@ URI: [mme_schema:registered_extractors](https://marda-alliance.github.io/metadat
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: registered_extractors
 description: A slot for an automatically-generated enumeration of `Extractor` IDs
@@ -72,4 +73,5 @@ range: string
 pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
 
 ```
+
 </details>

@@ -55,6 +55,7 @@ URI: [mme_schema:installation](https://marda-alliance.github.io/metadata_extract
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: installation
 description: A machine-actionable set of installation instructions to obtain a working
@@ -71,4 +72,5 @@ inlined: true
 inlined_as_list: true
 
 ```
+
 </details>

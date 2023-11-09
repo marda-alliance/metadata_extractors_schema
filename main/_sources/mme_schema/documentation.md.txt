@@ -53,6 +53,7 @@ URI: [mme_schema:documentation](https://marda-alliance.github.io/metadata_extrac
 ## LinkML Source
 
 <details>
+
 ```yaml
 name: documentation
 description: A URL or URI for any online documentation associated with this extractor.
@@ -65,4 +66,5 @@ domain_of:
 range: string
 
 ```
+
 </details>
