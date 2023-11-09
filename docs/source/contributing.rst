@@ -7,7 +7,7 @@ Contributions to this project are welcome. We pledge to follow the `Contributor 
 
     If you wish to contribute a new :class:`FileType` or a new :class:`Extractor` to the `Registry <https://marda-registry.fly.dev/>`_, please open a pull request at |MMERegistryRepo|_.
 
-If you have any suggestions, technical queries, or a feature request related to the schemas, please do not hesitate to `open an issue<https://github.com/marda-alliance/metadata_extractors_schema/issues>`_ on |MMESchemaRepo|_.
+If you have any suggestions, technical queries, or a feature request related to the schemas, please do not hesitate to `open an issue <https://github.com/marda-alliance/metadata_extractors_schema/issues>`_ on |MMESchemaRepo|_.
 
 For general questions related to the MaRDA Metadata Extractors WG, please use the `discussion board on GitHub <https://github.com/marda-alliance/metadata_extractors/discussions>`_.
 
