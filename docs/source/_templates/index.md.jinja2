@@ -25,7 +25,7 @@ Name: {{ schema.name }}
 {% endfor %}
 {% else -%}
 {% for c in gen.all_class_objects()|sort(attribute=sort_by) -%}
-| {{gen.link(c)}} | {{c.description|enshorten}} |
+| {{gen.link(c)}} | {{c.description | wordwrap(80, wrapstring='<br/>')}} |
 {% endfor %}
 {% endif %}
 
@@ -46,7 +46,7 @@ hidden: true
 | Slot | Description |
 | --- | --- |
 {% for s in gen.all_slot_objects()|sort(attribute=sort_by) -%}
-| {{gen.link(s)}} | {{s.description|enshorten}} |
+| {{gen.link(s)}} | {{s.description | wordwrap(80, wrapstring='<br/>')}} |
 {% endfor %}
 
 
@@ -67,7 +67,7 @@ hidden: true
 | Enumeration | Description |
 | --- | --- |
 {% for e in gen.all_enum_objects()|sort(attribute=sort_by) -%}
-| {{gen.link(e)}} | {{e.description|enshorten}} |
+| {{gen.link(e)}} | {{e.description | wordwrap(80, wrapstring='<br/>')}} |
 {% endfor %}
 
 ```{toctree}
@@ -87,5 +87,5 @@ hidden: true
 | Type | Description |
 | --- | --- |
 {% for t in gen.all_type_objects()|sort(attribute=sort_by) -%}
-| {{gen.link(t)}} | {{t.description|enshorten}} |
+| {{gen.link(t)}} | {{t.description | wordwrap(80, wrapstring='<br/>')}} |
 {% endfor %}

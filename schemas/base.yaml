@@ -247,29 +247,28 @@ slots:
 
 enums:
     UsageTypes:
+        description: >-
+            This enumeration specifies the execution environment for the `Extractor`.
         permissible_values:
             cli:
                 description: >-
-                    Access the Extractor as a command line executable. The executable
+                    Access the `Extractor` as a command line executable. The executable
                     as well as the invocation syntax, parametrised using arguments,
                     shall be supplied in the `command` slot.
             python:
                 description: >-
-                    Access the Extractor as a Python function. The function should
+                    Access the `Extractor` as a Python function. The function should
                     be available when `import <setup>` is called, and should be
                     specified including relevant namespaces. The function signature,
                     parametrised using arguments, shall be supplied in the `command`
                     slot.
     UsageScope:
         description: >-
-            This enumeration allows the `Extractor->usage` to be described
-            in one of two modes, `meta-only` and `meta+data`, whereby
-            either a summary of file metadata, or the full file is returned
-            by the `Extractor`, respectively. In practice, this means that extractors
-            may have multiple defined usage modes for each scope and each
-            execution method. The default is to assume the 'worst case', i.e. that
-            the extractor returns as much of the data in the input file as
-            it supports, plus potentially additional analysis.
+            This enumeration specifies the scope of extraction performed by the `Extractor`.
+        comments:
+            - Currently allows the `Extractor->usage` to be described in one of two modes, `meta-only` and `meta+data`.
+            - In practice, this means that extractors may have multiple defined usage modes for each `UsageScope` and each `UsageType`.
+            - The default is to assume the 'worst case', i.e. that the `Extractor` returns as much of the data in the input file as it supports, plus potentially additional analysis.
         permissible_values:
             meta-only:
                 description: >-
@@ -309,11 +308,11 @@ enums:
         permissible_values:
             pip:
                 description: >-
-                    Install the Extractor using 'pip'. Will process `packages` using
+                    Install the `Extractor` using 'pip'. Will process `packages` using
                     `pip install` and `requirements` using `pip install -r`.
             conda:
                 description: >-
-                    Install the Extractor using 'conda'.
+                    Install the `Extractor` using 'conda'.
                 comments:
                     - Note that installation using `conda` is not yet supported by
                       the API.
