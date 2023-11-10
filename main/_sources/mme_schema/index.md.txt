@@ -115,43 +115,43 @@ UsageTemplate
 
 | Slot | Description |
 | --- | --- |
-| [associated_instruments](associated_instruments.md) | A list of any instruments, or classes of instruments, that typically create t... |
-| [associated_software](associated_software.md) | A list of any known software (proprietary or otherwise) that produces such `F... |
-| [associated_standards](associated_standards.md) | A list of any particular well-defined file format standards relevant to this ... |
-| [associated_vendors](associated_vendors.md) | A list of software or instrument vendors that can be associated with this par... |
-| [base_formats](base_formats.md) | A list of any particular underlying generic formats which this `FileType` is ... |
-| [citations](citations.md) | A citation or citations for the entry, to be provided should it be used in ac... |
-| [command](command.md) | A machine-executable command by which the `Extractor` functionality can be ac... |
-| [contributors](contributors.md) | A list of the contributors to the resource |
-| [creators](creators.md) | A list of the creators of the resource |
-| [description](description.md) | A human-readable outline of the entry, its format, data content and uses |
-| [documentation](documentation.md) | A URL or URI for any online documentation associated with this extractor |
-| [id](id.md) | A unique identifier for the entry within the MaRDA registry namespace, this s... |
-| [input_path](input_path.md) | The location of the resource (e |
-| [input_type](input_type.md) | The `FileType` of the `input_path` |
-| [installation](installation.md) | A machine-actionable set of installation instructions to obtain a working set... |
-| [instructions](instructions.md) | Any human-readable usage notes or installation instructions for this `Extract... |
-| [license](license.md) | A URL, URI or SPDX license identifier for a legal document giving official pe... |
-| [method](method.md) | Usage invocation method, e |
-| [name](name.md) | A recognisable name for the entry |
-| [output_path](output_path.md) | The location where the output of the extraction will be written to disk |
-| [output_type](output_type.md) | The `FileType` of the `output_path`, for `Extractors` supporting multiple out... |
-| [packages](packages.md) | A list of packages, including versioned packages or `git+https://` targets, t... |
-| [registered_extractors](registered_extractors.md) | A slot for an automatically-generated enumeration of `Extractor` IDs that sup... |
-| [requirements](requirements.md) | Contents of a 'requirements |
-| [requires_python](requires_python.md) | A PEP 440 version string for the version constraints on the Python version re... |
-| [scope](scope.md) | Specification of extraction scope |
-| [setup](setup.md) | Any necessary setup step for the 'command' to become available |
-| [source_repository](source_repository.md) | A URL or URI for a source code repository associated with this extractor |
-| [spdx](spdx.md) | An SPDX License Identifier entry |
-| [subject](subject.md) | Any keywords, phrases or classification codes that are relevant to the entry,... |
-| [supported_filetypes](supported_filetypes.md) | An enumeration of the `FileType` that an `Extractor` supports, matching `File... |
-| [supported_output_filetypes](supported_output_filetypes.md) | An enumeration of the possible output formats of an `Extractor` |
-| [template](template.md) | A mechanism for overriding the template values for this file type in the usag... |
-| [title](title.md) | A name given to the resource [from DC] |
-| [type](type.md) | Any bibliographic resource type (e |
-| [uri](uri.md) | An unambiguous reference to the resource within a given context |
-| [usage](usage.md) | A machine-actionable instructions for the usage of the Extractor |
+| [associated_instruments](associated_instruments.md) | A list of any instruments, or classes of instruments, that typically create the<br/>data encoded into this `FileType`. |
+| [associated_software](associated_software.md) | A list of any known software (proprietary or otherwise) that produces such<br/>`FileType`. |
+| [associated_standards](associated_standards.md) | A list of any particular well-defined file format standards relevant to this<br/>`FileType`, e.g., CIF, NeXus, then it can be listed here. |
+| [associated_vendors](associated_vendors.md) | A list of software or instrument vendors that can be associated with this<br/>particular `FileType`. |
+| [base_formats](base_formats.md) | A list of any particular underlying generic formats which this `FileType` is<br/>based on, e.g., CSV, JSON, HDF5, XML. |
+| [citations](citations.md) | A citation or citations for the entry, to be provided should it be used in<br/>academic work (or otherwise). |
+| [command](command.md) | A machine-executable command by which the `Extractor` functionality can be<br/>accessed. |
+| [contributors](contributors.md) | A list of the contributors to the resource. |
+| [creators](creators.md) | A list of the creators of the resource. |
+| [description](description.md) | A human-readable outline of the entry, its format, data content and uses. |
+| [documentation](documentation.md) | A URL or URI for any online documentation associated with this extractor. |
+| [id](id.md) | A unique identifier for the entry within the MaRDA registry namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash ("-") characters are permitted. |
+| [input_path](input_path.md) | The location of the resource (e.g., file, or directory) on disk to be extracted.<br/>Required. |
+| [input_type](input_type.md) | The `FileType` of the `input_path`. Defaults to the `FileType->id` for each<br/>supported file type. |
+| [installation](installation.md) | A machine-actionable set of installation instructions to obtain a working set-up<br/>of the `Extractor`. |
+| [instructions](instructions.md) | Any human-readable usage notes or installation instructions for this<br/>`Extractor`. This field is intended for human use only and is not intended to be<br/>machine-actionable. Please use the `Extractor->installation` and<br/>`Extractor->usage` slots for that purpose. |
+| [license](license.md) | A URL, URI or SPDX license identifier for a legal document giving official<br/>permission to do something with the resource. |
+| [method](method.md) | Usage invocation method, e.g. from a command line or from Python. |
+| [name](name.md) | A recognisable name for the entry. |
+| [output_path](output_path.md) | The location where the output of the extraction will be written to disk.<br/>Defaults to the `Extractor` default. |
+| [output_type](output_type.md) | The `FileType` of the `output_path`, for `Extractors` supporting multiple output<br/>`FileTypes`. Defaults to the `FileType->id` for each supported output file type. |
+| [packages](packages.md) | A list of packages, including versioned packages or `git+https://` targets, to<br/>be installed using the Installer. |
+| [registered_extractors](registered_extractors.md) | A slot for an automatically-generated enumeration of `Extractor` IDs that<br/>support this file type. This slot should be auto-populated by a registry. |
+| [requirements](requirements.md) | Contents of a 'requirements.txt'-like file. Will be installed by the selected<br/>Installer using an appropriate method, e.g., `pip install -r requirements.txt`<br/>for pip, or `conda env create -f requirements.txt` for conda. |
+| [requires_python](requires_python.md) | A PEP 440 version string for the version constraints on the Python version<br/>required for this extractor. |
+| [scope](scope.md) | Specification of extraction scope. |
+| [setup](setup.md) | Any necessary setup step for the 'command' to become available. |
+| [source_repository](source_repository.md) | A URL or URI for a source code repository associated with this extractor. |
+| [spdx](spdx.md) | An SPDX License Identifier entry. |
+| [subject](subject.md) | Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques. |
+| [supported_filetypes](supported_filetypes.md) | An enumeration of the `FileType` that an `Extractor` supports, matching<br/>`FileTypes` present in the registry. The `FileType->id` slot can be passed to<br/>the `Extractor`, [see the `Usage` class](Usage.md). |
+| [supported_output_filetypes](supported_output_filetypes.md) | An enumeration of the possible output formats of an `Extractor`. These should<br/>match `FileTypes` present in the registry. They can be specified on extractor<br/>execution using the templates described in the `Extractor->Usage->command` slot,<br/>[see the `Usage` class](Usage.md). |
+| [template](template.md) | A mechanism for overriding the template values for this file type in the usage<br/>instructions. |
+| [title](title.md) | A name given to the resource [from DC]. |
+| [type](type.md) | Any bibliographic resource type (e.g., article, dataset, software) enumerated in<br/>the DCMI Type Vocabulary. |
+| [uri](uri.md) | An unambiguous reference to the resource within a given context. |
+| [usage](usage.md) | A machine-actionable instructions for the usage of the Extractor. The described<br/>usage pattern shall be available after the instructions specified in<br/>`Extractor->installation` slot have been followed. |
 
 
 
@@ -206,9 +206,9 @@ usage
 
 | Enumeration | Description |
 | --- | --- |
-| [InstallerTypes](InstallerTypes.md) | This enumeration allows the `Extractor->installation` to specify which instal... |
-| [UsageScope](UsageScope.md) | This enumeration allows the `Extractor->usage` to be described in one of two ... |
-| [UsageTypes](UsageTypes.md) |  |
+| [InstallerTypes](InstallerTypes.md) | This enumeration allows the `Extractor->installation` to specify which installer<br/>software is to be used for the installation of the `Extractor`. |
+| [UsageScope](UsageScope.md) | This enumeration specifies the scope of extraction performed by the `Extractor`. |
+| [UsageTypes](UsageTypes.md) | This enumeration specifies the execution environment for the `Extractor`. |
 
 
 ```{toctree}
@@ -233,17 +233,17 @@ UsageTypes
 | [Date](Date.md) | a date (year, month and day) in an idealized calendar |
 | [DateOrDatetime](DateOrDatetime.md) | Either a date or a datetime |
 | [Datetime](Datetime.md) | The combination of a date and time |
-| [Decimal](Decimal.md) | A real number with arbitrary precision that conforms to the xsd:decimal speci... |
+| [Decimal](Decimal.md) | A real number with arbitrary precision that conforms to the xsd:decimal<br/>specification |
 | [Double](Double.md) | A real number that conforms to the xsd:double specification |
 | [Float](Float.md) | A real number that conforms to the xsd:float specification |
 | [Integer](Integer.md) | An integer |
-| [Jsonpath](Jsonpath.md) | A string encoding a JSON Path |
-| [Jsonpointer](Jsonpointer.md) | A string encoding a JSON Pointer |
+| [Jsonpath](Jsonpath.md) | A string encoding a JSON Path. The value of the string MUST conform to JSON<br/>Point syntax and SHOULD dereference to zero or more valid objects within the<br/>current instance document when encoded in tree form. |
+| [Jsonpointer](Jsonpointer.md) | A string encoding a JSON Pointer. The value of the string MUST conform to JSON<br/>Point syntax and SHOULD dereference to a valid object within the current<br/>instance document when encoded in tree form. |
 | [Ncname](Ncname.md) | Prefix part of CURIE |
-| [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model |
-| [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model |
-| [Sparqlpath](Sparqlpath.md) | A string encoding a SPARQL Property Path |
+| [Nodeidentifier](Nodeidentifier.md) | A URI, CURIE or BNODE that represents a node in a model. |
+| [Objectidentifier](Objectidentifier.md) | A URI or CURIE that represents an object in the model. |
+| [Sparqlpath](Sparqlpath.md) | A string encoding a SPARQL Property Path. The value of the string MUST conform<br/>to SPARQL syntax and SHOULD dereference to zero or more valid objects within the<br/>current instance document when encoded as RDF. |
 | [String](String.md) | A character string |
-| [Time](Time.md) | A time object represents a (local) time of day, independent of any particular... |
+| [Time](Time.md) | A time object represents a (local) time of day, independent of any particular<br/>day |
 | [Uri](Uri.md) | a complete URI |
 | [Uriorcurie](Uriorcurie.md) | a URI or a CURIE |

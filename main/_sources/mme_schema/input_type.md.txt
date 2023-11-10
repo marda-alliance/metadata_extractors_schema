@@ -18,7 +18,7 @@ URI: [mme_schema:input_type](https://marda-alliance.github.io/metadata_extractor
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). |  no  |
+[UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specificat... |  no  |
 
 
 

@@ -18,7 +18,7 @@ URI: [dc_terms:creator](http://purl.org/dc/terms/1.1/creator)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Citation](Citation.md) | A container for a citation or another form of attribution for the parent resource. |  no  |
+[Citation](Citation.md) | A container for a citation or another form of attribution for the parent reso... |  no  |
 
 
 

@@ -18,7 +18,7 @@ URI: [mme_schema:associated_instruments](https://marda-alliance.github.io/metada
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[FileType](FileType.md) | A specific encoding of data for storage purposes. A `FileType` is defined by a set of common characteristics and expectations, that can be assumed for all files of a given file type. |  no  |
+[FileType](FileType.md) | A specific encoding of data for storage purposes |  no  |
 
 
 

@@ -110,6 +110,7 @@
              
   <section id="enum-usagetypes">
 <h1>Enum: UsageTypes<a class="headerlink" href="#enum-usagetypes" title="Link to this heading"></a></h1>
+<p><em>This enumeration specifies the execution environment for the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</em></p>
 <p>URI: <a class="reference internal" href="#"><span class="doc std std-doc">UsageTypes</span></a></p>
 <section id="permissible-values">
 <h2>Permissible Values<a class="headerlink" href="#permissible-values" title="Link to this heading"></a></h2>
@@ -123,11 +124,11 @@
 <tbody>
 <tr class="row-even"><td><p>cli</p></td>
 <td><p>None</p></td>
-<td><p>Access the Extractor as a command line executable</p></td>
+<td><p>Access the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> as a command line executable. The executable as well as<br/>the invocation syntax, parametrised using arguments, shall be supplied in the<br/><code class="docutils literal notranslate"><span class="pre">command</span></code> slot.</p></td>
 </tr>
 <tr class="row-odd"><td><p>python</p></td>
 <td><p>None</p></td>
-<td><p>Access the Extractor as a Python function</p></td>
+<td><p>Access the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> as a Python function. The function should be available<br/>when <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">&lt;setup&gt;</span></code> is called, and should be specified including relevant<br/>namespaces. The function signature, parametrised using arguments, shall be<br/>supplied in the <code class="docutils literal notranslate"><span class="pre">command</span></code> slot.</p></td>
 </tr>
 </tbody>
 </table>
@@ -160,18 +161,19 @@
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <details>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTypes</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This enumeration specifies the execution environment for the `Extractor`.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">cli</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access the Extractor as a command line executable. The executable</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access the `Extractor` as a command line executable. The executable</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">as well as the invocation syntax, parametrised using arguments, shall be supplied</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">in the `command` slot.</span>
 <span class="w">  </span><span class="nt">python</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access the Extractor as a Python function. The function should be</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">available when `import &lt;setup&gt;` is called, and should be specified including</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Access the `Extractor` as a Python function. The function should</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be available when `import &lt;setup&gt;` is called, and should be specified including</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">relevant namespaces. The function signature, parametrised using arguments, shall</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">be supplied in the `command` slot.</span>
 </pre></div>

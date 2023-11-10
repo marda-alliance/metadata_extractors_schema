@@ -18,7 +18,7 @@ URI: [mme_schema:packages](https://marda-alliance.github.io/metadata_extractors_
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Installation](Installation.md) | A machine-actionable specification of a set of installation instructions for the parent `Extractor`. |  no  |
+[Installation](Installation.md) | A machine-actionable specification of a set of installation instructions for ... |  no  |
 
 
 

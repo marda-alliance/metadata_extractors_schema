@@ -3,9 +3,15 @@
 
 
 
-_This enumeration allows the `Extractor->usage` to be described in one of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata, or the full file is returned by the `Extractor`, respectively. In practice, this means that extractors may have multiple defined usage modes for each scope and each execution method. The default is to assume the 'worst case', i.e. that the extractor returns as much of the data in the input file as it supports, plus potentially additional analysis._
+_This enumeration specifies the scope of extraction performed by the `Extractor`._
 
 
+
+## Comments
+
+* Currently allows the `Extractor->usage` to be described in one of two modes, `meta-only` and `meta+data`.
+* In practice, this means that extractors may have multiple defined usage modes for each `UsageScope` and each `UsageType`.
+* The default is to assume the 'worst case', i.e. that the `Extractor` returns as much of the data in the input file as it supports, plus potentially additional analysis.
 
 URI: [UsageScope](UsageScope)
 
@@ -13,8 +19,8 @@ URI: [UsageScope](UsageScope)
 
 | Value | Meaning | Description |
 | --- | --- | --- |
-| meta-only | None | This usage scope only returns metadata associated with the file, with the int... |
-| meta+data | None | This usage scope refers to a "full" extraction of the file, whereby the extra... |
+| meta-only | None | This usage scope only returns metadata associated with the file, with the<br/>interpretatio of "metadata" left up to the `Extractor`. |
+| meta+data | None | This usage scope refers to a "full" extraction of the file, whereby the<br/>extractor tries to faithfully interpret and return all supported information<br/>contained within the file. |
 
 
 
@@ -52,13 +58,14 @@ URI: [UsageScope](UsageScope)
 
 ```yaml
 name: UsageScope
-description: This enumeration allows the `Extractor->usage` to be described in one
-  of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,
-  or the full file is returned by the `Extractor`, respectively. In practice, this
-  means that extractors may have multiple defined usage modes for each scope and each
-  execution method. The default is to assume the 'worst case', i.e. that the extractor
-  returns as much of the data in the input file as it supports, plus potentially additional
-  analysis.
+description: This enumeration specifies the scope of extraction performed by the `Extractor`.
+comments:
+- Currently allows the `Extractor->usage` to be described in one of two modes, `meta-only`
+  and `meta+data`.
+- In practice, this means that extractors may have multiple defined usage modes for
+  each `UsageScope` and each `UsageType`.
+- The default is to assume the 'worst case', i.e. that the `Extractor` returns as
+  much of the data in the input file as it supports, plus potentially additional analysis.
 from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
 rank: 1000
 permissible_values:

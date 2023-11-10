@@ -18,7 +18,7 @@ URI: [mme_schema:output_path](https://marda-alliance.github.io/metadata_extracto
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specification, [see `Usage` class](Usage.md). |  no  |
+[UsageTemplate](UsageTemplate.md) | A container for specifying string substitution templates for usage specificat... |  no  |
 
 
 

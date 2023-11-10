@@ -18,7 +18,7 @@ URI: [mme_schema:usage](https://marda-alliance.github.io/metadata_extractors_sch
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information f... |  no  |
 
 
 

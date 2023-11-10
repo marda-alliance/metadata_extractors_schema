@@ -67,6 +67,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#enumerations">Enumerations</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="InstallerTypes.html">Enum: InstallerTypes</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Enum: UsageScope</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#comments">Comments</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#permissible-values">Permissible Values</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#slots">Slots</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#identifier-and-mapping-information">Identifier and Mapping Information</a><ul>
@@ -111,8 +112,16 @@
              
   <section id="enum-usagescope">
 <h1>Enum: UsageScope<a class="headerlink" href="#enum-usagescope" title="Link to this heading"></a></h1>
-<p><em>This enumeration allows the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;usage</span></code> to be described in one of two modes, <code class="docutils literal notranslate"><span class="pre">meta-only</span></code> and <code class="docutils literal notranslate"><span class="pre">meta+data</span></code>, whereby either a summary of file metadata, or the full file is returned by the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>, respectively. In practice, this means that extractors may have multiple defined usage modes for each scope and each execution method. The default is to assume the ‘worst case’, i.e. that the extractor returns as much of the data in the input file as it supports, plus potentially additional analysis.</em></p>
+<p><em>This enumeration specifies the scope of extraction performed by the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</em></p>
+<section id="comments">
+<h2>Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Currently allows the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;usage</span></code> to be described in one of two modes, <code class="docutils literal notranslate"><span class="pre">meta-only</span></code> and <code class="docutils literal notranslate"><span class="pre">meta+data</span></code>.</p></li>
+<li><p>In practice, this means that extractors may have multiple defined usage modes for each <code class="docutils literal notranslate"><span class="pre">UsageScope</span></code> and each <code class="docutils literal notranslate"><span class="pre">UsageType</span></code>.</p></li>
+<li><p>The default is to assume the ‘worst case’, i.e. that the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> returns as much of the data in the input file as it supports, plus potentially additional analysis.</p></li>
+</ul>
 <p>URI: <a class="reference internal" href="#"><span class="doc std std-doc">UsageScope</span></a></p>
+</section>
 <section id="permissible-values">
 <h2>Permissible Values<a class="headerlink" href="#permissible-values" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -125,11 +134,11 @@
 <tbody>
 <tr class="row-even"><td><p>meta-only</p></td>
 <td><p>None</p></td>
-<td><p>This usage scope only returns metadata associated with the file, with the int…</p></td>
+<td><p>This usage scope only returns metadata associated with the file, with the<br/>interpretatio of “metadata” left up to the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>meta+data</p></td>
 <td><p>None</p></td>
-<td><p>This usage scope refers to a “full” extraction of the file, whereby the extra…</p></td>
+<td><p>This usage scope refers to a “full” extraction of the file, whereby the<br/>extractor tries to faithfully interpret and return all supported information<br/>contained within the file.</p></td>
 </tr>
 </tbody>
 </table>
@@ -162,13 +171,14 @@
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <details>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageScope</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This enumeration allows the `Extractor-&gt;usage` to be described in one</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">of two modes, `meta-only` and `meta+data`, whereby either a summary of file metadata,</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">or the full file is returned by the `Extractor`, respectively. In practice, this</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">means that extractors may have multiple defined usage modes for each scope and each</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">execution method. The default is to assume the &#39;worst case&#39;, i.e. that the extractor</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">returns as much of the data in the input file as it supports, plus potentially additional</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">analysis.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This enumeration specifies the scope of extraction performed by the `Extractor`.</span>
+<span class="nt">comments</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Currently allows the `Extractor-&gt;usage` to be described in one of two modes, `meta-only`</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">and `meta+data`.</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In practice, this means that extractors may have multiple defined usage modes for</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">each `UsageScope` and each `UsageType`.</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The default is to assume the &#39;worst case&#39;, i.e. that the `Extractor` returns as</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">much of the data in the input file as it supports, plus potentially additional analysis.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">permissible_values</span><span class="p">:</span>

@@ -18,7 +18,7 @@ URI: [mme_schema:template](https://marda-alliance.github.io/metadata_extractors_
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[SupportedFileType](SupportedFileType.md) | An specification of a `FileType`, supported by the parent `Extractor`. |  no  |
+[SupportedFileType](SupportedFileType.md) | An specification of a `FileType`, supported by the parent `Extractor` |  no  |
 
 
 

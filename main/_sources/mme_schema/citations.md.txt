@@ -18,7 +18,7 @@ URI: [dcmitype:BibliographicReference](http://purl.org/dc/dcmitype/1.1Bibliograp
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information from a supplied "file" with a specific [`FileType`](FileType.md). |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information f... |  no  |
 
 
 
