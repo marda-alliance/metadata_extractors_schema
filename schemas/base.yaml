@@ -266,9 +266,13 @@ enums:
         description: >-
             This enumeration specifies the scope of extraction performed by the `Extractor`.
         comments:
-            - Currently allows the `Extractor->usage` to be described in one of two modes, `meta-only` and `meta+data`.
-            - In practice, this means that extractors may have multiple defined usage modes for each `UsageScope` and each `UsageType`.
-            - The default is to assume the 'worst case', i.e. that the `Extractor` returns as much of the data in the input file as it supports, plus potentially additional analysis.
+            - Currently allows the `Extractor->usage` to be described in one of two
+              modes, `meta-only` and `meta+data`.
+            - In practice, this means that extractors may have multiple defined usage
+              modes for each `UsageScope` and each `UsageType`.
+            - The default is to assume the 'worst case', i.e. that the `Extractor`
+              returns as much of the data in the input file as it supports, plus potentially
+              additional analysis.
         permissible_values:
             meta-only:
                 description: >-
