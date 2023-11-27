@@ -109,6 +109,14 @@ setup: example.extractors
 command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
 
 ```
+### Example: Usage-cli
+
+```yaml
+---
+method: cli
+command: parse --type={{ input_type }} {{ file_path }}
+
+```
 ### Example: Usage-cli_scope
 
 ```yaml
@@ -116,14 +124,6 @@ command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
 method: cli
 scope: meta-only
 command: parse --type=example --summary {{ file_path }}
-
-```
-### Example: Usage-cli
-
-```yaml
----
-method: cli
-command: parse --type={{ input_type }} {{ file_path }}
 
 ```
 
