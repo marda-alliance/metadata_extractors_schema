@@ -77,9 +77,9 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#mappings">Mappings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#example-installation-conda-reqs">Example: Installation-conda_reqs</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#example-installation-pip-reqs">Example: Installation-pip_reqs</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#example-installation-pip">Example: Installation-pip</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-installation-conda-reqs">Example: Installation-conda_reqs</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#linkml-source">LinkML Source</a><ul>
@@ -225,25 +225,6 @@ Installation {
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
-<section id="example-installation-conda-reqs">
-<h3>Example: Installation-conda_reqs<a class="headerlink" href="#example-installation-conda-reqs" title="Link to this heading"></a></h3>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda</span>
-<span class="nt">requirements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<span class="w">    </span><span class="no">dependencies:</span>
-<span class="w">    </span><span class="no">- python=3.4</span>
-<span class="w">    </span><span class="no">- numpy</span>
-<span class="w">    </span><span class="no">- toolz</span>
-<span class="w">    </span><span class="no">- matplotlib</span>
-<span class="w">    </span><span class="no">- dill</span>
-<span class="w">    </span><span class="no">- pandas</span>
-<span class="w">    </span><span class="no">- partd</span>
-<span class="w">    </span><span class="no">- bokeh</span>
-<span class="w">    </span><span class="no">- pip:</span>
-<span class="w">        </span><span class="no">- git+https://github.com/example/extractor.git#egg=example[all]</span>
-</pre></div>
-</div>
-</section>
 <section id="example-installation-pip-reqs">
 <h3>Example: Installation-pip_reqs<a class="headerlink" href="#example-installation-pip-reqs" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
@@ -263,6 +244,25 @@ Installation {
 <span class="nt">packages</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example-extractor</span>
 <span class="nt">requires_python</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">==3.4</span>
+</pre></div>
+</div>
+</section>
+<section id="example-installation-conda-reqs">
+<h3>Example: Installation-conda_reqs<a class="headerlink" href="#example-installation-conda-reqs" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda</span>
+<span class="nt">requirements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">dependencies:</span>
+<span class="w">    </span><span class="no">- python=3.4</span>
+<span class="w">    </span><span class="no">- numpy</span>
+<span class="w">    </span><span class="no">- toolz</span>
+<span class="w">    </span><span class="no">- matplotlib</span>
+<span class="w">    </span><span class="no">- dill</span>
+<span class="w">    </span><span class="no">- pandas</span>
+<span class="w">    </span><span class="no">- partd</span>
+<span class="w">    </span><span class="no">- bokeh</span>
+<span class="w">    </span><span class="no">- pip:</span>
+<span class="w">        </span><span class="no">- git+https://github.com/example/extractor.git#egg=example[all]</span>
 </pre></div>
 </div>
 </section>

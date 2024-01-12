@@ -89,6 +89,14 @@ scope: meta-only
 command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
 
 ```
+### Example: Usage-cli
+
+```yaml
+---
+method: cli
+command: parse --type={{ input_type }} {{ file_path }}
+
+```
 ### Example: Usage-python_templating_scope
 
 ```yaml
@@ -107,14 +115,6 @@ scope: meta+data
 method: python
 setup: example.extractors
 command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
-
-```
-### Example: Usage-cli
-
-```yaml
----
-method: cli
-command: parse --type={{ input_type }} {{ file_path }}
 
 ```
 ### Example: Usage-cli_scope

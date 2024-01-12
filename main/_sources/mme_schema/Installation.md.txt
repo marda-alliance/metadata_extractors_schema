@@ -79,25 +79,6 @@ Installation {
 
 
 ## Examples
-### Example: Installation-conda_reqs
-
-```yaml
----
-method: conda
-requirements: >-
-    dependencies:
-    - python=3.4
-    - numpy
-    - toolz
-    - matplotlib
-    - dill
-    - pandas
-    - partd
-    - bokeh
-    - pip:
-        - git+https://github.com/example/extractor.git#egg=example[all]
-
-```
 ### Example: Installation-pip_reqs
 
 ```yaml
@@ -118,6 +99,25 @@ method: pip
 packages:
     - example-extractor
 requires_python: ==3.4
+
+```
+### Example: Installation-conda_reqs
+
+```yaml
+---
+method: conda
+requirements: >-
+    dependencies:
+    - python=3.4
+    - numpy
+    - toolz
+    - matplotlib
+    - dill
+    - pandas
+    - partd
+    - bokeh
+    - pip:
+        - git+https://github.com/example/extractor.git#egg=example[all]
 
 ```
 
