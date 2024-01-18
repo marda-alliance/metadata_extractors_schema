@@ -51,8 +51,10 @@ classes:
             associated_file_extensions:
                 multivalued: true
                 description: >-
-                    A list of any known file extensions that this file is found with, to be used
-                    as a hint for file type detection. Should omit the leading '.', e.g., 'json' or 'txt'.
+                    A list of any known file extensions that this file is found with,
+                    to be used
+                    as a hint for file type detection. Should omit the leading '.',
+                    e.g., 'json' or 'txt'.
             base_formats:
                 multivalued: true
                 range: FileType
