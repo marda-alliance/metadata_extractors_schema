@@ -11,8 +11,9 @@ associated_vendors:
     - UCAR
 subject:
     - climatology
-    - meteorology
-    - oceanography
+    - meteorology - oceanography
+associated_file_extensions:
+    - nc
 associated_software:
     - ArcGIS
     - OriginPro
