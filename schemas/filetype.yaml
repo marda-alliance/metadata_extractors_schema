@@ -61,6 +61,7 @@ classes:
                     to this `FileType`, e.g., CIF, NeXus, then it can be listed here.
             registered_extractors:
                 multivalued: true
+                required: false
                 pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
                 description: >-
                     A slot for an automatically-generated enumeration of `Extractor`
