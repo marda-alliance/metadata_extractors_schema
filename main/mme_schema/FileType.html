@@ -158,6 +158,7 @@ FileType {
     stringList associated_vendors  
     stringList associated_instruments  
     stringList associated_software  
+    stringList associated_file_extensions  
     stringList associated_standards  
     stringList registered_extractors  
 }
@@ -211,17 +212,22 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <td><p>A list of any known software (proprietary or otherwise) that produces such<br/><code class="docutils literal notranslate"><span class="pre">FileType</span></code>.</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="base_formats.html"><span class="std std-doc">base_formats</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="associated_file_extensions.html"><span class="std std-doc">associated_file_extensions</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>A list of any known file extensions that files of this <code class="docutils literal notranslate"><span class="pre">FileType</span></code> are found<br/>with. These may be used as a hint for <code class="docutils literal notranslate"><span class="pre">FileType</span></code> detection. Should omit the<br/>leading <code class="docutils literal notranslate"><span class="pre">'.'</span></code>, e.g. ‘json’ or ‘txt’.</p></td>
+<td><p>direct</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="base_formats.html"><span class="std std-doc">base_formats</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="#"><span class="std std-doc">FileType</span></a></p></td>
 <td><p>A list of any particular underlying generic formats which this <code class="docutils literal notranslate"><span class="pre">FileType</span></code> is<br/>based on, e.g., CSV, JSON, HDF5, XML.</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="associated_standards.html"><span class="std std-doc">associated_standards</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="associated_standards.html"><span class="std std-doc">associated_standards</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A list of any particular well-defined file format standards relevant to this<br/><code class="docutils literal notranslate"><span class="pre">FileType</span></code>, e.g., CIF, NeXus, then it can be listed here.</p></td>
 <td><p>direct</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="registered_extractors.html"><span class="std std-doc">registered_extractors</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="registered_extractors.html"><span class="std std-doc">registered_extractors</span></a></p></td>
 <td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
 <td><p>A slot for an automatically-generated enumeration of <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> IDs that<br/>support this file type. This slot should be auto-populated by a registry.</p></td>
 <td><p>direct</p></td>
@@ -295,8 +301,9 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UCAR</span>
 <span class="nt">subject</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">climatology</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meteorology</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oceanography</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meteorology - oceanography</span>
+<span class="nt">associated_file_extensions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nc</span>
 <span class="nt">associated_software</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ArcGIS</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OriginPro</span>
@@ -321,6 +328,9 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <span class="nt">associated_instruments</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example Machine</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bunch of Junk</span>
+<span class="nt">associated_file_extensions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dat</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">txt</span>
 <span class="nt">associated_software</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example Software</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bitrot Software</span>
@@ -371,6 +381,15 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">associated_file_extensions</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">associated_file_extensions</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of any known file extensions that files of this `FileType`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">are found with. These may be used as a hint for `FileType` detection. Should</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">omit the leading `&#39;.&#39;`, e.g. &#39;json&#39; or &#39;txt&#39;.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^[A-z,0-9]*[A-z,0-9]+$</span>
 <span class="w">  </span><span class="nt">base_formats</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base_formats</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of any particular underlying generic formats which this `FileType`</span>
@@ -448,6 +467,20 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FileType</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">associated_file_extensions</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">associated_file_extensions</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of any known file extensions that files of this `FileType`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">are found with. These may be used as a hint for `FileType` detection. Should</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">omit the leading `&#39;.&#39;`, e.g. &#39;json&#39; or &#39;txt&#39;.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">associated_file_extensions</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FileType</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FileType</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^[A-z,0-9]*[A-z,0-9]+$</span>
 <span class="w">  </span><span class="nt">base_formats</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">base_formats</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of any particular underlying generic formats which this `FileType`</span>

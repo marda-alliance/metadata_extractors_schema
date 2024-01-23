@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slot: output_type &mdash; MaRDA Metadata Extractors main documentation</title>
+  <title>Slot: associated_file_extensions &mdash; MaRDA Metadata Extractors main documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/custom_theme.css" type="text/css" />
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Slot: packages" href="packages.html" />
-    <link rel="prev" title="Slot: output_path" href="output_path.html" /> 
+    <link rel="next" title="Slot: associated_instruments" href="associated_instruments.html" />
+    <link rel="prev" title="Class: UsageTemplate" href="UsageTemplate.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -64,7 +64,16 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#schema-diagram">Schema Diagram</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#classes">Classes</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#slots">Slots</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="associated_file_extensions.html">Slot: associated_file_extensions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Slot: associated_file_extensions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#applicable-classes">Applicable Classes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#identifier-and-mapping-information">Identifier and Mapping Information</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#schema-source">Schema Source</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#linkml-source">LinkML Source</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="associated_instruments.html">Slot: associated_instruments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="associated_software.html">Slot: associated_software</a></li>
 <li class="toctree-l3"><a class="reference internal" href="associated_standards.html">Slot: associated_standards</a></li>
@@ -85,16 +94,7 @@
 <li class="toctree-l3"><a class="reference internal" href="method.html">Slot: method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="name.html">Slot: name</a></li>
 <li class="toctree-l3"><a class="reference internal" href="output_path.html">Slot: output_path</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Slot: output_type</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#applicable-classes">Applicable Classes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#identifier-and-mapping-information">Identifier and Mapping Information</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#schema-source">Schema Source</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#linkml-source">LinkML Source</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="output_type.html">Slot: output_type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="packages.html">Slot: packages</a></li>
 <li class="toctree-l3"><a class="reference internal" href="registered_extractors.html">Slot: registered_extractors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="requirements.html">Slot: requirements</a></li>
@@ -134,9 +134,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">MaRDA Metadata Extractors Schema</a></li>
-      <li class="breadcrumb-item active">Slot: output_type</li>
+      <li class="breadcrumb-item active">Slot: associated_file_extensions</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/marda-alliance/metadata_extractors_schema/blob/main/docs/source/mme_schema/output_type.md" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/marda-alliance/metadata_extractors_schema/blob/main/docs/source/mme_schema/associated_file_extensions.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -144,10 +144,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="slot-output-type">
-<h1>Slot: output_type<a class="headerlink" href="#slot-output-type" title="Link to this heading"></a></h1>
-<p><em>The <code class="docutils literal notranslate"><span class="pre">FileType</span></code> of the <code class="docutils literal notranslate"><span class="pre">output_path</span></code>, for <code class="docutils literal notranslate"><span class="pre">Extractors</span></code> supporting multiple output <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code>. Defaults to the <code class="docutils literal notranslate"><span class="pre">FileType-&gt;id</span></code> for each supported output file type.</em></p>
-<p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/output_type">mme_schema:output_type</a></p>
+  <section id="slot-associated-file-extensions">
+<h1>Slot: associated_file_extensions<a class="headerlink" href="#slot-associated-file-extensions" title="Link to this heading"></a></h1>
+<p><em>A list of any known file extensions that files of this <code class="docutils literal notranslate"><span class="pre">FileType</span></code> are found with. These may be used as a hint for <code class="docutils literal notranslate"><span class="pre">FileType</span></code> detection. Should omit the leading <code class="docutils literal notranslate"><span class="pre">'.'</span></code>, e.g. ‘json’ or ‘txt’.</em></p>
+<p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/associated_file_extensions">mme_schema:associated_file_extensions</a></p>
 <!-- no inheritance hierarchy -->
 <section id="applicable-classes">
 <h2>Applicable Classes<a class="headerlink" href="#applicable-classes" title="Link to this heading"></a></h2>
@@ -159,8 +159,8 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="UsageTemplate.html"><span class="std std-doc">UsageTemplate</span></a></p></td>
-<td><p>A container for specifying string substitution templates for usage specificat…</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="FileType.html"><span class="std std-doc">FileType</span></a></p></td>
+<td><p>A specific encoding of data for storage purposes</p></td>
 <td><p>no</p></td>
 </tr>
 </tbody>
@@ -170,6 +170,8 @@
 <h2>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Range: <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></li>
+<li><p>Multivalued: True</p></li>
+<li><p>Regex pattern: <code class="docutils literal notranslate"><span class="pre">^[A-z,0-9]*[A-z,0-9]+$</span></code></p></li>
 </ul>
 </section>
 <section id="identifier-and-mapping-information">
@@ -184,17 +186,19 @@
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <details>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_type</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The `FileType` of the `output_path`, for `Extractors` supporting multiple</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">output `FileTypes`. Defaults to the `FileType-&gt;id` for each supported output file</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">type.</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">associated_file_extensions</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of any known file extensions that files of this `FileType` are</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">found with. These may be used as a hint for `FileType` detection. Should omit the</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">leading `&#39;.&#39;`, e.g. &#39;json&#39; or &#39;txt&#39;.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">output_type</span>
-<span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">associated_file_extensions</span>
+<span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FileType</span>
 <span class="nt">domain_of</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTemplate</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FileType</span>
 <span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="nt">pattern</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^[A-z,0-9]*[A-z,0-9]+$</span>
 </pre></div>
 </div>
 </details></section>
@@ -204,8 +208,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="output_path.html" class="btn btn-neutral float-left" title="Slot: output_path" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="packages.html" class="btn btn-neutral float-right" title="Slot: packages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="UsageTemplate.html" class="btn btn-neutral float-left" title="Class: UsageTemplate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="associated_instruments.html" class="btn btn-neutral float-right" title="Slot: associated_instruments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

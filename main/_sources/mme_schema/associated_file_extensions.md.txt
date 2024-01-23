@@ -1,0 +1,78 @@
+# Slot: associated_file_extensions
+
+
+_A list of any known file extensions that files of this `FileType` are found with. These may be used as a hint for `FileType` detection. Should omit the leading `'.'`, e.g. 'json' or 'txt'._
+
+
+
+URI: [mme_schema:associated_file_extensions](https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/associated_file_extensions)
+
+
+
+<!-- no inheritance hierarchy -->
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
+| --- | --- | --- |
+[FileType](FileType.md) | A specific encoding of data for storage purposes |  no  |
+
+
+
+
+
+
+
+## Properties
+
+* Range: [String](String.md)
+
+* Multivalued: True
+
+* Regex pattern: `^[A-z,0-9]*[A-z,0-9]+$`
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+
+
+
+
+## LinkML Source
+
+<details>
+
+```yaml
+name: associated_file_extensions
+description: A list of any known file extensions that files of this `FileType` are
+  found with. These may be used as a hint for `FileType` detection. Should omit the
+  leading `'.'`, e.g. 'json' or 'txt'.
+from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+rank: 1000
+multivalued: true
+alias: associated_file_extensions
+owner: FileType
+domain_of:
+- FileType
+range: string
+pattern: ^[A-z,0-9]*[A-z,0-9]+$
+
+```
+
+</details>

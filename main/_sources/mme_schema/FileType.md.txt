@@ -21,6 +21,7 @@ FileType {
     stringList associated_vendors  
     stringList associated_instruments  
     stringList associated_software  
+    stringList associated_file_extensions  
     stringList associated_standards  
     stringList registered_extractors  
 }
@@ -45,6 +46,7 @@ FileType ||--}o FileType : "base_formats"
 | [associated_vendors](associated_vendors.md) | 0..* <br/> [String](String.md) | A list of software or instrument vendors that can be associated with this<br/>particular `FileType`. | direct |
 | [associated_instruments](associated_instruments.md) | 0..* <br/> [String](String.md) | A list of any instruments, or classes of instruments, that typically create the<br/>data encoded into this `FileType`. | direct |
 | [associated_software](associated_software.md) | 0..* <br/> [String](String.md) | A list of any known software (proprietary or otherwise) that produces such<br/>`FileType`. | direct |
+| [associated_file_extensions](associated_file_extensions.md) | 0..* <br/> [String](String.md) | A list of any known file extensions that files of this `FileType` are found<br/>with. These may be used as a hint for `FileType` detection. Should omit the<br/>leading `'.'`, e.g. 'json' or 'txt'. | direct |
 | [base_formats](base_formats.md) | 0..* <br/> [FileType](FileType.md) | A list of any particular underlying generic formats which this `FileType` is<br/>based on, e.g., CSV, JSON, HDF5, XML. | direct |
 | [associated_standards](associated_standards.md) | 0..* <br/> [String](String.md) | A list of any particular well-defined file format standards relevant to this<br/>`FileType`, e.g., CIF, NeXus, then it can be listed here. | direct |
 | [registered_extractors](registered_extractors.md) | 0..* <br/> [String](String.md) | A slot for an automatically-generated enumeration of `Extractor` IDs that<br/>support this file type. This slot should be auto-populated by a registry. | direct |
@@ -107,8 +109,9 @@ associated_vendors:
     - UCAR
 subject:
     - climatology
-    - meteorology
-    - oceanography
+    - meteorology - oceanography
+associated_file_extensions:
+    - nc
 associated_software:
     - ArcGIS
     - OriginPro
@@ -133,6 +136,9 @@ subject:
 associated_instruments:
     - Example Machine
     - Bunch of Junk
+associated_file_extensions:
+    - dat
+    - txt
 associated_software:
     - Example Software
     - Bitrot Software
@@ -188,6 +194,15 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
+  associated_file_extensions:
+    name: associated_file_extensions
+    description: A list of any known file extensions that files of this `FileType`
+      are found with. These may be used as a hint for `FileType` detection. Should
+      omit the leading `'.'`, e.g. 'json' or 'txt'.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+    rank: 1000
+    multivalued: true
+    pattern: ^[A-z,0-9]*[A-z,0-9]+$
   base_formats:
     name: base_formats
     description: A list of any particular underlying generic formats which this `FileType`
@@ -268,6 +283,20 @@ attributes:
     domain_of:
     - FileType
     range: string
+  associated_file_extensions:
+    name: associated_file_extensions
+    description: A list of any known file extensions that files of this `FileType`
+      are found with. These may be used as a hint for `FileType` detection. Should
+      omit the leading `'.'`, e.g. 'json' or 'txt'.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+    rank: 1000
+    multivalued: true
+    alias: associated_file_extensions
+    owner: FileType
+    domain_of:
+    - FileType
+    range: string
+    pattern: ^[A-z,0-9]*[A-z,0-9]+$
   base_formats:
     name: base_formats
     description: A list of any particular underlying generic formats which this `FileType`

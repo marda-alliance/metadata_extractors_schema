@@ -29,6 +29,7 @@ FileType {
     stringList associated_vendors  
     stringList associated_instruments  
     stringList associated_software  
+    stringList associated_file_extensions  
     stringList associated_standards  
     stringList registered_extractors  
 }
@@ -115,6 +116,7 @@ UsageTemplate
 
 | Slot | Description |
 | --- | --- |
+| [associated_file_extensions](associated_file_extensions.md) | A list of any known file extensions that files of this `FileType` are found<br/>with. These may be used as a hint for `FileType` detection. Should omit the<br/>leading `'.'`, e.g. 'json' or 'txt'. |
 | [associated_instruments](associated_instruments.md) | A list of any instruments, or classes of instruments, that typically create the<br/>data encoded into this `FileType`. |
 | [associated_software](associated_software.md) | A list of any known software (proprietary or otherwise) that produces such<br/>`FileType`. |
 | [associated_standards](associated_standards.md) | A list of any particular well-defined file format standards relevant to this<br/>`FileType`, e.g., CIF, NeXus, then it can be listed here. |
@@ -162,6 +164,7 @@ maxdepth: 0
 hidden: true
 ---
 
+associated_file_extensions
 associated_instruments
 associated_software
 associated_standards

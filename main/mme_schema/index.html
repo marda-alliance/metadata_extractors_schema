@@ -76,6 +76,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#slots">Slots</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="associated_file_extensions.html">Slot: associated_file_extensions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="associated_instruments.html">Slot: associated_instruments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="associated_software.html">Slot: associated_software</a></li>
 <li class="toctree-l3"><a class="reference internal" href="associated_standards.html">Slot: associated_standards</a></li>
@@ -176,6 +177,7 @@ FileType {
     stringList associated_vendors  
     stringList associated_instruments  
     stringList associated_software  
+    stringList associated_file_extensions  
     stringList associated_standards  
     stringList registered_extractors  
 }
@@ -270,115 +272,118 @@ SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="associated_instruments.html"><span class="std std-doc">associated_instruments</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="associated_file_extensions.html"><span class="std std-doc">associated_file_extensions</span></a></p></td>
+<td><p>A list of any known file extensions that files of this <code class="docutils literal notranslate"><span class="pre">FileType</span></code> are found<br/>with. These may be used as a hint for <code class="docutils literal notranslate"><span class="pre">FileType</span></code> detection. Should omit the<br/>leading <code class="docutils literal notranslate"><span class="pre">'.'</span></code>, e.g. ‘json’ or ‘txt’.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="associated_instruments.html"><span class="std std-doc">associated_instruments</span></a></p></td>
 <td><p>A list of any instruments, or classes of instruments, that typically create the<br/>data encoded into this <code class="docutils literal notranslate"><span class="pre">FileType</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="associated_software.html"><span class="std std-doc">associated_software</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="associated_software.html"><span class="std std-doc">associated_software</span></a></p></td>
 <td><p>A list of any known software (proprietary or otherwise) that produces such<br/><code class="docutils literal notranslate"><span class="pre">FileType</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="associated_standards.html"><span class="std std-doc">associated_standards</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="associated_standards.html"><span class="std std-doc">associated_standards</span></a></p></td>
 <td><p>A list of any particular well-defined file format standards relevant to this<br/><code class="docutils literal notranslate"><span class="pre">FileType</span></code>, e.g., CIF, NeXus, then it can be listed here.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="associated_vendors.html"><span class="std std-doc">associated_vendors</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="associated_vendors.html"><span class="std std-doc">associated_vendors</span></a></p></td>
 <td><p>A list of software or instrument vendors that can be associated with this<br/>particular <code class="docutils literal notranslate"><span class="pre">FileType</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="base_formats.html"><span class="std std-doc">base_formats</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="base_formats.html"><span class="std std-doc">base_formats</span></a></p></td>
 <td><p>A list of any particular underlying generic formats which this <code class="docutils literal notranslate"><span class="pre">FileType</span></code> is<br/>based on, e.g., CSV, JSON, HDF5, XML.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="citations.html"><span class="std std-doc">citations</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="citations.html"><span class="std std-doc">citations</span></a></p></td>
 <td><p>A citation or citations for the entry, to be provided should it be used in<br/>academic work (or otherwise).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="command.html"><span class="std std-doc">command</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="command.html"><span class="std std-doc">command</span></a></p></td>
 <td><p>A machine-executable command by which the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> functionality can be<br/>accessed.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="contributors.html"><span class="std std-doc">contributors</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="contributors.html"><span class="std std-doc">contributors</span></a></p></td>
 <td><p>A list of the contributors to the resource.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="creators.html"><span class="std std-doc">creators</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="creators.html"><span class="std std-doc">creators</span></a></p></td>
 <td><p>A list of the creators of the resource.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="description.html"><span class="std std-doc">description</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="description.html"><span class="std std-doc">description</span></a></p></td>
 <td><p>A human-readable outline of the entry, its format, data content and uses.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="documentation.html"><span class="std std-doc">documentation</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="documentation.html"><span class="std std-doc">documentation</span></a></p></td>
 <td><p>A URL or URI for any online documentation associated with this extractor.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="id.html"><span class="std std-doc">id</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="id.html"><span class="std std-doc">id</span></a></p></td>
 <td><p>A unique identifier for the entry within the MaRDA registry namespace, this<br/>should be a shorthand label rather than a UUID. Only lower-case alphanumeric and<br/>dash (“-”) characters are permitted.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="input_path.html"><span class="std std-doc">input_path</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="input_path.html"><span class="std std-doc">input_path</span></a></p></td>
 <td><p>The location of the resource (e.g., file, or directory) on disk to be extracted.<br/>Required.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="input_type.html"><span class="std std-doc">input_type</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="input_type.html"><span class="std std-doc">input_type</span></a></p></td>
 <td><p>The <code class="docutils literal notranslate"><span class="pre">FileType</span></code> of the <code class="docutils literal notranslate"><span class="pre">input_path</span></code>. Defaults to the <code class="docutils literal notranslate"><span class="pre">FileType-&gt;id</span></code> for each<br/>supported file type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="installation.html"><span class="std std-doc">installation</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="installation.html"><span class="std std-doc">installation</span></a></p></td>
 <td><p>A machine-actionable set of installation instructions to obtain a working set-up<br/>of the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="instructions.html"><span class="std std-doc">instructions</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="instructions.html"><span class="std std-doc">instructions</span></a></p></td>
 <td><p>Any human-readable usage notes or installation instructions for this<br/><code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. This field is intended for human use only and is not intended to be<br/>machine-actionable. Please use the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;installation</span></code> and<br/><code class="docutils literal notranslate"><span class="pre">Extractor-&gt;usage</span></code> slots for that purpose.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="license.html"><span class="std std-doc">license</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="license.html"><span class="std std-doc">license</span></a></p></td>
 <td><p>A URL, URI or SPDX license identifier for a legal document giving official<br/>permission to do something with the resource.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="method.html"><span class="std std-doc">method</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="method.html"><span class="std std-doc">method</span></a></p></td>
 <td><p>Usage invocation method, e.g. from a command line or from Python.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="name.html"><span class="std std-doc">name</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="name.html"><span class="std std-doc">name</span></a></p></td>
 <td><p>A recognisable name for the entry.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="output_path.html"><span class="std std-doc">output_path</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="output_path.html"><span class="std std-doc">output_path</span></a></p></td>
 <td><p>The location where the output of the extraction will be written to disk.<br/>Defaults to the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> default.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="output_type.html"><span class="std std-doc">output_type</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="output_type.html"><span class="std std-doc">output_type</span></a></p></td>
 <td><p>The <code class="docutils literal notranslate"><span class="pre">FileType</span></code> of the <code class="docutils literal notranslate"><span class="pre">output_path</span></code>, for <code class="docutils literal notranslate"><span class="pre">Extractors</span></code> supporting multiple output<br/><code class="docutils literal notranslate"><span class="pre">FileTypes</span></code>. Defaults to the <code class="docutils literal notranslate"><span class="pre">FileType-&gt;id</span></code> for each supported output file type.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="packages.html"><span class="std std-doc">packages</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="packages.html"><span class="std std-doc">packages</span></a></p></td>
 <td><p>A list of packages, including versioned packages or <code class="docutils literal notranslate"><span class="pre">git+https://</span></code> targets, to<br/>be installed using the Installer.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="registered_extractors.html"><span class="std std-doc">registered_extractors</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="registered_extractors.html"><span class="std std-doc">registered_extractors</span></a></p></td>
 <td><p>A slot for an automatically-generated enumeration of <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> IDs that<br/>support this file type. This slot should be auto-populated by a registry.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="requirements.html"><span class="std std-doc">requirements</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="requirements.html"><span class="std std-doc">requirements</span></a></p></td>
 <td><p>Contents of a ‘requirements.txt’-like file. Will be installed by the selected<br/>Installer using an appropriate method, e.g., <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code><br/>for pip, or <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">requirements.txt</span></code> for conda.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="requires_python.html"><span class="std std-doc">requires_python</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="requires_python.html"><span class="std std-doc">requires_python</span></a></p></td>
 <td><p>A PEP 440 version string for the version constraints on the Python version<br/>required for this extractor.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="scope.html"><span class="std std-doc">scope</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="scope.html"><span class="std std-doc">scope</span></a></p></td>
 <td><p>Specification of extraction scope.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="setup.html"><span class="std std-doc">setup</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="setup.html"><span class="std std-doc">setup</span></a></p></td>
 <td><p>Any necessary setup step for the ‘command’ to become available.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="source_repository.html"><span class="std std-doc">source_repository</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="source_repository.html"><span class="std std-doc">source_repository</span></a></p></td>
 <td><p>A URL or URI for a source code repository associated with this extractor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="spdx.html"><span class="std std-doc">spdx</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="spdx.html"><span class="std std-doc">spdx</span></a></p></td>
 <td><p>An SPDX License Identifier entry.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="subject.html"><span class="std std-doc">subject</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="subject.html"><span class="std std-doc">subject</span></a></p></td>
 <td><p>Any keywords, phrases or classification codes that are relevant to the entry,<br/>e.g., particular scientific domains of applicability, or experimental<br/>techniques.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="supported_filetypes.html"><span class="std std-doc">supported_filetypes</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="supported_filetypes.html"><span class="std std-doc">supported_filetypes</span></a></p></td>
 <td><p>An enumeration of the <code class="docutils literal notranslate"><span class="pre">FileType</span></code> that an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> supports, matching<br/><code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. The <code class="docutils literal notranslate"><span class="pre">FileType-&gt;id</span></code> slot can be passed to<br/>the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>, <a class="reference internal" href="Usage.html"><span class="std std-doc">see the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="supported_output_filetypes.html"><span class="std std-doc">supported_output_filetypes</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="supported_output_filetypes.html"><span class="std std-doc">supported_output_filetypes</span></a></p></td>
 <td><p>An enumeration of the possible output formats of an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. These should<br/>match <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. They can be specified on extractor<br/>execution using the templates described in the <code class="docutils literal notranslate"><span class="pre">Extractor-&gt;Usage-&gt;command</span></code> slot,<br/><a class="reference internal" href="Usage.html"><span class="std std-doc">see the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="template.html"><span class="std std-doc">template</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="template.html"><span class="std std-doc">template</span></a></p></td>
 <td><p>A mechanism for overriding the template values for this file type in the usage<br/>instructions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="title.html"><span class="std std-doc">title</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="title.html"><span class="std std-doc">title</span></a></p></td>
 <td><p>A name given to the resource [from DC].</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="type.html"><span class="std std-doc">type</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="type.html"><span class="std std-doc">type</span></a></p></td>
 <td><p>Any bibliographic resource type (e.g., article, dataset, software) enumerated in<br/>the DCMI Type Vocabulary.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="uri.html"><span class="std std-doc">uri</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="uri.html"><span class="std std-doc">uri</span></a></p></td>
 <td><p>An unambiguous reference to the resource within a given context.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="usage.html"><span class="std std-doc">usage</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="usage.html"><span class="std std-doc">usage</span></a></p></td>
 <td><p>A machine-actionable instructions for the usage of the Extractor. The described<br/>usage pattern shall be available after the instructions specified in<br/><code class="docutils literal notranslate"><span class="pre">Extractor-&gt;installation</span></code> slot have been followed.</p></td>
 </tr>
 </tbody>
