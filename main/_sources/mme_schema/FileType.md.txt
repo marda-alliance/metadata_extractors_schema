@@ -139,6 +139,7 @@ associated_instruments:
 associated_file_extensions:
     - dat
     - txt
+    - tar.gz
 associated_software:
     - Example Software
     - Bitrot Software
@@ -202,7 +203,7 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
-    pattern: ^[A-z,0-9]*[A-z,0-9]+$
+    pattern: ^[A-z,0-9]*[A-z,0-9,.]+[A-z,0-9]$
   base_formats:
     name: base_formats
     description: A list of any particular underlying generic formats which this `FileType`
@@ -296,7 +297,7 @@ attributes:
     domain_of:
     - FileType
     range: string
-    pattern: ^[A-z,0-9]*[A-z,0-9]+$
+    pattern: ^[A-z,0-9]*[A-z,0-9,.]+[A-z,0-9]$
   base_formats:
     name: base_formats
     description: A list of any particular underlying generic formats which this `FileType`

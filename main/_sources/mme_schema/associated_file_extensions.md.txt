@@ -32,7 +32,7 @@ URI: [mme_schema:associated_file_extensions](https://marda-alliance.github.io/me
 
 * Multivalued: True
 
-* Regex pattern: `^[A-z,0-9]*[A-z,0-9]+$`
+* Regex pattern: `^[A-z,0-9]*[A-z,0-9,.]+[A-z,0-9]$`
 
 
 
@@ -71,7 +71,7 @@ owner: FileType
 domain_of:
 - FileType
 range: string
-pattern: ^[A-z,0-9]*[A-z,0-9]+$
+pattern: ^[A-z,0-9]*[A-z,0-9,.]+[A-z,0-9]$
 
 ```
 
