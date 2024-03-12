@@ -171,14 +171,10 @@ classes:
             format:
                 description: >-
                     For an `UsageType` returning an in-memory object, an additional
-                    library
-                    installed in the calling environment may be needed to understand
-                    the
-                    format of the returned object. For instance, if a `pd.DataFrame`
-                    is
-                    returned by the `Usage`, set `format` to `pandas` to indicate
-                    this
-                    requirement.
+                    library installed in the calling environment may be needed to
+                    understand the format of the returned object. For instance, if
+                    a `pd.DataFrame` is returned by the `Usage`, set `format` to
+                    `pandas` to indicate this requirement.
 
     Installation:
         description: >-
