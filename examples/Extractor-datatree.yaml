@@ -17,6 +17,12 @@ usage:
       scope: meta+data
       setup: datatree
       command: datatree.open_datatree({{ file_path }})
+      format: xarray-datatree
+    - method: python
+      scope: meta+data
+      setup: datatree
+      command: datatree.open_datatree({{ file_path }}).to_dict()
+      format: xarray
 installation:
     - method: pip
       packages:

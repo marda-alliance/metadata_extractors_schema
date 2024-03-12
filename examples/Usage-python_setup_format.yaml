@@ -2,3 +2,4 @@
 method: python
 setup: example.extractors
 command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
+format: pandas
