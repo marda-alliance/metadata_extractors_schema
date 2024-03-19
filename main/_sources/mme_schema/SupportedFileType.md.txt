@@ -104,17 +104,27 @@ attributes:
     description: A reference to the registered MarDA `FileType->id` for this file
       type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+    domain_of:
+    - Extractor
+    - SupportedFileType
+    - FileType
   description:
     name: description
     description: Free-text description of caveats or instructions specific to this
       file type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+    domain_of:
+    - Extractor
+    - SupportedFileType
+    - FileType
   template:
     name: template
     description: A mechanism for overriding the template values for this file type
       in the usage instructions.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
+    domain_of:
+    - SupportedFileType
     range: UsageTemplate
     required: false
 
@@ -141,8 +151,8 @@ attributes:
     owner: SupportedFileType
     domain_of:
     - Extractor
-    - FileType
     - SupportedFileType
+    - FileType
     range: string
   description:
     name: description
@@ -153,8 +163,8 @@ attributes:
     owner: SupportedFileType
     domain_of:
     - Extractor
-    - FileType
     - SupportedFileType
+    - FileType
     range: string
   template:
     name: template

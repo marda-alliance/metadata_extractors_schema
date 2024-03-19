@@ -18,8 +18,8 @@ URI: [dc_terms:subject](http://purl.org/dc/terms/1.1/subject)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information f... |  no  |
 [FileType](FileType.md) | A specific encoding of data for storage purposes |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information f... |  no  |
 
 
 

@@ -96,6 +96,9 @@ attributes:
     description: An unambiguous reference to the resource within a given context.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     slot_uri: dc_terms:identifier
+    domain_of:
+    - Citation
+    - License
     required: false
   spdx:
     name: spdx
@@ -103,6 +106,8 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: dc_terms:identifier
+    domain_of:
+    - License
     required: false
 
 ```

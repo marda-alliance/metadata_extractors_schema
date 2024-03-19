@@ -80,11 +80,12 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#mappings">Mappings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-templating-scope">Example: Usage-python_templating_scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-cli-scope">Example: Usage-cli_scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup">Example: Usage-python_setup</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup-scope">Example: Usage-python_setup_scope</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#example-usage-cli">Example: Usage-cli</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-templating-scope">Example: Usage-python_templating_scope</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-python-setup">Example: Usage-python_setup</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#example-usage-cli-scope">Example: Usage-cli_scope</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-usage-cli-filetypes">Example: Usage-cli_filetypes</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#linkml-source">LinkML Source</a><ul>
@@ -140,6 +141,7 @@ Usage {
     string setup  
     string command  
     UsageScope scope  
+    stringList supported_filetypes  
 }
 
 
@@ -174,6 +176,11 @@ Usage {
 <tr class="row-odd"><td><p><a class="reference internal" href="scope.html"><span class="std std-doc">scope</span></a></p></td>
 <td><p>0..1 <br/> <a class="reference internal" href="UsageScope.html"><span class="std std-doc">UsageScope</span></a></p></td>
 <td><p>Specification of extraction scope.</p></td>
+<td><p>direct</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="supported_filetypes.html"><span class="std std-doc">supported_filetypes</span></a></p></td>
+<td><p>0..* <br/> <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></td>
+<td><p>An enumeration of the <code class="docutils literal notranslate"><span class="pre">FileType</span></code> that this <code class="docutils literal notranslate"><span class="pre">Usage</span></code> of an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> supports,<br/>matching one or more of the <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the <code class="docutils literal notranslate"><span class="pre">supported_filetypes</span></code><br/>slot of the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>. Defaults to all <code class="docutils literal notranslate"><span class="pre">supported_filetypes</span></code> specified in the<br/><code class="docutils literal notranslate"><span class="pre">Extractor</span></code> definition.</p></td>
 <td><p>direct</p></td>
 </tr>
 </tbody>
@@ -227,6 +234,35 @@ Usage {
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="example-usage-python-templating-scope">
+<h3>Example: Usage-python_templating_scope<a class="headerlink" href="#example-usage-python-templating-scope" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">&#39;{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()&#39;</span>
+<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta+data</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage-cli-scope">
+<h3>Example: Usage-cli_scope<a class="headerlink" href="#example-usage-cli-scope" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
+<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type=example --summary {{ file_path }}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-usage-python-setup">
+<h3>Example: Usage-python_setup<a class="headerlink" href="#example-usage-python-setup" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors</span>
+<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract({{ file_path }}, type=&quot;{{ input_type }}&quot;)</span>
+</pre></div>
+</div>
+</section>
 <section id="example-usage-python-setup-scope">
 <h3>Example: Usage-python_setup_scope<a class="headerlink" href="#example-usage-python-setup-scope" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
@@ -245,32 +281,14 @@ Usage {
 </pre></div>
 </div>
 </section>
-<section id="example-usage-python-templating-scope">
-<h3>Example: Usage-python_templating_scope<a class="headerlink" href="#example-usage-python-templating-scope" title="Link to this heading"></a></h3>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
-<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
-<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<span class="w">    </span><span class="no">&#39;{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()&#39;</span>
-<span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta+data</span>
-</pre></div>
-</div>
-</section>
-<section id="example-usage-python-setup">
-<h3>Example: Usage-python_setup<a class="headerlink" href="#example-usage-python-setup" title="Link to this heading"></a></h3>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
-<span class="nt">setup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors</span>
-<span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.extractors.extract({{ file_path }}, type=&quot;{{ input_type }}&quot;)</span>
-</pre></div>
-</div>
-</section>
-<section id="example-usage-cli-scope">
-<h3>Example: Usage-cli_scope<a class="headerlink" href="#example-usage-cli-scope" title="Link to this heading"></a></h3>
+<section id="example-usage-cli-filetypes">
+<h3>Example: Usage-cli_filetypes<a class="headerlink" href="#example-usage-cli-filetypes" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
 <span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cli</span>
 <span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
 <span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parse --type=example --summary {{ file_path }}</span>
+<span class="nt">supported_filetypes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
 </pre></div>
 </div>
 </section>
@@ -292,6 +310,9 @@ Usage {
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage invocation method, e.g. from a command line or from Python.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageTypes</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">setup</span><span class="p">:</span>
@@ -301,6 +322,8 @@ Usage {
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;For</span><span class="nv"> </span><span class="s">`method:</span><span class="nv"> </span><span class="s">python`,</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">argument</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Python</span><span class="se">&#39;&#39;</span><span class="s">s</span><span class="nv"> </span><span class="s">`import`.&#39;</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
 <span class="w">  </span><span class="nt">command</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">command</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A machine-executable command by which the `Extractor` functionality</span>
@@ -314,13 +337,29 @@ Usage {
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">by the `UsageTemplate` class](UsageTemplate.md).</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">scope</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scope</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specification of extraction scope.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageScope</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">supported_filetypes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the `FileType` that this `Usage` of an `Extractor`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">supports, matching one or more of the `FileTypes` present in the `supported_filetypes`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">slot of the `Extractor`. Defaults to all `supported_filetypes` specified in</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the `Extractor` definition.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </pre></div>
 </div>
@@ -388,6 +427,21 @@ Usage {
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UsageScope</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">supported_filetypes</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the `FileType` that this `Usage` of an `Extractor`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">supports, matching one or more of the `FileTypes` present in the `supported_filetypes`</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">slot of the `Extractor`. Defaults to all `supported_filetypes` specified in</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">the `Extractor` definition.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </pre></div>
 </div>

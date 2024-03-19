@@ -18,6 +18,7 @@ Usage {
     string setup  
     string command  
     UsageScope scope  
+    stringList supported_filetypes  
 }
 
 
@@ -37,6 +38,7 @@ Usage {
 | [setup](setup.md) | 0..1 <br/> [String](String.md) | Any necessary setup step for the 'command' to become available. | direct |
 | [command](command.md) | 1..1 <br/> [String](String.md) | A machine-executable command by which the `Extractor` functionality can be<br/>accessed. | direct |
 | [scope](scope.md) | 0..1 <br/> [UsageScope](UsageScope.md) | Specification of extraction scope. | direct |
+| [supported_filetypes](supported_filetypes.md) | 0..* <br/> [String](String.md) | An enumeration of the `FileType` that this `Usage` of an `Extractor` supports,<br/>matching one or more of the `FileTypes` present in the `supported_filetypes`<br/>slot of the `Extractor`. Defaults to all `supported_filetypes` specified in the<br/>`Extractor` definition. | direct |
 
 
 
@@ -79,6 +81,35 @@ Usage {
 
 
 ## Examples
+### Example: Usage-python_templating_scope
+
+```yaml
+---
+method: python
+setup: example
+command: >-
+    '{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()'
+scope: meta+data
+
+```
+### Example: Usage-cli_scope
+
+```yaml
+---
+method: cli
+scope: meta-only
+command: parse --type=example --summary {{ file_path }}
+
+```
+### Example: Usage-python_setup
+
+```yaml
+---
+method: python
+setup: example.extractors
+command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
+
+```
 ### Example: Usage-python_setup_scope
 
 ```yaml
@@ -97,33 +128,15 @@ method: cli
 command: parse --type={{ input_type }} {{ file_path }}
 
 ```
-### Example: Usage-python_templating_scope
-
-```yaml
----
-method: python
-setup: example
-command: >-
-    '{{ input_type }}.extractors.extract.ExampleExtractor({{ file_path }}).parse()'
-scope: meta+data
-
-```
-### Example: Usage-python_setup
-
-```yaml
----
-method: python
-setup: example.extractors
-command: example.extractors.extract({{ file_path }}, type="{{ input_type }}")
-
-```
-### Example: Usage-cli_scope
+### Example: Usage-cli_filetypes
 
 ```yaml
 ---
 method: cli
 scope: meta-only
 command: parse --type=example --summary {{ file_path }}
+supported_filetypes:
+    - example
 
 ```
 
@@ -150,6 +163,9 @@ attributes:
     description: Usage invocation method, e.g. from a command line or from Python.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
+    domain_of:
+    - Usage
+    - Installation
     range: UsageTypes
     required: true
   setup:
@@ -159,6 +175,8 @@ attributes:
     - 'For `method: python`, this is an argument to Python''s `import`.'
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
+    domain_of:
+    - Usage
   command:
     name: command
     description: A machine-executable command by which the `Extractor` functionality
@@ -172,13 +190,29 @@ attributes:
       by the `UsageTemplate` class](UsageTemplate.md).
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
+    domain_of:
+    - Usage
     required: true
   scope:
     name: scope
     description: Specification of extraction scope.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
+    domain_of:
+    - Usage
     range: UsageScope
+    required: false
+  supported_filetypes:
+    name: supported_filetypes
+    description: An enumeration of the `FileType` that this `Usage` of an `Extractor`
+      supports, matching one or more of the `FileTypes` present in the `supported_filetypes`
+      slot of the `Extractor`. Defaults to all `supported_filetypes` specified in
+      the `Extractor` definition.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+    multivalued: true
+    domain_of:
+    - Extractor
+    - Usage
     required: false
 
 ```
@@ -249,6 +283,21 @@ attributes:
     domain_of:
     - Usage
     range: UsageScope
+    required: false
+  supported_filetypes:
+    name: supported_filetypes
+    description: An enumeration of the `FileType` that this `Usage` of an `Extractor`
+      supports, matching one or more of the `FileTypes` present in the `supported_filetypes`
+      slot of the `Extractor`. Defaults to all `supported_filetypes` specified in
+      the `Extractor` definition.
+    from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
+    multivalued: true
+    alias: supported_filetypes
+    owner: Usage
+    domain_of:
+    - Extractor
+    - Usage
+    range: string
     required: false
 
 ```

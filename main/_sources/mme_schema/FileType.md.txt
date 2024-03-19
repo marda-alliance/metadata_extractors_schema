@@ -181,6 +181,8 @@ attributes:
     rank: 1000
     slot_uri: schema_org:vendor
     multivalued: true
+    domain_of:
+    - FileType
   associated_instruments:
     name: associated_instruments
     description: A list of any instruments, or classes of instruments, that typically
@@ -188,6 +190,8 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
+    domain_of:
+    - FileType
   associated_software:
     name: associated_software
     description: A list of any known software (proprietary or otherwise) that produces
@@ -195,6 +199,8 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
+    domain_of:
+    - FileType
   associated_file_extensions:
     name: associated_file_extensions
     description: A list of any known file extensions that files of this `FileType`
@@ -203,6 +209,8 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
+    domain_of:
+    - FileType
     pattern: ^[A-z,0-9]*[A-z,0-9,.]+[A-z,0-9]$
   base_formats:
     name: base_formats
@@ -211,6 +219,8 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
+    domain_of:
+    - FileType
     range: FileType
   associated_standards:
     name: associated_standards
@@ -219,6 +229,8 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
+    domain_of:
+    - FileType
   registered_extractors:
     name: registered_extractors
     description: A slot for an automatically-generated enumeration of `Extractor`
@@ -226,6 +238,8 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     multivalued: true
+    domain_of:
+    - FileType
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
 
 ```
@@ -348,8 +362,8 @@ attributes:
     owner: FileType
     domain_of:
     - Extractor
-    - FileType
     - SupportedFileType
+    - FileType
     range: string
     required: true
     pattern: ^[a-z]+[a-z,0-9,-]*[a-z,0-9]+$
@@ -364,8 +378,8 @@ attributes:
     owner: FileType
     domain_of:
     - Extractor
-    - FileType
     - SupportedFileType
+    - FileType
     range: string
     required: true
   name:

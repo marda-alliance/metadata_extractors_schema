@@ -98,10 +98,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Slot: supported_filetypes</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#applicable-classes">Applicable Classes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#properties">Properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#identifier-and-mapping-information">Identifier and Mapping Information</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#schema-source">Schema Source</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#identifier-and-mapping-information">Identifier and Mapping Information</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#linkml-source">LinkML Source</a></li>
 </ul>
 </li>
@@ -146,7 +143,6 @@
              
   <section id="slot-supported-filetypes">
 <h1>Slot: supported_filetypes<a class="headerlink" href="#slot-supported-filetypes" title="Link to this heading"></a></h1>
-<p><em>An enumeration of the <code class="docutils literal notranslate"><span class="pre">FileType</span></code> that an <code class="docutils literal notranslate"><span class="pre">Extractor</span></code> supports, matching <code class="docutils literal notranslate"><span class="pre">FileTypes</span></code> present in the registry. The <code class="docutils literal notranslate"><span class="pre">FileType-&gt;id</span></code> slot can be passed to the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>, <a class="reference internal" href="Usage.html"><span class="std std-doc">see the <code class="docutils literal notranslate"><span class="pre">Usage</span></code> class</span></a>.</em></p>
 <p>URI: <a class="reference external" href="https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/supported_filetypes">mme_schema:supported_filetypes</a></p>
 <!-- no inheritance hierarchy -->
 <section id="applicable-classes">
@@ -163,42 +159,31 @@
 <td><p>A script, code, or web service that, when executed, can extract information f…</p></td>
 <td><p>no</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="Usage.html"><span class="std std-doc">Usage</span></a></p></td>
+<td><p>A machine-actionable specification of a set of usage instructions of the pare…</p></td>
+<td><p>no</p></td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="properties">
 <h2>Properties<a class="headerlink" href="#properties" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>Range: <a class="reference internal" href="SupportedFileType.html"><span class="std std-doc">SupportedFileType</span></a></p></li>
-<li><p>Multivalued: True</p></li>
-<li><p>Required: True</p></li>
+<li><p>Range: <a class="reference internal" href="String.html"><span class="std std-doc">String</span></a></p></li>
 </ul>
 </section>
 <section id="identifier-and-mapping-information">
 <h2>Identifier and Mapping Information<a class="headerlink" href="#identifier-and-mapping-information" title="Link to this heading"></a></h2>
-<section id="schema-source">
-<h3>Schema Source<a class="headerlink" href="#schema-source" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>from schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</p></li>
-</ul>
-</section>
 </section>
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
 <details>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">An enumeration of the `FileType` that an `Extractor` supports, matching</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">`FileTypes` present in the registry. The `FileType-&gt;id` slot can be passed to the</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">`Extractor`, [see the `Usage` class](Usage.md).</span>
-<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
-<span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">supported_filetypes</span>
-<span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
 <span class="nt">domain_of</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor</span>
-<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SupportedFileType</span>
-<span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
+<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
 </pre></div>
 </div>
 </details></section>

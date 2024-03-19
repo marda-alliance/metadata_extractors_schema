@@ -169,18 +169,6 @@ Extractor {
     string documentation  
     string instructions  
 }
-FileType {
-    string id  
-    string description  
-    string name  
-    stringList subject  
-    stringList associated_vendors  
-    stringList associated_instruments  
-    stringList associated_software  
-    stringList associated_file_extensions  
-    stringList associated_standards  
-    stringList registered_extractors  
-}
 Citation {
     string uri  
     stringList creators  
@@ -207,12 +195,25 @@ Usage {
     string setup  
     string command  
     UsageScope scope  
+    stringList supported_filetypes  
 }
 Installation {
     InstallerTypes method  
     string requires_python  
     string requirements  
     stringList packages  
+}
+FileType {
+    string id  
+    string description  
+    string name  
+    stringList subject  
+    stringList associated_vendors  
+    stringList associated_instruments  
+    stringList associated_software  
+    stringList associated_file_extensions  
+    stringList associated_standards  
+    stringList registered_extractors  
 }
 
 Extractor ||--}o Citation : &quot;citations&quot;
@@ -221,8 +222,8 @@ Extractor ||--}| SupportedFileType : &quot;supported_filetypes&quot;
 Extractor ||--}o SupportedFileType : &quot;supported_output_filetypes&quot;
 Extractor ||--}o Usage : &quot;usage&quot;
 Extractor ||--}o Installation : &quot;installation&quot;
-FileType ||--}o FileType : &quot;base_formats&quot;
 SupportedFileType ||--|o UsageTemplate : &quot;template&quot;
+FileType ||--}o FileType : &quot;base_formats&quot;
 
         </div></section>
 <section id="classes">

@@ -110,6 +110,9 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: dc_terms:identifier
+    domain_of:
+    - Citation
+    - License
     required: false
   creators:
     name: creators
@@ -118,6 +121,8 @@ attributes:
     rank: 1000
     slot_uri: dc_terms:creator
     multivalued: true
+    domain_of:
+    - Citation
   contributors:
     name: contributors
     description: A list of the contributors to the resource.
@@ -125,12 +130,16 @@ attributes:
     rank: 1000
     slot_uri: dc_terms:contributor
     multivalued: true
+    domain_of:
+    - Citation
   title:
     name: title
     description: A name given to the resource [from DC].
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: dc_terms:title
+    domain_of:
+    - Citation
     required: false
   type:
     name: type
@@ -139,6 +148,8 @@ attributes:
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
     slot_uri: dc_terms:type
+    domain_of:
+    - Citation
     required: false
 
 ```

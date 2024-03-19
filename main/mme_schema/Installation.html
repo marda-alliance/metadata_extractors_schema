@@ -77,9 +77,9 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#mappings">Mappings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#example-installation-pip-reqs">Example: Installation-pip_reqs</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#example-installation-pip">Example: Installation-pip</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#example-installation-conda-reqs">Example: Installation-conda_reqs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-installation-pip-reqs">Example: Installation-pip_reqs</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#linkml-source">LinkML Source</a><ul>
@@ -225,18 +225,6 @@ Installation {
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
-<section id="example-installation-pip-reqs">
-<h3>Example: Installation-pip_reqs<a class="headerlink" href="#example-installation-pip-reqs" title="Link to this heading"></a></h3>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
-<span class="nt">requirements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<span class="w">    </span><span class="no">linkml &gt;= 1.5.2, &lt; 1.6.2</span>
-<span class="w">    </span><span class="no">linkml-runtime != 1.6.1</span>
-<span class="w">    </span><span class="no">pre-commit ~= 2.20</span>
-<span class="nt">requires_python</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&gt;=3.8&#39;</span>
-</pre></div>
-</div>
-</section>
 <section id="example-installation-pip">
 <h3>Example: Installation-pip<a class="headerlink" href="#example-installation-pip" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
@@ -266,6 +254,18 @@ Installation {
 </pre></div>
 </div>
 </section>
+<section id="example-installation-pip-reqs">
+<h3>Example: Installation-pip_reqs<a class="headerlink" href="#example-installation-pip-reqs" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
+<span class="nt">requirements</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">linkml &gt;= 1.5.2, &lt; 1.6.2</span>
+<span class="w">    </span><span class="no">linkml-runtime != 1.6.1</span>
+<span class="w">    </span><span class="no">pre-commit ~= 2.20</span>
+<span class="nt">requires_python</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;&gt;=3.8&#39;</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="linkml-source">
 <h2>LinkML Source<a class="headerlink" href="#linkml-source" title="Link to this heading"></a></h2>
@@ -284,6 +284,9 @@ Installation {
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Extractor installer, specifying the package manager to process the</span>
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">installation instructions with.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Usage</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">InstallerTypes</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">requires_python</span><span class="p">:</span>
@@ -292,6 +295,8 @@ Installation {
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">version required for this extractor.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
 <span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">requirements</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">requirements</span>
@@ -300,6 +305,8 @@ Installation {
 <span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">for pip, or `conda env create -f requirements.txt` for conda.</span>
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
 <span class="w">  </span><span class="nt">packages</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">packages</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A list of packages, including versioned packages or `git+https://`</span>
@@ -307,6 +314,8 @@ Installation {
 <span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Installation</span>
 </pre></div>
 </div>
 </details>

@@ -128,18 +128,24 @@ attributes:
       be extracted. Required.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
+    domain_of:
+    - UsageTemplate
   input_type:
     name: input_type
     description: The `FileType` of the `input_path`. Defaults to the `FileType->id`
       for each supported file type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
+    domain_of:
+    - UsageTemplate
   output_path:
     name: output_path
     description: The location where the output of the extraction will be written to
       disk. Defaults to the `Extractor` default.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
+    domain_of:
+    - UsageTemplate
   output_type:
     name: output_type
     description: The `FileType` of the `output_path`, for `Extractors` supporting
@@ -147,6 +153,8 @@ attributes:
       output file type.
     from_schema: https://marda-alliance.github.io/metadata_extractors_schema/main/mme_schema/
     rank: 1000
+    domain_of:
+    - UsageTemplate
 
 ```
 
