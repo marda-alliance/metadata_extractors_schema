@@ -161,14 +161,22 @@ classes:
                     - >-
                       For `method: python`, a parametrized function invocation which
                       should be available after installing and setting up the `Extractor`.
-                    - The templated parameters which can be requested from the user
+                    - >-
+                      The templated parameters which can be requested from the user
                       are [described by the `UsageTemplate` class](UsageTemplate.md).
             scope:
                 required: false
                 range: UsageScope
                 description: >-
                     Specification of extraction scope.
-
+            supported_filetypes:
+                required: false
+                multivalued: true
+                description: >-
+                    An enumeration of the `FileType` that this `Usage` of an `Extractor`
+                    supports, matching one or more of the `FileTypes` present in the
+                    `supported_filetypes` slot of the `Extractor`. Defaults to all
+                    `supported_filetypes` specified in the `Extractor` definition.
 
     Installation:
         description: >-
