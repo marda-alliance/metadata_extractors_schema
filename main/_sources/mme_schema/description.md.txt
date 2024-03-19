@@ -18,8 +18,8 @@ URI: [schema_org:description](http://schema.org/description)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[FileType](FileType.md) | A specific encoding of data for storage purposes |  no  |
 [Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information f... |  no  |
+[FileType](FileType.md) | A specific encoding of data for storage purposes |  no  |
 [SupportedFileType](SupportedFileType.md) | An specification of a `FileType`, supported by the parent `Extractor` |  no  |
 
 
