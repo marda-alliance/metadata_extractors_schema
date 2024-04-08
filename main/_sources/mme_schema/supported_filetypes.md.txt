@@ -13,8 +13,8 @@ URI: [mme_schema:supported_filetypes](https://marda-alliance.github.io/metadata_
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information f... |  no  |
 [Usage](Usage.md) | A machine-actionable specification of a set of usage instructions of the pare... |  no  |
+[Extractor](Extractor.md) | A script, code, or web service that, when executed, can extract information f... |  no  |
 
 
 

@@ -79,14 +79,16 @@ Installation {
 
 
 ## Examples
-### Example: Installation-pip
+### Example: Installation-pip_reqs
 
 ```yaml
 ---
 method: pip
-packages:
-    - example-extractor
-requires_python: ==3.4
+requirements: >-
+    linkml >= 1.5.2, < 1.6.2
+    linkml-runtime != 1.6.1
+    pre-commit ~= 2.20
+requires_python: '>=3.8'
 
 ```
 ### Example: Installation-conda_reqs
@@ -108,16 +110,14 @@ requirements: >-
         - git+https://github.com/example/extractor.git#egg=example[all]
 
 ```
-### Example: Installation-pip_reqs
+### Example: Installation-pip
 
 ```yaml
 ---
 method: pip
-requirements: >-
-    linkml >= 1.5.2, < 1.6.2
-    linkml-runtime != 1.6.1
-    pre-commit ~= 2.20
-requires_python: '>=3.8'
+packages:
+    - example-extractor
+requires_python: ==3.4
 
 ```
 

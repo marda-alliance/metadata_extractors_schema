@@ -66,8 +66,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#mappings">Mappings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#example-filetype-netcdf">Example: FileType-netcdf</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#example-filetype-example">Example: FileType-example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-filetype-netcdf">Example: FileType-netcdf</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#linkml-source">LinkML Source</a><ul>
@@ -95,8 +95,8 @@
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#mappings">Mappings</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#example-filetype-netcdf">Example: FileType-netcdf</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#example-filetype-example">Example: FileType-example</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example-filetype-netcdf">Example: FileType-netcdf</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#linkml-source">LinkML Source</a><ul>
@@ -286,30 +286,6 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
-<section id="example-filetype-netcdf">
-<h3>Example: FileType-netcdf<a class="headerlink" href="#example-filetype-netcdf" title="Link to this heading"></a></h3>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<span class="w">    </span><span class="no">netcdf</span>
-<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<span class="w">    </span><span class="no">Network Common Data Form (NetCDF) file.</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
-<span class="w">    </span><span class="no">A file format for storing multidimensional scientific data (variables) such as</span>
-<span class="w">    </span><span class="no">temperature, humidity, pressure, wind speed, and direction. This particular record</span>
-<span class="w">    </span><span class="no">represents NetCDF version 4, which used HDF5+ as a container.</span>
-<span class="nt">associated_vendors</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UCAR</span>
-<span class="nt">subject</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">climatology</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meteorology - oceanography</span>
-<span class="nt">associated_file_extensions</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nc</span>
-<span class="nt">associated_software</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ArcGIS</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OriginPro</span>
-</pre></div>
-</div>
-</section>
 <section id="example-filetype-example">
 <h3>Example: FileType-example<a class="headerlink" href="#example-filetype-example" title="Link to this heading"></a></h3>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
@@ -335,6 +311,30 @@ FileType ||--}o FileType : &quot;base_formats&quot;
 <span class="nt">associated_software</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Example Software</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bitrot Software</span>
+</pre></div>
+</div>
+</section>
+<section id="example-filetype-netcdf">
+<h3>Example: FileType-netcdf<a class="headerlink" href="#example-filetype-netcdf" title="Link to this heading"></a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">netcdf</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">Network Common Data Form (NetCDF) file.</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">    </span><span class="no">A file format for storing multidimensional scientific data (variables) such as</span>
+<span class="w">    </span><span class="no">temperature, humidity, pressure, wind speed, and direction. This particular record</span>
+<span class="w">    </span><span class="no">represents NetCDF version 4, which used HDF5+ as a container.</span>
+<span class="nt">associated_vendors</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UCAR</span>
+<span class="nt">subject</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">climatology</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meteorology - oceanography</span>
+<span class="nt">associated_file_extensions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nc</span>
+<span class="nt">associated_software</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ArcGIS</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OriginPro</span>
 </pre></div>
 </div>
 </section>

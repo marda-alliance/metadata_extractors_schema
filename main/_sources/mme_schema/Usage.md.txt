@@ -81,6 +81,14 @@ Usage {
 
 
 ## Examples
+### Example: Usage-cli
+
+```yaml
+---
+method: cli
+command: parse --type={{ input_type }} {{ file_path }}
+
+```
 ### Example: Usage-python_templating_scope
 
 ```yaml
@@ -118,14 +126,6 @@ method: python
 setup: example
 scope: meta-only
 command: example.extractors.extract.ExampleExtractor({{ file_path }}).summarize()
-
-```
-### Example: Usage-cli
-
-```yaml
----
-method: cli
-command: parse --type={{ input_type }} {{ file_path }}
 
 ```
 ### Example: Usage-cli_filetypes

@@ -93,30 +93,6 @@ FileType ||--}o FileType : "base_formats"
 
 
 ## Examples
-### Example: FileType-netcdf
-
-```yaml
----
-id: >-
-    netcdf
-name: >-
-    Network Common Data Form (NetCDF) file.
-description: >-
-    A file format for storing multidimensional scientific data (variables) such as
-    temperature, humidity, pressure, wind speed, and direction. This particular record
-    represents NetCDF version 4, which used HDF5+ as a container.
-associated_vendors:
-    - UCAR
-subject:
-    - climatology
-    - meteorology - oceanography
-associated_file_extensions:
-    - nc
-associated_software:
-    - ArcGIS
-    - OriginPro
-
-```
 ### Example: FileType-example
 
 ```yaml
@@ -143,6 +119,30 @@ associated_file_extensions:
 associated_software:
     - Example Software
     - Bitrot Software
+
+```
+### Example: FileType-netcdf
+
+```yaml
+---
+id: >-
+    netcdf
+name: >-
+    Network Common Data Form (NetCDF) file.
+description: >-
+    A file format for storing multidimensional scientific data (variables) such as
+    temperature, humidity, pressure, wind speed, and direction. This particular record
+    represents NetCDF version 4, which used HDF5+ as a container.
+associated_vendors:
+    - UCAR
+subject:
+    - climatology
+    - meteorology - oceanography
+associated_file_extensions:
+    - nc
+associated_software:
+    - ArcGIS
+    - OriginPro
 
 ```
 
