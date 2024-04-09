@@ -285,7 +285,7 @@ enums:
             meta-only:
                 description: >-
                     This usage scope only returns metadata associated with the file,
-                    with the interpretatio of "metadata" left up to the `Extractor`.
+                    with the interpretation of "metadata" left up to the `Extractor`.
                 comments:
                     - >-
                       This may include, but is not limited to:

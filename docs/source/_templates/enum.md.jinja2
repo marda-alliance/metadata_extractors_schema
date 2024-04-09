@@ -20,10 +20,10 @@ URI: {{ gen.uri_link(element) }}
 {% if element.permissible_values -%}
 ## Permissible Values
 
-| Value | Meaning | Description |
+| Value | Description | Comments |
 | --- | --- | --- |
 {% for pv in element.permissible_values.values() -%}
-| {{pv.text}} | {{pv.meaning}} | {{pv.description | wordwrap(80, wrapstring='<br/>')}} |
+| {{pv.text}} | {{pv.description | wordwrap(80, wrapstring='<br/>')}} | {{pv.comments| join(' ') | wordwrap(80, wrapstring='<br/>')}} |
 {% endfor %}
 {% else %}
 _This is a dynamic enum_
