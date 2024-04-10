@@ -127,18 +127,18 @@
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Value</p></th>
-<th class="head"><p>Meaning</p></th>
 <th class="head"><p>Description</p></th>
+<th class="head"><p>Comments</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>meta-only</p></td>
-<td><p>None</p></td>
-<td><p>This usage scope only returns metadata associated with the file, with the<br/>interpretatio of “metadata” left up to the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
+<td><p>This usage scope only returns metadata associated with the file, with the<br/>interpretation of “metadata” left up to the <code class="docutils literal notranslate"><span class="pre">Extractor</span></code>.</p></td>
+<td><p>This may include, but is not limited to:<br/>  - timestamps,<br/>  - column headings,<br/>  - data types, and<br/>  - data shapes. The size of data returned in this mode should be limited and<br/>will typically be much smaller than the file size. This metadata SHOULD be<br/>expressed as a JSON-serializable document that can, for example, be loaded into<br/>Python with only standard library imports.</p></td>
 </tr>
 <tr class="row-odd"><td><p>meta+data</p></td>
-<td><p>None</p></td>
 <td><p>This usage scope refers to a “full” extraction of the file, whereby the<br/>extractor tries to faithfully interpret and return all supported information<br/>contained within the file.</p></td>
+<td><p>This may include, but is not limited to:<br/>  - binary data,<br/>  - large multi-dimensional arrays,<br/>  - plus all of the associated metadata from a <code class="docutils literal notranslate"><span class="pre">meta-only</span></code> extraction. The size<br/>of the data returned in this mode is not limited and could be significantly<br/>larger than the input file size (in the case of binary data, or additional<br/>analysis being performed upon extraction).</p></td>
 </tr>
 </tbody>
 </table>
@@ -185,7 +185,7 @@
 <span class="w">  </span><span class="nt">meta-only</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meta-only</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This usage scope only returns metadata associated with the file,</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the interpretatio of &quot;metadata&quot; left up to the `Extractor`.</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">with the interpretation of &quot;metadata&quot; left up to the `Extractor`.</span>
 <span class="w">    </span><span class="nt">comments</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;This</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">include,</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">limited</span><span class="nv"> </span><span class="s">to:\n</span><span class="nv">  </span><span class="s">-</span><span class="nv"> </span><span class="s">timestamps,\n</span><span class="nv">  </span><span class="s">-</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">headings,\n\</span>
 <span class="w">      </span><span class="s">\ </span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">types,</span><span class="nv"> </span><span class="s">and\n</span><span class="nv">  </span><span class="s">-</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">shapes.&quot;</span>

@@ -17,10 +17,10 @@ URI: [UsageScope](UsageScope)
 
 ## Permissible Values
 
-| Value | Meaning | Description |
+| Value | Description | Comments |
 | --- | --- | --- |
-| meta-only | None | This usage scope only returns metadata associated with the file, with the<br/>interpretatio of "metadata" left up to the `Extractor`. |
-| meta+data | None | This usage scope refers to a "full" extraction of the file, whereby the<br/>extractor tries to faithfully interpret and return all supported information<br/>contained within the file. |
+| meta-only | This usage scope only returns metadata associated with the file, with the<br/>interpretation of "metadata" left up to the `Extractor`. | This may include, but is not limited to:<br/>  - timestamps,<br/>  - column headings,<br/>  - data types, and<br/>  - data shapes. The size of data returned in this mode should be limited and<br/>will typically be much smaller than the file size. This metadata SHOULD be<br/>expressed as a JSON-serializable document that can, for example, be loaded into<br/>Python with only standard library imports. |
+| meta+data | This usage scope refers to a "full" extraction of the file, whereby the<br/>extractor tries to faithfully interpret and return all supported information<br/>contained within the file. | This may include, but is not limited to:<br/>  - binary data,<br/>  - large multi-dimensional arrays,<br/>  - plus all of the associated metadata from a `meta-only` extraction. The size<br/>of the data returned in this mode is not limited and could be significantly<br/>larger than the input file size (in the case of binary data, or additional<br/>analysis being performed upon extraction). |
 
 
 
@@ -72,7 +72,7 @@ permissible_values:
   meta-only:
     text: meta-only
     description: This usage scope only returns metadata associated with the file,
-      with the interpretatio of "metadata" left up to the `Extractor`.
+      with the interpretation of "metadata" left up to the `Extractor`.
     comments:
     - "This may include, but is not limited to:\n  - timestamps,\n  - column headings,\n\
       \  - data types, and\n  - data shapes."

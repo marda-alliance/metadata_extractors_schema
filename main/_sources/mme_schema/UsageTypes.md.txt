@@ -11,10 +11,10 @@ URI: [UsageTypes](UsageTypes)
 
 ## Permissible Values
 
-| Value | Meaning | Description |
+| Value | Description | Comments |
 | --- | --- | --- |
-| cli | None | Access the `Extractor` as a command line executable. The executable as well as<br/>the invocation syntax, parametrised using arguments, shall be supplied in the<br/>`command` slot. |
-| python | None | Access the `Extractor` as a Python function. The function should be available<br/>when `import <setup>` is called, and should be specified including relevant<br/>namespaces. The function signature, parametrised using arguments, shall be<br/>supplied in the `command` slot. |
+| cli | Access the `Extractor` as a command line executable. The executable as well as<br/>the invocation syntax, parametrised using arguments, shall be supplied in the<br/>`command` slot. |  |
+| python | Access the `Extractor` as a Python function. The function should be available<br/>when `import <setup>` is called, and should be specified including relevant<br/>namespaces. The function signature, parametrised using arguments, shall be<br/>supplied in the `command` slot. |  |
 
 
 

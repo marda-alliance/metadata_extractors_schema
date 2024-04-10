@@ -11,10 +11,10 @@ URI: [InstallerTypes](InstallerTypes)
 
 ## Permissible Values
 
-| Value | Meaning | Description |
+| Value | Description | Comments |
 | --- | --- | --- |
-| pip | None | Install the `Extractor` using 'pip'. Will process `packages` using `pip install`<br/>and `requirements` using `pip install -r`. |
-| conda | None | Install the `Extractor` using 'conda'. |
+| pip | Install the `Extractor` using 'pip'. Will process `packages` using `pip install`<br/>and `requirements` using `pip install -r`. |  |
+| conda | Install the `Extractor` using 'conda'. | Note that installation using `conda` is not yet supported by the API. |
 
 
 
