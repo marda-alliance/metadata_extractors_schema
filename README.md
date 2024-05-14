@@ -1,3 +1,8 @@
+> Note: As of May 2024, this repository has been archived and the development of the metadata extractor schema continues under the [datatractor/schema](https://github.com/datatractor/schema) project.
+
+
+
+
 <div align="center" style="padding-bottom: 1em;">
 <img width="100px" align="center" src="https://avatars.githubusercontent.com/u/74017645?s=200&v=4">
 </div>
